@@ -1,0 +1,17 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:cut_sandstone",
+        "minecraft:oak_planks",
+        "minecraft:end_stone",
+        "minecraft:obsidian",
+        "minecraft:emerald_block",
+        "minecraft:ladder",
+        "minecraft:cobweb",
+        "minecraft:red_bed",
+        "minecraft:yellow_bed",
+        "minecraft:lime_bed",
+        "minecraft:light_blue_bed",
+        "minecraft:tinted_glass"
+    ]
+}

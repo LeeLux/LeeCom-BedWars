@@ -1,0 +1,15 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:placed_block",
+            "conditions": {
+                "item": {
+                    "tag": "minecraft:all"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "bw:stats/placedblock"
+    }
+}
