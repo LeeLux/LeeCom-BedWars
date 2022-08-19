@@ -12,7 +12,7 @@ execute as @e[tag=bw.clon.map2] at @s run clone ~ ~ ~ ~-150 ~ ~150 -150 ~ 0
 execute as @e[tag=bw.clon.map2] at @s run clone ~ ~ ~ ~150 ~ ~-150 0 ~ -150
 execute as @e[tag=bw.clon.map2] at @s run tp @s ~ ~1 ~
 execute as @e[tag=bw.clon.map2] at @s run scoreboard players add @s bw.clear 1
-title @a times 0 40 0
+title @a times 10 70 20
 title @a title [{"text": "","color": "red"},{"text": "Cloning process...  ["},{"score":{"name": "@e[tag=bw.clon.map2,limit=1]","objective": "bw.clear","value": "error"},"color": "green"},{"text": "/"},{"text": "320","color": "green"},{"text": "]"}]
 title @a subtitle [{"text": "The map and the play area must be loaded propertly!","color": "red"}]
 #END#

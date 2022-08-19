@@ -33,7 +33,7 @@ tellraw @a [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"te
 #END#
 
 #title
-title @a times 0 80 20
+title @a times 10 70 20
 title @a subtitle [{"text": ""}]
 title @a title [{"text": "cloneing is done","color": "green"}]
 #END#

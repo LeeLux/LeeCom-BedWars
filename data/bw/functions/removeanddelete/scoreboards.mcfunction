@@ -43,7 +43,8 @@ scoreboard objectives remove bw.resource.2
 scoreboard objectives remove bw.resource.3
 scoreboard objectives remove bw.resource.4
 scoreboard objectives remove bw.death.bed
-scoreboard objectives remove bw.death2
+scoreboard objectives remove bw.nbtdeathtime
+scoreboard objectives remove bw.death
 scoreboard objectives remove bw.join.red
 scoreboard objectives remove bw.join.yellow
 scoreboard objectives remove bw.join.green

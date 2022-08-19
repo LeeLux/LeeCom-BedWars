@@ -98,7 +98,8 @@ scoreboard objectives add bw.resource.2 dummy
 scoreboard objectives add bw.resource.3 dummy
 scoreboard objectives add bw.resource.4 dummy
 scoreboard objectives add bw.death.bed deathCount
-scoreboard objectives add bw.death2 deathCount
+scoreboard objectives add bw.nbtdeathtime dummy
+scoreboard objectives add bw.death deathCount
 scoreboard objectives add bw.join.red trigger
 scoreboard objectives add bw.join.yellow trigger
 scoreboard objectives add bw.join.green trigger

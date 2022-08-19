@@ -93,4 +93,8 @@ execute if score bw.uptimeday bw.stats matches 8.. run scoreboard players set bw
 #END#
 ##END##
 
+## doImmediateRespawn as 1 or 0 in BedWars
+execute store result score bw.doImmediateRespawn BedWars run gamerule doImmediateRespawn
+##END##
+
 schedule function bw:main1s 1s

@@ -6,6 +6,7 @@
 
 ##bed destroy green##
 tellraw @a [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"selector":"@a[scores={green.broken=..1}]"},{"text":" has destroyed the "},{"text":"Green Bed","color":"green"},{"text":"!","color":"white"}]
+title @a times 10 70 20
 title @a[team=green] title [{"text": "Bed destoyed!","color": "green"}]
 title @a[team=green] subtitle [{"selector":"@a[scores={green.broken=..1}]"},{"text": " destroyed you bed!","color": "green"}]
 playsound minecraft:entity.ender_dragon.growl voice @a[team=green] ~ ~ ~
