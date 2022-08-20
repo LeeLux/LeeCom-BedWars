@@ -21,9 +21,9 @@ scoreboard players add @s bws.losered 1
 scoreboard players add @s bws.loseyellow 1
 scoreboard players add @s bws.losegreen 1
 scoreboard players add @s bws.loseblue 1
-scoreboard players add @s bws.totalminutes 1
-scoreboard players add @s bws.totalhours 1
-scoreboard players add @s bws.totaldays 1
+scoreboard players add @s bws.ingamemin 1
+scoreboard players add @s bws.ingamehour 1
+scoreboard players add @s bws.ingamesec 1
 scoreboard players add @s bws.damagedealt 1
 scoreboard players add @s bws.damagetaken 1
 scoreboard players add @s bws.killsred 1
@@ -65,9 +65,9 @@ scoreboard players remove @s bws.losered 1
 scoreboard players remove @s bws.loseyellow 1
 scoreboard players remove @s bws.losegreen 1
 scoreboard players remove @s bws.loseblue 1
-scoreboard players remove @s bws.totalminutes 1
-scoreboard players remove @s bws.totalhours 1
-scoreboard players remove @s bws.totaldays 1
+scoreboard players remove @s bws.ingamemin 1
+scoreboard players remove @s bws.ingamehour 1
+scoreboard players remove @s bws.ingamesec 1
 scoreboard players remove @s bws.damagedealt 1
 scoreboard players remove @s bws.damagetaken 1
 scoreboard players remove @s bws.killsred 1

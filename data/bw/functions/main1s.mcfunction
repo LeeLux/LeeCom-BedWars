@@ -56,40 +56,59 @@ execute if score bw.gamestate BedWars matches 1.. run effect give @a[gamemode=!c
 
 ##stats##
 #recording play time#
-#temp sec counter
+
+#playtime as team in minutes (just when game is running)
+#add sec
+execute if score bw.gamestate BedWars matches 1.. run scoreboard players add @a[team=!spec] bws.ingamesec 1
+#red min
+execute if score bw.gamestate BedWars matches 1.. run scoreboard players add @a[scores={bws.ingamesec=61..},team=red] bws.timered 1
+#yellow min
+execute if score bw.gamestate BedWars matches 1.. run scoreboard players add @a[scores={bws.ingamesec=61..},team=yellow] bws.timeyellow 1
+#green min
+execute if score bw.gamestate BedWars matches 1.. run scoreboard players add @a[scores={bws.ingamesec=61..},team=green] bws.timegreen 1
+#blue min
+execute if score bw.gamestate BedWars matches 1.. run scoreboard players add @a[scores={bws.ingamesec=61..},team=blue] bws.timeblue 1
+#overall playtime (just when game is running)
+#+1 min if sec > 60
+execute if score bw.gamestate BedWars matches 1.. run scoreboard players add @a[scores={bws.ingamesec=61..}] bws.ingamemin 1
+#-60 sec if sec > 60
+execute if score bw.gamestate BedWars matches 1.. run scoreboard players remove @a[scores={bws.ingamesec=61..}] bws.ingamesec 60
+#+1 hour if min > 60
+execute if score bw.gamestate BedWars matches 1.. run scoreboard players add @a[scores={bws.ingamemin=61..}] bws.ingamehour 1
+#-60 min if min > 60
+execute if score bw.gamestate BedWars matches 1.. run scoreboard players remove @a[scores={bws.ingamemin=61..}] bws.ingamemin 60
+#END#
+
+#overall everytime sec timer sec +1
 scoreboard players add @a bws.playtimesec 1
-#temp min counter
+#+1 min if sec > 60
 scoreboard players add @a[scores={bws.playtimesec=61..}] bws.playtimemin 1
-#stacking min counter
-scoreboard players add @a[scores={bws.playtimesec=61..}] bws.totalminutes 1
-
-#playtime as team (just when game is running)
-execute if score bw.gamestate BedWars matches 1.. run scoreboard players add @a[scores={bws.playtimesec=61..},team=red] bws.timered 1
-execute if score bw.gamestate BedWars matches 1.. run scoreboard players add @a[scores={bws.playtimesec=61..},team=yellow] bws.timeyellow 1
-execute if score bw.gamestate BedWars matches 1.. run scoreboard players add @a[scores={bws.playtimesec=61..},team=green] bws.timegreen 1
-execute if score bw.gamestate BedWars matches 1.. run scoreboard players add @a[scores={bws.playtimesec=61..},team=blue] bws.timeblue 1
-
-#resetting temp sec counter
-scoreboard players set @a[scores={bws.playtimesec=61..}] bws.playtimesec 1
-#temp hour counter
+#-60 sec if sec > 60
+scoreboard players remove @a[scores={bws.playtimesec=61..}] bws.playtimesec 60
+#+1 hour if min > 60
 scoreboard players add @a[scores={bws.playtimemin=61..}] bws.playtimehour 1
-#stacking hour counter
-scoreboard players add @a[scores={bws.playtimemin=61..}] bws.totalhours 1
-#resetting temp min counter
-scoreboard players set @a[scores={bws.playtimemin=61..}] bws.playtimemin 1
-#stacking day counter
-scoreboard players add @a[scores={bws.playtimehour=61..}] bws.totaldays 1
+#-60 min if min > 60
+scoreboard players remove @a[scores={bws.playtimemin=61..}] bws.playtimemin 60
 #END#
 
 #server/world uptime#
+#+1 sec ever second
 scoreboard players add bw.uptimesec bw.stats 1
+#+1 min if sec > 60
 execute if score bw.uptimesec bw.stats matches 61.. run scoreboard players add bw.uptimemin bw.stats 1
-execute if score bw.uptimesec bw.stats matches 61.. run scoreboard players set bw.uptimesec bw.stats 1
+#-60 sec if sec > 60
+execute if score bw.uptimesec bw.stats matches 61.. run scoreboard players remove bw.uptimesec bw.stats 60
+#+1 hour if min > 60
 execute if score bw.uptimemin bw.stats matches 61.. run scoreboard players add bw.uptimehour bw.stats 1
-execute if score bw.uptimemin bw.stats matches 61.. run scoreboard players set bw.uptimemin bw.stats 1
+#-60 min if min > 60
+execute if score bw.uptimemin bw.stats matches 61.. run scoreboard players remove bw.uptimemin bw.stats 60
+#+1 day if hour > 24
 execute if score bw.uptimehour bw.stats matches 25.. run scoreboard players add bw.uptimeday bw.stats 1
-execute if score bw.uptimehour bw.stats matches 25.. run scoreboard players set bw.uptimehour bw.stats 1
+#-24 hour if hour > 24
+execute if score bw.uptimehour bw.stats matches 25.. run scoreboard players remove bw.uptimehour bw.stats 24
+#+1 week if day > 7
 execute if score bw.uptimeday bw.stats matches 8.. run scoreboard players add bw.uptimeweek bw.stats 1
+#-7 day if day > 7
 execute if score bw.uptimeday bw.stats matches 8.. run scoreboard players set bw.uptimeday bw.stats 1
 #END#
 ##END##

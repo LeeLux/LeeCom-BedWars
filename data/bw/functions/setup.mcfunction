@@ -189,9 +189,9 @@ scoreboard objectives add bws.timered dummy
 scoreboard objectives add bws.timeyellow dummy
 scoreboard objectives add bws.timegreen dummy
 scoreboard objectives add bws.timeblue dummy
-scoreboard objectives add bws.totalminutes dummy
-scoreboard objectives add bws.totalhours dummy
-scoreboard objectives add bws.totaldays dummy
+scoreboard objectives add bws.ingamesec dummy
+scoreboard objectives add bws.ingamemin dummy
+scoreboard objectives add bws.ingamehour dummy
 #wl teams
 scoreboard objectives add bws.wlintred dummy
 scoreboard objectives add bws.wldecimalred dummy

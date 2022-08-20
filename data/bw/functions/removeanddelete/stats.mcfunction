@@ -51,9 +51,9 @@ scoreboard objectives remove bws.timegreen
 scoreboard objectives remove bws.timered
 scoreboard objectives remove bws.timeyellow
 scoreboard objectives remove bws.tnt
-scoreboard objectives remove bws.totaldays
-scoreboard objectives remove bws.totalhours
-scoreboard objectives remove bws.totalminutes
+scoreboard objectives remove bws.ingamesec
+scoreboard objectives remove bws.ingamehour
+scoreboard objectives remove bws.ingamemin
 scoreboard objectives remove bws.winns
 scoreboard objectives remove bws.wldecimal
 scoreboard objectives remove bws.wldecimalblu
