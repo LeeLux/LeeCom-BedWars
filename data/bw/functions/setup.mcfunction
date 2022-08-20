@@ -135,7 +135,7 @@ scoreboard objectives add bw.customshop trigger
 scoreboard objectives add bw.shop.predi dummy
 scoreboard objectives add bw.shopreset trigger
 scoreboard objectives add bw.keepteam trigger
-#scoreboard objectives add bw.
+scoreboard objectives add bw.updateshop trigger
 #scoreboard objectives add bw.
 #scoreboard objectives add bw.
 #scoreboard objectives add bw.

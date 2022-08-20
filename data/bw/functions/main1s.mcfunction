@@ -28,6 +28,7 @@ scoreboard players enable @a[tag=bw.admin] bw.mapshop
 scoreboard players enable @a[tag=bw.admin] bw.setactionbar
 scoreboard players enable @a[tag=bw.admin] bw.shopreset
 scoreboard players enable @a[tag=bw.admin] bw.keepteam
+scoreboard players enable @a[tag=bw.admin] bw.updateshop
 #everyone#
 execute if score bw.gamestate BedWars matches 0 run scoreboard players enable @a bw.join.red
 execute if score bw.gamestate BedWars matches 0 run scoreboard players enable @a bw.join.yellow

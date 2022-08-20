@@ -48,6 +48,10 @@ execute as @a[scores={bw.gamecountdown=1..}] run function bw:settosettings/gamec
 execute as @a[scores={bw.keepteam=1..}] run function bw:settosettings/keepteam
 #END#
 
+# runns the bw:shop/updateshop.mcfunction when trigger
+execute as @a[scores={bw.updateshop=1..}] run function bw:shop/updateshop
+#END#
+
 ## set spawn rate of resources
 #spawn rate bronce##
 execute as @a[scores={bw.spawn.bronce=1..},limit=1] run function bw:settosettings/bronce_spawn
@@ -121,7 +125,7 @@ scoreboard players set @a[predicate=bw:shop] bw.shop.predi 5
 
 ## detecting the shop villiger and give you the tags for the shop !!  NEW  !!
 ##only used if the 'multiplayer' shop is used ##
-#if the game ism't running, a sec can still use the shop
+#if the game isn't running, a sec can still use the shop
 execute unless score bw.gamestate BedWars matches 2..3 as @a[tag=!bw.shop.want,scores={bw.shop.predi=1..}] at @s if entity @e[tag=bw.shop,distance=..6] unless entity @e[distance=..1,tag=bw.shop.entity] run tag @s add bw.shop.lookingat
 execute unless score bw.gamestate BedWars matches 2..3 as @a[scores={bw.shop.predi=1..}] at @s if entity @e[tag=bw.shop,distance=..6] unless entity @e[distance=..1,tag=bw.shop.entity] run tag @s add bw.shop.want
 #but if its running, spec can't use the shop
