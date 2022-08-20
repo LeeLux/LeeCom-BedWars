@@ -117,3 +117,7 @@ recipe take @a *
 worldborder center 0 0
 worldborder set 300
 #END#
+
+#giving players the breaking tool#
+execute as @a[team=!spec] run function bw:respawn
+#END#
