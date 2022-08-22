@@ -19,7 +19,7 @@ scoreboard players reset @a[team=yellow,scores={yellow.broken=1..}] yellow.broke
 ##END##
 
 # Spawn protection v1
-execute as @e[tag=bw.respawn,type=armor_stand] at @s run fill ~ ~ ~ ~ ~2 ~ air destroy
+execute as @e[tag=bw.respawn] at @s run fill ~ ~ ~ ~ ~2 ~ air destroy
 #END#
 
 # Adding some thing on all items so players can use them in adventure
@@ -55,17 +55,17 @@ kill @e[type=item,nbt={Item: {id: "minecraft:glass_bottle"}}]
 ##END##
 
 ## respawn
-execute as @e[type=minecraft:armor_stand,tag=bw.bed.red] at @s if block ~ ~ ~ minecraft:red_bed run function bw:respawn/red
-execute as @e[type=minecraft:armor_stand,tag=bw.bed.yellow] at @s if block ~ ~ ~ minecraft:yellow_bed run function bw:respawn/yellow
-execute as @e[type=minecraft:armor_stand,tag=bw.bed.green] at @s if block ~ ~ ~ minecraft:lime_bed run function bw:respawn/green
-execute as @e[type=minecraft:armor_stand,tag=bw.bed.blue] at @s if block ~ ~ ~ minecraft:light_blue_bed run function bw:respawn/blue
+execute as @e[tag=bw.bed.red] at @s if block ~ ~ ~ minecraft:red_bed run function bw:respawn/red
+execute as @e[tag=bw.bed.yellow] at @s if block ~ ~ ~ minecraft:yellow_bed run function bw:respawn/yellow
+execute as @e[tag=bw.bed.green] at @s if block ~ ~ ~ minecraft:lime_bed run function bw:respawn/green
+execute as @e[tag=bw.bed.blue] at @s if block ~ ~ ~ minecraft:light_blue_bed run function bw:respawn/blue
 ##END##
 
 ## set spec
-execute as @e[type=minecraft:armor_stand,tag=bw.bed.red] at @s unless block ~ ~ ~ minecraft:red_bed as @a[team=red,scores={bw.death.bed=1..}] run function bw:respawn/joinspecingame
-execute as @e[type=minecraft:armor_stand,tag=bw.bed.yellow] at @s unless block ~ ~ ~ minecraft:yellow_bed as @a[team=yellow,scores={bw.death.bed=1..}] run function bw:respawn/joinspecingame
-execute as @e[type=minecraft:armor_stand,tag=bw.bed.green] at @s unless block ~ ~ ~ minecraft:lime_bed as @a[team=green,scores={bw.death.bed=1..}] run function bw:respawn/joinspecingame
-execute as @e[type=minecraft:armor_stand,tag=bw.bed.blue] at @s unless block ~ ~ ~ minecraft:light_blue_bed as @a[team=blue,scores={bw.death.bed=1..}] run function bw:respawn/joinspecingame
+execute as @e[tag=bw.bed.red] at @s unless block ~ ~ ~ minecraft:red_bed as @a[team=red,scores={bw.death.bed=1..}] run function bw:respawn/joinspecingame
+execute as @e[tag=bw.bed.yellow] at @s unless block ~ ~ ~ minecraft:yellow_bed as @a[team=yellow,scores={bw.death.bed=1..}] run function bw:respawn/joinspecingame
+execute as @e[tag=bw.bed.green] at @s unless block ~ ~ ~ minecraft:lime_bed as @a[team=green,scores={bw.death.bed=1..}] run function bw:respawn/joinspecingame
+execute as @e[tag=bw.bed.blue] at @s unless block ~ ~ ~ minecraft:light_blue_bed as @a[team=blue,scores={bw.death.bed=1..}] run function bw:respawn/joinspecingame
 
 scoreboard players reset @a bw.death.bed
 ##END##

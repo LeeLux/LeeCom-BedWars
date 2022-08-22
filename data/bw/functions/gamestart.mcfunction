@@ -79,9 +79,9 @@ execute if score bw.team.blue bw.teams matches 1.. run function bw:beds/blue
 ##END##
 
 ##set chests##
-execute as @e[type=armor_stand,tag=bw.chest] at @s run data merge block ~ ~ ~ {Items: []}
-execute as @e[type=armor_stand,tag=bw.chest] at @s run fill ~ ~ ~ ~ ~ ~ air replace chest
-execute as @e[type=armor_stand,tag=bw.chest] at @s run fill ~ ~ ~ ~ ~ ~ chest replace air
+execute as @e[tag=bw.chest] at @s run data merge block ~ ~ ~ {Items: []}
+execute as @e[tag=bw.chest] at @s run fill ~ ~ ~ ~ ~ ~ air replace chest
+execute as @e[tag=bw.chest] at @s run fill ~ ~ ~ ~ ~ ~ chest replace air
 ##END##
 
 ##tp player to there respawnpoint##
