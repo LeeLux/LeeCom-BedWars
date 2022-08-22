@@ -87,7 +87,8 @@ scoreboard players reset @a[scores={bw.gamestart=1..}] bw.gamestart
 ##END##
 
 ## Manually draw and auto timer runs out draw
-execute as @a if score @s bw.drawforce matches 1.. run function bw:gameend/time
+execute as @a if score @s bw.drawforce matches 1.. if score bw.gamestate BedWars matches 1.. run function bw:gameend/time
+execute as @a if score @s bw.drawforce matches 1.. unless score bw.gamestate BedWars matches 1.. run tellraw @a[tag=bw.admin] [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text": "The game is not running and can therefor not be determent to a draw!"}]
 scoreboard players reset @a[scores={bw.drawforce=1..}] bw.drawforce
 execute if score bw.gametime BedWars matches 3600.. run function bw:gameend/time
 ##END##
