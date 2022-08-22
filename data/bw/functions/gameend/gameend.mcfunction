@@ -9,10 +9,16 @@ scoreboard players set bw.gamestate BedWars 0
 ##END##
 
 ##general ending visials and sounds##
-playsound minecraft:ui.toast.challenge_complete voice @a ~ ~ ~
+execute at @a run playsound minecraft:ui.toast.challenge_complete voice @a ~ ~ ~
 ##END##
     
 ##optional team leave##
+#if keeptime is aktiv/on and you are spec but were in a team you go back into that team
+team join blue @a[tag=bw.playedteamblue,team=spec]
+team join green @a[tag=bw.playedteamgreen,team=spec]
+team join red @a[tag=bw.playedteamred,team=spec]
+team join yellow @a[tag=bw.playedteamyellow,team=spec]
+
 execute unless score bw.keepteam BedWars matches 1 run team leave @a
 ##END##
 

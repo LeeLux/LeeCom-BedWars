@@ -11,7 +11,6 @@ team join spec @s
 gamemode spectator @s
 function bw:respawn/spec
 tp @s @e[tag=bw.respawn.spec,limit=1]
-function bw:gameend/removeplayedteamtag
 
 #stats#
 scoreboard players add @s bws.gotspectator 1
