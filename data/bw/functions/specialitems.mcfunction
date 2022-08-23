@@ -14,6 +14,8 @@ tp @e[type=chicken,limit=1] ~ -1000 ~
 
 ## brige egg
 execute as @e[type=minecraft:egg,nbt={Item: {tag: {Tags: ["bw.brigeegg"]}}}] at @s run fill ^-1 ^-2 ^-1 ^1 ^-2 ^-1 minecraft:cut_sandstone replace air
+scoreboard players add @e[type=minecraft:egg,nbt={Item: {tag: {Tags: ["bw.brigeegg"]}}}] bw.brigeeggtimer 1
+execute as @e[type=minecraft:egg,nbt={Item: {tag: {Tags: ["bw.brigeegg"]}}}] if score bw.removerticks bw.brigeeggtimer < @s bw.brigeeggtimer run kill @s[type=!player]
 ##END##
 
 ## TNT

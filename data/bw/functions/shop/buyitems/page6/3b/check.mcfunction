@@ -4,7 +4,7 @@
 #         Please don't claim this as your own work!        #
 # ======================================================== #
 #in witch slot the resource is (slot of what you want to buy + 9)
-function bw:shop/buyitems/slot/11
+function bw:shop/buyitems/slot/12
 #gets you resources to score agan (just backup/just in case)
 function bw:shop/resourcetoscore
 #resource.1
