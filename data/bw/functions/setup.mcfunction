@@ -136,8 +136,8 @@ scoreboard objectives add bw.shop.predi dummy
 scoreboard objectives add bw.shopreset trigger
 scoreboard objectives add bw.keepteam trigger
 scoreboard objectives add bw.updateshop trigger
-#scoreboard objectives add bw.
-#scoreboard objectives add bw.
+scoreboard objectives add bw.normalregen trigger
+scoreboard objectives add bw.brigeeggtimer dummy
 #scoreboard objectives add bw.
 #scoreboard objectives add bw.
 #scoreboard objectives add bw.

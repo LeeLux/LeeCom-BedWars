@@ -52,6 +52,10 @@ execute as @a[scores={bw.keepteam=1..}] run function bw:settosettings/keepteam
 execute as @a[scores={bw.updateshop=1..}] run function bw:shop/updateshop
 #END#
 
+# Set normalregen to BEDWARS Settings
+execute as @a[scores={bw.normalregen=1..}] run function bw:settosettings/normalregen
+#END#
+
 ## set spawn rate of resources
 #spawn rate bronce##
 execute as @a[scores={bw.spawn.bronce=1..},limit=1] run function bw:settosettings/bronce_spawn

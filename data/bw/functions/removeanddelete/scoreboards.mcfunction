@@ -81,6 +81,10 @@ scoreboard objectives remove bw.shop.predi
 scoreboard objectives remove shopreset
 scoreboard objectives remove bw.keepteam
 scoreboard objectives remove bw.updateshop
+scoreboard objectives remove bw.normalregen
+scoreboard objectives remove bw.brigeeggtimer
+#scoreboard objectives remove bw.
+#scoreboard objectives remove bw.
 #scoreboard objectives remove bw.
 #scoreboard objectives remove bw.
 #scoreboard objectives remove bw.

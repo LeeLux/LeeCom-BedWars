@@ -29,6 +29,7 @@ scoreboard players enable @a[tag=bw.admin] bw.setactionbar
 scoreboard players enable @a[tag=bw.admin] bw.shopreset
 scoreboard players enable @a[tag=bw.admin] bw.keepteam
 scoreboard players enable @a[tag=bw.admin] bw.updateshop
+scoreboard players enable @a[tag=bw.admin] bw.normalregen
 #everyone#
 execute if score bw.gamestate BedWars matches 0 run scoreboard players enable @a bw.join.red
 execute if score bw.gamestate BedWars matches 0 run scoreboard players enable @a bw.join.yellow
@@ -115,6 +116,10 @@ execute if score bw.uptimeday bw.stats matches 8.. run scoreboard players set bw
 
 ## doImmediateRespawn as 1 or 0 in BedWars
 execute store result score bw.doImmediateRespawn BedWars run gamerule doImmediateRespawn
+##END##
+
+## making nobody need the eat or lose hunger
+effect give @a minecraft:saturation 60000 0 true
 ##END##
 
 schedule function bw:main1s 1s

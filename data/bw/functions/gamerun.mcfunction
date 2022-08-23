@@ -3,6 +3,7 @@
 # https://www.youtube.com/channel/UCTL2EnToGrLXZaHV7oYHRDg #
 #         Please don't claim this as your own work!        #
 # ======================================================== #
+#is ticked if game is running
 
 ## calls func. if a team member destroys his own bed (replace it, particles etc.)
 execute as @a[team=red,scores={red.broken=1..}] run function bw:ownbedbroken/red
