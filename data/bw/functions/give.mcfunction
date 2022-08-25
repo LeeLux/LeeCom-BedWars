@@ -61,7 +61,9 @@ give @s warped_sign{display: {Name: '[{"text": "","color": "white","italic":fals
 
 give @s warped_sign{display: {Name: '[{"text": "","color": "white","italic":false},{"text":"[BW] ","color":"green"},{"text":"Join ","color":"white","italic":false},{"text":"Blue ","color":"blue","italic":false},{"text":"Team","color":"white","italic":false}]'}, BlockEntityTag: {Text1: '{"text":"[Right click]","color":"yellow","clickEvent":{"action":"run_command","value":"/trigger bw.join.blue"}}', Text3: '{"text":"to join team","color":"white"}', Text4: '{"text":"Blue","color":"blue"}'}} 1
 
-give @s warped_sign{display: {Name: '[{"text": "","color": "white","italic":false},{"text":"[BW] ","color":"green"},{"text":"Game Start","color":"white","italic":false}]'}, BlockEntityTag: {Text1: '{"text":"[Right click]","color":"yellow","clickEvent":{"action":"run_command","value":"/trigger bw.gamestart"}}', Text3: '{"text":"to start the","color":"white"}', Text4: '{"text":"Game!","color":"yellow"}'}} 1
+give @s crimson_sign{display: {Name: '[{"text": "","color": "white","italic":false},{"text":"[BW] ","color":"green"},{"text":"Game Start","color":"white","italic":false}]'}, BlockEntityTag: {Text1: '{"text":"[Right click]","color":"yellow","clickEvent":{"action":"run_command","value":"/trigger bw.gamestart"}}', Text3: '{"text":"to start the","color":"white"}', Text4: '{"text":"Game!","color":"yellow"}'}} 1
+
+give @s crimson_sign{display: {Name: '[{"text": "","color": "white","italic":false},{"text":"[BW] ","color":"green"},{"text":"Join ","color":"white","italic":false},{"text":"Empty ","color":"gray","italic":false},{"text":"Team","color":"white","italic":false}]'}, BlockEntityTag: {Text1: '{"text":"[Right click]","color":"yellow","clickEvent":{"action":"run_command","value":"/trigger bw.join.empty"}}', Text3: '{"text":"to leave all teams","color":"white"}'}} 1
 ##END##
 
 ##chests##
