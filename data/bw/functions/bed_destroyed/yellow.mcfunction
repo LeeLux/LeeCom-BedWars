@@ -5,13 +5,13 @@
 # ======================================================== #
 
 ##bed destroy yellow##
-tellraw @a [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"selector":"@a[scores={yellow.broken=..1}]"},{"text":" has destroyed the "},{"text":"Yellow Bed","color":"yellow"},{"text":"!","color":"white"}]
+tellraw @a [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"selector":"@a[scores={bw.yellow.broken=..1}]"},{"text":" has destroyed the "},{"text":"Yellow Bed","color":"yellow"},{"text":"!","color":"white"}]
 title @a times 10 70 20
 title @a[team=yellow] title [{"text": "Bed destoyed!","color": "yellow"}]
-title @a[team=yellow] subtitle [{"selector":"@a[scores={yellow.broken=..1}]"},{"text": " destroyed you bed!","color": "yellow"}]
+title @a[team=yellow] subtitle [{"selector":"@a[scores={bw.yellow.broken=..1}]"},{"text": " destroyed you bed!","color": "yellow"}]
 playsound minecraft:entity.ender_dragon.growl voice @a[team=yellow] ~ ~ ~
 playsound minecraft:entity.ender_dragon.growl voice @s ~ ~ ~
-scoreboard players reset @a[scores={yellow.broken=1..}] yellow.broken
+scoreboard players reset @a[scores={bw.yellow.broken=1..}] bw.yellow.broken
 ##END##
 
 #stats#

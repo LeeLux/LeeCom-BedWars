@@ -79,10 +79,10 @@ scoreboard objectives add bw.name.respawn trigger
 scoreboard objectives add bw.name.bed trigger
 scoreboard objectives add bw.name.other trigger
 scoreboard objectives add Rotation dummy
-scoreboard objectives add blue.broken minecraft.mined:minecraft.light_blue_bed
-scoreboard objectives add red.broken minecraft.mined:minecraft.red_bed
-scoreboard objectives add yellow.broken minecraft.mined:minecraft.yellow_bed
-scoreboard objectives add green.broken minecraft.mined:minecraft.lime_bed
+scoreboard objectives add bw.blue.broken minecraft.mined:minecraft.light_blue_bed
+scoreboard objectives add bw.red.broken minecraft.mined:minecraft.red_bed
+scoreboard objectives add bw.yellow.broken minecraft.mined:minecraft.yellow_bed
+scoreboard objectives add bw.green.broken minecraft.mined:minecraft.lime_bed
 #scoreboard objectives add bw.
 scoreboard objectives add bw.shop.page dummy
 scoreboard objectives add bw.shop.temp dummy
@@ -138,7 +138,7 @@ scoreboard objectives add bw.keepteam trigger
 scoreboard objectives add bw.updateshop trigger
 scoreboard objectives add bw.normalregen trigger
 scoreboard objectives add bw.brigeeggtimer dummy
-#scoreboard objectives add bw.
+scoreboard objectives add bw.timer dummy
 #scoreboard objectives add bw.
 #scoreboard objectives add bw.
 #scoreboard objectives add bw.

@@ -24,10 +24,10 @@ scoreboard objectives remove bw.name.respawn
 scoreboard objectives remove bw.name.bed
 scoreboard objectives remove bw.name.other
 scoreboard objectives remove Rotation
-scoreboard objectives remove blue.broken
-scoreboard objectives remove red.broken
-scoreboard objectives remove yellow.broken
-scoreboard objectives remove green.broken
+scoreboard objectives remove bw.blue.broken
+scoreboard objectives remove bw.red.broken
+scoreboard objectives remove bw.yellow.broken
+scoreboard objectives remove bw.green.broken
 #scoreboard objectives remove bw.
 scoreboard objectives remove bw.shop.page
 scoreboard objectives remove bw.shop.temp
@@ -83,7 +83,7 @@ scoreboard objectives remove bw.keepteam
 scoreboard objectives remove bw.updateshop
 scoreboard objectives remove bw.normalregen
 scoreboard objectives remove bw.brigeeggtimer
-#scoreboard objectives remove bw.
+scoreboard objectives remove bw.timer
 #scoreboard objectives remove bw.
 #scoreboard objectives remove bw.
 #scoreboard objectives remove bw.

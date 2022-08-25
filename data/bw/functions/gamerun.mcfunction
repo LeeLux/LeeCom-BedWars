@@ -6,17 +6,17 @@
 #is ticked if game is running
 
 ## calls func. if a team member destroys his own bed (replace it, particles etc.)
-execute as @a[team=red,scores={red.broken=1..}] run function bw:ownbedbroken/red
-execute as @a[team=blue,scores={blue.broken=1..}] run function bw:ownbedbroken/blue
-execute as @a[team=green,scores={green.broken=1..}] run function bw:ownbedbroken/green
-execute as @a[team=yellow,scores={yellow.broken=1..}] run function bw:ownbedbroken/yellow
+execute as @a[team=red,scores={bw.red.broken=1..}] run function bw:ownbedbroken/red
+execute as @a[team=blue,scores={bw.blue.broken=1..}] run function bw:ownbedbroken/blue
+execute as @a[team=green,scores={bw.green.broken=1..}] run function bw:ownbedbroken/green
+execute as @a[team=yellow,scores={bw.yellow.broken=1..}] run function bw:ownbedbroken/yellow
 ##END##
 
 ## reset bed broken counter if the bed was the same color as the team
-scoreboard players reset @a[team=red,scores={red.broken=1..}] red.broken
-scoreboard players reset @a[team=blue,scores={blue.broken=1..}] blue.broken
-scoreboard players reset @a[team=green,scores={green.broken=1..}] green.broken
-scoreboard players reset @a[team=yellow,scores={yellow.broken=1..}] yellow.broken
+scoreboard players reset @a[team=red,scores={bw.red.broken=1..}] bw.red.broken
+scoreboard players reset @a[team=blue,scores={bw.blue.broken=1..}] bw.blue.broken
+scoreboard players reset @a[team=green,scores={bw.green.broken=1..}] bw.green.broken
+scoreboard players reset @a[team=yellow,scores={bw.yellow.broken=1..}] bw.yellow.broken
 ##END##
 
 # Spawn protection v1
