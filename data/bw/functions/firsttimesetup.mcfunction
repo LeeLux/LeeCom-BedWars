@@ -39,7 +39,13 @@ scoreboard players set bw.spawn.gold BedWars 30
 scoreboard players set bw.spawn.platin BedWars 60
 ##END##
 ## set default ticks after a brige egg disappears
-scoreboard players set bw.removerticks bw.brigeeggtimer 80
+scoreboard players set bw.removerticks bw.brigeeggtimer 40
+##END##
+## set default auto draw and bed destruction times and bool
+scoreboard players set bw.autodrawbool BedWars 1
+scoreboard players set bw.autodrawtime BedWars 3600
+scoreboard players set bw.bedgonebool BedWars 1
+scoreboard players set bw.bedgonetime BedWars 2400
 ##END##
 ##=============END===============##
 ## Set default minecarft settings weatehr etc..

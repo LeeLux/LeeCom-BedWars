@@ -76,6 +76,7 @@ execute if score bw.team.red bw.teams matches 1.. unless score bw.team.yellow bw
 execute if score bw.team.yellow bw.teams matches 1.. unless score bw.team.red bw.teams matches 1.. unless score bw.team.green bw.teams matches 1.. unless score bw.team.blue bw.teams matches 1.. run function bw:gameend/yellow
 execute if score bw.team.green bw.teams matches 1.. unless score bw.team.yellow bw.teams matches 1.. unless score bw.team.red bw.teams matches 1.. unless score bw.team.blue bw.teams matches 1.. run function bw:gameend/green
 execute if score bw.team.blue bw.teams matches 1.. unless score bw.team.yellow bw.teams matches 1.. unless score bw.team.green bw.teams matches 1.. unless score bw.team.red bw.teams matches 1.. run function bw:gameend/blue
+##END##
 
 ## no team error gaemend
 function bw:teamsum

@@ -56,6 +56,22 @@ execute as @a[scores={bw.updateshop=1..}] run function bw:shop/updateshop
 execute as @a[scores={bw.normalregen=1..}] run function bw:settosettings/normalregen
 #END#
 
+# set bw.bedgonetime so BEDWARS Settings
+execute as @a[scores={bw.bedgonetime=1..}] run function bw:settosettings/bedgonetime
+#END#
+
+# set bw.bedgonebool so BEDWARS Settings
+execute as @a[scores={bw.bedgonebool=1..}] run function bw:settosettings/bedgonebool
+#END#
+
+# set bw.autodrawtime so BEDWARS Settings
+execute as @a[scores={bw.autodrawtime=1..}] run function bw:settosettings/autodrawtime
+#END#
+
+# set bw.autodrawbool so BEDWARS Settings
+execute as @a[scores={bw.autodrawbool=1..}] run function bw:settosettings/autodrawbool
+#END#
+
 ## set spawn rate of resources
 #spawn rate bronce##
 execute as @a[scores={bw.spawn.bronce=1..},limit=1] run function bw:settosettings/bronce_spawn

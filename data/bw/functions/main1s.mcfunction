@@ -30,6 +30,10 @@ scoreboard players enable @a[tag=bw.admin] bw.shopreset
 scoreboard players enable @a[tag=bw.admin] bw.keepteam
 scoreboard players enable @a[tag=bw.admin] bw.updateshop
 scoreboard players enable @a[tag=bw.admin] bw.normalregen
+scoreboard players enable @a[tag=bw.admin] bw.bedgonetime
+scoreboard players enable @a[tag=bw.admin] bw.bedgonebool
+scoreboard players enable @a[tag=bw.admin] bw.autodrawtime
+scoreboard players enable @a[tag=bw.admin] bw.autodrawbool
 #everyone#
 execute if score bw.gamestate BedWars matches 0 run scoreboard players enable @a bw.join.red
 execute if score bw.gamestate BedWars matches 0 run scoreboard players enable @a bw.join.yellow

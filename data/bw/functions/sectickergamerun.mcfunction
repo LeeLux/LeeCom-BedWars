@@ -40,6 +40,14 @@ execute unless score bw.hours bw.timer matches 1.. if score bw.minutes bw.timer 
 execute unless score bw.hours bw.timer matches 1.. unless score bw.minutes bw.timer matches 1.. run title @a actionbar [{"nbt":"TimeColor","storage": "minecraft:bedwars","interpret": true},{"score":{"name": "bw.seconds","objective": "bw.timer","value": "erroe"}},{"text": "s"}]
 ##END##
 
+## auto bed destruction if enabled
+execute if score bw.bedgonebool BedWars matches 1 run function bw:bedgone/warnings
+##END##
+
+## auto draw if enabled
+execute if score bw.autodrawbool BedWars matches 1 run function bw:autodraw/warnings
+##END##
+
 #actionbar#
 function bw:actionbar/recourcetimer
 #END#
