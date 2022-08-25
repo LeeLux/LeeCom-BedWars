@@ -108,7 +108,7 @@ scoreboard objectives add bw.join.empty trigger
 scoreboard objectives add bw.Y dummy
 scoreboard objectives add bw.setYdeath trigger
 scoreboard objectives add bw.clear dummy
-scoreboard objectives add bw.sidebar dummy {"text":"BedWars","color":"yellow","bold": true}
+scoreboard objectives add bw.sidebar dummy {"text":"BedWars","color":"gold","bold": true}
 scoreboard objectives add bw.teams dummy
 scoreboard objectives add bw.alwaysshop trigger
 scoreboard objectives add bw.bedselfbroken dummy
@@ -266,10 +266,11 @@ team join sblue §9Blue§7:
 
 ##set sidbar
 scoreboard players set §7. bw.sidebar 9
-scoreboard players set §cRed§8: bw.sidebar 8
-scoreboard players set §eYellow§8: bw.sidebar 7
-scoreboard players set §aGreen§8: bw.sidebar 6
-scoreboard players set §9Blue§8: bw.sidebar 5
+scoreboard players set §cRed§7: bw.sidebar 8
+scoreboard players set §eYellow§7: bw.sidebar 7
+scoreboard players set §aGreen§7: bw.sidebar 6
+scoreboard players set §9Blue§7: bw.sidebar 5
+scoreboard players set §7' bw.sidebar 4
 ##END##
 
 ##first time install##
