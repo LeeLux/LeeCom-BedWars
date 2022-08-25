@@ -94,7 +94,7 @@ scoreboard players reset @a[scores={bw.gamestart=1..}] bw.gamestart
 execute as @a if score @s bw.drawforce matches 1.. unless score bw.gamestate BedWars matches 1.. run tellraw @a[tag=bw.admin] [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text": "The game is not running and can therefor not be determent to a draw!"}]
 execute as @a if score @s bw.drawforce matches 1.. if score bw.gamestate BedWars matches 1.. run function bw:gameend/time
 scoreboard players reset @a[scores={bw.drawforce=1..}] bw.drawforce
-execute if score bw.gametime BedWars matches 3600.. run function bw:gameend/time
+#execute if score bw.gametime BedWars matches 3600.. run function bw:gameend/time
 ##END##
 
 ## run visiblenames code
@@ -239,4 +239,9 @@ execute if score bw.doImmediateRespawn BedWars matches 1 as @a[scores={bw.death=
 execute as @a if score @s bw.death matches ..-1 run scoreboard players add @s bw.death 1
 scoreboard players set @a[scores={bw.death=1..}] bw.death -1
 execute as @a[tag=bw.givebrakingtoolafterrespawn,scores={bw.death=0}] run function bw:respawn
+##END##
+## arrow for bow and crossbow pucheses
+#bow
+execute as @e[type=item,nbt={Item:{id:"minecraft:bow"}},nbt=!{Item:{tag:{Tags:["bw.dropedarrow"]}}}] at @s run summon item ~ ~ ~ {PickupDelay:0s,Item:{id:"minecraft:arrow",Count:1b,tag:{HideFlags:94,CanPlaceOn:["#bw.place"],CanDestroy:["#bw.break"]}}}
+execute as @e[type=item,nbt={Item:{id:"minecraft:bow"}},nbt=!{Item:{tag:{Tags:["bw.dropedarrow"]}}}] at @s run data modify entity @s Item.tag.Tags append value "bw.dropedarrow"
 ##END##

@@ -14,7 +14,7 @@ tellraw @a [{"text":"# ======================================== #","color":"dark
 #END#
 
 ## set the prefix
-data merge storage bedwars {Prefix: '[{"text":"","color":"white"},{"text":"[BW] ","color":"green"}]', StatsPrefix: '[{"text":"","color":"white"},{"text":"[BWStats] ","color":"gold"}]', Resources: {Items: [], CurrenCount: 9}}
+data merge storage bedwars {Prefix: '[{"text":"","color":"white"},{"text":"[BW] ","color":"green"}]', StatsPrefix: '[{"text":"","color":"white"},{"text":"[BWStats] ","color":"gold"}]', Resources: {Items: [], CurrenCount: 9},TimeColor:'{"text":"","color":"white"}'}
 ### =============================== ###
 ### THE DEFAULT NUMBERS AND SCORES! ###
 ### =============================== ###
