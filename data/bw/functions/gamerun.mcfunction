@@ -68,6 +68,12 @@ execute as @e[tag=bw.bed.yellow] at @s unless block ~ ~ ~ minecraft:yellow_bed a
 execute as @e[tag=bw.bed.green] at @s unless block ~ ~ ~ minecraft:lime_bed as @a[team=green,scores={bw.death.bed=1..}] run function bw:respawn/joinspecingame
 execute as @e[tag=bw.bed.blue] at @s unless block ~ ~ ~ minecraft:light_blue_bed as @a[team=blue,scores={bw.death.bed=1..}] run function bw:respawn/joinspecingame
 
+#death without beds
+execute unless entity @e[tag=bw.bed.red] as @a[team=red,scores={bw.death.bed=1..}] run function bw:respawn/joinspecingame
+execute unless entity @e[tag=bw.bed.yellow] as @a[team=yellow,scores={bw.death.bed=1..}] run function bw:respawn/joinspecingame
+execute unless entity @e[tag=bw.bed.green] as @a[team=green,scores={bw.death.bed=1..}] run function bw:respawn/joinspecingame
+execute unless entity @e[tag=bw.bed.blue] as @a[team=blue,scores={bw.death.bed=1..}] run function bw:respawn/joinspecingame
+
 scoreboard players reset @a bw.death.bed
 ##END##
 
