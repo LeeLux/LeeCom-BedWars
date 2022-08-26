@@ -127,4 +127,9 @@ execute store result score bw.doImmediateRespawn BedWars run gamerule doImmediat
 effect give @a minecraft:saturation 60000 0 true
 ##END##
 
+## normalregen
+execute unless score bw.normalregen BedWars matches 1 run gamerule naturalRegeneration false
+execute unless score bw.normalregen BedWars matches 1 run effect give @a regeneration 6000 0 true
+##END##
+
 schedule function bw:main1s 1s

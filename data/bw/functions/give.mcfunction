@@ -70,7 +70,7 @@ give @s crimson_sign{display: {Name: '[{"text": "","color": "white","italic":fal
 ##END##
 
 ##chests##
-give @s bat_spawn_egg{display: {Name: '[{"text": "","color": "white","italic":false},{"text":"[BW] ","color":"green"},{"text":"Chest ","color":"dark_gray","italic":false},{"text":"","color":"white","italic":false}]'}, EntityTag: {id: "minecraft:armor_stand", NoGravity: 1b, Silent: 1b, Invulnerable: 1b, Marker: 1b, Invisible: 1b, NoBasePlate: 1b, Tags: ["bw.chest", "bw.entity", "bw.rotadetoplayer"]}} 1
+give @s bat_spawn_egg{display: {Name: '[{"text": "","color": "white","italic":false},{"text":"[BW] ","color":"green"},{"text":"Chest ","color":"dark_gray","italic":false},{"text":"","color":"white","italic":false}]'}, EntityTag: {id: "minecraft:armor_stand", NoGravity: 1b, Silent: 1b, Invulnerable: 1b, Marker: 1b, Invisible: 1b, NoBasePlate: 1b, Tags: ["bw.chest", "bw.entity", "bw.rotadetoplayer", "bw.other"]}} 1
 
 ##END##
 

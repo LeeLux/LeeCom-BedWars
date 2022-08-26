@@ -330,8 +330,3 @@ setblock 65542 247 65536 barrel[facing=up]{CustomName: '{"text":"Shop page 6" }'
 setblock 65543 247 65536 barrel[facing=up]{CustomName: '{"text":"Shop page 7" }'} keep
 setblock 65544 247 65536 barrel[facing=up]{CustomName: '{"text": "Shop Resources"}'} keep
 #END#
-
-## normalregen init
-execute unless score bw.normalregen BedWars matches 1 run gamerule naturalRegeneration false
-execute unless score bw.normalregen BedWars matches 1 run effect give @a regeneration 6000 0 true
-##END##
