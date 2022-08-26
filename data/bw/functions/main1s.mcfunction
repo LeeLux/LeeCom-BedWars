@@ -35,12 +35,13 @@ scoreboard players enable @a[tag=bw.admin] bw.bedgonebool
 scoreboard players enable @a[tag=bw.admin] bw.autodrawtime
 scoreboard players enable @a[tag=bw.admin] bw.autodrawbool
 #everyone#
-execute if score bw.gamestate BedWars matches 0 run scoreboard players enable @a bw.join.red
-execute if score bw.gamestate BedWars matches 0 run scoreboard players enable @a bw.join.yellow
-execute if score bw.gamestate BedWars matches 0 run scoreboard players enable @a bw.join.green
-execute if score bw.gamestate BedWars matches 0 run scoreboard players enable @a bw.join.blue
-execute if score bw.gamestate BedWars matches 0 run scoreboard players enable @a bw.join.empty
-execute if score bw.gamestate BedWars matches 0 run scoreboard players enable @a bw.gamestart
+scoreboard players enable @a bw.join.red
+scoreboard players enable @a bw.join.yellow
+scoreboard players enable @a bw.join.green
+scoreboard players enable @a bw.join.blue
+scoreboard players enable @a bw.join.empty
+scoreboard players enable @a bw.join.random
+scoreboard players enable @a bw.gamestart
 ##END##
 
 ##invisible minecarts (texturpack) not really my code or ideer##

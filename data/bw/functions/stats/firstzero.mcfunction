@@ -40,8 +40,8 @@ scoreboard players add @s bws.redbed 1
 scoreboard players add @s bws.yellowbed 1
 scoreboard players add @s bws.greenbed 1
 scoreboard players add @s bws.bluebed 1
-#scoreboard players add @s bws.
-#scoreboard players add @s bws.
+scoreboard players add @s bws.playtimemin 1
+scoreboard players add @s bws.playtimehour 1
 #scoreboard players add @s bws.
 #scoreboard players add @s bws.
 #scoreboard players add @s bws.
@@ -84,8 +84,8 @@ scoreboard players remove @s bws.redbed 1
 scoreboard players remove @s bws.yellowbed 1
 scoreboard players remove @s bws.greenbed 1
 scoreboard players remove @s bws.bluebed 1
-#scoreboard players remove @s bws.
-#scoreboard players remove @s bws.
+scoreboard players remove @s bws.playtimemin 1
+scoreboard players remove @s bws.playtimehour 1
 #scoreboard players remove @s bws.
 #scoreboard players remove @s bws.
 #scoreboard players remove @s bws.

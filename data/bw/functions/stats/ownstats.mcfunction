@@ -32,7 +32,7 @@ tellraw @s [{"nbt":"StatsPrefix","storage":"minecraft:bedwars","interpret":true}
 tellraw @s [{"nbt":"StatsPrefix","storage":"minecraft:bedwars","interpret":true},{"text": "Damage dealt "},{"score":{"name": "@s","objective": "bws.damagedealt"},"color": "green"},{"text": " taken "},{"score":{"name": "@s","objective": "bws.damagetaken"},"color": "green"}]
 #beds destroyedf and got spectator and bws.playedgames
 tellraw @s [{"nbt":"StatsPrefix","storage":"minecraft:bedwars","interpret":true},{"text": "Beds destroyed "},{"score":{"name": "@s","objective": "bws.destroyedbed"},"color": "green"},{"text": " Got spectator "},{"score":{"name": "@s","objective": "bws.gotspectator"},"color": "green"},{"text": " Total games "},{"score":{"name": "@s","objective": "bws.playedgames"},"color": "green"}]
-#total plkay time
+#total play time and ingame time
 tellraw @s [{"nbt":"StatsPrefix","storage":"minecraft:bedwars","interpret":true},{"text": "Online time "},{"score":{"name": "@s","objective": "bws.playtimehour"},"color": "green"},{"text": "h"},{"score":{"name": "@s","objective": "bws.playtimemin"},"color": "green"},{"text": "m"},{"text": " Ingame time "},{"score":{"name": "@s","objective": "bws.ingamehour"},"color": "green"},{"text": "h"},{"score":{"name": "@s","objective": "bws.ingamemin"},"color": "green"},{"text": "m"}]
 #end
 tellraw @s [{"nbt":"StatsPrefix","storage":"minecraft:bedwars","interpret":true},{"text": "=== [END] ===","color": "gold"}]

@@ -62,13 +62,13 @@ execute if score bw.team.yellow bw.teams matches 6 as @e[tag=bw.bed.yellow] at @
 execute if score bw.team.yellow bw.teams matches 6 as @e[tag=bw.bed.yellow] at @s if block ~ ~ ~ minecraft:yellow_bed run team modify syellow suffix [{"text": " ❤ ","color": "red"},{"text": "6  ","color": "gold"}]
 #7
 execute if score bw.team.yellow bw.teams matches 7 as @e[tag=bw.bed.yellow] at @s unless block ~ ~ ~ minecraft:yellow_bed run team modify syellow suffix [{"text": " ❤ ","color": "gray"},{"text": "7  ","color": "gold"}]
-execute if score bw.team.yellow bw.teams matches 7 as @e[tag=bw.bed.yellow] at @s if block ~ ~ ~ minecraft:yellow_bed run team modify syellow suffix [{"text": " ❤ ","color": "gold"},{"text": "7  ","color": "gold"}]
+execute if score bw.team.yellow bw.teams matches 7 as @e[tag=bw.bed.yellow] at @s if block ~ ~ ~ minecraft:yellow_bed run team modify syellow suffix [{"text": " ❤ ","color": "red"},{"text": "7  ","color": "gold"}]
 #8
 execute if score bw.team.yellow bw.teams matches 8 as @e[tag=bw.bed.yellow] at @s unless block ~ ~ ~ minecraft:yellow_bed run team modify syellow suffix [{"text": " ❤ ","color": "gray"},{"text": "8  ","color": "gold"}]
-execute if score bw.team.yellow bw.teams matches 8 as @e[tag=bw.bed.yellow] at @s if block ~ ~ ~ minecraft:yellow_bed run team modify syellow suffix [{"text": " ❤ ","color": "gold"},{"text": "8  ","color": "gold"}]
+execute if score bw.team.yellow bw.teams matches 8 as @e[tag=bw.bed.yellow] at @s if block ~ ~ ~ minecraft:yellow_bed run team modify syellow suffix [{"text": " ❤ ","color": "red"},{"text": "8  ","color": "gold"}]
 #8+
 execute if score bw.team.yellow bw.teams matches 9.. as @e[tag=bw.bed.yellow] at @s unless block ~ ~ ~ minecraft:yellow_bed run team modify syellow suffix [{"text": " ❤ ","color": "gray"},{"text": "8+  ","color": "gold"}]
-execute if score bw.team.yellow bw.teams matches 9.. as @e[tag=bw.bed.yellow] at @s if block ~ ~ ~ minecraft:yellow_bed run team modify syellow suffix [{"text": " ❤ ","color": "gold"},{"text": "8+  ","color": "gold"}]
+execute if score bw.team.yellow bw.teams matches 9.. as @e[tag=bw.bed.yellow] at @s if block ~ ~ ~ minecraft:yellow_bed run team modify syellow suffix [{"text": " ❤ ","color": "red"},{"text": "8+  ","color": "gold"}]
 ##END##
 
 ##set suffix green##
@@ -95,13 +95,13 @@ execute if score bw.team.green bw.teams matches 6 as @e[tag=bw.bed.green] at @s 
 execute if score bw.team.green bw.teams matches 6 as @e[tag=bw.bed.green] at @s if block ~ ~ ~ minecraft:lime_bed run team modify sgreen suffix [{"text": " ❤ ","color": "red"},{"text": "6  ","color": "gold"}]
 #7
 execute if score bw.team.green bw.teams matches 7 as @e[tag=bw.bed.green] at @s unless block ~ ~ ~ minecraft:lime_bed run team modify sgreen suffix [{"text": " ❤ ","color": "gray"},{"text": "7  ","color": "gold"}]
-execute if score bw.team.green bw.teams matches 7 as @e[tag=bw.bed.green] at @s if block ~ ~ ~ minecraft:lime_bed run team modify sgreen suffix [{"text": " ❤ ","color": "gold"},{"text": "7  ","color": "gold"}]
+execute if score bw.team.green bw.teams matches 7 as @e[tag=bw.bed.green] at @s if block ~ ~ ~ minecraft:lime_bed run team modify sgreen suffix [{"text": " ❤ ","color": "red"},{"text": "7  ","color": "gold"}]
 #8
 execute if score bw.team.green bw.teams matches 8 as @e[tag=bw.bed.green] at @s unless block ~ ~ ~ minecraft:lime_bed run team modify sgreen suffix [{"text": " ❤ ","color": "gray"},{"text": "8  ","color": "gold"}]
-execute if score bw.team.green bw.teams matches 8 as @e[tag=bw.bed.green] at @s if block ~ ~ ~ minecraft:lime_bed run team modify sgreen suffix [{"text": " ❤ ","color": "gold"},{"text": "8  ","color": "gold"}]
+execute if score bw.team.green bw.teams matches 8 as @e[tag=bw.bed.green] at @s if block ~ ~ ~ minecraft:lime_bed run team modify sgreen suffix [{"text": " ❤ ","color": "red"},{"text": "8  ","color": "gold"}]
 #8+
 execute if score bw.team.green bw.teams matches 9.. as @e[tag=bw.bed.green] at @s unless block ~ ~ ~ minecraft:lime_bed run team modify sgreen suffix [{"text": " ❤ ","color": "gray"},{"text": "8+  ","color": "gold"}]
-execute if score bw.team.green bw.teams matches 9.. as @e[tag=bw.bed.green] at @s if block ~ ~ ~ minecraft:lime_bed run team modify sgreen suffix [{"text": " ❤ ","color": "gold"},{"text": "8+  ","color": "gold"}]
+execute if score bw.team.green bw.teams matches 9.. as @e[tag=bw.bed.green] at @s if block ~ ~ ~ minecraft:lime_bed run team modify sgreen suffix [{"text": " ❤ ","color": "red"},{"text": "8+  ","color": "gold"}]
 ##END##
 
 ##set suffix blue##

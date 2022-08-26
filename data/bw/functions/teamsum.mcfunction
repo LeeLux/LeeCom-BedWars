@@ -15,3 +15,4 @@ execute if score bw.team.red bw.teams matches 1.. run scoreboard players add bw.
 execute if score bw.team.yellow bw.teams matches 1.. run scoreboard players add bw.teams bw.teams 1
 execute if score bw.team.green bw.teams matches 1.. run scoreboard players add bw.teams bw.teams 1
 execute if score bw.team.blue bw.teams matches 1.. run scoreboard players add bw.teams bw.teams 1
+execute if score bw.team.random bw.teams matches 2.. run scoreboard players add bw.teams bw.teams 2

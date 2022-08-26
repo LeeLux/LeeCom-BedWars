@@ -7,45 +7,45 @@
 
 tellraw @a [{"text":"Datapack: ","color":"green"},{"text":"LeeCom BedWars ","color":"gold"},{"text":" started!","color":"green"},{"text":" v0.07en","color":"gold"}]
 
-## start main1s.mcfunction for not so important things ##
+## start main1s.mcfunction for not so important things
 function bw:main1s
-## END ##
+##END##
 
-### creating teams ###
-##spec##
-team add spec [{"text": "Spec","color": "gray"},{"text": " | ","color": "gray"}]
+### creating teams
+## spec
+team add spec
 team modify spec color gray
 #team modify spec prefix [{"text": "Spec","color": "gray"},{"text": " | ","color": "gray"}]
 team modify spec prefix [{"text": "S ","color": "gray"}]
 team modify spec friendlyFire false
 team modify spec collisionRule never
 team modify spec seeFriendlyInvisibles true
-##red##
-team add red [{"text": "Red","color": "red"},{"text": " | ","color": "gray"}]
+## red
+team add red
 team modify red color red
 #team modify red prefix [{"text": "Red","color": "red"},{"text": " | ","color": "gray"}]
 team modify red prefix [{"text": "R ","color": "red"}]
 team modify red friendlyFire false
 team modify red collisionRule never
 team modify red seeFriendlyInvisibles true
-##yellow
-team add yellow [{"text": "Yellow","color": "yellow"},{"text": " | ","color": "gray"}]
+## yellow
+team add yellow
 team modify yellow color yellow
 #team modify yellow prefix [{"text": "Yellow","color": "yellow"},{"text": " | ","color": "gray"}]
 team modify yellow prefix [{"text": "Y ","color": "yellow"}]
 team modify yellow friendlyFire false
 team modify yellow collisionRule never
 team modify yellow seeFriendlyInvisibles true
-##green
-team add green [{"text": "Green","color": "green"},{"text": " | ","color": "gray"}]
+## green
+team add green
 team modify green color green
 #team modify green prefix [{"text": "Green","color": "green"},{"text": " | ","color": "gray"}]
 team modify green prefix [{"text": "G ","color": "green"}]
 team modify green friendlyFire false
 team modify green collisionRule never
 team modify green seeFriendlyInvisibles true
-##blue##
-team add blue [{"text": "Blue","color": "blue"},{"text": " | ","color": "gray"}]
+## blue
+team add blue
 team modify blue color blue
 #team modify blue prefix [{"text": "Blue","color": "blue"},{"text": " | ","color": "gray"}]
 team modify blue prefix [{"text": "B ","color": "blue"}]
@@ -53,7 +53,15 @@ team modify blue friendlyFire false
 team modify blue collisionRule never
 team modify blue seeFriendlyInvisibles true
 
-##more teams for sidbar##
+# enother team for joining a random team
+team add random
+team modify random color dark_gray
+team modify random prefix [{"text": "? ","color": "dark_gray"}]
+team modify random friendlyFire false
+team modify random collisionRule never
+#END#
+
+## more teams for sidbar
 team add sred
 team add syellow
 team add sgreen
@@ -105,6 +113,7 @@ scoreboard objectives add bw.join.yellow trigger
 scoreboard objectives add bw.join.green trigger
 scoreboard objectives add bw.join.blue trigger
 scoreboard objectives add bw.join.empty trigger
+scoreboard objectives add bw.join.random trigger
 scoreboard objectives add bw.Y dummy
 scoreboard objectives add bw.setYdeath trigger
 scoreboard objectives add bw.clear dummy
@@ -114,7 +123,7 @@ scoreboard objectives add bw.alwaysshop trigger
 scoreboard objectives add bw.bedselfbroken dummy
 scoreboard objectives add bw.entity.count dummy
 scoreboard objectives add bw.cancel.clone trigger
-scoreboard objectives add bw.health health {"text":"Health","color":"red","bold": true}
+scoreboard objectives add bw.health health {"text": "❤","color": "red"}
 scoreboard objectives add bw.sethealth trigger
 scoreboard objectives add bw.random dummy
 scoreboard objectives add bw.gameID dummy
@@ -153,7 +162,7 @@ scoreboard objectives add bw.autodrawbool trigger
 #scoreboard objectives add bw.
 #scoreboard objectives add bw.
 #scoreboard objectives add bw.
-## stats scoreboards ##
+## stats scoreboards
 scoreboard objectives add bw.stats dummy
 scoreboard objectives add bws.kills playerKillCount
 scoreboard objectives add bws.deaths deathCount
@@ -231,15 +240,15 @@ scoreboard objectives add bws.kddecimalblu dummy
 ## END ##
 # END #
 
-##Secticker Start##
+## Secticker Start
 execute if score bw.gamestate BedWars matches 0 run function bw:secticker
 ##END##
 
-##start visiblenames 1s repeat function##
+## start visiblenames 1s repeat function
 function bw:visiblenames
 ##END##
 
-##Scoreboars join teams to better identifi them##
+## Scoreboars join teams to better identifi them
 team join red bw.broncetimer
 team join red bw.spawn.bronce
 team join red bw.team.red
@@ -258,21 +267,23 @@ team join blue bw.team.blue
 
 team join spec bw.gametime
 team join spec bw.gamestate
+
+team join random bw.team.random
 ##END##
 
-##lobby spawn##
+## lobby spawn
 execute as @e[tag=bw.lobby.spawn,limit=1] at @s run forceload add ~ ~
 execute if score bw.gamestate BedWars matches 0 as @e[tag=bw.lobby.spawn,limit=1] at @s run spawnpoint @a ~ ~ ~
 ##
 
-##team join sidbar##
+## team join sidbar
 team join sred §cRed§7:
 team join syellow §eYellow§7:
 team join sgreen §aGreen§7:
 team join sblue §9Blue§7:
 ##
 
-##set sidbar
+## set sidbar
 scoreboard players set §7. bw.sidebar 9
 scoreboard players set §cRed§7: bw.sidebar 8
 scoreboard players set §eYellow§7: bw.sidebar 7
@@ -281,7 +292,7 @@ scoreboard players set §9Blue§7: bw.sidebar 5
 scoreboard players set §7' bw.sidebar 4
 ##END##
 
-##first time install##
+## first time install
 execute unless entity @e[type=marker,tag=bw.firstinstall] run function bw:firsttimesetup
 execute unless entity @e[type=marker,tag=bw.firstinstall] run summon marker 0 500 0 {Tags: ["bw.firstinstall", "bw.entity"]}
 ##END##
@@ -319,3 +330,8 @@ setblock 65542 247 65536 barrel[facing=up]{CustomName: '{"text":"Shop page 6" }'
 setblock 65543 247 65536 barrel[facing=up]{CustomName: '{"text":"Shop page 7" }'} keep
 setblock 65544 247 65536 barrel[facing=up]{CustomName: '{"text": "Shop Resources"}'} keep
 #END#
+
+## normalregen init
+execute unless score bw.normalregen BedWars matches 1 run gamerule naturalRegeneration false
+execute unless score bw.normalregen BedWars matches 1 run effect give @a regeneration 6000 0 true
+##END##

@@ -97,11 +97,10 @@ tag @e[tag=bw.shop.need] remove bw.shop.need
 #execute unless score bw.alwaysshop BedWars matches 0 run function bw:shop/shoprun
 ## !! THIS IS THE NEW SYSTEM (JUST SINGLEPLAYER) !! ##
 execute unless score bw.alwaysshop BedWars matches 0 run function bw:shop/runningshop
-## simply swtich not available !
-#END#
+
 
 ## Game Start
-execute as @a if score @s bw.gamestart matches 1.. run function bw:checks/starttest
+execute if score bw.gamestate BedWars matches 0 as @a if score @s bw.gamestart matches 1.. run function bw:checks/starttest
 execute if score bw.gametimer BedWars matches 0 run function bw:gamestart
 scoreboard players reset @a[scores={bw.gamestart=1..}] bw.gamestart
 ##END##
@@ -178,6 +177,13 @@ execute if score bw.gamestate BedWars matches 0 as @a[scores={bw.join.yellow=1..
 execute if score bw.gamestate BedWars matches 0 as @a[scores={bw.join.green=1..}] if score bw.gametimer BedWars matches -1 run function bw:teamjoin/green
 execute if score bw.gamestate BedWars matches 0 as @a[scores={bw.join.blue=1..}] if score bw.gametimer BedWars matches -1 run function bw:teamjoin/blue
 execute if score bw.gamestate BedWars matches 0 as @a[scores={bw.join.empty=1..}] if score bw.gametimer BedWars matches -1 run function bw:teamjoin/empty
+execute if score bw.gamestate BedWars matches 0 as @a[scores={bw.join.random=1..}] if score bw.gametimer BedWars matches -1 run function bw:teamjoin/random
+execute unless score bw.gamestate BedWars matches 0 run scoreboard players reset @a[scores={bw.join.red=1..}] bw.join.red
+scoreboard players reset @a[scores={bw.join.blue=1..}] bw.join.blue
+scoreboard players reset @a[scores={bw.join.green=1..}] bw.join.green
+scoreboard players reset @a[scores={bw.join.yellow=1..}] bw.join.yellow
+scoreboard players reset @a[scores={bw.join.empty=1..}] bw.join.empty
+scoreboard players reset @a[scores={bw.join.random=1..}] bw.join.random
 ##END##
 
 ## set bw.setYdeath to bw.Ydeath BedWars
@@ -203,6 +209,7 @@ execute store result score bw.team.red bw.teams if entity @a[team=red]
 execute store result score bw.team.yellow bw.teams if entity @a[team=yellow]
 execute store result score bw.team.green bw.teams if entity @a[team=green]
 execute store result score bw.team.blue bw.teams if entity @a[team=blue]
+execute store result score bw.team.random bw.teams if entity @a[team=random]
 ##END##
 
 ## player join

@@ -12,6 +12,8 @@ scoreboard players set bw.starttestcancel BedWars 0
 execute unless score bw.gamestate BedWars matches 0 run scoreboard players set bw.starttestcancel BedWars 1
 #the countdown must be finished (-1)
 execute unless score bw.gametimer BedWars matches -1 run scoreboard players set bw.starttestcancel BedWars 2
+# join teams if you are in random team
+execute if score bw.team.random bw.teams matches 1.. run function bw:teamjoin/teamsfromrandom
 #enought players in teams#
 function bw:teamsum
 execute unless score bw.teams bw.teams matches 2.. run scoreboard players set bw.starttestcancel BedWars 3

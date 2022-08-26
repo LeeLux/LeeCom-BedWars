@@ -20,6 +20,8 @@ team join red @a[tag=bw.playedteamred,team=spec]
 team join yellow @a[tag=bw.playedteamyellow,team=spec]
 
 execute unless score bw.keepteam BedWars matches 1 run team leave @a
+
+team empty spec
 ##END##
 
 #difficulty

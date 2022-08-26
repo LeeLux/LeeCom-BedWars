@@ -50,6 +50,7 @@ scoreboard objectives remove bw.join.yellow
 scoreboard objectives remove bw.join.green
 scoreboard objectives remove bw.join.blue
 scoreboard objectives remove bw.join.empty
+scoreboard objectives remove bw.join.random
 scoreboard objectives remove bw.Y
 scoreboard objectives remove bw.setYdeath
 scoreboard objectives remove bw.clear
