@@ -5,6 +5,7 @@
 # ======================================================== #
 
 clear @s
+gamemode creative @s
 
 ##give delete item##
 item replace entity @s hotbar.0 with barrier{display: {Name: '[{"text": "","color": "white","italic":false},{"text":"[BW] ","color":"green"},{"text":"Delete Custom BW Entity","color":"red","italic":false},{"text": " (drop)","color": "gray"}]', Lore: ['{"text":"If dropped, the nearest custom BedWars","color":"white","italic":false}', '{"text":"entity in a 4 Block radius will be killed!","color":"white","italic":false}']}, Tags: ["bw.entity.delete"], Enchantments: [{}]} 64

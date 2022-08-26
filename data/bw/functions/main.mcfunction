@@ -14,10 +14,10 @@ function bw:entity_count
 #END#
 
 # bw.entity delete with delete item
-execute as @e[type=item,nbt={Item: {id: "minecraft:barrier", tag: {Tags: ["bw.entity.delete"]}}}] at @s run tp @e[tag=bw.shop,limit=1,distance=..4,sort=nearest] ~ ~-1000 ~
-execute as @e[type=item,nbt={Item: {id: "minecraft:barrier", tag: {Tags: ["bw.entity.delete"]}}}] at @s run kill @e[tag=bw.entity,limit=1,distance=..4,sort=nearest]
-#execute as @e[type=item,nbt={Item:{id:"minecraft:barrier",tag:{Tags:["bw.entity.delete"]}}}] at @s run give @p barrier{display:{Name:'{"text":"Delete Custom BW Entity","color":"red","italic":false}'},Tags:["bw.entity.delete","bw.entity"],Enchantments:[{}]} 1
-execute as @e[type=item,nbt={Item: {id: "minecraft:barrier", tag: {Tags: ["bw.entity.delete"]}}}] at @s run kill @s
+execute as @e[type=item,nbt={Item: {tag: {Tags: ["bw.entity.delete"]}}}] at @s run tellraw @p [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text": "Killed: "},{"selector":"@e[tag=bw.entity,limit=1,distance=..4,sort=nearest]"}]
+execute as @e[type=item,nbt={Item: {tag: {Tags: ["bw.entity.delete"]}}}] at @s run tp @e[tag=bw.shop,limit=1,distance=..4,sort=nearest] ~ ~-1000 ~
+execute as @e[type=item,nbt={Item: {tag: {Tags: ["bw.entity.delete"]}}}] at @s run kill @e[tag=bw.entity,limit=1,distance=..4,sort=nearest]
+execute as @e[type=item,nbt={Item: {tag: {Tags: ["bw.entity.delete"]}}}] at @s run kill @s
 #END#
 
 # set alwaysshop to BEDWARS Settings
