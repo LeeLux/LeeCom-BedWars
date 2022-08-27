@@ -1,0 +1,31 @@
+[
+    {
+      "function": "minecraft:set_count",
+      "count": {
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "bw.team.empty"
+        },
+        "score": "bw.teams"
+      },
+      "add": false,
+      "conditions": [
+        {
+          "condition": "minecraft:value_check",
+          "value": {
+            "type": "minecraft:score",
+            "target": {
+              "type": "minecraft:fixed",
+              "name": "bw.team.empty"
+            },
+            "score": "bw.teams"
+          },
+          "range": {
+            "min": 1
+          }
+        }
+      ]
+    }
+  ]
+  

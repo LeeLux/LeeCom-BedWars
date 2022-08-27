@@ -152,7 +152,7 @@ scoreboard objectives add bw.bedgonetime trigger
 scoreboard objectives add bw.bedgonebool trigger
 scoreboard objectives add bw.autodrawtime trigger
 scoreboard objectives add bw.autodrawbool trigger
-#scoreboard objectives add bw.
+scoreboard objectives add bw.eightteams trigger
 #scoreboard objectives add bw.
 #scoreboard objectives add bw.
 #scoreboard objectives add bw.
@@ -246,6 +246,11 @@ execute if score bw.gamestate BedWars matches 0 run function bw:secticker
 
 ## start visiblenames 1s repeat function
 function bw:visiblenames
+##END##
+
+## start invgui clocks
+function bw:invgui/page1/10t
+function bw:invgui/page2/10t
 ##END##
 
 ## Scoreboars join teams to better identifi them

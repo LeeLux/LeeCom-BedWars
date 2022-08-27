@@ -89,7 +89,7 @@ scoreboard objectives remove bw.bedgonetime
 scoreboard objectives remove bw.bedgonebool
 scoreboard objectives remove bw.autodrawtime
 scoreboard objectives remove bw.autodrawbool
-#scoreboard objectives remove bw.
+scoreboard objectives remove bw.eightteams
 #scoreboard objectives remove bw.
 #scoreboard objectives remove bw.
 #scoreboard objectives remove bw.

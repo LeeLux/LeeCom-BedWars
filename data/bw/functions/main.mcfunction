@@ -72,6 +72,10 @@ execute as @a[scores={bw.autodrawtime=1..}] run function bw:settosettings/autodr
 execute as @a[scores={bw.autodrawbool=1..}] run function bw:settosettings/autodrawbool
 #END#
 
+# set bw.eightteams so BEDWARS Settings
+execute as @a[scores={bw.eightteams=1..}] run function bw:settosettings/eightteams
+#END#
+
 ## set spawn rate of resources
 #spawn rate bronce##
 execute as @a[scores={bw.spawn.bronce=1..},limit=1] run function bw:settosettings/bronce_spawn
@@ -210,6 +214,7 @@ execute store result score bw.team.yellow bw.teams if entity @a[team=yellow]
 execute store result score bw.team.green bw.teams if entity @a[team=green]
 execute store result score bw.team.blue bw.teams if entity @a[team=blue]
 execute store result score bw.team.random bw.teams if entity @a[team=random]
+execute store result score bw.team.empty bw.teams if entity @a[team=!blue,team=!green,team=!random,team=!red,team=!spec,team=!yellow,]
 ##END##
 
 ## player join
@@ -267,4 +272,8 @@ execute as @a[tag=bw.givebrakingtoolafterrespawn,scores={bw.death=0}] run functi
 #bow
 execute as @e[type=item,nbt={Item:{id:"minecraft:bow"}},nbt=!{Item:{tag:{Tags:["bw.dropedarrow"]}}}] at @s run summon item ~ ~ ~ {PickupDelay:0s,Item:{id:"minecraft:arrow",Count:1b,tag:{HideFlags:94,CanPlaceOn:["#bw.place"],CanDestroy:["#bw.break"]}}}
 execute as @e[type=item,nbt={Item:{id:"minecraft:bow"}},nbt=!{Item:{tag:{Tags:["bw.dropedarrow"]}}}] at @s run data modify entity @s Item.tag.Tags append value "bw.dropedarrow"
+##END##
+
+## run invgui
+function bw:invgui/main
 ##END##
