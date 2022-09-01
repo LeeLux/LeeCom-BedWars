@@ -76,6 +76,10 @@ execute as @a[scores={bw.autodrawbool=1..}] run function bw:settosettings/autodr
 execute as @a[scores={bw.eightteams=1..}] run function bw:settosettings/eightteams
 #END#
 
+# func for bw.invgui
+execute as @a[scores={bw.invgui=1..}] run function bw:invgui/toggel
+#END#
+
 ## set spawn rate of resources
 #spawn rate bronce##
 execute as @a[scores={bw.spawn.bronce=1..},limit=1] run function bw:settosettings/bronce_spawn

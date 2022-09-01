@@ -43,6 +43,7 @@ scoreboard players enable @a bw.join.blue
 scoreboard players enable @a bw.join.empty
 scoreboard players enable @a bw.join.random
 scoreboard players enable @a bw.gamestart
+scoreboard players enable @a bw.invgui
 ##END##
 
 ##invisible minecarts (texturpack) not really my code or ideer##

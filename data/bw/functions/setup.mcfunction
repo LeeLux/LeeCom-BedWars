@@ -153,8 +153,8 @@ scoreboard objectives add bw.bedgonebool trigger
 scoreboard objectives add bw.autodrawtime trigger
 scoreboard objectives add bw.autodrawbool trigger
 scoreboard objectives add bw.eightteams trigger
-#scoreboard objectives add bw.
-#scoreboard objectives add bw.
+scoreboard objectives add bw.invgui trigger
+scoreboard objectives add bw.invgui.page dummy
 #scoreboard objectives add bw.
 #scoreboard objectives add bw.
 #scoreboard objectives add bw.
@@ -251,6 +251,7 @@ function bw:visiblenames
 ## start invgui clocks
 function bw:invgui/page1/10t
 function bw:invgui/page2/10t
+function bw:invgui/page3/10t
 ##END##
 
 ## Scoreboars join teams to better identifi them
