@@ -6,14 +6,16 @@
 
 scoreboard players set @s bw.invgui.page 1
 clear @s
-item replace entity @s hotbar.0 with ender_eye{CustomModelData:100001,display:{Name:'[{"text": "Join team ","italic": false},{"text": "Red","color": "red"},{"text": " (right click)","color": "gray"}]'}}
-item replace entity @s hotbar.1 with ender_eye{CustomModelData:100002,display:{Name:'[{"text": "Join team ","italic": false},{"text": "Orange","color": "red"},{"text": " (right click)","color": "gray"}]'}}
-item replace entity @s hotbar.2 with ender_eye{CustomModelData:100003,display:{Name:'[{"text": "Join team ","italic": false},{"text": "Yellow","color": "yellow"},{"text": " (right click)","color": "gray"}]'}}
-item replace entity @s hotbar.3 with ender_eye{CustomModelData:100004,display:{Name:'[{"text": "Join team ","italic": false},{"text": "Green","color": "green"},{"text": " (right click)","color": "gray"}]'}}
-item replace entity @s hotbar.4 with ender_eye{CustomModelData:100005,display:{Name:'[{"text": "Join team ","italic": false},{"text": "Blue","color": "blue"},{"text": " (right click)","color": "gray"}]'}}
-item replace entity @s hotbar.5 with ender_eye{CustomModelData:100006,display:{Name:'[{"text": "Join team ","italic": false},{"text": "Purple","color": "dark_purple"},{"text": " (right click)","color": "gray"}]'}}
-item replace entity @s hotbar.6 with ender_eye{CustomModelData:100007,display:{Name:'[{"text": "Join team ","italic": false},{"text": "White","color": "white"},{"text": " (right click)","color": "gray"}]'}}
-item replace entity @s hotbar.7 with ender_eye{CustomModelData:100008,display:{Name:'[{"text": "Join team ","italic": false},{"text": "Black","color": "black"},{"text": " (right click)","color": "gray"}]'}}
-item replace entity @s hotbar.8 with ender_eye{CustomModelData:100012,display:{Name:'[{"text": "Next page","italic": false},{"text": " (right click)","color": "gray"}]'}}
+#all 8 teams
+item replace entity @s hotbar.0 from block 65538 255 65536 container.0
+item replace entity @s hotbar.1 from block 65538 255 65536 container.1
+item replace entity @s hotbar.2 from block 65538 255 65536 container.2
+item replace entity @s hotbar.3 from block 65538 255 65536 container.3
+item replace entity @s hotbar.4 from block 65538 255 65536 container.4
+item replace entity @s hotbar.5 from block 65538 255 65536 container.5
+item replace entity @s hotbar.6 from block 65538 255 65536 container.6
+item replace entity @s hotbar.7 from block 65538 255 65536 container.7
+#start
+item replace entity @s hotbar.8 from block 65538 255 65536 container.12
 
 function bw:invgui/page1/count

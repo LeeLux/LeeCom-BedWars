@@ -335,4 +335,6 @@ setblock 65541 247 65536 barrel[facing=up]{CustomName: '{"text":"Shop page 5" }'
 setblock 65542 247 65536 barrel[facing=up]{CustomName: '{"text":"Shop page 6" }'} keep
 setblock 65543 247 65536 barrel[facing=up]{CustomName: '{"text":"Shop page 7" }'} keep
 setblock 65544 247 65536 barrel[facing=up]{CustomName: '{"text": "Shop Resources"}'} keep
+#invgui
+setblock 65538 255 65536 barrel[facing=up]{CustomName: '{"text": "Invgui item"}'} keep
 #END#
