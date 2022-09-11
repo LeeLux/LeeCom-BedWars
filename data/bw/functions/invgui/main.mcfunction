@@ -9,9 +9,9 @@ execute as @a[tag=bw.invgui] unless score @s bw.invgui.page matches 1..3 unless 
 
 execute as @a[tag=bw.invgui.rem] run function bw:invgui/rem
 
-#manage items
-#@e[type=item,nbt={Item:{tag:{Tags:["bw.invgui.item"]}}}]
+execute as @a[tag=bw.invgui] run function bw:invgui/eclick/manage
 
+## manage items
 #if you drom any item you invgui will be reset and it will be 'used'
 #execute as @e[type=item,nbt={Item:{tag:{Tags:["bw.invgui.item"]}}}] at @s as @p[distance=..2,tag=bw.invgui] run 
 #teams
@@ -35,3 +35,4 @@ execute as @e[type=item,nbt={Item:{tag:{Tags:["bw.invgui.item.start"]}}}] at @s 
 #resett/reload everyting
 execute as @e[type=item,nbt={Item:{tag:{Tags:["bw.invgui.item"]}}}] at @s as @p[distance=..2,tag=bw.invgui] run function bw:invgui/reload
 kill @e[type=item,nbt={Item:{tag:{Tags:["bw.invgui.item"]}}}]
+## END ##
