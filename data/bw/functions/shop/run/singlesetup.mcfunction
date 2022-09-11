@@ -4,7 +4,4 @@
 #         Please don't claim this as your own work!        #
 # ======================================================== #
 
-function bw:invgui/page2/count
-function bw:invgui/lorereset
-execute if score bw.team.random bw.teams matches 1.. run function bw:invgui/page2/lore/random
-execute if score bw.team.empty bw.teams matches 1.. run function bw:invgui/page2/lore/empty
+execute as @e[tag=bw.shop] unless entity @e[distance=..1,tag=bw.shop.entity] at @s run function bw:shop/summonshopminecart

@@ -47,6 +47,8 @@ scoreboard players set bw.autodrawtime BedWars 3600
 scoreboard players set bw.bedgonebool BedWars 1
 scoreboard players set bw.bedgonetime BedWars 2400
 ##END##
+## whats the default how the shop should work(with version)
+scoreboard players set bw.shopversion BedWars 2
 ##=============END===============##
 ## Set default minecarft settings weatehr etc..
 gamerule announceAdvancements false

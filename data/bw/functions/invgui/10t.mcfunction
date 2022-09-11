@@ -4,7 +4,8 @@
 #         Please don't claim this as your own work!        #
 # ======================================================== #
 
-function bw:invgui/page2/count
-function bw:invgui/lorereset
-execute if score bw.team.random bw.teams matches 1.. run function bw:invgui/page2/lore/random
-execute if score bw.team.empty bw.teams matches 1.. run function bw:invgui/page2/lore/empty
+execute as @a[scores={bw.invgui.page=1}] run function bw:invgui/page1/10t
+execute as @a[scores={bw.invgui.page=2}] run function bw:invgui/page2/10t
+execute as @a[scores={bw.invgui.page=3}] run function bw:invgui/page3/10t
+
+schedule function bw:invgui/10t 10t

@@ -31,10 +31,10 @@ execute as @a at @s as @e[type=item,distance=..5] run data modify entity @s Item
 
 ## the shop
 ## !! THIS IS CURRENTLY THE OLD SYSTEM (MULTIPLAYER 'FREINDLY') !! 
-#function bw:shop/shoprun
+execute if score bw.shopversion BedWars matches 1 run function bw:shop/run/single
 
 ## !! THIS IS THE NEW SYSTEM (JUST SINGLEPLAYER) !! 
-function bw:shop/runningshop
+execute if score bw.shopversion BedWars matches 2 run function bw:shop/run/multi
 
 ## simply swtich not available !
 #END#

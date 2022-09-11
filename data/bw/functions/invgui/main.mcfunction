@@ -12,7 +12,7 @@ execute as @a[tag=bw.invgui.rem] run function bw:invgui/rem
 #manage items
 #@e[type=item,nbt={Item:{tag:{Tags:["bw.invgui.item"]}}}]
 
-#if you drom any item you invgui will be reset
+#if you drom any item you invgui will be reset and it will be 'used'
 #execute as @e[type=item,nbt={Item:{tag:{Tags:["bw.invgui.item"]}}}] at @s as @p[distance=..2,tag=bw.invgui] run 
 #teams
 execute as @e[type=item,nbt={Item:{tag:{Tags:["bw.invgui.item.red"]}}}] at @s as @p[distance=..2,tag=bw.invgui] run function bw:invgui/adv/red

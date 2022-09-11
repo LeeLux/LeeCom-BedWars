@@ -4,5 +4,5 @@
 #         Please don't claim this as your own work!        #
 # ======================================================== #
 
-advancement revoke @s only bw:villshopclickedgloweffect
-tag @e[tag=bw.shop.entity,distance=..6] add bw.shopgloweffect
+advancement revoke @s only bw:endereyejoinorange
+trigger bw.join.orange
