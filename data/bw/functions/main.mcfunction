@@ -72,6 +72,14 @@ execute as @a[scores={bw.autodrawtime=1..}] run function bw:settosettings/autodr
 execute as @a[scores={bw.autodrawbool=1..}] run function bw:settosettings/autodrawbool
 #END#
 
+# set bw.eightteams so BEDWARS Settings
+execute as @a[scores={bw.eightteams=1..}] run function bw:settosettings/eightteams
+#END#
+
+# func for bw.invgui
+execute as @a[scores={bw.invgui=1..}] run function bw:invgui/toggel
+#END#
+
 ## set spawn rate of resources
 #spawn rate bronce##
 execute as @a[scores={bw.spawn.bronce=1..},limit=1] run function bw:settosettings/bronce_spawn
@@ -91,13 +99,6 @@ execute as @e[tag=bw.shop.need] at @s positioned ~ ~1.3 ~ run function bw:shop/s
 #execute as @e[tag=bw.shop.need] at @s positioned ~ ~ ~ run function bw:shop/summonshopminecart
 tag @e[tag=bw.shop.need] remove bw.shop.need
 ##END##
-
-# run the alwaysshop when alwaysshop is activated#
-## !! THIS IS CURRENTLY THE OLD SYSTEM (MULTIPLAYER 'FREINDLY') !! ##
-#execute unless score bw.alwaysshop BedWars matches 0 run function bw:shop/shoprun
-## !! THIS IS THE NEW SYSTEM (JUST SINGLEPLAYER) !! ##
-execute unless score bw.alwaysshop BedWars matches 0 run function bw:shop/runningshop
-
 
 ## Game Start
 execute if score bw.gamestate BedWars matches 0 as @a if score @s bw.gamestart matches 1.. run function bw:checks/starttest
@@ -143,33 +144,28 @@ scoreboard players remove @a[scores={bw.shop.predi=1..}] bw.shop.predi 1
 scoreboard players set @a[predicate=bw:shop] bw.shop.predi 5
 ##END##
 
+# run the alwaysshop when alwaysshop is activated#
+## !! THIS IS CURRENTLY THE OLD SYSTEM (MULTIPLAYER 'FREINDLY') !! ##
+execute if score bw.shopversion BedWars matches 1 unless score bw.alwaysshop BedWars matches 0 run function bw:shop/run/single
+## !! THIS IS THE NEW SYSTEM (JUST SINGLEPLAYER) !! ##
+execute if score bw.shopversion BedWars matches 2 unless score bw.alwaysshop BedWars matches 0 run function bw:shop/run/multi
+
+
 ## detecting the shop villiger and give you the tags for the shop !!  NEW  !!
 ##only used if the 'multiplayer' shop is used ##
-#if the game isn't running, a sec can still use the shop
+#if the game isn't running, a spec can still use the shop
+#MULTI
 execute unless score bw.gamestate BedWars matches 2..3 as @a[tag=!bw.shop.want,scores={bw.shop.predi=1..}] at @s if entity @e[tag=bw.shop,distance=..6] unless entity @e[distance=..1,tag=bw.shop.entity] run tag @s add bw.shop.lookingat
+#SINGLE
 execute unless score bw.gamestate BedWars matches 2..3 as @a[scores={bw.shop.predi=1..}] at @s if entity @e[tag=bw.shop,distance=..6] unless entity @e[distance=..1,tag=bw.shop.entity] run tag @s add bw.shop.want
 #but if its running, spec can't use the shop
+#MULTI
 execute if score bw.gamestate BedWars matches 2..3 as @a[team=!spec,tag=!bw.shop.want,scores={bw.shop.predi=1..}] at @s if entity @e[tag=bw.shop,distance=..6] unless entity @e[distance=..1,tag=bw.shop.entity] run tag @s add bw.shop.lookingat
+#SINGLE
 execute if score bw.gamestate BedWars matches 2..3 as @a[team=!spec,scores={bw.shop.predi=1..}] at @s if entity @e[tag=bw.shop,distance=..6] unless entity @e[distance=..1,tag=bw.shop.entity] run tag @s add bw.shop.want
 execute as @a[scores={bw.shop.predi=..0}] at @s positioned ~ ~1.3 ~ unless entity @e[tag=bw.shop.villclicked,distance=..1] run tag @s remove bw.shop.want
-#summoning and running shop in bw:shop/shoprun#
+#summoning and running shop in bw:shop/run/single or bw:shop/run/multi#
 ##END##
-
-## copy of the shop start code from shoprun
-#execute as @a[tag=bw.shop.lookingat] at @s unless entity @e[distance=..1,tag=bw.shop.entity] run summon chest_minecart ~ ~1.3 ~ {NoGravity: 1b, Silent: 1b, Invulnerable: 1b, CustomDisplayTile: 1b, LootTable: "empty", Tags: ["bw.shop.entity", "bw.entity", "bw.invis_minecart", "bw.shop.first"], CustomName: '[{"text":"","color":"white"},{"text":"[BW] ","color":"green","italic":false},{"text":"Shop"}]', DisplayState: {Name: "minecraft:air"}}
-#tag @a[tag=bw.shop.lookingat] remove bw.shop.lookingat
-#execute as @a[tag=bw.shop.want] at @s run tp @e[tag=bw.shop.entity,distance=..3,limit=1,sort=nearest] ~ ~1.3 ~
-#execute as @e[tag=bw.shop.entity] at @s unless entity @a[tag=bw.shop.want,limit=1,sort=nearest,distance=..3] run tp @s ~ -300 ~
-#first (the mc needs to be filled in the beginning or my code will think you have bought all the items on page 1 and will try to buy them for you etc.)
-#you also need to update the minecarts content witch I do by giveing it some random loot in the beginneng and than overwriting it with the atually content I want /loot replace entity @s container.0 loot blocks/cut_sandstone
-#execute as @e[tag=bw.shop.first] run scoreboard players set @s bw.shop.temp 1
-#execute as @e[tag=bw.shop.first] run loot replace entity @s container.0 loot blocks/cut_sandstone
-#execute as @e[tag=bw.shop.first] run function bw:shop/reset1
-#tag @e remove bw.shop.first
-
-#execute as @e[tag=bw.shop.entity] run function bw:shop/manage
-##END##
-
 
 ## team join v1
 execute if score bw.gamestate BedWars matches 0 as @a[scores={bw.join.red=1..}] if score bw.gametimer BedWars matches -1 run function bw:teamjoin/red
@@ -210,6 +206,7 @@ execute store result score bw.team.yellow bw.teams if entity @a[team=yellow]
 execute store result score bw.team.green bw.teams if entity @a[team=green]
 execute store result score bw.team.blue bw.teams if entity @a[team=blue]
 execute store result score bw.team.random bw.teams if entity @a[team=random]
+execute store result score bw.team.empty bw.teams if entity @a[team=!blue,team=!green,team=!random,team=!red,team=!spec,team=!yellow,]
 ##END##
 
 ## player join
@@ -267,4 +264,8 @@ execute as @a[tag=bw.givebrakingtoolafterrespawn,scores={bw.death=0}] run functi
 #bow
 execute as @e[type=item,nbt={Item:{id:"minecraft:bow"}},nbt=!{Item:{tag:{Tags:["bw.dropedarrow"]}}}] at @s run summon item ~ ~ ~ {PickupDelay:0s,Item:{id:"minecraft:arrow",Count:1b,tag:{HideFlags:94,CanPlaceOn:["#bw.place"],CanDestroy:["#bw.break"]}}}
 execute as @e[type=item,nbt={Item:{id:"minecraft:bow"}},nbt=!{Item:{tag:{Tags:["bw.dropedarrow"]}}}] at @s run data modify entity @s Item.tag.Tags append value "bw.dropedarrow"
+##END##
+
+## run invgui
+function bw:invgui/main
 ##END##

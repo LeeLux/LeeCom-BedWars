@@ -1,0 +1,37 @@
+[
+    {
+      "function": "minecraft:set_lore",
+      "entity": "this",
+      "lore": [
+        [
+          [
+            {
+              "text": "- ",
+              "color": "gray",
+              "italic": false
+            },
+            {
+              "selector": "@a[team=red,tag=bw.invgui.lore.red]"
+            }
+          ]
+        ]
+      ],
+      "replace": false,
+      "conditions": [
+        {
+          "condition": "minecraft:value_check",
+          "value": {
+            "type": "minecraft:score",
+            "target": {
+              "type": "minecraft:fixed",
+              "name": "bw.team.red"
+            },
+            "score": "bw.teams"
+          },
+          "range": {
+            "min": 1
+          }
+        }
+      ]
+    }
+  ]  

@@ -39,6 +39,9 @@ setblock 65541 247 65536 air replace
 setblock 65542 247 65536 air replace
 setblock 65543 247 65536 air replace
 setblock 65544 247 65536 air replace
+
+#invgui
+setblock 65538 255 65536 air replace
 #removing forceloads
 forceload remove 4096 4096
 

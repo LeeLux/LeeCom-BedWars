@@ -47,6 +47,8 @@ scoreboard players set bw.autodrawtime BedWars 3600
 scoreboard players set bw.bedgonebool BedWars 1
 scoreboard players set bw.bedgonetime BedWars 2400
 ##END##
+## whats the default how the shop should work(with version)
+scoreboard players set bw.shopversion BedWars 2
 ##=============END===============##
 ## Set default minecarft settings weatehr etc..
 gamerule announceAdvancements false
@@ -72,9 +74,11 @@ gamerule fireDamage true
 gamerule doTileDrops true
 gamerule doLimitedCrafting true
 ##END##
-# setup the shop items
+# setup the shop items and invgui
 schedule function bw:shop/install/default 1t
 schedule function bw:shop/copydefaultocustom 2t
 schedule function bw:shop/setdefaultshop 3t
+
+schedule function bw:invgui/setupitems 1t
 #END#
 ##END##

@@ -64,6 +64,10 @@ tp @a @e[tag=bw.lobby.spawn,limit=1]
 execute as @a run function bw:gameend/removeplayedteamtag
 #END#
 
-##star clearing up 0 0##
+## invgui
+tag @a remove bw.invgui
+##END##
+
+## star clearing up 0 0
 function bw:clear00/start
 ##END###

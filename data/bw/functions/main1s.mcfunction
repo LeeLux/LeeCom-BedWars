@@ -15,7 +15,7 @@ scoreboard players enable @a[tag=bw.admin] bw.name.spawner
 scoreboard players enable @a[tag=bw.admin] bw.name.respawn
 scoreboard players enable @a[tag=bw.admin] bw.name.bed
 scoreboard players enable @a[tag=bw.admin] bw.name.other
-#bw.setYdeath is enabled in line 250 because its must be enabled after it runs some commands!
+# (OLD) bw.setYdeath is enabled in line 250 because its must be enabled after it runs some commands!
 scoreboard players enable @a[tag=bw.admin] bw.alwaysshop
 scoreboard players enable @a[tag=bw.admin] bw.customshop
 scoreboard players enable @a[tag=bw.admin] bw.sethealth
@@ -34,6 +34,7 @@ scoreboard players enable @a[tag=bw.admin] bw.bedgonetime
 scoreboard players enable @a[tag=bw.admin] bw.bedgonebool
 scoreboard players enable @a[tag=bw.admin] bw.autodrawtime
 scoreboard players enable @a[tag=bw.admin] bw.autodrawbool
+scoreboard players enable @a[tag=bw.admin] bw.eightteams
 #everyone#
 scoreboard players enable @a bw.join.red
 scoreboard players enable @a bw.join.yellow
@@ -42,6 +43,7 @@ scoreboard players enable @a bw.join.blue
 scoreboard players enable @a bw.join.empty
 scoreboard players enable @a bw.join.random
 scoreboard players enable @a bw.gamestart
+scoreboard players enable @a bw.invgui
 ##END##
 
 ##invisible minecarts (texturpack) not really my code or ideer##
@@ -56,9 +58,15 @@ execute as @e[type=furnace_minecart,tag=!bw.invis_minecart] run function bw:invi
 execute if score bw.gamestate BedWars matches 0 run effect give @a[gamemode=!creative,gamemode=!spectator] minecraft:weakness 1 250 true
 #END#
 
+## hunger
 #removes hunger in gamestate 1..#
-execute if score bw.gamestate BedWars matches 1.. run effect give @a[gamemode=!creative,gamemode=!spectator] minecraft:saturation 1 250 true
+#execute if score bw.gamestate BedWars matches 1.. run effect give @a[gamemode=!creative,gamemode=!spectator] minecraft:saturation 1 250 true
 #END#
+
+#making nobody need the eat or lose hunger
+effect give @a minecraft:saturation 60000 0 true
+#END#
+##END##
 
 ##stats##
 #recording play time#
@@ -121,10 +129,6 @@ execute if score bw.uptimeday bw.stats matches 8.. run scoreboard players set bw
 
 ## doImmediateRespawn as 1 or 0 in BedWars
 execute store result score bw.doImmediateRespawn BedWars run gamerule doImmediateRespawn
-##END##
-
-## making nobody need the eat or lose hunger
-effect give @a minecraft:saturation 60000 0 true
 ##END##
 
 ## normalregen

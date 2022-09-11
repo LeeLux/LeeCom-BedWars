@@ -152,9 +152,9 @@ scoreboard objectives add bw.bedgonetime trigger
 scoreboard objectives add bw.bedgonebool trigger
 scoreboard objectives add bw.autodrawtime trigger
 scoreboard objectives add bw.autodrawbool trigger
-#scoreboard objectives add bw.
-#scoreboard objectives add bw.
-#scoreboard objectives add bw.
+scoreboard objectives add bw.eightteams trigger
+scoreboard objectives add bw.invgui trigger
+scoreboard objectives add bw.invgui.page dummy
 #scoreboard objectives add bw.
 #scoreboard objectives add bw.
 #scoreboard objectives add bw.
@@ -248,6 +248,10 @@ execute if score bw.gamestate BedWars matches 0 run function bw:secticker
 function bw:visiblenames
 ##END##
 
+## start invgui clocks
+function bw:invgui/10t
+##END##
+
 ## Scoreboars join teams to better identifi them
 team join red bw.broncetimer
 team join red bw.spawn.bronce
@@ -329,4 +333,6 @@ setblock 65541 247 65536 barrel[facing=up]{CustomName: '{"text":"Shop page 5" }'
 setblock 65542 247 65536 barrel[facing=up]{CustomName: '{"text":"Shop page 6" }'} keep
 setblock 65543 247 65536 barrel[facing=up]{CustomName: '{"text":"Shop page 7" }'} keep
 setblock 65544 247 65536 barrel[facing=up]{CustomName: '{"text": "Shop Resources"}'} keep
+#invgui
+setblock 65538 255 65536 barrel[facing=up]{CustomName: '{"text": "Invgui item"}'} keep
 #END#
