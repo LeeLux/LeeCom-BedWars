@@ -92,6 +92,11 @@ tp @a[team=blue] @e[tag=bw.respawn.blue,limit=1]
 tp @a[team=spec] @e[tag=bw.respawn.spec,limit=1]
 ##END##
 
+##removing invgui
+tag @a[tag=bw.invgui] add bw.invgui.afterround
+execute as @a run function bw:invgui/rem
+##END##
+
 ##reset player like he was killed##
 function bw:resettingplayer
 ##END##

@@ -13,7 +13,6 @@ execute as @a[tag=bw.invgui] run function bw:invgui/eclick/manage
 
 ## manage items
 #if you drom any item you invgui will be reset and it will be 'used'
-#execute as @e[type=item,nbt={Item:{tag:{Tags:["bw.invgui.item"]}}}] at @s as @p[distance=..2,tag=bw.invgui] run 
 #teams
 execute as @e[type=item,nbt={Item:{tag:{Tags:["bw.invgui.item.red"]}}}] at @s as @p[distance=..2,tag=bw.invgui] run function bw:invgui/adv/red
 execute as @e[type=item,nbt={Item:{tag:{Tags:["bw.invgui.item.orange"]}}}] at @s as @p[distance=..2,tag=bw.invgui] run function bw:invgui/adv/orange
@@ -30,7 +29,7 @@ execute as @e[type=item,nbt={Item:{tag:{Tags:["bw.invgui.item.back"]}}}] at @s a
 execute as @e[type=item,nbt={Item:{tag:{Tags:["bw.invgui.item.random"]}}}] at @s as @p[distance=..2,tag=bw.invgui] run function bw:invgui/adv/random 
 execute as @e[type=item,nbt={Item:{tag:{Tags:["bw.invgui.item.empty"]}}}] at @s as @p[distance=..2,tag=bw.invgui] run function bw:invgui/adv/leave 
 #start
-execute as @e[type=item,nbt={Item:{tag:{Tags:["bw.invgui.item.start"]}}}] at @s as @p[distance=..2,tag=bw.invgui] run function bw:invgui/adv/start 
+execute as @e[type=item,nbt={Item:{tag:{Tags:["bw.invgui.item.start"]}}}] at @s as @p[distance=..2,tag=bw.invgui,scores={bw.death=0}] run function bw:invgui/adv/start 
 
 #resett/reload everyting
 execute as @e[type=item,nbt={Item:{tag:{Tags:["bw.invgui.item"]}}}] at @s as @p[distance=..2,tag=bw.invgui] run function bw:invgui/reload

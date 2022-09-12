@@ -55,7 +55,7 @@ execute as @e[type=furnace_minecart,tag=!bw.invis_minecart] run function bw:invi
 ##END##
 
 #deactivates pvp in gamestate 0#
-execute if score bw.gamestate BedWars matches 0 run effect give @a[gamemode=!creative,gamemode=!spectator] minecraft:weakness 1 250 true
+execute if score bw.gamestate BedWars matches 0 run effect give @a[gamemode=!creative,gamemode=!spectator] minecraft:weakness 2 250 true
 #END#
 
 ## hunger

@@ -65,7 +65,8 @@ execute as @a run function bw:gameend/removeplayedteamtag
 #END#
 
 ## invgui
-tag @a remove bw.invgui
+tag @a[tag=bw.invgui.afterround] add bw.invgui
+tag @a remove bw.invgui.afterround
 ##END##
 
 ## star clearing up 0 0
