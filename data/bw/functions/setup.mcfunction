@@ -95,8 +95,9 @@ scoreboard objectives add bw.green.broken minecraft.mined:minecraft.lime_bed
 scoreboard objectives add bw.shop.page dummy
 scoreboard objectives add bw.shop.temp dummy
 scoreboard objectives add bw.shop.update dummy
-scoreboard objectives add bw.shop.slot dummy
 scoreboard objectives add bw.shop.res dummy
+scoreboard objectives add bw.shop.players dummy
+scoreboard objectives add bw.shop.version dummy
 scoreboard objectives add bw.remresource.1 dummy
 scoreboard objectives add bw.remresource.2 dummy
 scoreboard objectives add bw.remresource.3 dummy

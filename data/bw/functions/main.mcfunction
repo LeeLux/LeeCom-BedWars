@@ -16,7 +16,7 @@ function bw:entity_count
 # bw.entity delete with delete item
 execute as @e[type=item,nbt={Item: {tag: {Tags: ["bw.entity.delete"]}}}] at @s run tellraw @p [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text": "Killed: "},{"selector":"@e[tag=bw.entity,limit=1,distance=..4,sort=nearest]"}]
 execute as @e[type=item,nbt={Item: {tag: {Tags: ["bw.entity.delete"]}}}] at @s run tp @e[tag=bw.shop,limit=1,distance=..4,sort=nearest] ~ ~-1000 ~
-execute as @e[type=item,nbt={Item: {tag: {Tags: ["bw.entity.delete"]}}}] at @s run kill @e[tag=bw.entity,limit=1,distance=..4,sort=nearest]
+execute as @e[type=item,nbt={Item: {tag: {Tags: ["bw.entity.delete"]}}}] at @s run tp @e[tag=bw.entity,limit=1,distance=..4,sort=nearest] ~ ~-1000 ~
 execute as @e[type=item,nbt={Item: {tag: {Tags: ["bw.entity.delete"]}}}] at @s run kill @s
 #END#
 
@@ -91,7 +91,7 @@ execute as @a[scores={bw.spawn.gold=1..},limit=1] run function bw:settosettings/
 execute as @a[scores={bw.spawn.platin=1..},limit=1] run function bw:settosettings/platin_spawn
 ##END##
 
-## summon the shpo minecarts in the shop vill/entity
+## summon the shpo minecarts in the shop vill/entity when first placed/setup
 #must stand above the alwaysshop to propertly work!!!!!!
 execute as @e[tag=bw.shop.need] at @s positioned ~ ~1.3 ~ run function bw:shop/summonshopminecart
 #optional make two more to cover the hole bw.shop vill/entity
@@ -140,31 +140,46 @@ execute unless score bw.gametimer BedWars matches -1 run function bw:xpbarcountd
 ##END##
 
 ## shop prediacte
+#remove each tick one
 scoreboard players remove @a[scores={bw.shop.predi=1..}] bw.shop.predi 1
+#add 5 if you look at the bw.shop
 scoreboard players set @a[predicate=bw:shop] bw.shop.predi 5
+#here the predicate as manually set to 5 if there are any bw.shops in front of you
+execute as @a at @s positioned ^ ^ ^1 if entity @e[tag=bw.shop,distance=..0.5] run scoreboard players set @s bw.shop.predi 5
+execute as @a at @s positioned ^ ^ ^2 if entity @e[tag=bw.shop,distance=..0.5] run scoreboard players set @s bw.shop.predi 5
+execute as @a at @s positioned ^ ^ ^3 if entity @e[tag=bw.shop,distance=..0.5] run scoreboard players set @s bw.shop.predi 5
+execute as @a at @s positioned ^ ^ ^4 if entity @e[tag=bw.shop,distance=..0.5] run scoreboard players set @s bw.shop.predi 5
+execute as @a at @s positioned ^ ^ ^5 if entity @e[tag=bw.shop,distance=..0.5] run scoreboard players set @s bw.shop.predi 5
+execute as @a at @s positioned ^ ^ ^6 if entity @e[tag=bw.shop,distance=..0.5] run scoreboard players set @s bw.shop.predi 5
+#END
 ##END##
 
-# run the alwaysshop when alwaysshop is activated#
-## !! THIS IS CURRENTLY THE OLD SYSTEM (MULTIPLAYER 'FREINDLY') !! ##
-execute if score bw.shopversion BedWars matches 1 unless score bw.alwaysshop BedWars matches 0 run function bw:shop/run/single
-## !! THIS IS THE NEW SYSTEM (JUST SINGLEPLAYER) !! ##
-execute if score bw.shopversion BedWars matches 2 unless score bw.alwaysshop BedWars matches 0 run function bw:shop/run/multi
+## shop
+#when a shop do not yet have a version(its just playced or lost ist), than it gets the 1 version
+execute as @e[tag=bw.shop] unless score @s bw.shop.version matches 1.. run scoreboard players set @s bw.shop.version 1
+#END
 
+#sets how many players are round a shop entity to its bw.shop.players score. So we can switch from single to multi shop when more than 1 players are around a shop
+execute as @e[tag=bw.shop] store result score @s bw.shop.players at @s if entity @a[distance=..6]
+#END
 
-## detecting the shop villiger and give you the tags for the shop !!  NEW  !!
-##only used if the 'multiplayer' shop is used ##
-#if the game isn't running, a spec can still use the shop
-#MULTI
-execute unless score bw.gamestate BedWars matches 2..3 as @a[tag=!bw.shop.want,scores={bw.shop.predi=1..}] at @s if entity @e[tag=bw.shop,distance=..6] unless entity @e[distance=..1,tag=bw.shop.entity] run tag @s add bw.shop.lookingat
-#SINGLE
-execute unless score bw.gamestate BedWars matches 2..3 as @a[scores={bw.shop.predi=1..}] at @s if entity @e[tag=bw.shop,distance=..6] unless entity @e[distance=..1,tag=bw.shop.entity] run tag @s add bw.shop.want
-#but if its running, spec can't use the shop
-#MULTI
-execute if score bw.gamestate BedWars matches 2..3 as @a[team=!spec,tag=!bw.shop.want,scores={bw.shop.predi=1..}] at @s if entity @e[tag=bw.shop,distance=..6] unless entity @e[distance=..1,tag=bw.shop.entity] run tag @s add bw.shop.lookingat
-#SINGLE
-execute if score bw.gamestate BedWars matches 2..3 as @a[team=!spec,scores={bw.shop.predi=1..}] at @s if entity @e[tag=bw.shop,distance=..6] unless entity @e[distance=..1,tag=bw.shop.entity] run tag @s add bw.shop.want
-execute as @a[scores={bw.shop.predi=..0}] at @s positioned ~ ~1.3 ~ unless entity @e[tag=bw.shop.villclicked,distance=..1] run tag @s remove bw.shop.want
-#summoning and running shop in bw:shop/run/single or bw:shop/run/multi#
+#sets the shop entity scores of version to the same as of its bw.shop
+execute as @e[tag=bw.shop] at @s run scoreboard players operation @e[tag=bw.shop.entity,limit=1,sort=nearest,distance=..2] bw.shop.version = @s bw.shop.version
+#END
+
+#when bw.alwaysshop is activ, the shop will run all the time
+execute unless score bw.alwaysshop BedWars matches 0 run function bw:shop/run/witchversion
+#END
+
+#if you are looking at a shop, are in rech of it and don't already have a shop entity(the shop with GUI) you will get the tags to get a shop entity
+execute as @a[tag=!bw.shop.want,scores={bw.shop.predi=1..}] at @s if entity @e[tag=bw.shop,distance=..6] unless entity @e[distance=..1,tag=bw.shop.entity] run tag @s add bw.shop.lookingat
+execute as @a[tag=!bw.shop.want,scores={bw.shop.predi=1..}] at @s if entity @e[tag=bw.shop,distance=..6] unless entity @e[distance=..1,tag=bw.shop.entity] run tag @s add bw.shop.want
+execute as @a[scores={bw.shop.predi=..0}] at @s positioned ~ ~1.3 ~ unless entity @e[tag=bw.shop.villclicked,distance=..2,limit=1,sort=nearest] run tag @s remove bw.shop.want
+#END
+
+# runs the code that lets th player change pages and buy items inside the shop entitys
+execute at @e[tag=bw.shop.entity] if entity @p[distance=..6] as @e[tag=bw.shop.entity] at @s run function bw:shop/manage
+#END
 ##END##
 
 ## team join v1

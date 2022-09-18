@@ -3,39 +3,16 @@
 # https://www.youtube.com/channel/UCTL2EnToGrLXZaHV7oYHRDg #
 #         Please don't claim this as your own work!        #
 # ======================================================== #
+#is called from every bw.shop with just one player around it from bw:shop/run/witchversion
 
-#get and set the resources to counter#
-function bw:shop/resourcetoscore
+# if you summon a shop entity manually (clicked the villager) the spawnd shop entity will be tped to the nearest bw.shop if possible so it wount be killed because no bw.shop is around
+execute as @e[tag=bw.shop.entity,tag=bw.shop.villclicked,distance=..6] at @s unless entity @e[tag=bw.shop,distance=..2] if entity @e[tag=bw.shop,distance=..6,scores={bw.shop.version=1}] run tp @s @e[tag=bw.shop,distance=..6,limit=1,sort=nearest,scores={bw.shop.version=1}]
 #END#
 
-##code##
-#summoing the shops is done in bw:main !not here!#
+#tp the shop to the bw.shop vill/entity so that it can't be moved
+execute as @e[tag=bw.shop.entity] at @s at @e[tag=bw.shop,sort=nearest,limit=1] unless entity @e[tag=bw.shop.entity,distance=..0.5] run tp @s ~ ~1.3 ~
+#END
 
-#removing the shops if no bw.shop is nearby
+# removing the shops if no bw.shop is nearby
 execute as @e[tag=bw.shop.entity] at @s unless entity @e[tag=bw.shop,distance=..2] run tp @s ~ ~-1000 ~
-execute as @e[tag=bw.shop.entity] at @s unless entity @e[tag=bw.shop,distance=..2] run kill @s
-#END#
-
-#tp the shop the the bw.shop vill/entity so that it can't be moved
-execute as @e[tag=bw.shop.entity] at @s at @e[tag=bw.shop,sort=nearest,limit=1] run tp @s ~ ~1.3 ~
-#end
-
-#setting the shop page to 1 (quickbuy) when no player is around and bw.shopreset is aktiv
-execute unless score bw.shopreset BedWars matches 0 as @e[tag=bw.shop.entity,scores={bw.shop.temp=2..}] at @s unless entity @p[distance=..6] run function bw:shop/shopresetquickbuy
-#END#
-
-#first (the mc needs to be filled in the beginning or my code will think you have bought all the items on page 1 and will try to buy them for you etc.)
-#you also need to update the minecarts content witch I do by giveing it some random loot in the beginneng and than overwriting it with the atually content I want /loot replace entity @s container.0 loot blocks/cut_sandstone
-execute as @e[tag=bw.shop.first] run scoreboard players set @s bw.shop.temp 1
-execute as @e[tag=bw.shop.first] run loot replace entity @s container.0 loot blocks/cut_sandstone
-execute as @e[tag=bw.shop.first] run function bw:shop/reset1
-tag @e[tag=bw.shop.first] remove bw.shop.first
-
-execute as @e[tag=bw.shop.entity] at @s if entity @p[distance=..6] run function bw:shop/manage
-
-#removing all BWShopItem items#
-kill @e[nbt={Item: {tag: {BWShopItem: 1b}}}]
-clear @a #all{BWShopItem: 1b}
-#END#
-
-##END##
+#END

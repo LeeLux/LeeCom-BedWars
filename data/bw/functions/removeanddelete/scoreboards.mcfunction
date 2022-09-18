@@ -32,8 +32,9 @@ scoreboard objectives remove bw.green.broken
 scoreboard objectives remove bw.shop.page
 scoreboard objectives remove bw.shop.temp
 scoreboard objectives remove bw.shop.update
-scoreboard objectives remove bw.shop.slot
 scoreboard objectives remove bw.shop.res
+scoreboard objectives remove bw.shop.players
+scoreboard objectives remove bw.shop.version
 scoreboard objectives remove bw.remresource.1
 scoreboard objectives remove bw.remresource.2
 scoreboard objectives remove bw.remresource.3
