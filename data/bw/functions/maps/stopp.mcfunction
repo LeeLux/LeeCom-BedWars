@@ -5,10 +5,10 @@
 # ======================================================== #
 
 #kill#
-kill @e[tag=bw.clon.map1]
-kill @e[tag=bw.clon.map2]
-kill @e[tag=bw.clon.map3]
-kill @e[tag=bw.clon.map4]
+kill @e[tag=bw.clone.map1]
+kill @e[tag=bw.clone.map2]
+kill @e[tag=bw.clone.map3]
+kill @e[tag=bw.clone.map4]
 kill @e[tag=bw.clear00]
 #END#
 

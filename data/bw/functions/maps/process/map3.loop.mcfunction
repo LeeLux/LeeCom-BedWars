@@ -6,16 +6,16 @@
 
 ##clearing loop##
 #loop#
-execute as @e[tag=bw.clon.map3] at @s run clone ~ ~ ~ ~150 ~ ~150 0 ~ 0
-execute as @e[tag=bw.clon.map3] at @s run clone ~ ~ ~ ~-150 ~ ~-150 -150 ~ -150
-execute as @e[tag=bw.clon.map3] at @s run clone ~ ~ ~ ~-150 ~ ~150 -150 ~ 0
-execute as @e[tag=bw.clon.map3] at @s run clone ~ ~ ~ ~150 ~ ~-150 0 ~ -150
-execute as @e[tag=bw.clon.map3] at @s run tp @s ~ ~1 ~
-execute as @e[tag=bw.clon.map3] at @s run scoreboard players add @s bw.clear 1
+execute as @e[tag=bw.clone.map3] at @s run clone ~ ~ ~ ~150 ~ ~150 0 ~ 0
+execute as @e[tag=bw.clone.map3] at @s run clone ~ ~ ~ ~-150 ~ ~-150 -150 ~ -150
+execute as @e[tag=bw.clone.map3] at @s run clone ~ ~ ~ ~-150 ~ ~150 -150 ~ 0
+execute as @e[tag=bw.clone.map3] at @s run clone ~ ~ ~ ~150 ~ ~-150 0 ~ -150
+execute as @e[tag=bw.clone.map3] at @s run tp @s ~ ~1 ~
+execute as @e[tag=bw.clone.map3] at @s run scoreboard players add @s bw.clear 1
 title @a times 10 70 20
-title @a title [{"text": "","color": "red"},{"text": "Cloning process...  ["},{"score":{"name": "@e[tag=bw.clon.map3,limit=1]","objective": "bw.clear","value": "error"},"color": "green"},{"text": "/"},{"text": "320","color": "green"},{"text": "]"}]
+title @a title [{"text": "","color": "red"},{"text": "Cloning process...  ["},{"score":{"name": "@e[tag=bw.clone.map3,limit=1]","objective": "bw.clear","value": "error"},"color": "green"},{"text": "/"},{"text": "320","color": "green"},{"text": "]"}]
 title @a subtitle [{"text": "The map and the play area must be loaded propertly!","color": "red"}]
 #END#
-execute if entity @e[tag=bw.clon.map3,scores={bw.clear=320..}] run function bw:maps/process/end
-execute as @e[tag=bw.clon.map3] at @s unless score @s bw.clear matches 320.. run schedule function bw:maps/process/map3.loop 1t
+execute if entity @e[tag=bw.clone.map3,scores={bw.clear=320..}] run function bw:maps/process/end
+execute as @e[tag=bw.clone.map3] at @s unless score @s bw.clear matches 320.. run schedule function bw:maps/process/map3.loop 1t
 ##END##

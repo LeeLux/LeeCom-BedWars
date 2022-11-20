@@ -4,7 +4,7 @@
 #         Please don't claim this as your own work!        #
 # ======================================================== #
 
-kill @e[tag=bw.clon.map2]
+kill @e[tag=bw.clone.map2]
 #visuals#
 tellraw @a [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text": "Cloning starts..."}]
 #END#
