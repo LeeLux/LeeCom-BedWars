@@ -69,6 +69,10 @@ effect give @a minecraft:saturation 60000 0 true
 ##END##
 
 ##stats##
+#pearltimer goes down
+scoreboard players remove @a[scores={bw.pearltimer=1..}] bw.pearltimer 1
+#END#
+
 #recording play time#
 
 #playtime as team in minutes (just when game is running)

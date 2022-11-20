@@ -70,6 +70,16 @@ scoreboard objectives remove bws.wongreen
 scoreboard objectives remove bws.wonred
 scoreboard objectives remove bws.wonyellow
 scoreboard objectives remove bws.draws
+scoreboard objectives remove bws.pearlkills
+scoreboard objectives remove bws.tempkillcou
+scoreboard objectives remove bws.strengthkill
+#scoreboard objectives remove bws.
+#scoreboard objectives remove bws.
+#scoreboard objectives remove bws.
+#scoreboard objectives remove bws.
+#scoreboard objectives remove bws.
+#scoreboard objectives remove bws.
+#scoreboard objectives remove bws.
 #scoreboard objectives remove bws.
 #scoreboard objectives remove bws.
 #scoreboard objectives remove bws.

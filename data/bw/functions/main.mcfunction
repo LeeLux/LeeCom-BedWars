@@ -236,7 +236,7 @@ execute as @a[scores={bw.mapshop=1..}] at @s run function bw:teleport/mapshop
 ##END##
 
 ## run stats
-function bw:stats/manage
+execute as @a at @s run function bw:stats/manage
 ##END##
 
 ## run special items code

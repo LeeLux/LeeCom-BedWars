@@ -155,7 +155,7 @@ scoreboard objectives add bw.autodrawbool trigger
 scoreboard objectives add bw.eightteams trigger
 scoreboard objectives add bw.invgui trigger
 scoreboard objectives add bw.invgui.page dummy
-#scoreboard objectives add bw.
+scoreboard objectives add bw.pearltimer dummy
 #scoreboard objectives add bw.
 #scoreboard objectives add bw.
 #scoreboard objectives add bw.
@@ -209,6 +209,10 @@ scoreboard objectives add bws.timeblue dummy
 scoreboard objectives add bws.ingamesec dummy
 scoreboard objectives add bws.ingamemin dummy
 scoreboard objectives add bws.ingamehour dummy
+scoreboard objectives add bws.pearlkills dummy
+scoreboard objectives add bws.pearlkilluse minecraft.used:minecraft.ender_pearl
+scoreboard objectives add bws.tempkillcou playerKillCount
+scoreboard objectives add bws.strengthkill dummy
 #wl teams
 scoreboard objectives add bws.wlintred dummy
 scoreboard objectives add bws.wldecimalred dummy
