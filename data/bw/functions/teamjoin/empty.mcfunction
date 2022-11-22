@@ -9,3 +9,4 @@
 #execute if entity @s[team=blue] run tellraw @a [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"selector":"@s","color":"none"},{"text":" left team ","color":"none"},{"text":"Blue","color":"blue"}]
 team leave @s
 scoreboard players reset @s bw.join.empty
+playsound minecraft:entity.ender_eye.death voice @s

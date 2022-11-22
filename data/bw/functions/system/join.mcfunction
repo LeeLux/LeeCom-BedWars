@@ -4,8 +4,7 @@
 #         Please don't claim this as your own work!        #
 # ======================================================== #
 
-team join random @a
-schedule function bw:teamjoin/teams_from_random 1t
-title @a times 10 70 20
-title @a title [{"text": "You joined a random team","color": "gold"}]
-playsound minecraft:entity.ender_eye.death voice @a ~ ~ ~ 1 1
+execute unless score bw.gamestate BedWars matches 1.. run team leave @s
+execute run function bw:system/checks/first_zero
+execute if score bw.gamestate BedWars matches 1.. unless score @s bw.gameID = bw.gameID BedWars run function bw:respawn/joinspecingame
+scoreboard players reset @s bw.join

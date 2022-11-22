@@ -163,18 +163,8 @@ execute as @a[scores={bw.shop.predi=..0}] at @s positioned ~ ~1.3 ~ unless entit
 ##END##
 
 ## team join v1
-execute if score bw.gamestate BedWars matches 0 as @a[scores={bw.join.red=1..}] if score bw.gametimer BedWars matches -1 run function bw:teamjoin/red
-execute if score bw.gamestate BedWars matches 0 as @a[scores={bw.join.yellow=1..}] if score bw.gametimer BedWars matches -1 run function bw:teamjoin/yellow
-execute if score bw.gamestate BedWars matches 0 as @a[scores={bw.join.green=1..}] if score bw.gametimer BedWars matches -1 run function bw:teamjoin/green
-execute if score bw.gamestate BedWars matches 0 as @a[scores={bw.join.blue=1..}] if score bw.gametimer BedWars matches -1 run function bw:teamjoin/blue
-execute if score bw.gamestate BedWars matches 0 as @a[scores={bw.join.empty=1..}] if score bw.gametimer BedWars matches -1 run function bw:teamjoin/empty
-execute if score bw.gamestate BedWars matches 0 as @a[scores={bw.join.random=1..}] if score bw.gametimer BedWars matches -1 run function bw:teamjoin/random
-execute unless score bw.gamestate BedWars matches 0 run scoreboard players reset @a[scores={bw.join.red=1..}] bw.join.red
-scoreboard players reset @a[scores={bw.join.blue=1..}] bw.join.blue
-scoreboard players reset @a[scores={bw.join.green=1..}] bw.join.green
-scoreboard players reset @a[scores={bw.join.yellow=1..}] bw.join.yellow
-scoreboard players reset @a[scores={bw.join.empty=1..}] bw.join.empty
-scoreboard players reset @a[scores={bw.join.random=1..}] bw.join.random
+execute if score bw.gamestate BedWars matches 0 if score bw.gametimer BedWars matches -1 run function bw:teamjoin/trigger_join
+execute unless score bw.gamestate BedWars matches 0 as @a run function bw:teamjoin/reset_join
 ##END##
 
 ## set bw.setYdeath to bw.Ydeath BedWars
@@ -207,10 +197,7 @@ execute store result score bw.team.empty bw.teams if entity @a[team=!blue,team=!
 ## player join
 execute as @a unless score @s bw.joinleave matches 0 run scoreboard players add @s bw.join 1
 scoreboard players set @a bw.joinleave 0
-execute as @a[scores={bw.join=1..}] unless score bw.gamestate BedWars matches 1.. run team leave @s
-execute as @a[scores={bw.join=1..}] run function bw:system/checks/first_zero
-execute as @a[scores={bw.join=1..}] if score bw.gamestate BedWars matches 1.. unless score @s bw.gameID = bw.gameID BedWars run function bw:respawn/joinspecingame
-scoreboard players reset @a[scores={bw.join=1..}] bw.join
+execute as @a[scores={bw.join=1..}] at @s run function bw:system/join
 ##END##
 
 ## bools
