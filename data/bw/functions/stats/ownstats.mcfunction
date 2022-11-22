@@ -3,7 +3,7 @@
 # https://www.youtube.com/channel/UCTL2EnToGrLXZaHV7oYHRDg #
 #         Please don't claim this as your own work!        #
 # ======================================================== #
-execute as @s run function bw:stats/mathstatsstart
+execute as @s run function bw:stats/do_math
 #team spesific
 tellraw @s [{"nbt":"StatsPrefix","storage":"minecraft:bedwars","interpret":true},{"text": "=== [Team spesific stats] ===","color": "gold"}]
 #red

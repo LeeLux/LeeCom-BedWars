@@ -6,5 +6,5 @@
 
 scoreboard players operation bw.eightteams BedWars += @s bw.eightteams
 execute unless score bw.eightteams BedWars matches 0..1 run scoreboard players set bw.eightteams BedWars 0
-execute as @a[scores={bw.eightteams=1..}] run function bw:display/eightteamsdisplay
+execute as @a[scores={bw.eightteams=1..}] run function bw:display/eightteams
 scoreboard players reset @a[scores={bw.eightteams=1..}] bw.eightteams
