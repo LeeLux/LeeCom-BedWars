@@ -9,4 +9,5 @@ execute if score bw.team.blue bw.teams <= bw.team.red bw.teams if score bw.team.
 execute if score bw.team.green bw.teams <= bw.team.red bw.teams if score bw.team.green bw.teams <= bw.team.blue bw.teams if score bw.team.green bw.teams <= bw.team.yellow bw.teams run team join green @r[team=random]
 execute if score bw.team.yellow bw.teams <= bw.team.red bw.teams if score bw.team.yellow bw.teams <= bw.team.blue bw.teams if score bw.team.yellow bw.teams <= bw.team.green bw.teams run team join yellow @r[team=random]
 #loop if nessersery
-execute if entity @a[team=random] run function bw:teamjoin/teams_from_random
+#normaly you don't need a delay here but its cooler in the tab bar
+execute if entity @a[team=random] run schedule function bw:teamjoin/teams_from_random 1t
