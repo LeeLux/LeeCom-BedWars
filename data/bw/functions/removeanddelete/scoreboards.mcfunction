@@ -92,7 +92,7 @@ scoreboard objectives remove bw.autodrawbool
 scoreboard objectives remove bw.eightteams
 scoreboard objectives remove bw.invgui
 scoreboard objectives remove bw.invgui.page
-#scoreboard objectives remove bw.
+scoreboard objectives remove bw.pearltime
 #scoreboard objectives remove bw.
 #scoreboard objectives remove bw.
 #scoreboard objectives remove bw.

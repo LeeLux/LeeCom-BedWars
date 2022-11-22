@@ -5,4 +5,4 @@
 # ======================================================== #
 
 advancement revoke @s only bw:placedblock
-execute if score bw.gamestate BedWars matches 1.. run scoreboard players add @s[team=!spec,gamemode=adventure] bws.placedblocks 1
+execute if score bw.gamestate BedWars matches 1.. run scoreboard players add @s[team=!spec,gamemode=!creative] bws.placedblocks 1

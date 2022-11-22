@@ -6,7 +6,7 @@
 
 scoreboard players operation bw.customshop BedWars += @s bw.customshop
 execute unless score bw.customshop BedWars matches 0..1 run scoreboard players set bw.customshop BedWars 0
-execute as @a[scores={bw.customshop=1..}] run function bw:display/customshopdisplay
+execute as @a[scores={bw.customshop=1..}] run function bw:display/customshop
 scoreboard players reset @a[scores={bw.customshop=1..}] bw.customshop
 
 execute if score bw.customshop BedWars matches 0 run function bw:shop/setdefaultshop

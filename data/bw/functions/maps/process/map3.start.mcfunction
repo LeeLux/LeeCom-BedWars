@@ -5,9 +5,9 @@
 # ======================================================== #
 
 #summon#
-execute unless entity @e[tag=bw.clon.map3] run summon armor_stand -1000 -64 1000 {NoGravity: 1b, Silent: 1b, Invulnerable: 1b, Marker: 1b, Invisible: 1b, Tags: ["bw.clon.map3", "bw.entity", "bw.clon"]}
+execute unless entity @e[tag=bw.clone.map3] run summon armor_stand -1000 -64 1000 {NoGravity: 1b, Silent: 1b, Invulnerable: 1b, Marker: 1b, Invisible: 1b, Tags: ["bw.clone.map3", "bw.entity", "bw.clone"]}
 #END#
 
 #start loop#
-execute as @e[tag=bw.clon.map3,limit=1] at @s run function bw:maps/process/map3.loop
+execute as @e[tag=bw.clone.map3,limit=1] at @s run function bw:maps/process/map3.loop
 #END#

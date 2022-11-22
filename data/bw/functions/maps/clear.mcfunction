@@ -11,7 +11,7 @@ tellraw @a [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"te
 #END#
 
 #summon#
-execute unless entity @e[tag=bw.clear00] run summon armor_stand 0 320 0 {NoGravity: 1b, Silent: 1b, Invulnerable: 1b, Marker: 1b, Invisible: 1b, Tags: ["bw.clear00", "bw.entity", "bw.clon"]}
+execute unless entity @e[tag=bw.clear00] run summon armor_stand 0 320 0 {NoGravity: 1b, Silent: 1b, Invulnerable: 1b, Marker: 1b, Invisible: 1b, Tags: ["bw.clear00", "bw.entity", "bw.clone"]}
 #END#
 
 #start loop#
