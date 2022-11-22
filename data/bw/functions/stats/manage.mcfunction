@@ -5,7 +5,7 @@
 # ======================================================== #
 
 # detecting ender pearl kills
-execute as @s[scores={bws.pearlkilluse=1..}] at @s run function bw:stats/initperalkilles
+execute as @s[scores={bws.pearlkilluse=1..}] at @s run function bw:stats/init_pearl_kills
 scoreboard players add @s[scores={bws.tempkillcou=1..,bw.pearltimer=1..}] bws.pearlkills 1
 #END#
 

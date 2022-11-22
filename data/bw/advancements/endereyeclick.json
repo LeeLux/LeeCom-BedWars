@@ -13,6 +13,6 @@
         }
     },
     "rewards": {
-        "function": "bw:platform"
+        "function": "bw:specialitems/platform"
     }
 }

@@ -6,5 +6,5 @@
 
 scoreboard players operation bw.healthdisplay BedWars += @s bw.sethealth
 execute unless score bw.healthdisplay BedWars matches 0..3 run scoreboard players set bw.healthdisplay BedWars 0
-execute as @a[scores={bw.sethealth=1..}] run function bw:display/healthdisplay
+execute as @a[scores={bw.sethealth=1..}] run function bw:display/health
 scoreboard players reset @a[scores={bw.sethealth=1..}] bw.sethealth
