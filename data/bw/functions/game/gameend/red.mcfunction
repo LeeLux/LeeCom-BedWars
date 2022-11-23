@@ -31,5 +31,5 @@ scoreboard players add bws.bluelose bw.stats 1
 #END#
 
 #!! after the stats !!#
-function bw:gameend/gameend
+function bw:game/gameend/gameend
 #END#

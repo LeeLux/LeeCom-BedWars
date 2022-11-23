@@ -51,7 +51,7 @@ kill @e[type=arrow]
 ##END##
 
 #resetting player#
-function bw:system/resettingplayer
+execute as @a run function bw:system/reset_player
 #END#
 
 ##back to lobby##
@@ -61,7 +61,7 @@ tp @a @e[tag=bw.lobby.spawn,limit=1]
 ##END##
 
 #removing playedteam tag#
-execute as @a run function bw:game/gameend/removeplayedteamtag
+execute as @a run function bw:game/gameend/remove_played_teamtag
 #END#
 
 ## invgui

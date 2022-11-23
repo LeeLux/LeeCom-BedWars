@@ -36,5 +36,5 @@ execute if score bw.starttestcancel BedWars matches 4 run tellraw @a [{"nbt":"Pr
 # == END == #
 
 # == trying to start game == #
-execute if score bw.starttestcancel BedWars matches 0 run function bw:game/init_start
+execute unless score bw.starttestcancel BedWars matches 1.. run function bw:game/init_start
 # == END == #

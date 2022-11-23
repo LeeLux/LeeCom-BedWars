@@ -5,8 +5,10 @@
 # ======================================================== #
 
 
-clear @a
-effect clear @a
-effect give @a regeneration 1 255 false
-effect give @a saturation 1 255 false
-execute as @a run function bw:game/clear_enderchest
+clear @s
+effect clear @s
+experience set @s 0 levels
+experience set @s 0 points
+effect give @s regeneration 1 255 false
+effect give @s saturation 1 255 false
+execute as @s run function bw:game/clear_enderchest

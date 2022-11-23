@@ -101,7 +101,7 @@ tag @e[tag=bw.shop.need] remove bw.shop.need
 ##END##
 
 ## Game Start
-execute if score bw.gamestate BedWars matches 0 as @a if score @s bw.gamestart matches 1.. run function bw:checks/starttest
+execute as @a if score @s bw.gamestart matches 1.. run function bw:system/checks/starttest
 execute if score bw.gametimer BedWars matches 0 run function bw:game/start
 scoreboard players reset @a[scores={bw.gamestart=1..}] bw.gamestart
 ##END##
