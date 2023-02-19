@@ -156,8 +156,8 @@ scoreboard objectives add bw.eightteams trigger
 scoreboard objectives add bw.invgui trigger
 scoreboard objectives add bw.invgui.page dummy
 scoreboard objectives add bw.pearltimer dummy
-#scoreboard objectives add bw.
-#scoreboard objectives add bw.
+scoreboard objectives add bw.sneaktime minecraft.custom:sneak_time
+scoreboard objectives add bw.hometptimer dummy
 #scoreboard objectives add bw.
 #scoreboard objectives add bw.
 #scoreboard objectives add bw.

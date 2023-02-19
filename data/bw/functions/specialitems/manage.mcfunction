@@ -55,3 +55,11 @@ execute as @e[nbt={Tags: ["bw.glowing.entity"]},type=marker] at @s run effect gi
 execute as @e[nbt={Tags: ["bw.glowing.entity"]},type=marker] at @s run playsound block.beacon.activate voice @a[distance=..16] ~ ~ ~ 1 1 1
 kill @e[tag=bw.glowing.entity,type=!player]
 ##END##
+
+## Home powder
+execute as @e[type=minecraft:item,nbt={Item:{id:"minecraft:glowstone_dust",tag:{Tags:["bw.homepowder"]}}}] at @s run scoreboard players add @p[distance=..1,scores={bw.sneaktime=1..}] bw.hometptimer 1
+scoreboard players reset @a[scores={bw.sneaktime=1..}] bw.sneaktime
+#make the home powder not pickupable
+execute as @a[scores={bw.hometptimer=1..}] at @s run data modify entity @e[type=minecraft:item,nbt={Item:{id:"minecraft:glowstone_dust",tag:{Tags:["bw.homepowder"]}}},limit=1,sort=nearest] PickupDelay set value 2s
+execute as @a unless score @s bw.sneaktime matches 1.. run scoreboard players reset @s bw.hometptimer
+##END##

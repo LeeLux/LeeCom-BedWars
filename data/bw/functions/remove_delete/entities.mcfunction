@@ -6,5 +6,7 @@
 
 #deleting all entitys
 kill @e[tag=bw.entity]
-tellraw @s [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text":"All entitys from: ","color":"green"},{"text":"LeeCom BedWars","color":"gold"},{"text":" are now deleted!","color":"green"}]
+tellraw @s {"text": ""}
+tellraw @s [{"nbt":"HoleName","storage":"minecraft:bedwars","interpret":true},{"text":"All custom entities have been removed"}]
+tellraw @s {"text": ""}
 playsound minecraft:entity.vex.death voice @s ~ ~ ~ 10 1
