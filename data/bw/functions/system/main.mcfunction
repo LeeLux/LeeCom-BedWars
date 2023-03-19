@@ -113,6 +113,7 @@ scoreboard players reset @a[scores={bw.drawforce=1..}] bw.drawforce
 ##END##
 
 ## rotade bw.rotadetoplayer entities to @p player
+effect give @e[tag=bw.rotadetoplayer,tag=bw.shop] regeneration 999999 250 true
 execute as @e[tag=bw.rotadetoplayer] at @s run tp @s ~ ~ ~ facing entity @p
 execute as @e[tag=bw.rotadetoplayer] run data modify entity @s Rotation[1] set value 0f
 tag @e[tag=bw.rotadetoplayer] remove bw.rotadetoplayer
