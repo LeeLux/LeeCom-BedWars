@@ -24,37 +24,24 @@ execute as @e[type=tnt,nbt={Fuse: 1s}] at @s run function bw:specialitems/tnt/1s
 ##END##
 
 ## Glowing
-#get becon/entity#
-execute as @e[nbt={LeftOwner: 1b, Item: {tag: {Tags: ["bw.glowing"]}}}] at @s unless block ^ ^ ^-1 air run tag @s add bw.glowing.initonground
-execute as @e[nbt={LeftOwner: 1b, Item: {tag: {Tags: ["bw.glowing"]}}}] at @s unless block ^ ^ ^-0.5 air run tag @s add bw.glowing.initonground
-execute as @e[nbt={LeftOwner: 1b, Item: {tag: {Tags: ["bw.glowing"]}}}] at @s unless block ^ ^-1 ^ air run tag @s add bw.glowing.initonground
-execute as @e[nbt={LeftOwner: 1b, Item: {tag: {Tags: ["bw.glowing"]}}}] at @s unless block ^ ^-0.5 ^ air run tag @s add bw.glowing.initonground
-execute as @e[nbt={LeftOwner: 1b, Item: {tag: {Tags: ["bw.glowing"]}}}] at @s unless block ^ ^-1 ^-1 air run tag @s add bw.glowing.initonground
-execute as @e[nbt={LeftOwner: 1b, Item: {tag: {Tags: ["bw.glowing"]}}}] at @s unless block ^ ^-0.5 ^-0.5 air run tag @s add bw.glowing.initonground
-execute as @e[tag=bw.glowing.initonground] at @s run summon marker ~ ~ ~ {Tags: ["bw.glowing.entity"]}
-kill @e[tag=bw.glowing.initonground,type=!player]
-tag @e remove bw.glowing.initonground
-#END#
+execute as @e[type=spectral_arrow,nbt={inGround:1b},tag=!bw.glowing.point] at @s run tag @s add bw.glowing.point
 
 #white sparki
-#execute as @e[nbt={Tags: ["bw.glowing.entity"]},type=marker] at @s run particle wax_off ~ ~1 ~ 8 8 8 0 100000 force @a
-#white
-execute as @e[nbt={Tags: ["bw.glowing.entity"]},type=marker] at @s unless entity @a[distance=..16,team=!spec] run particle minecraft:dust 1 1 1 6 ~ ~4 ~ 8 8 8 1 600 force @a
+execute as @e[tag=bw.glowing.point] at @s unless entity @a[distance=..16,team=!spec] run particle minecraft:dust 1 1 1 6 ~ ~4 ~ 8 8 8 1 600 force @a
 #red
-execute as @e[nbt={Tags: ["bw.glowing.entity"]},type=marker] at @s if entity @a[distance=..16,team=red] run particle minecraft:dust 1 0 0 6 ~ ~4 ~ 8 8 8 1 600 force @a
+execute as @e[tag=bw.glowing.point] at @s if entity @a[distance=..16,team=red] run particle minecraft:dust 1 0 0 6 ~ ~4 ~ 8 8 8 1 600 force @a
 #blue
-execute as @e[nbt={Tags: ["bw.glowing.entity"]},type=marker] at @s if entity @a[distance=..16,team=blue] run particle minecraft:dust 0 0 1 6 ~ ~4 ~ 8 8 8 1 600 force @a
+execute as @e[tag=bw.glowing.point] at @s if entity @a[distance=..16,team=blue] run particle minecraft:dust 0 0 1 6 ~ ~4 ~ 8 8 8 1 600 force @a
 #green
-execute as @e[nbt={Tags: ["bw.glowing.entity"]},type=marker] at @s if entity @a[distance=..16,team=green] run particle minecraft:dust 0 1 0 6 ~ ~4 ~ 8 8 8 1 600 force @a
+execute as @e[tag=bw.glowing.point] at @s if entity @a[distance=..16,team=green] run particle minecraft:dust 0 1 0 6 ~ ~4 ~ 8 8 8 1 600 force @a
 #yellow
-execute as @e[nbt={Tags: ["bw.glowing.entity"]},type=marker] at @s if entity @a[distance=..16,team=yellow] run particle minecraft:dust 1 1 0 6 ~ ~4 ~ 8 8 8 1 600 force @a
+execute as @e[tag=bw.glowing.point] at @s if entity @a[distance=..16,team=yellow] run particle minecraft:dust 1 1 0 6 ~ ~4 ~ 8 8 8 1 600 force @a
 
 #glowing
-execute as @e[nbt={Tags: ["bw.glowing.entity"]},type=marker] at @s run effect give @a[distance=..16] glowing 10 255 true
+execute as @e[tag=bw.glowing.point] at @s run effect give @a[distance=..16,team=!spec] glowing 10 255 true
 #sounds
-execute as @e[nbt={Tags: ["bw.glowing.entity"]},type=marker] at @s run playsound block.beacon.activate voice @a[distance=..16] ~ ~ ~ 1 1 1
-kill @e[tag=bw.glowing.entity,type=!player]
-##END##
+
+##EDN##
 
 ## Home powder
 execute as @e[type=minecraft:item,nbt={Item:{id:"minecraft:glowstone_dust",tag:{Tags:["bw.homepowder"]}}}] at @s run scoreboard players add @p[distance=..1,scores={bw.sneaktime=1..}] bw.hometptimer 1
@@ -62,4 +49,7 @@ scoreboard players reset @a[scores={bw.sneaktime=1..}] bw.sneaktime
 #make the home powder not pickupable
 execute as @a[scores={bw.hometptimer=1..}] at @s run data modify entity @e[type=minecraft:item,nbt={Item:{id:"minecraft:glowstone_dust",tag:{Tags:["bw.homepowder"]}}},limit=1,sort=nearest] PickupDelay set value 2s
 execute as @a unless score @s bw.sneaktime matches 1.. run scoreboard players reset @s bw.hometptimer
+execute as @e[tag=bw.glowing.point] at @s run playsound block.beacon.activate voice @a[distance=..16,team=!spec] ~ ~ ~ 1 1 1
+#entity remove
+kill @e[tag=bw.glowing.point]
 ##END##
