@@ -93,8 +93,8 @@ scoreboard objectives remove bw.eightteams
 scoreboard objectives remove bw.invgui
 scoreboard objectives remove bw.invgui.page
 scoreboard objectives remove bw.pearltime
-#scoreboard objectives remove bw.
-#scoreboard objectives remove bw.
+scoreboard objectives remove bw.sneaktime
+scoreboard objectives remove bw.hometptimer
 #scoreboard objectives remove bw.
 #scoreboard objectives remove bw.
 #scoreboard objectives remove bw.
@@ -122,7 +122,8 @@ team remove sgreen
 team remove sblue
 #END#
 
-execute as @e[tag=bw.lobby.spawn,limit=1] at @s run forceload remove ~ ~
-tellraw @s [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text":"All scoreboards from: ","color":"green"},{"text":"LeeCom BedWars","color":"gold"},{"text":" are now deleted!","color":"green"}]
+tellraw @s {"text": ""}
+tellraw @s [{"nbt":"HoleName","storage":"minecraft:bedwars","interpret":true},{"text":"All scoreboards and teams have been removed"}]
+tellraw @s {"text": ""}
 playsound minecraft:entity.vex.death voice @s ~ ~ ~ 10 1
 # END #

@@ -89,6 +89,8 @@ scoreboard objectives remove bws.strengthkill
 #scoreboard objectives remove bws.
 #scoreboard objectives remove bws.
 
-tellraw @s [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text":"All stats from: ","color":"green"},{"text":"LeeCom BedWars","color":"gold"},{"text":" are now deleted!","color":"green"}]
+tellraw @s {"text": ""}
+tellraw @s [{"nbt":"HoleName","storage":"minecraft:bedwars","interpret":true},{"text":"All stats and there scoreboards have been removed"}]
+tellraw @s {"text": ""}
 playsound minecraft:entity.vex.death voice @s ~ ~ ~ 10 1
 # END #
