@@ -4,8 +4,11 @@
 #         Please don't claim this as your own work!        #
 # ======================================================== #
 
-team join random @a
-schedule function bw:teamjoin/teams_from_random 1t
-title @a times 10 70 20
-title @a title [{"text": "You joined a random team","color": "gold"}]
-playsound minecraft:entity.ender_eye.death voice @a ~ ~ ~ 1 1
+
+clear @s
+effect clear @s
+experience set @s 0 levels
+experience set @s 0 points
+effect give @s regeneration 1 255 false
+effect give @s saturation 1 255 false
+execute as @s run function bw:game/clear_enderchest

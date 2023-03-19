@@ -26,7 +26,11 @@ execute as @e[type=tnt,nbt={Fuse: 1s}] at @s run function bw:specialitems/tnt/1s
 ## Glowing
 #get becon/entity#
 execute as @e[nbt={LeftOwner: 1b, Item: {tag: {Tags: ["bw.glowing"]}}}] at @s unless block ^ ^ ^-1 air run tag @s add bw.glowing.initonground
+execute as @e[nbt={LeftOwner: 1b, Item: {tag: {Tags: ["bw.glowing"]}}}] at @s unless block ^ ^ ^-0.5 air run tag @s add bw.glowing.initonground
 execute as @e[nbt={LeftOwner: 1b, Item: {tag: {Tags: ["bw.glowing"]}}}] at @s unless block ^ ^-1 ^ air run tag @s add bw.glowing.initonground
+execute as @e[nbt={LeftOwner: 1b, Item: {tag: {Tags: ["bw.glowing"]}}}] at @s unless block ^ ^-0.5 ^ air run tag @s add bw.glowing.initonground
+execute as @e[nbt={LeftOwner: 1b, Item: {tag: {Tags: ["bw.glowing"]}}}] at @s unless block ^ ^-1 ^-1 air run tag @s add bw.glowing.initonground
+execute as @e[nbt={LeftOwner: 1b, Item: {tag: {Tags: ["bw.glowing"]}}}] at @s unless block ^ ^-0.5 ^-0.5 air run tag @s add bw.glowing.initonground
 execute as @e[tag=bw.glowing.initonground] at @s run summon marker ~ ~ ~ {Tags: ["bw.glowing.entity"]}
 kill @e[tag=bw.glowing.initonground,type=!player]
 tag @e remove bw.glowing.initonground

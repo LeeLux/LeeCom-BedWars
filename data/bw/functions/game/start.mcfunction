@@ -52,10 +52,10 @@ execute as @e[tag=bw.respawn.spec] at @s run spawnpoint @a[team=spec] ~ ~ ~
 ##END##
 
 ##kill resources##
-#kill @e[type=item,nbt={Item: {id: "minecraft:copper_ingot", tag: {Tags: ["bw.resource.1"]}}}]
-#kill @e[type=item,nbt={Item: {id: "minecraft:iron_ingot", tag: {Tags: ["bw.resource.2"]}}}]
-#kill @e[type=item,nbt={Item: {id: "minecraft:gold_ingot", tag: {Tags: ["bw.resource.3"]}}}]
-#kill @e[type=item,nbt={Item: {id: "minecraft:netherite_ingot", tag: {Tags: ["bw.resource.4"]}}}]
+kill @e[type=item,nbt={Item: {tag: {Tags: ["bw.resource.1"]}}}]
+kill @e[type=item,nbt={Item: {tag: {Tags: ["bw.resource.2"]}}}]
+kill @e[type=item,nbt={Item: {tag: {Tags: ["bw.resource.3"]}}}]
+kill @e[type=item,nbt={Item: {tag: {Tags: ["bw.resource.4"]}}}]
 
 #or kill all items
 kill @e[type=item]
@@ -72,10 +72,10 @@ scoreboard players operation bw.platintimer BedWars = bw.spawn.platin BedWars
 ##Set Beds##
 #set die y rotation to 0#
 execute as @e[tag=bw.bed] run data modify entity @s Rotation[1] set value 0f
-execute if score bw.team.red bw.teams matches 1.. run function bw:beds/own_broken/red
-execute if score bw.team.yellow bw.teams matches 1.. run function bw:beds/own_broken/yellow
-execute if score bw.team.green bw.teams matches 1.. run function bw:beds/own_broken/green
-execute if score bw.team.blue bw.teams matches 1.. run function bw:beds/own_broken/blue
+execute if score bw.team.red bw.teams matches 1.. run function bw:beds/place/red
+execute if score bw.team.yellow bw.teams matches 1.. run function bw:beds/place/yellow
+execute if score bw.team.green bw.teams matches 1.. run function bw:beds/place/green
+execute if score bw.team.blue bw.teams matches 1.. run function bw:beds/place/blue
 ##END##
 
 ##set chests##
@@ -98,7 +98,7 @@ execute as @a run function bw:invgui/rem
 ##END##
 
 ##reset player like he was killed##
-function bw:system/resettingplayer
+execute as @a run function bw:system/reset_player
 ##END##
 
 #set random game id#

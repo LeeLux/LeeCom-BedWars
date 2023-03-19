@@ -13,6 +13,10 @@ tellraw @a [{"text":"#       Please don't claim this as your own work!    #","co
 tellraw @a [{"text":"# ======================================== #","color":"dark_green"}]
 #END#
 
+#set game sidebar to sidebar
+scoreboard objectives setdisplay sidebar bw.sidebar
+#END#
+
 ## set the prefix
 data merge storage bedwars {Prefix: '[{"text":"","color":"white"},{"text":"[BW] ","color":"green"}]', StatsPrefix: '[{"text":"","color":"white"},{"text":"[BWStats] ","color":"gold"}]', Resources: {Items: [], CurrenCount: 9},TimeColor:'{"text":"","color":"white"}'}
 ### =============================== ###

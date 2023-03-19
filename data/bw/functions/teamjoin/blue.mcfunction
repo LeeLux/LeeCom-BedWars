@@ -6,3 +6,4 @@
 #execute unless entity @s[team=blue] run tellraw @a [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"selector":"@s","color":"none"},{"text":" joined team ","color":"none"},{"text":"Blue","color":"blue"}]
 team join blue @s
 scoreboard players reset @s bw.join.blue
+playsound minecraft:entity.ender_eye.death voice @s

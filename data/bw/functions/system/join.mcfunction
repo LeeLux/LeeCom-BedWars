@@ -4,9 +4,7 @@
 #         Please don't claim this as your own work!        #
 # ======================================================== #
 
-
-clear @a
-effect clear @a
-effect give @a regeneration 1 255 false
-effect give @a saturation 1 255 false
-execute as @a run function bw:game/clear_enderchest
+execute unless score bw.gamestate BedWars matches 1.. run team leave @s
+execute run function bw:system/checks/first_zero
+execute if score bw.gamestate BedWars matches 1.. unless score @s bw.gameID = bw.gameID BedWars run function bw:respawn/joinspecingame
+scoreboard players reset @s bw.join
