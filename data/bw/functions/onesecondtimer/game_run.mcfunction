@@ -39,7 +39,7 @@ function bw:actionbar/run_timer
 ##END##
 
 ## auto bed destruction if enabled
-execute if score bw.bedgonebool BedWars matches 1 run function bw:bedgone/warnings
+execute if score bw.bedgonebool BedWars matches 1 run function bw:beds/gone/warnings
 ##END##
 
 ## auto draw if enabled
