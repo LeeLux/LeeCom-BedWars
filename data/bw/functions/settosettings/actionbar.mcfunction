@@ -5,6 +5,6 @@
 # ======================================================== #
 
 scoreboard players operation bw.actionbar BedWars += @s bw.setactionbar
-execute unless score bw.actionbar BedWars matches 0..3 run scoreboard players set bw.actionbar BedWars 0
+execute unless score bw.actionbar BedWars matches 0..7 run scoreboard players set bw.actionbar BedWars 0
 execute as @a[scores={bw.setactionbar=1..}] run function bw:display/actionbar
 scoreboard players reset @a[scores={bw.setactionbar=1..}] bw.setactionbar

@@ -34,8 +34,6 @@ scoreboard players set bw.hours bw.timer 0
 scoreboard players set bw.minutes bw.timer 0
 # Start operations
 function bw:stats/game_timer
-# display
-function bw:actionbar/run_timer
 ##END##
 
 ## auto bed destruction if enabled
@@ -47,6 +45,6 @@ execute if score bw.autodrawbool BedWars matches 1 run function bw:display/autod
 ##END##
 
 #actionbar#
-function bw:actionbar/recourcetimer
+function bw:actionbar/manage
 #END#
 execute if score bw.gamestate BedWars matches 1.. run schedule function bw:onesecondtimer/game_run 1s
