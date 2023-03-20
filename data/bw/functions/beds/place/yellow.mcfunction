@@ -4,7 +4,7 @@
 #         Please don't claim this as your own work!        #
 # ======================================================== #
 
-##yellow bed##
+## place
 execute as @e[tag=bw.bed.yellow,scores={Rotation=-45..45}] at @s run fill ^ ^ ^ ^ ^ ^ yellow_bed[ part= foot,facing= north,occupied=true] replace air
 execute as @e[tag=bw.bed.yellow,scores={Rotation=-45..45}] at @s run fill ^ ^ ^-1 ^ ^ ^-1 yellow_bed[ part= head,facing= north,occupied=true] replace air
 
@@ -18,3 +18,4 @@ execute as @e[tag=bw.bed.yellow,scores={Rotation=136..180}] at @s run fill ^ ^ ^
 
 execute as @e[tag=bw.bed.yellow,scores={Rotation=-135..-46}] at @s run fill ^ ^ ^ ^ ^ ^ yellow_bed[ part= foot,facing= west,occupied=true] replace air
 execute as @e[tag=bw.bed.yellow,scores={Rotation=-135..-46}] at @s run fill ^ ^ ^-1 ^ ^ ^-1 yellow_bed[ part= head,facing= west,occupied=true] replace air
+##END##

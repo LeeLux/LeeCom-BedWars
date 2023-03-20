@@ -72,10 +72,10 @@ scoreboard players operation bw.platintimer BedWars = bw.spawn.platin BedWars
 ##Set Beds##
 #set die y rotation to 0#
 execute as @e[tag=bw.bed] run data modify entity @s Rotation[1] set value 0f
-execute if score bw.team.red bw.teams matches 1.. run function bw:beds/place/red
-execute if score bw.team.yellow bw.teams matches 1.. run function bw:beds/place/yellow
-execute if score bw.team.green bw.teams matches 1.. run function bw:beds/place/green
-execute if score bw.team.blue bw.teams matches 1.. run function bw:beds/place/blue
+execute if score bw.team.red bw.teams matches 1.. run function bw:beds/place/check/red
+execute if score bw.team.yellow bw.teams matches 1.. run function bw:beds/place/check/yellow
+execute if score bw.team.green bw.teams matches 1.. run function bw:beds/place/check/green
+execute if score bw.team.blue bw.teams matches 1.. run function bw:beds/place/check/blue
 ##END##
 
 ##set chests##
