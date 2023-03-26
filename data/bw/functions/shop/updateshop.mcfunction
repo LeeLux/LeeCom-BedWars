@@ -9,7 +9,15 @@ function bw:display/updateshop
 ##END##
 
 # the real function of the whre the shop is updated
-function bw:addingforceload
+function bw:system/addingforceload
+# reloading the shop items
+# bw.customshop = 0 = default
+execute unless score bw.customshop BedWars matches 1 run function bw:shop/setcustomshop
+execute unless score bw.customshop BedWars matches 1 run function bw:shop/setdefaultshop
+# bw.customshop = 1 = custom
+execute if score bw.customshop BedWars matches 1 run function bw:shop/setdefaultshop
+execute if score bw.customshop BedWars matches 1 run function bw:shop/setcustomshop
+# resets the entities inventory
 execute as @e[tag=bw.shop.entity] run data remove entity @s Inventory
 execute as @e[tag=bw.shop.entity] run function bw:shop/reset1
 ##END##
