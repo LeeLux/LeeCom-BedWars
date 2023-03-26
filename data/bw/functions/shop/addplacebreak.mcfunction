@@ -12,6 +12,7 @@ data modify block 65540 247 65536 Items[].tag merge value {CanPlaceOn: ["#bw.pla
 data modify block 65541 247 65536 Items[].tag merge value {CanPlaceOn: ["#bw.place"], CanDestroy: ["#bw.break"], HideFlags: 94, Unbreakable: 1b, BWShopItem: 1b}
 data modify block 65542 247 65536 Items[].tag merge value {CanPlaceOn: ["#bw.place"], CanDestroy: ["#bw.break"], HideFlags: 94, Unbreakable: 1b, BWShopItem: 1b}
 data modify block 65543 247 65536 Items[].tag merge value {CanPlaceOn: ["#bw.place"], CanDestroy: ["#bw.break"], HideFlags: 94, Unbreakable: 1b, BWShopItem: 1b}
+#resources
 data modify block 65544 247 65536 Items[].tag merge value {CanPlaceOn: ["#bw.place"], CanDestroy: ["#bw.break"], HideFlags: 94}
 
 #adding resources tag

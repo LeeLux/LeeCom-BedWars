@@ -27,6 +27,7 @@ execute as @e[tag=bw.respawn] at @s run fill ~ ~ ~ ~ ~2 ~ air destroy
 execute as @a at @s as @e[type=item,distance=..5] run data modify entity @s Item.tag.HideFlags set value 94
 execute as @a at @s as @e[type=item,distance=..5] run data modify entity @s Item.tag.CanPlaceOn set value ["#bw.place"]
 execute as @a at @s as @e[type=item,distance=..5] run data modify entity @s Item.tag.CanDestroy set value ["#bw.break"]
+execute as @a at @s as @e[type=item,distance=..5] run data modify entity @s Item.tag.Unbreakable set value 1b
 #END#
 
 ## the shop
