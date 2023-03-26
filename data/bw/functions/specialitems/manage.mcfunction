@@ -40,16 +40,19 @@ execute as @e[tag=bw.glowing.point] at @s if entity @a[distance=..16,team=yellow
 #glowing
 execute as @e[tag=bw.glowing.point] at @s run effect give @a[distance=..16,team=!spec] glowing 10 255 true
 #sounds
-
-##EDN##
-
-## Home powder
-execute as @e[type=minecraft:item,nbt={Item:{id:"minecraft:glowstone_dust",tag:{Tags:["bw.homepowder"]}}}] at @s run scoreboard players add @p[distance=..1,scores={bw.sneaktime=1..}] bw.hometptimer 1
-scoreboard players reset @a[scores={bw.sneaktime=1..}] bw.sneaktime
-#make the home powder not pickupable
-execute as @a[scores={bw.hometptimer=1..}] at @s run data modify entity @e[type=minecraft:item,nbt={Item:{id:"minecraft:glowstone_dust",tag:{Tags:["bw.homepowder"]}}},limit=1,sort=nearest] PickupDelay set value 2s
-execute as @a unless score @s bw.sneaktime matches 1.. run scoreboard players reset @s bw.hometptimer
 execute as @e[tag=bw.glowing.point] at @s run playsound block.beacon.activate voice @a[distance=..16,team=!spec] ~ ~ ~ 1 1 1
 #entity remove
 kill @e[tag=bw.glowing.point]
+##EDN##
+
+## Home powder
+execute as @e[type=minecraft:item,nbt={Item:{tag:{Tags:["bw.homepowder"]}}},tag=!bw.homepowder.save] at @s run function bw:specialitems/home_powder/start_check
+# if not sneaking + you have the bw.shomepowder.started tag (you are trying to tp) = cancel
+execute as @a[tag=bw.shomepowder.started] unless score @s bw.sneaktime matches 1.. run function bw:specialitems/home_powder/cancel
+# reset sneaktime
+scoreboard players reset @a[scores={bw.sneaktime=1..}] bw.sneaktime
+scoreboard players add @a[tag=bw.shomepowder.started] bw.hometptimer 1
+# when x ticks passed sneaking, the home poweder succeeded and you get tped
+execute as @a[scores={bw.hometptimer=100..}] at @s run function bw:specialitems/home_powder/success
+execute as @a[tag=bw.shomepowder.started] at @s run function bw:specialitems/home_powder/visual_loop
 ##END##
