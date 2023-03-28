@@ -4,7 +4,6 @@
 #         Please don't claim this as your own work!        #
 # ======================================================== #
 
-
 ## remove all chickens
 #summons a brige egg
 #execute as @e[type=chicken,limit=1] at @s run summon item ~ ~1 ~ {Item: {id: "minecraft:egg", Count: 1b, tag: {HideFlags: 24, Tags: ["bw.brigeegg"], Enchantments: [{}], display: {Name: '{"text":"Brige","italic":false}'}}}}
@@ -55,4 +54,21 @@ scoreboard players add @a[tag=bw.shomepowder.started] bw.hometptimer 1
 # when x ticks passed sneaking, the home poweder succeeded and you get tped
 execute as @a[scores={bw.hometptimer=100..}] at @s run function bw:specialitems/home_powder/success
 execute as @a[tag=bw.shomepowder.started] at @s run function bw:specialitems/home_powder/visual_loop
+##END##
+
+## traps
+# string: It's a trap!
+
+# armore stand: I will find you!
+# give @p armor_stand{display:{Name:'{"text":"I will find you!","color":"dark_blue","italic":false}'},EntityTag:{CustomNameVisible:0b,NoGravity:1b,Silent:1b,Small:1b,Invisible:1b,Tags:["bw.entity","bw.trap","bw.trap.eye", "bw.trap.getplacedteam"],DisabledSlots:4144959,ArmorItems:[{},{},{},{id:"minecraft:ender_eye",Count:1b}]}} 1
+# adding the team of placer
+execute as @e[tag=bw.trap.getplacedteam] at @s if entity @a[scores={bw.usearmorstand=1..},distance=..10] run function bw:specialitems/traps/getplacedteam
+# found an enemy
+execute as @e[tag=bw.trap.eye,team=red] at @s if entity @a[distance=..4,team=!red,team=!spec,team=!random] run function bw:specialitems/traps/found_enemy/red
+execute as @e[tag=bw.trap.eye,team=yellow] at @s if entity @a[distance=..4,team=!yellow,team=!spec,team=!random] run function bw:specialitems/traps/found_enemy/yellow
+execute as @e[tag=bw.trap.eye,team=green] at @s if entity @a[distance=..4,team=!green,team=!spec,team=!random] run function bw:specialitems/traps/found_enemy/green
+execute as @e[tag=bw.trap.eye,team=blue] at @s if entity @a[distance=..4,team=!blue,team=!spec,team=!random] run function bw:specialitems/traps/found_enemy/blue
+# resets place scoreboard
+scoreboard players reset @a[scores={bw.usearmorstand=1..}] bw.usearmorstand
+
 ##END##

@@ -140,4 +140,9 @@ execute unless score bw.normalregen BedWars matches 1 run gamerule naturalRegene
 execute unless score bw.normalregen BedWars matches 1 run effect give @a regeneration 6000 0 true
 ##END##
 
+## special items trap particles
+# particles
+execute as @e[tag=bw.trap.eye] at @s run function bw:specialitems/traps/team_particles
+##END##
+
 schedule function bw:onesecondtimer/main 1s

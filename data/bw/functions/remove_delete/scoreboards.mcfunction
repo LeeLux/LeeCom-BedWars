@@ -95,7 +95,7 @@ scoreboard objectives remove bw.invgui.page
 scoreboard objectives remove bw.pearltime
 scoreboard objectives remove bw.sneaktime
 scoreboard objectives remove bw.hometptimer
-#scoreboard objectives remove bw.
+scoreboard objectives remove bw.usearmorstand
 #scoreboard objectives remove bw.
 #scoreboard objectives remove bw.
 #scoreboard objectives remove bw.
