@@ -11,63 +11,6 @@ tellraw @a [{"text":"Datapack: ","color":"green"},{"text":"LeeCom BedWars ","col
 function bw:onesecondtimer/main
 ##END##
 
-### creating teams
-## spec
-team add spec
-team modify spec color gray
-#team modify spec prefix [{"text": "Spec","color": "gray"},{"text": " | ","color": "gray"}]
-team modify spec prefix [{"text": "S ","color": "gray"}]
-team modify spec friendlyFire false
-team modify spec collisionRule never
-team modify spec seeFriendlyInvisibles true
-## red
-team add red
-team modify red color red
-#team modify red prefix [{"text": "Red","color": "red"},{"text": " | ","color": "gray"}]
-team modify red prefix [{"text": "R ","color": "red"}]
-team modify red friendlyFire false
-team modify red collisionRule never
-team modify red seeFriendlyInvisibles true
-## yellow
-team add yellow
-team modify yellow color yellow
-#team modify yellow prefix [{"text": "Yellow","color": "yellow"},{"text": " | ","color": "gray"}]
-team modify yellow prefix [{"text": "Y ","color": "yellow"}]
-team modify yellow friendlyFire false
-team modify yellow collisionRule never
-team modify yellow seeFriendlyInvisibles true
-## green
-team add green
-team modify green color green
-#team modify green prefix [{"text": "Green","color": "green"},{"text": " | ","color": "gray"}]
-team modify green prefix [{"text": "G ","color": "green"}]
-team modify green friendlyFire false
-team modify green collisionRule never
-team modify green seeFriendlyInvisibles true
-## blue
-team add blue
-team modify blue color blue
-#team modify blue prefix [{"text": "Blue","color": "blue"},{"text": " | ","color": "gray"}]
-team modify blue prefix [{"text": "B ","color": "blue"}]
-team modify blue friendlyFire false
-team modify blue collisionRule never
-team modify blue seeFriendlyInvisibles true
-
-# enother team for joining a random team
-team add random
-team modify random color dark_gray
-team modify random prefix [{"text": "? ","color": "dark_gray"}]
-team modify random friendlyFire false
-team modify random collisionRule never
-#END#
-
-## more teams for sidbar
-team add sred
-team add syellow
-team add sgreen
-team add sblue
-##END##
-
 # creating scoreboards #
 scoreboard objectives add bw.gametime dummy
 scoreboard objectives add bw.gamestate dummy
@@ -256,49 +199,10 @@ function bw:onesecondtimer/visible_names
 function bw:invgui/10t
 ##END##
 
-## Scoreboars join teams to better identifi them
-team join red bw.broncetimer
-team join red bw.spawn.bronce
-team join red bw.team.red
-
-team join green bw.silvertimer
-team join green bw.spawn.silver
-team join green bw.team.green
-
-team join yellow bw.goldtimer
-team join yellow bw.spawn.gold
-team join yellow bw.team.yellow
-
-team join blue bw.platintimer
-team join blue bw.spawn.platin
-team join blue bw.team.blue
-
-team join spec bw.gametime
-team join spec bw.gamestate
-
-team join random bw.team.random
-##END##
-
 ## lobby spawn
 execute as @e[tag=bw.lobby.spawn,limit=1] at @s run forceload add ~ ~
 execute if score bw.gamestate BedWars matches 0 as @e[tag=bw.lobby.spawn,limit=1] at @s run spawnpoint @a ~ ~ ~
 ##
-
-## team join sidbar
-team join sred §cRed§7:
-team join syellow §eYellow§7:
-team join sgreen §aGreen§7:
-team join sblue §9Blue§7:
-##
-
-## set sidbar
-scoreboard players set §7. bw.sidebar 9
-scoreboard players set §cRed§7: bw.sidebar 8
-scoreboard players set §eYellow§7: bw.sidebar 7
-scoreboard players set §aGreen§7: bw.sidebar 6
-scoreboard players set §9Blue§7: bw.sidebar 5
-scoreboard players set §7' bw.sidebar 4
-##END##
 
 ## first time install
 execute unless entity @e[type=marker,tag=bw.firstinstall] run function bw:setup/first_init
