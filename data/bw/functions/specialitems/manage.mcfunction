@@ -58,9 +58,17 @@ execute as @a[tag=bw.shomepowder.started] at @s run function bw:specialitems/hom
 
 ## traps
 # string: It's a trap!
-
+#second time trigger
+execute as @a[tag=bw.trap.string_triggert] at @s if block ~ ~0.5 ~ tripwire run function bw:specialitems/traps/string_triggert/foot_second
+execute as @a[tag=bw.trap.string_triggert] at @s if block ~ ~1.5 ~ tripwire run function bw:specialitems/traps/string_triggert/chest_second
+# first time trigger
+execute as @a[tag=!bw.trap.string_triggert] at @s if block ~ ~0.5 ~ tripwire run function bw:specialitems/traps/string_triggert/foot
+execute as @a[tag=!bw.trap.string_triggert] at @s if block ~ ~1.5 ~ tripwire run function bw:specialitems/traps/string_triggert/chest
+# trap aktivated time increase
+scoreboard players add @a[tag=bw.trap.string_triggert] bw.trapaktivated 1
+# remove string triggert after 20 seconds
+execute as @a[scores={bw.trapaktivated=400..}] run function bw:specialitems/traps/string_triggert/remove_tag
 # armore stand: I will find you!
-# give @p armor_stand{display:{Name:'{"text":"I will find you!","color":"dark_blue","italic":false}'},EntityTag:{CustomNameVisible:0b,NoGravity:1b,Silent:1b,Small:1b,Invisible:1b,Tags:["bw.entity","bw.trap","bw.trap.eye", "bw.trap.getplacedteam"],DisabledSlots:4144959,ArmorItems:[{},{},{},{id:"minecraft:ender_eye",Count:1b}]}} 1
 # adding the team of placer
 execute as @e[tag=bw.trap.getplacedteam] at @s if entity @a[scores={bw.usearmorstand=1..},distance=..10] run function bw:specialitems/traps/getplacedteam
 # found an enemy

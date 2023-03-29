@@ -102,7 +102,7 @@ scoreboard objectives add bw.pearltimer dummy
 scoreboard objectives add bw.sneaktime minecraft.custom:sneak_time
 scoreboard objectives add bw.hometptimer dummy
 scoreboard objectives add bw.usearmorstand minecraft.used:minecraft.armor_stand
-#scoreboard objectives add bw.
+scoreboard objectives add bw.trapaktivated dummy
 #scoreboard objectives add bw.
 #scoreboard objectives add bw.
 ## stats scoreboards
