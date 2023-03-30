@@ -5,7 +5,7 @@
 # ======================================================== #
 #in witch slot the resource is (slot of what you want to buy + 9)
 function bw:shop/buyitems/slot/12
-#gets you resources to score agan (just backup/just in case)
+#gets you resources to score again (just backup/just in case)
 function bw:shop/resourcetoscore
 #resource.1
 execute if score @s bw.shop.res matches 1 if score @p bw.remresource.1 <= @p bw.resource.1 run function bw:shop/buyitems/page7/3b/buy

@@ -5,7 +5,7 @@
 # ======================================================== #
 
 
-tellraw @a [{"text":"Datapack: ","color":"green"},{"text":"LeeCom BedWars ","color":"gold"},{"text":" started!","color":"green"},{"text":" v0.07en","color":"gold"}]
+tellraw @a [{"text":"Datapack: ","color":"green"},{"text":"LeeCom ","color":"gold"},{"text":" started!","color":"green"},{"text":" v0.07en","color":"gold"}]
 
 ## start bw:onesecondtimer/main for not so important things that run just ones per second
 function bw:onesecondtimer/main
@@ -212,25 +212,29 @@ execute unless entity @e[type=marker,tag=bw.firstinstall] run summon marker 0 50
 #set containes for the shopitems#
 #default
 execute as @r at @s run function bw:system/addingforceload
-setblock 65536 250 65536 barrel[facing=up] keep
-setblock 65537 250 65536 barrel[facing=up] keep
-setblock 65538 250 65536 barrel[facing=up] keep
-setblock 65539 250 65536 barrel[facing=up] keep
-setblock 65540 250 65536 barrel[facing=up] keep
-setblock 65541 250 65536 barrel[facing=up] keep
-setblock 65542 250 65536 barrel[facing=up] keep
-setblock 65543 250 65536 barrel[facing=up] keep
-setblock 65544 250 65536 barrel[facing=up]{CustomName: '{"text": "BedWars Resources"}'} keep
-setblock 65536 250 65537 barrel[facing=up]{CustomName: '{"text": "BedWars Temp Quckbuy"}'} keep
+setblock 65536 250 65537 barrel[facing=up]{CustomName: '{"text": "Temp Quckbuy"}'} keep
+setblock 65536 250 65536 barrel[facing=up]{CustomName: '{"text": "Default Select"}'} keep
+setblock 65537 250 65536 barrel[facing=up]{CustomName: '{"text": "Default page 1"}'} keep
+setblock 65538 250 65536 barrel[facing=up]{CustomName: '{"text": "Default page 2"}'} keep
+setblock 65539 250 65536 barrel[facing=up]{CustomName: '{"text": "Default page 3"}'} keep
+setblock 65540 250 65536 barrel[facing=up]{CustomName: '{"text": "Default page 4"}'} keep
+setblock 65541 250 65536 barrel[facing=up]{CustomName: '{"text": "Default page 5"}'} keep
+setblock 65542 250 65536 barrel[facing=up]{CustomName: '{"text": "Default page 6"}'} keep
+setblock 65543 250 65536 barrel[facing=up]{CustomName: '{"text": "Default page 7"}'} keep
+setblock 65544 250 65536 barrel[facing=up]{CustomName: '{"text": "Default page 8"}'} keep
+setblock 65545 250 65536 barrel[facing=up]{CustomName: '{"text": "Default page 9"}'} keep
+setblock 65546 250 65536 barrel[facing=up]{CustomName: '{"text": "Default Resources"}'} keep
 #custom
-setblock 65537 253 65536 barrel[facing=up]{CustomName: '{"text":"BedWars Custom page 1" }'} keep
-setblock 65538 253 65536 barrel[facing=up]{CustomName: '{"text":"BedWars Custom page 2" }'} keep
-setblock 65539 253 65536 barrel[facing=up]{CustomName: '{"text":"BedWars Custom page 3" }'} keep
-setblock 65540 253 65536 barrel[facing=up]{CustomName: '{"text":"BedWars Custom page 4" }'} keep
-setblock 65541 253 65536 barrel[facing=up]{CustomName: '{"text":"BedWars Custom page 5" }'} keep
-setblock 65542 253 65536 barrel[facing=up]{CustomName: '{"text":"BedWars Custom page 6" }'} keep
-setblock 65543 253 65536 barrel[facing=up]{CustomName: '{"text":"BedWars Custom page 7" }'} keep
-setblock 65544 253 65536 barrel[facing=up]{CustomName: '{"text": "BedWars Custom Resources"}'} keep
+setblock 65537 253 65536 barrel[facing=up]{CustomName: '{"text":"Custom page 1" }'} keep
+setblock 65538 253 65536 barrel[facing=up]{CustomName: '{"text":"Custom page 2" }'} keep
+setblock 65539 253 65536 barrel[facing=up]{CustomName: '{"text":"Custom page 3" }'} keep
+setblock 65540 253 65536 barrel[facing=up]{CustomName: '{"text":"Custom page 4" }'} keep
+setblock 65541 253 65536 barrel[facing=up]{CustomName: '{"text":"Custom page 5" }'} keep
+setblock 65542 253 65536 barrel[facing=up]{CustomName: '{"text":"Custom page 6" }'} keep
+setblock 65543 253 65536 barrel[facing=up]{CustomName: '{"text":"Custom page 7" }'} keep
+setblock 65544 253 65536 barrel[facing=up]{CustomName: '{"text":"Custom page 8" }'} keep
+setblock 65545 253 65536 barrel[facing=up]{CustomName: '{"text":"Custom page 9" }'} keep
+setblock 65546 253 65536 barrel[facing=up]{CustomName: '{"text":"Custom Resources" }'} keep
 #shop
 setblock 65536 247 65536 barrel[facing=up]{CustomName: '{"text":"Temp Resources" }'} keep
 setblock 65537 247 65536 barrel[facing=up]{CustomName: '{"text":"Shop page 1" }'} keep
@@ -240,7 +244,9 @@ setblock 65540 247 65536 barrel[facing=up]{CustomName: '{"text":"Shop page 4" }'
 setblock 65541 247 65536 barrel[facing=up]{CustomName: '{"text":"Shop page 5" }'} keep
 setblock 65542 247 65536 barrel[facing=up]{CustomName: '{"text":"Shop page 6" }'} keep
 setblock 65543 247 65536 barrel[facing=up]{CustomName: '{"text":"Shop page 7" }'} keep
-setblock 65544 247 65536 barrel[facing=up]{CustomName: '{"text": "Shop Resources"}'} keep
+setblock 65544 247 65536 barrel[facing=up]{CustomName: '{"text":"Shop page 8" }'} keep
+setblock 65545 247 65536 barrel[facing=up]{CustomName: '{"text":"Shop page 9" }'} keep
+setblock 65546 247 65536 barrel[facing=up]{CustomName: '{"text":"Shop Resources" }'} keep
 #invgui
-setblock 65538 255 65536 barrel[facing=up]{CustomName: '{"text": "Invgui item"}'} keep
+setblock 65538 255 65536 barrel[facing=up]{CustomName: '{"text": "Invgui items"}'} keep
 #END#

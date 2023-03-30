@@ -14,3 +14,4 @@ function bw:shop/install/armor
 function bw:shop/install/magic
 function bw:shop/install/specials
 function bw:shop/install/quickbuy
+function bw:shop/install/empty

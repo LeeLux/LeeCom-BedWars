@@ -4,7 +4,7 @@
 #         Please don't claim this as your own work!        #
 # ======================================================== #
 
-summon marker ~ ~ ~ {Tags: ["bw.entity", "bw.addingforceload"]}
+execute at @s run summon marker ~ ~ ~ {Tags: ["bw.entity", "bw.addingforceload"]}
 tp @e[tag=bw.addingforceload] @s
 tp @s 65537 256 65536
 forceload add 4096 4096

@@ -12,3 +12,5 @@ data modify block 65541 253 65536 Items set from block 65541 250 65536 Items
 data modify block 65542 253 65536 Items set from block 65542 250 65536 Items
 data modify block 65543 253 65536 Items set from block 65543 250 65536 Items
 data modify block 65544 253 65536 Items set from block 65544 250 65536 Items
+data modify block 65545 253 65536 Items set from block 65545 250 65536 Items
+data modify block 65546 253 65536 Items set from block 65546 250 65536 Items

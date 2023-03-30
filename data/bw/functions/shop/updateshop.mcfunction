@@ -12,14 +12,13 @@ function bw:display/updateshop
 function bw:system/addingforceload
 # reloading the shop items
 # bw.customshop = 0 = default
-execute unless score bw.customshop BedWars matches 1 run function bw:shop/setcustomshop
-execute unless score bw.customshop BedWars matches 1 run function bw:shop/setdefaultshop
+execute unless score bw.customshop BedWars matches 1 run function bw:shop/setshoptype/setcustomshop
+execute unless score bw.customshop BedWars matches 1 run function bw:shop/setshoptype/setdefaultshop
 # bw.customshop = 1 = custom
-execute if score bw.customshop BedWars matches 1 run function bw:shop/setdefaultshop
-execute if score bw.customshop BedWars matches 1 run function bw:shop/setcustomshop
+execute if score bw.customshop BedWars matches 1 run function bw:shop/setshoptype/setdefaultshop
+execute if score bw.customshop BedWars matches 1 run function bw:shop/setshoptype/setcustomshop
 # resets the entities inventory
-execute as @e[tag=bw.shop.entity] run data remove entity @s Inventory
-execute as @e[tag=bw.shop.entity] run function bw:shop/reset1
+execute as @e[tag=bw.shop.entity] run function bw:shop/reset/1
 ##END##
 
 # resetting the trigger

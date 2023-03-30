@@ -81,11 +81,7 @@ gamerule doLimitedCrafting true
 ##END##
 
 ## setup the shop items and invgui
-schedule function bw:shop/install/default 1t
-schedule function bw:shop/copydefaultocustom 2t
-schedule function bw:shop/setdefaultshop 3t
-
-schedule function bw:invgui/setupitems 1t
+function bw:setup/shop_invgui
 ##END##
 
 ### creating teams
