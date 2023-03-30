@@ -28,7 +28,7 @@ execute unless score bw.shopreset BedWars matches 0 as @e[tag=bw.shop.entity,sco
 #you also need to update the minecarts content witch I do by giveing it some random loot in the beginneng and than overwriting it with the atually content I want /loot replace entity @s container.0 loot blocks/cut_sandstone
 execute as @e[tag=bw.shop.first] run scoreboard players set @s bw.shop.temp 1
 execute as @e[tag=bw.shop.first] run loot replace entity @s container.0 loot blocks/cut_sandstone
-execute as @e[tag=bw.shop.first] run function bw:shop/reset1
+execute as @e[tag=bw.shop.first] run function bw:shop/reset/1
 tag @e[tag=bw.shop.first] remove bw.shop.first
 
 execute as @e[tag=bw.shop.entity] at @s if entity @p[distance=..6] run function bw:shop/manage

@@ -104,4 +104,4 @@ data modify block 65537 250 65536 Items append from block 65536 250 65537 Items[
 
 data modify block 65537 250 65536 Items append from block 65536 250 65536 Items[]
 
-data modify block 65537 250 65536 Items[{Slot: 19b}].tag.Enchantments[] set value {}
+data modify block 65537 250 65536 Items[{Slot: 18b}].tag.Enchantments[] set value {}

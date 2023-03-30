@@ -16,6 +16,8 @@ setblock 65541 250 65536 air replace
 setblock 65542 250 65536 air replace
 setblock 65543 250 65536 air replace
 setblock 65544 250 65536 air replace
+setblock 65545 250 65536 air replace
+setblock 65546 250 65536 air replace
 
 setblock 65536 250 65537 air replace
 
@@ -29,6 +31,8 @@ setblock 65541 253 65536 air replace
 setblock 65542 253 65536 air replace
 setblock 65543 253 65536 air replace
 setblock 65544 253 65536 air replace
+setblock 65545 253 65536 air replace
+setblock 65546 253 65536 air replace
 
 #shop
 setblock 65536 247 65536 air replace
@@ -40,6 +44,8 @@ setblock 65541 247 65536 air replace
 setblock 65542 247 65536 air replace
 setblock 65543 247 65536 air replace
 setblock 65544 247 65536 air replace
+setblock 65545 247 65536 air replace
+setblock 65546 247 65536 air replace
 
 #invgui
 setblock 65538 255 65536 air replace
