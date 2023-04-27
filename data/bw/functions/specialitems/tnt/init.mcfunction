@@ -5,7 +5,7 @@
 # ======================================================== #
 
 # ========================================================= #
-# credits to Miles_Playz for some parts of the tnt systems! #
+# credit to Miles_Playz for some parts of the tnt systems!  #
 # ========================================================= #
 
 fill ~5 ~5 ~5 ~-5 ~-5 ~-5 redstone_block replace air

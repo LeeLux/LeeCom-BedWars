@@ -1,9 +1,0 @@
-{
-    "replace": false,
-    "values": [
-        "minecraft:end_stone",
-        "minecraft:ladder",
-        "minecraft:cobweb",
-        "minecraft:emerald_block"
-    ]
-}

@@ -142,9 +142,9 @@ scoreboard players set @a[predicate=bw:shop] bw.shop.predi 5
 
 # run the alwaysshop when alwaysshop is activated#
 ## !! THIS IS CURRENTLY THE OLD SYSTEM (MULTIPLAYER 'FREINDLY') !! ##
-execute if score bw.shopversion BedWars matches 1 unless score bw.alwaysshop BedWars matches 0 run function bw:shop/run/single
+execute unless score bw.alwaysshop BedWars matches 0 if score bw.shopversion BedWars matches 1 run function bw:shop/run/single
 ## !! THIS IS THE NEW SYSTEM (JUST SINGLEPLAYER) !! ##
-execute if score bw.shopversion BedWars matches 2 unless score bw.alwaysshop BedWars matches 0 run function bw:shop/run/multi
+execute unless score bw.alwaysshop BedWars matches 0 if score bw.shopversion BedWars matches 2 run function bw:shop/run/multi
 
 
 ## detecting the shop villiger and give you the tags for the shop !!  NEW  !!
