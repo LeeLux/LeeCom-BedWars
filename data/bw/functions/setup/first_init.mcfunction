@@ -34,6 +34,7 @@ scoreboard players set bw.negativOne bw.random -1
 scoreboard players set bw.10 bw.random 10
 scoreboard players set bw.20 bw.random 20
 scoreboard players set bw.100 bw.random 100
+scoreboard players set bw.10000000 bw.random 10000000
 scoreboard players set bw.peraltimer bw.random 10
 ##END##
 ## set default spawn rates for item spawners
@@ -53,7 +54,7 @@ scoreboard players set bw.bedgonebool BedWars 1
 scoreboard players set bw.bedgonetime BedWars 2400
 ##END##
 ## whats the default how the shop should work(with version)
-scoreboard players set bw.shopversion BedWars 2
+scoreboard players set bw.shopversion BedWars 1
 ##=============END===============##
 ## Set default minecarft settings weatehr etc..
 gamerule announceAdvancements false
