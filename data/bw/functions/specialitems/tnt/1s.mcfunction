@@ -15,11 +15,6 @@ particle explosion ~ ~ ~ 1 1 1 1 0 force @a
 particle explosion_emitter ~ ~ ~ 1 1 1 1 0 force @a
 #fill commands here
 
-#function bw:specialitems/tnt/100
-#function bw:specialitems/tnt/80
-
-#function bw:specialitems/tnt/tree/init
-
 #this ist just temp
 fill ~2 ~3 ~2 ~-2 ~-3 ~-2 air replace #bw.tnt_destroys
 fill ~3 ~2 ~2 ~-3 ~-2 ~-2 air replace #bw.tnt_destroys
