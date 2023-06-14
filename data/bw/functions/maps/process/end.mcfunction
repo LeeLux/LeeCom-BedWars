@@ -7,6 +7,7 @@
 ##done##
 
 #killing clone entities#
+kill @e[tag=bw.clear00]
 kill @e[tag=bw.clone.map1]
 kill @e[tag=bw.clone.map2]
 kill @e[tag=bw.clone.map3]

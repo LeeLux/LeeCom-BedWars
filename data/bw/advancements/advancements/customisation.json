@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:barrel"
+    },
+    "title": "Customisation",
+    "description": "Go the the area to customise the shop",
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "bw:advancements/root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:location_check",
+            "offsetX": 10,
+            "offsetY": 10,
+            "offsetZ": 10,
+            "predicate": {
+              "position": {
+                "x": 65537,
+                "z": 65536
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
