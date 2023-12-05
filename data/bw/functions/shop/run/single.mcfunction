@@ -9,7 +9,7 @@ function bw:shop/resourcetoscore
 #END#
 
 ##code##
-#summoing the shops is done in bw:main !not here!#
+#summoing the shops is done in bw:main !not here! #
 
 #removing the shops if no bw.shop is nearby
 execute as @e[tag=bw.shop.entity] at @s unless entity @e[tag=bw.shop,distance=..2] run tp @s ~ ~-1000 ~

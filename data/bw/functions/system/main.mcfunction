@@ -14,9 +14,9 @@ function bw:system/entity_count
 #END#
 
 # bw.entity delete with delete item
-execute as @e[type=item,nbt={Item: {tag: {Tags: ["bw.entity.delete"]}}}] at @s run tellraw @p [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text": "Killed: "},{"selector":"@e[tag=bw.entity,limit=1,distance=..4,sort=nearest]"}]
-execute as @e[type=item,nbt={Item: {tag: {Tags: ["bw.entity.delete"]}}}] at @s run tp @e[tag=bw.shop,limit=1,distance=..4,sort=nearest] ~ ~-1000 ~
-execute as @e[type=item,nbt={Item: {tag: {Tags: ["bw.entity.delete"]}}}] at @s run kill @e[tag=bw.entity,limit=1,distance=..4,sort=nearest]
+execute as @e[type=item,nbt={Item: {tag: {Tags: ["bw.entity.delete"]}}}] at @s run tellraw @p [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text": "Killed: "},{"selector":"@e[tag=bw.entity,limit=1,distance=..2,sort=nearest]"}]
+execute as @e[type=item,nbt={Item: {tag: {Tags: ["bw.entity.delete"]}}}] at @s run tp @e[tag=bw.shop,limit=1,distance=..2,sort=nearest] ~ ~-1000 ~
+execute as @e[type=item,nbt={Item: {tag: {Tags: ["bw.entity.delete"]}}}] at @s run kill @e[tag=bw.entity,limit=1,distance=..2,sort=nearest]
 execute as @e[type=item,nbt={Item: {tag: {Tags: ["bw.entity.delete"]}}}] at @s run kill @s
 #END#
 
@@ -56,12 +56,12 @@ execute as @a[scores={bw.updateshop=1..}] run function bw:shop/updateshop
 execute as @a[scores={bw.normalregen=1..}] run function bw:settosettings/normalregen
 #END#
 
-# set bw.bedgonetime so BEDWARS Settings
-execute as @a[scores={bw.bedgonetime=1..}] run function bw:settosettings/bedgonetime
+# set bw.bedsgonetime so BEDWARS Settings
+execute as @a[scores={bw.bedsgonetime=1..}] run function bw:settosettings/bedsgonetime
 #END#
 
-# set bw.bedgonebool so BEDWARS Settings
-execute as @a[scores={bw.bedgonebool=1..}] run function bw:settosettings/bedgonebool
+# set bw.bedsgonebool so BEDWARS Settings
+execute as @a[scores={bw.bedsgonebool=1..}] run function bw:settosettings/bedsgonebool
 #END#
 
 # set bw.autodrawtime so BEDWARS Settings
@@ -141,9 +141,9 @@ scoreboard players set @a[predicate=bw:shop] bw.shop.predi 5
 ##END##
 
 # run the alwaysshop when alwaysshop is activated#
-## !! THIS IS CURRENTLY THE OLD SYSTEM (MULTIPLAYER 'FREINDLY') !! ##
-execute unless score bw.alwaysshop BedWars matches 0 if score bw.shopversion BedWars matches 1 run function bw:shop/run/single
 ## !! THIS IS THE NEW SYSTEM (JUST SINGLEPLAYER) !! ##
+execute unless score bw.alwaysshop BedWars matches 0 if score bw.shopversion BedWars matches 1 run function bw:shop/run/single
+## !! THIS IS CURRENTLY THE OLD SYSTEM (MULTIPLAYER 'FREINDLY') !! ##
 execute unless score bw.alwaysshop BedWars matches 0 if score bw.shopversion BedWars matches 2 run function bw:shop/run/multi
 
 
@@ -181,7 +181,7 @@ scoreboard players enable @a[tag=bw.admin] bw.setYdeath
 scoreboard players set @a[tag=bw.admin] bw.setYdeath -2147483648
 ##END##
 
-## y level = ..0 = kill
+## kills the player if there y level is under the Ydeath score
 execute as @a at @s store result score @s bw.Y run data get entity @s Pos[1]
 execute as @a if score @s bw.Y <= bw.Ydeath BedWars run kill @s
 ##END##
@@ -205,7 +205,7 @@ execute as @a[scores={bw.join=1..}] at @s run function bw:system/join
 #execute store success score #Bool bw.bools if score #Bool bw.bools matches 0
 ##END##
 
-## calles the clear00/done function if y 320 is reached
+## calles the clear00/done function if y 320.. is reached
 execute if entity @e[tag=bw.clear00,scores={bw.clear00=320..}] run function bw:clear00/done
 ##END##
 
@@ -243,7 +243,8 @@ execute as @a if score @s bw.death matches ..-1 run scoreboard players add @s bw
 scoreboard players set @a[scores={bw.death=1..}] bw.death -1
 execute as @a[tag=bw.givebrakingtoolafterrespawn,scores={bw.death=0}] run function bw:setup/respawn
 ##END##
-## arrow for bow and crossbow pucheses
+
+## arrow for bow pucheses
 #bow
 execute as @e[type=item,nbt={Item:{id:"minecraft:bow"}},nbt=!{Item:{tag:{Tags:["bw.dropedarrow"]}}}] at @s run summon item ~ ~ ~ {PickupDelay:0s,Item:{id:"minecraft:arrow",Count:1b,tag:{HideFlags:94,CanPlaceOn:["#bw.place"],CanDestroy:["#bw.break"]}}}
 execute as @e[type=item,nbt={Item:{id:"minecraft:bow"}},nbt=!{Item:{tag:{Tags:["bw.dropedarrow"]}}}] at @s run data modify entity @s Item.tag.Tags append value "bw.dropedarrow"

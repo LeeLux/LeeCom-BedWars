@@ -85,8 +85,8 @@ scoreboard objectives remove bw.updateshop
 scoreboard objectives remove bw.normalregen
 scoreboard objectives remove bw.brigeeggtimer
 scoreboard objectives remove bw.timer
-scoreboard objectives remove bw.bedgonetime
-scoreboard objectives remove bw.bedgonebool
+scoreboard objectives remove bw.bedsgonetime
+scoreboard objectives remove bw.bedsgonebool
 scoreboard objectives remove bw.autodrawtime
 scoreboard objectives remove bw.autodrawbool
 scoreboard objectives remove bw.eightteams
@@ -116,10 +116,6 @@ team remove yellow
 team remove green
 team remove blue
 team remove spec
-team remove sred
-team remove syellow
-team remove sgreen
-team remove sblue
 #END#
 
 tellraw @s {"text": ""}

@@ -91,8 +91,8 @@ scoreboard objectives add bw.updateshop trigger
 scoreboard objectives add bw.normalregen trigger
 scoreboard objectives add bw.brigeeggtimer dummy
 scoreboard objectives add bw.timer dummy
-scoreboard objectives add bw.bedgonetime trigger
-scoreboard objectives add bw.bedgonebool trigger
+scoreboard objectives add bw.bedsgonetime trigger
+scoreboard objectives add bw.bedsgonebool trigger
 scoreboard objectives add bw.autodrawtime trigger
 scoreboard objectives add bw.autodrawbool trigger
 scoreboard objectives add bw.eightteams trigger

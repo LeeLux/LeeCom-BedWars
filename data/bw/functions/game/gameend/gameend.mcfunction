@@ -35,6 +35,10 @@ worldborder center 0 0
 ##set sidbar##
 scoreboard objectives setdisplay sidebar bw.sidebar
 function bw:sidebar/lobby
+scoreboard players reset 0 bw.sidebar
+scoreboard players reset 1 bw.sidebar
+scoreboard players reset 2 bw.sidebar
+scoreboard players reset 3 bw.sidebar
 ##END##
 
 #stopp sectickergamerun function#
