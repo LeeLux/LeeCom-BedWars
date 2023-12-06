@@ -4,10 +4,16 @@
 #         Please don't claim this as your own work!        #
 # ======================================================== #
 
-# runs the game code wehn the game is activ
+## drop resources on death and clear the rest
+# clear inv
+clear @a[scores={bw.death=1..}]
+execute unless score bw.disableResourcesOnDeath BedWars matches 1 as @a[scores={bw.death=1..}] at @s run function bw:system/dropresources
+##END##
+
+## runs the game code wehn the game is activ
 execute if score bw.gamestate BedWars matches 1.. run function bw:game/run
 execute if score bw.gamestate BedWars matches 0 run scoreboard players reset bw.gametime
-#END#
+##END##
 
 # run the bw enitiy count
 function bw:system/entity_count
@@ -79,6 +85,15 @@ execute as @a[scores={bw.eightteams=1..}] run function bw:settosettings/eighttea
 # func for bw.invgui
 execute as @a[scores={bw.invgui=1..}] run function bw:invgui/toggel
 #END#
+
+# set bw.unlimitedCreativeResources so BEDWARS Settings
+execute as @a[scores={bw.unlimitedCreativeResources=1..}] run function bw:settosettings/unlimitedcreativeresources
+#END#
+
+# set bw.disableResourcesOnDeath so BEDWARS Settings
+execute as @a[scores={bw.disableResourcesOnDeath=1..}] run function bw:settosettings/disableresourcesondeath
+#END#
+
 
 ## set spawn rate of resources
 #spawn rate bronce##

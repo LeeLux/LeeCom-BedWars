@@ -5,7 +5,7 @@
 # ======================================================== #
 
 
-tellraw @a [{"text":"Datapack: ","color":"green"},{"text":"LeeCom ","color":"gold"},{"text":" started!","color":"green"},{"text":" v0.07en","color":"gold"}]
+tellraw @a [{"text":"Datapack: ","color":"green"},{"text":"LeeCom BedWars","color":"gold"},{"text":" started!","color":"green"},{"text":" v0.7.2en","color":"gold"}]
 
 ## start bw:onesecondtimer/main for not so important things that run just ones per second
 function bw:onesecondtimer/main
@@ -103,6 +103,9 @@ scoreboard objectives add bw.sneaktime minecraft.custom:sneak_time
 scoreboard objectives add bw.hometptimer dummy
 scoreboard objectives add bw.usearmorstand minecraft.used:minecraft.armor_stand
 scoreboard objectives add bw.trapaktivated dummy
+scoreboard objectives add bw.unlimitedCreativeResources trigger
+scoreboard objectives add bw.disableResourcesOnDeath trigger
+#scoreboard objectives add bw.
 #scoreboard objectives add bw.
 #scoreboard objectives add bw.
 ## stats scoreboards
@@ -120,7 +123,6 @@ scoreboard objectives add bws.wlint dummy
 scoreboard objectives add bws.wldecimal dummy
 scoreboard objectives add bws.placedblocks dummy
 scoreboard objectives add bws.tnt minecraft.used:tnt
-scoreboard objectives add bws.pearlkills dummy
 scoreboard objectives add bws.powerkills dummy
 scoreboard objectives add bws.playedred dummy
 scoreboard objectives add bws.playedgames dummy

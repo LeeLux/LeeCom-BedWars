@@ -51,7 +51,7 @@ scoreboard players set bw.removerticks bw.brigeeggtimer 40
 scoreboard players set bw.autodrawbool BedWars 1
 scoreboard players set bw.autodrawtime BedWars 3600
 scoreboard players set bw.bedsgonebool BedWars 1
-scoreboard players set bw.bedsgonetime BedWars 2400
+scoreboard players set bw.bedsgonetime BedWars 2700
 ##END##
 ## whats the default how the shop should work(with version)
 scoreboard players set bw.shopversion BedWars 1
@@ -70,7 +70,7 @@ gamerule doMobSpawning false
 gamerule doPatrolSpawning false
 gamerule doTraderSpawning false
 gamerule doWeatherCycle false
-gamerule keepInventory false
+gamerule keepInventory true
 gamerule mobGriefing false
 gamerule spawnRadius 1
 gamerule naturalRegeneration true

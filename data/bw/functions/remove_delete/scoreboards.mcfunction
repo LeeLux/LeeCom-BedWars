@@ -97,8 +97,8 @@ scoreboard objectives remove bw.sneaktime
 scoreboard objectives remove bw.hometptimer
 scoreboard objectives remove bw.usearmorstand
 scoreboard objectives remove bw.trapaktivated
-#scoreboard objectives remove bw.
-#scoreboard objectives remove bw.
+scoreboard objectives remove bw.unlimitedCreativeResources
+scoreboard objectives remove bw.disableResourcesOnDeath
 #scoreboard objectives remove bw.
 #scoreboard objectives remove bw.
 #scoreboard objectives remove bw.

@@ -35,6 +35,8 @@ scoreboard players enable @a[tag=bw.admin] bw.bedsgonebool
 scoreboard players enable @a[tag=bw.admin] bw.autodrawtime
 scoreboard players enable @a[tag=bw.admin] bw.autodrawbool
 scoreboard players enable @a[tag=bw.admin] bw.eightteams
+scoreboard players enable @a[tag=bw.admin] bw.unlimitedCreativeResources
+scoreboard players enable @a[tag=bw.admin] bw.disableResourcesOnDeath
 #everyone#
 scoreboard players enable @a bw.join.red
 scoreboard players enable @a bw.join.yellow

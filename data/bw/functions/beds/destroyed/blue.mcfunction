@@ -14,6 +14,10 @@ playsound minecraft:entity.ender_dragon.growl voice @s ~ ~ ~
 scoreboard players reset @a[scores={bw.blue.broken=1..}] bw.blue.broken
 ##END##
 
+## kill bed item
+kill @e[type=item,nbt={Item: {id: "minecraft:light_blue_bed"}}]
+##END##
+
 #stats#
 scoreboard players add @s bws.bluebed 1
 #END#

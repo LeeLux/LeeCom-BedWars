@@ -45,10 +45,11 @@ execute as @a at @s run function bw:beds/destroyed/check
 ##END##
 
 ## killing bed entity
-kill @e[type=item,nbt={Item: {id: "minecraft:red_bed"}}]
-kill @e[type=item,nbt={Item: {id: "minecraft:light_blue_bed"}}]
-kill @e[type=item,nbt={Item: {id: "minecraft:lime_bed"}}]
-kill @e[type=item,nbt={Item: {id: "minecraft:yellow_bed"}}]
+# moved to bw:beds/destroyed/
+#kill @e[type=item,nbt={Item: {id: "minecraft:red_bed"}}]
+#kill @e[type=item,nbt={Item: {id: "minecraft:light_blue_bed"}}]
+#kill @e[type=item,nbt={Item: {id: "minecraft:lime_bed"}}]
+#kill @e[type=item,nbt={Item: {id: "minecraft:yellow_bed"}}]
 ##END##
 
 ## clear bottles##  

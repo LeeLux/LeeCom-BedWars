@@ -15,7 +15,7 @@ particle explosion ~ ~ ~ 1 1 1 1 0 force @a
 particle explosion_emitter ~ ~ ~ 1 1 1 1 0 force @a
 #fill commands here
 
-#this ist just temp
+#this is just temp
 fill ~2 ~3 ~2 ~-2 ~-3 ~-2 air replace #bw.tnt_destroys
 fill ~3 ~2 ~2 ~-3 ~-2 ~-2 air replace #bw.tnt_destroys
 fill ~2 ~2 ~3 ~-2 ~-2 ~-3 air replace #bw.tnt_destroys

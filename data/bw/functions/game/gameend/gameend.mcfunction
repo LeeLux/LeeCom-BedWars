@@ -39,6 +39,7 @@ scoreboard players reset 0 bw.sidebar
 scoreboard players reset 1 bw.sidebar
 scoreboard players reset 2 bw.sidebar
 scoreboard players reset 3 bw.sidebar
+scoreboard players set 11 bw.sidebar 11
 ##END##
 
 #stopp sectickergamerun function#
