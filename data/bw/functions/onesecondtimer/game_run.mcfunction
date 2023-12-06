@@ -27,11 +27,11 @@ execute if score bw.platintimer BedWars matches ..0 run scoreboard players opera
 ##END##
 
 ## auto bed destruction if enabled
-execute if score bw.bedsgonebool BedWars matches 1 run function bw:beds/gone/warnings
+execute if score bw.enablebedsgoneaftertime BedWars matches 1 run function bw:beds/gone/warnings
 ##END##
 
 ## auto draw if enabled
-execute if score bw.autodrawbool BedWars matches 1 run function bw:display/autodraw_warnings
+execute if score bw.enableautodrawaftertime BedWars matches 1 run function bw:display/autodraw_warnings
 ##END##
 
 #actionbar#

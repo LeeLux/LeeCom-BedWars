@@ -9,13 +9,13 @@
 # bw.gametime BedWars = time in sec from game start
 
 # calculate time until beds are gone
-# bw.bedsgonetime BedSars = time in sec from game start until the beds will be destroyed
+# bw.settimeuntilbedsgone BedSars = time in sec from game start until the beds will be destroyed
 # bw.untilbedsgone bw.times = time in sec until the beds will be destroyed
 # Minutes (60*1)
 execute if score bw.untilbedsgoneSeconds bw.timer matches 60.. run scoreboard players add bw.untilbedsgoneMinutes bw.timer 1
 execute if score bw.untilbedsgoneSeconds bw.timer matches 60.. run scoreboard players remove bw.untilbedsgoneSeconds bw.timer 60
 # calculate time until auto draw
-# bw.autodrawtime BedSars = time in sec from game start until the games ends in a draw
+# bw.settimeuntilautodraw BedSars = time in sec from game start until the games ends in a draw
 # bw.untilautodraw bw.times = time in sec until the games ends in a draw
 # Minutes (60*1)
 execute if score bw.untilautodrawSeconds bw.timer matches 60.. run scoreboard players add bw.untilautodrawMinutes bw.timer 1

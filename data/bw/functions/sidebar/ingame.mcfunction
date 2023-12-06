@@ -19,16 +19,16 @@ execute store result storage minecraft:bedwars ScoreboardStats.timeH int 1 run s
 execute store result storage minecraft:bedwars ScoreboardStats.bedsgoneS int 1 run scoreboard players get bw.untilbedsgoneSeconds bw.timer
 execute store result storage minecraft:bedwars ScoreboardStats.bedsgoneM int 1 run scoreboard players get bw.untilbedsgoneMinutes bw.timer
 # dis-enableling
-execute if score bw.bedsgonebool BedWars matches 1 if score bw.untilbedsgone bw.timer matches 1.. run scoreboard players set 2 bw.sidebar 2
-execute unless score bw.bedsgonebool BedWars matches 1 run scoreboard players reset 2 bw.sidebar
+execute if score bw.enablebedsgoneaftertime BedWars matches 1 if score bw.untilbedsgone bw.timer matches 1.. run scoreboard players set 2 bw.sidebar 2
+execute unless score bw.enablebedsgoneaftertime BedWars matches 1 run scoreboard players reset 2 bw.sidebar
 execute unless score bw.untilbedsgone bw.timer matches 1.. run scoreboard players reset 2 bw.sidebar
 
 ## until auto draw timer
 execute store result storage minecraft:bedwars ScoreboardStats.autodrawS int 1 run scoreboard players get bw.untilautodrawSeconds bw.timer
 execute store result storage minecraft:bedwars ScoreboardStats.autodrawM int 1 run scoreboard players get bw.untilautodrawMinutes bw.timer
 # dis-enableling
-execute if score bw.autodrawbool BedWars matches 1 if score bw.untilautodraw bw.timer matches 1.. run scoreboard players set 1 bw.sidebar 1
-execute unless score bw.autodrawbool BedWars matches 1 run scoreboard players reset 1 bw.sidebar
+execute if score bw.enableautodrawaftertime BedWars matches 1 if score bw.untilautodraw bw.timer matches 1.. run scoreboard players set 1 bw.sidebar 1
+execute unless score bw.enableautodrawaftertime BedWars matches 1 run scoreboard players reset 1 bw.sidebar
 execute unless score bw.untilautodraw bw.timer matches 1.. run scoreboard players reset 1 bw.sidebar
 
 function bw:sidebar/ingame_changestats with storage minecraft:bedwars ScoreboardStats

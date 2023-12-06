@@ -4,7 +4,7 @@
 #         Please don't claim this as your own work!        #
 # ======================================================== #
 
-execute if entity @s[tag=bw.invgui] run tag @s add bw.invgui.rem
-execute if entity @s[tag=!bw.invgui] run tag @s add bw.invgui
+execute if entity @s[tag=bw.toggleinventorgui] run tag @s add bw.toggleinventorgui.rem
+execute if entity @s[tag=!bw.toggleinventorgui] run tag @s add bw.toggleinventorgui
 
-scoreboard players reset @s bw.invgui
+scoreboard players reset @s bw.toggleinventorgui

@@ -23,7 +23,7 @@ data merge storage bedwars {Prefix: '[{"text":"","color":"white"},{"text":"[BW] 
 ### THE DEFAULT NUMBERS AND SCORES! ###
 ### =============================== ###
 ## set other and generell default values
-scoreboard players set bw.gamecountdown BedWars 10
+scoreboard players set bw.setgamecountdown BedWars 10
 scoreboard players set bw.gametimer BedWars -1
 scoreboard players set bw.Ydeath BedWars 0
 scoreboard players set bw.gamestate BedWars 0
@@ -48,10 +48,10 @@ scoreboard players set bw.spawn.platin BedWars 60
 scoreboard players set bw.removerticks bw.brigeeggtimer 40
 ##END##
 ## set default auto draw and bed destruction times and bool
-scoreboard players set bw.autodrawbool BedWars 1
-scoreboard players set bw.autodrawtime BedWars 3600
-scoreboard players set bw.bedsgonebool BedWars 1
-scoreboard players set bw.bedsgonetime BedWars 2700
+scoreboard players set bw.enableautodrawaftertime BedWars 1
+scoreboard players set bw.settimeuntilautodraw BedWars 3600
+scoreboard players set bw.enablebedsgoneaftertime BedWars 1
+scoreboard players set bw.settimeuntilbedsgone BedWars 2700
 ##END##
 ## whats the default how the shop should work(with version)
 scoreboard players set bw.shopversion BedWars 1

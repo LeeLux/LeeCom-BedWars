@@ -19,8 +19,8 @@ tellraw @a [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"te
 
 #load area around the map#
 tag @s add bw.load.map4
-scoreboard players enable @s bw.map4
-trigger bw.map4
+scoreboard players enable @s bw.tptomap4
+trigger bw.tptomap4
 #end#
 
 #summon#

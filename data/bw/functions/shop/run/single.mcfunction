@@ -20,8 +20,8 @@ execute as @e[tag=bw.shop.entity] at @s unless entity @e[tag=bw.shop,distance=..
 execute as @e[tag=bw.shop.entity] at @s at @e[tag=bw.shop,sort=nearest,limit=1] run tp @s ~ ~1.3 ~
 #end
 
-#setting the shop page to 1 (quickbuy) when no player is around and bw.shopreset is aktiv
-execute unless score bw.shopreset BedWars matches 0 as @e[tag=bw.shop.entity,scores={bw.shop.temp=2..}] at @s unless entity @p[distance=..6] run function bw:shop/shopresetquickbuy
+#setting the shop page to 1 (quickbuy) when no player is around and bw.enableshopreset is aktiv
+execute unless score bw.enableshopreset BedWars matches 0 as @e[tag=bw.shop.entity,scores={bw.shop.temp=2..}] at @s unless entity @p[distance=..6] run function bw:shop/shopresetquickbuy
 #END#
 
 #first (the mc needs to be filled in the beginning or my code will think you have bought all the items on page 1 and will try to buy them for you etc.)

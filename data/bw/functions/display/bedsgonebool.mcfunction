@@ -5,6 +5,6 @@
 # ======================================================== #
 
 
-execute if score bw.bedsgonebool BedWars matches 0 run tellraw @a[tag=bw.admin] [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text":"bedsgonebool toggled ","color":"white"},{"text":"off","color":"red"}]
+execute if score bw.enablebedsgoneaftertime BedWars matches 0 run tellraw @a[tag=bw.admin] [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text":"bedsgonebool toggled ","color":"white"},{"text":"off","color":"red"}]
 
-execute if score bw.bedsgonebool BedWars matches 1 run tellraw @a[tag=bw.admin] [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text":"bedsgonebool toggled ","color":"white"},{"text":"on","color":"green"}]
+execute if score bw.enablebedsgoneaftertime BedWars matches 1 run tellraw @a[tag=bw.admin] [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text":"bedsgonebool toggled ","color":"white"},{"text":"on","color":"green"}]
