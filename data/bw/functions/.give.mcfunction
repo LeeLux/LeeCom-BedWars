@@ -13,7 +13,7 @@ item replace entity @s hotbar.0 with barrier{display: {Name: '[{"text": "","colo
 
 ##Shop Egg##
 ##(v0.4)##
-give @s villager_spawn_egg{display: {Name: '[{"text": "","color": "white","italic":false},{"text":"[BW] ","color":"green"},{"text":"Shop","color":"white","italic":false}]'},Tags:["bw.entity","","bw.shop","bw.shop.entity"],EntityTag: {Silent:1b,Invulnerable:1b,CustomNameVisible:1b,DeathLootTable:"empty",NoAI:1b,CanPickUpLoot:0b,Willing:0b,Tags:["bw.entity","","bw.shop","","bw.rotadetoplayer","","bw.shop.need"],CustomName:'[{"text":"","color":"white","italic":false},{"text":"[BW] ","color":"green"},{"text":"Shop","color":"white","italic":false}]',VillagerData:{level:99,profession:"minecraft:weaponsmith",type:"minecraft:plains"},Offers:{}}} 1
+give @s villager_spawn_egg{display: {Name: '[{"text": "","color": "white","italic":false},{"text":"[BW] ","color":"green"},{"text":"Shop","color":"white","italic":false}]'},Tags:["bw.entity","","bw.shop","bw.shop.entity"],EntityTag: {Silent:1b,Invulnerable:1b,CustomNameVisible:0b,DeathLootTable:"empty",NoAI:1b,CanPickUpLoot:0b,Willing:0b,Tags:["bw.entity","","bw.shop","","bw.rotadetoplayer","","bw.shop.need"],CustomName:'[{"text":"Shop","color":"white","italic":false}]',VillagerData:{level:99,profession:"minecraft:weaponsmith",type:"minecraft:plains"},Offers:{}}} 1
 
 
 ##Give Item Spawner##

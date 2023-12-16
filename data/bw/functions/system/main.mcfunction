@@ -106,12 +106,9 @@ execute as @a[scores={bw.spawn.gold=1..},limit=1] run function bw:settosettings/
 execute as @a[scores={bw.spawn.platin=1..},limit=1] run function bw:settosettings/platin_spawn
 ##END##
 
-## summon the shpo minecarts in the shop vill/entity
-#must stand above the alwaysshop to propertly work!!!!!!
-execute as @e[tag=bw.shop.need] at @s positioned ~ ~1.3 ~ run function bw:shop/summonshopminecart
-#optional make two more to cover the hole bw.shop vill/entity
-#execute as @e[tag=bw.shop.need] at @s positioned ~ ~0.65 ~ run function bw:shop/summonshopminecart
-#execute as @e[tag=bw.shop.need] at @s positioned ~ ~ ~ run function bw:shop/summonshopminecart
+## summon the shop minecarts in the mother shop entity
+# must stand above the alwaysshop to propertly work!
+execute as @e[tag=bw.shop.need] at @s run function bw:shop/run/singlesetup
 tag @e[tag=bw.shop.need] remove bw.shop.need
 ##END##
 
@@ -152,30 +149,14 @@ execute unless score bw.gametimer BedWars matches -1 run function bw:system/xpba
 
 ## shop prediacte
 scoreboard players remove @a[scores={bw.shop.predi=1..}] bw.shop.predi 1
-scoreboard players set @a[predicate=bw:shop] bw.shop.predi 5
+scoreboard players set @a[predicate=bw:shop] bw.shop.predi 2
 ##END##
 
-# run the alwaysshop when alwaysshop is activated#
-## !! THIS IS THE NEW SYSTEM (JUST SINGLEPLAYER) !! ##
+## run the alwaysshop when alwaysshop is activate
+# !! THIS IS THE NEW SYSTEM (JUST SINGLEPLAYER) !!
 execute unless score bw.enablealwaysshop BedWars matches 0 if score bw.shopversion BedWars matches 1 run function bw:shop/run/single
-## !! THIS IS CURRENTLY THE OLD SYSTEM (MULTIPLAYER 'FREINDLY') !! ##
+# !! THIS IS CURRENTLY THE OLD SYSTEM (MULTIPLAYER 'FREINDLY') !!
 execute unless score bw.enablealwaysshop BedWars matches 0 if score bw.shopversion BedWars matches 2 run function bw:shop/run/multi
-
-
-## detecting the shop villiger and give you the tags for the shop !!  NEW  !!
-##only used if the 'multiplayer' shop is used ##
-#if the game isn't running, a spec can still use the shop
-#MULTI
-execute unless score bw.gamestate BedWars matches 2..3 as @a[tag=!bw.shop.want,scores={bw.shop.predi=1..}] at @s if entity @e[tag=bw.shop,distance=..6] unless entity @e[distance=..1,tag=bw.shop.entity] run tag @s add bw.shop.lookingat
-#SINGLE
-execute unless score bw.gamestate BedWars matches 2..3 as @a[scores={bw.shop.predi=1..}] at @s if entity @e[tag=bw.shop,distance=..6] unless entity @e[distance=..1,tag=bw.shop.entity] run tag @s add bw.shop.want
-#but if its running, spec can't use the shop
-#MULTI
-execute if score bw.gamestate BedWars matches 2..3 as @a[team=!spec,tag=!bw.shop.want,scores={bw.shop.predi=1..}] at @s if entity @e[tag=bw.shop,distance=..6] unless entity @e[distance=..1,tag=bw.shop.entity] run tag @s add bw.shop.lookingat
-#SINGLE
-execute if score bw.gamestate BedWars matches 2..3 as @a[team=!spec,scores={bw.shop.predi=1..}] at @s if entity @e[tag=bw.shop,distance=..6] unless entity @e[distance=..1,tag=bw.shop.entity] run tag @s add bw.shop.want
-execute as @a[scores={bw.shop.predi=..0}] at @s positioned ~ ~1.3 ~ unless entity @e[tag=bw.shop.villclicked,distance=..1] run tag @s remove bw.shop.want
-#summoning and running shop in bw:shop/run/single or bw:shop/run/multi#
 ##END##
 
 ## team join v1
