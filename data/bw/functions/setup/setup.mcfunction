@@ -105,7 +105,7 @@ scoreboard objectives add bw.usearmorstand minecraft.used:minecraft.armor_stand
 scoreboard objectives add bw.trapaktivated dummy
 scoreboard objectives add bw.unlimitedCreativeResources trigger
 scoreboard objectives add bw.disableResourcesOnDeath trigger
-#scoreboard objectives add bw.
+scoreboard objectives add bw.beds dummy
 #scoreboard objectives add bw.
 #scoreboard objectives add bw.
 ## stats scoreboards

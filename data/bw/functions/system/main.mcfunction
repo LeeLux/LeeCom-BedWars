@@ -15,9 +15,25 @@ execute if score bw.gamestate BedWars matches 1.. run function bw:game/run
 execute if score bw.gamestate BedWars matches 0 run scoreboard players reset bw.gametime
 ##END##
 
-# run the bw enitiy count
+# puts the count of the entity type to the bw.entity.count scoreboard
 function bw:system/entity_count
 #END#
+
+# get the number of beds for each team
+# red
+scoreboard players set bw.bed.red bw.beds 0
+execute as @e[tag=bw.bed.red] at @s if block ~ ~ ~ red_bed run scoreboard players add bw.bed.red bw.beds 1
+# yellow
+scoreboard players set bw.bed.yellow bw.beds 0
+execute as @e[tag=bw.bed.yellow] at @s if block ~ ~ ~ yellow_bed run scoreboard players add bw.bed.yellow bw.beds 1
+# green
+scoreboard players set bw.bed.green bw.beds 0
+execute as @e[tag=bw.bed.green] at @s if block ~ ~ ~ lime_bed run scoreboard players add bw.bed.green bw.beds 1
+# blue
+scoreboard players set bw.bed.blue bw.beds 0
+execute as @e[tag=bw.bed.blue] at @s if block ~ ~ ~ light_blue_bed run scoreboard players add bw.bed.blue bw.beds 1
+#END#
+
 
 # bw.entity delete with delete item
 execute as @e[type=item,nbt={Item: {tag: {Tags: ["bw.entity.delete"]}}}] at @s run tellraw @p [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text": "Killed: "},{"selector":"@e[tag=bw.entity,limit=1,distance=..2,sort=nearest]"}]
@@ -26,73 +42,9 @@ execute as @e[type=item,nbt={Item: {tag: {Tags: ["bw.entity.delete"]}}}] at @s r
 execute as @e[type=item,nbt={Item: {tag: {Tags: ["bw.entity.delete"]}}}] at @s run kill @s
 #END#
 
-# set alwaysshop to BEDWARS Settings
-execute as @a[scores={bw.enablealwaysshop=1..}] run function bw:settosettings/alwaysshop
-#END#
-
-# set customshop to BEDWARS Settings
-execute as @a[scores={bw.enablecustomshop=1..}] run function bw:settosettings/customshop
-#END#
-
-# set actionbar to BEDWARS Settings
-execute as @a[scores={bw.setactionbardisplay=1..}] run function bw:settosettings/actionbar
-#END#
-
-# set health to BEDWARS Settings
-execute as @a[scores={bw.sethealthdisplay=1..}] run function bw:settosettings/sethealth
-#END#
-
-# set shopreset to BEDWARS Settings
-execute as @a[scores={bw.enableshopreset=1..}] run function bw:settosettings/shopreset
-#END#
-
-# Set Game Countdown to BEDWARS Settings
-execute as @a[scores={bw.setgamecountdown=1..}] run function bw:settosettings/gamecountdown
-#END#
-
-# Set keepteam to BEDWARS Settings
-execute as @a[scores={bw.enablekeepteamaftergameend=1..}] run function bw:settosettings/keepteam
-#END#
-
-# runns the bw:shop/updateshop.mcfunction when trigger
-execute as @a[scores={bw.updateshop=1..}] run function bw:shop/updateshop
-#END#
-
-# Set normalregen to BEDWARS Settings
-execute as @a[scores={bw.enablenormalregeneration=1..}] run function bw:settosettings/normalregen
-#END#
-
-# set bw.settimeuntilbedsgone so BEDWARS Settings
-execute as @a[scores={bw.settimeuntilbedsgone=1..}] run function bw:settosettings/bedsgonetime
-#END#
-
-# set bw.enablebedsgoneaftertime so BEDWARS Settings
-execute as @a[scores={bw.enablebedsgoneaftertime=1..}] run function bw:settosettings/bedsgonebool
-#END#
-
-# set bw.settimeuntilautodraw so BEDWARS Settings
-execute as @a[scores={bw.settimeuntilautodraw=1..}] run function bw:settosettings/autodrawtime
-#END#
-
-# set bw.enableautodrawaftertime so BEDWARS Settings
-execute as @a[scores={bw.enableautodrawaftertime=1..}] run function bw:settosettings/autodrawbool
-#END#
-
-# set bw.toggletoeightteams so BEDWARS Settings
-execute as @a[scores={bw.toggletoeightteams=1..}] run function bw:settosettings/eightteams
-#END#
-
-# func for bw.toggleinventorgui
-execute as @a[scores={bw.toggleinventorgui=1..}] run function bw:invgui/toggel
-#END#
-
-# set bw.unlimitedCreativeResources so BEDWARS Settings
-execute as @a[scores={bw.unlimitedCreativeResources=1..}] run function bw:settosettings/unlimitedcreativeresources
-#END#
-
-# set bw.disableResourcesOnDeath so BEDWARS Settings
-execute as @a[scores={bw.disableResourcesOnDeath=1..}] run function bw:settosettings/disableresourcesondeath
-#END#
+# runs the code that deals wit the trigger commands and changes the game settings
+function bw:system/settosettings
+#EDN#
 
 
 ## set spawn rate of resources
@@ -240,10 +192,9 @@ scoreboard players set @a[scores={bw.death=1..}] bw.death -1
 execute as @a[tag=bw.givebrakingtoolafterrespawn,scores={bw.death=0}] run function bw:setup/respawn
 ##END##
 
-## arrow for bow pucheses
-#bow
-execute as @e[type=item,nbt={Item:{id:"minecraft:bow"}},nbt=!{Item:{tag:{Tags:["bw.dropedarrow"]}}}] at @s run summon item ~ ~ ~ {PickupDelay:0s,Item:{id:"minecraft:arrow",Count:1b,tag:{HideFlags:94,CanPlaceOn:["#bw.place"],CanDestroy:["#bw.break"]}}}
-execute as @e[type=item,nbt={Item:{id:"minecraft:bow"}},nbt=!{Item:{tag:{Tags:["bw.dropedarrow"]}}}] at @s run data modify entity @s Item.tag.Tags append value "bw.dropedarrow"
+## arrow for bow purcheses
+execute as @e[type=item,nbt={Item:{id:"minecraft:bow",tag:{Enchantments:[{lvl:1s,id:"minecraft:infinity"}]}},},nbt=!{Item:{tag:{Tags:["bw.dropedarrow"]}}}] at @s run summon item ~ ~ ~ {PickupDelay:0s,Item:{id:"minecraft:arrow",Count:1b,tag:{HideFlags:94,CanPlaceOn:["#bw.place"],CanDestroy:["#bw.break"]}}}
+execute as @e[type=item,nbt={Item:{id:"minecraft:bow",tag:{Enchantments:[{lvl:1s,id:"minecraft:infinity"}]}}},nbt=!{Item:{tag:{Tags:["bw.dropedarrow"]}}}] at @s run data modify entity @s Item.tag.Tags append value "bw.dropedarrow"
 ##END##
 
 ## run invgui

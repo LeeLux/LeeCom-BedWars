@@ -159,9 +159,6 @@ scoreboard players set 13 bw.sidebar 13
 scoreboard players set 12 bw.sidebar 12
 scoreboard players set 11 bw.sidebar 11
 scoreboard players set 10 bw.sidebar 10
-scoreboard players set 3 bw.sidebar 3
-scoreboard players set 2 bw.sidebar 2
-scoreboard players set 1 bw.sidebar 1
 scoreboard players set 0 bw.sidebar 0
 scoreboard players display name 16 bw.sidebar [{"text":""}]
 scoreboard players display name 15 bw.sidebar [{"text":""}]
