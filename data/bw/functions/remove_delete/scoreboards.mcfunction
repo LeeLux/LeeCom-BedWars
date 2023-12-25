@@ -83,7 +83,6 @@ scoreboard objectives remove shopreset
 scoreboard objectives remove bw.enablekeepteamaftergameend
 scoreboard objectives remove bw.updateshop
 scoreboard objectives remove bw.enablenormalregeneration
-scoreboard objectives remove bw.brigeeggtimer
 scoreboard objectives remove bw.timer
 scoreboard objectives remove bw.settimeuntilbedsgone
 scoreboard objectives remove bw.enablebedsgoneaftertime
@@ -100,8 +99,6 @@ scoreboard objectives remove bw.trapaktivated
 scoreboard objectives remove bw.unlimitedCreativeResources
 scoreboard objectives remove bw.disableResourcesOnDeath
 scoreboard objectives remove bw.beds
-#scoreboard objectives remove bw.
-#scoreboard objectives remove bw.
 #scoreboard objectives remove bw.
 #scoreboard objectives remove bw.
 #scoreboard objectives remove bw.

@@ -30,10 +30,6 @@ scoreboard players add @a[team=spec] bws.gotspectator 1
 scoreboard objectives setdisplay sidebar bw.sidebar
 ##END##
 
-# difficulty
-difficulty normal
-#END#
-
 ## sidbar
 function bw:sidebar/ingame
 scoreboard players reset 11 bw.sidebar

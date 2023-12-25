@@ -89,7 +89,6 @@ scoreboard objectives add bw.enableshopreset trigger
 scoreboard objectives add bw.enablekeepteamaftergameend trigger
 scoreboard objectives add bw.updateshop trigger
 scoreboard objectives add bw.enablenormalregeneration trigger
-scoreboard objectives add bw.brigeeggtimer dummy
 scoreboard objectives add bw.timer dummy
 scoreboard objectives add bw.settimeuntilbedsgone trigger
 scoreboard objectives add bw.enablebedsgoneaftertime trigger
@@ -106,6 +105,7 @@ scoreboard objectives add bw.trapaktivated dummy
 scoreboard objectives add bw.unlimitedCreativeResources trigger
 scoreboard objectives add bw.disableResourcesOnDeath trigger
 scoreboard objectives add bw.beds dummy
+#scoreboard objectives add bw.
 #scoreboard objectives add bw.
 #scoreboard objectives add bw.
 ## stats scoreboards
@@ -251,9 +251,4 @@ setblock 65545 247 65536 barrel[facing=up]{CustomName: '{"text":"Shop page 9" }'
 setblock 65546 247 65536 barrel[facing=up]{CustomName: '{"text":"Shop Resources" }'} keep
 #invgui
 setblock 65538 255 65536 barrel[facing=up]{CustomName: '{"text": "Invgui items"}'} keep
-#END#
-
-#giving info message if the custom tnt can't be executed propertly
-execute store result score bw.difficulty BedWars run difficulty
-execute if score bw.difficulty BedWars matches 0 run tellraw @a [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text": "Because the difficulty was automatically or manually set to peaceful the custom tnt can't property be executed!","color": "red"}]
 #END#

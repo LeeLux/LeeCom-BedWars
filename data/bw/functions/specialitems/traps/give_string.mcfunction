@@ -4,4 +4,4 @@
 #         Please don't claim this as your own work!        #
 # ======================================================== #
 
-give @s string{display:{Name:'{"text":"It\'s a trap!","color":"dark_blue","italic":false}',Lore:['{"text": "Place this trap to give ANY","color": "gray"}','{"text": "player tuching it a bad time!","color": "gray"}','{"text": "Imagine triggering two at once!","color": "gray"}']}} 1
+give @s string{display:{Name:'{"text":"Effect trap","color":"blue","italic":false}',Lore:['{"text": "Place this trap and any player","color": "gray"}','{"text": "tuching it get\'s negative effects!","color": "gray"}']}} 1

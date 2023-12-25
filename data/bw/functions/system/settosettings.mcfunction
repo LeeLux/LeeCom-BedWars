@@ -4,6 +4,18 @@
 #         Please don't claim this as your own work!        #
 # ======================================================== #
 
+
+# set spawn rate of resources
+# spawn rate bronce
+execute as @a[scores={bw.spawn.bronce=1..},limit=1] run function bw:settosettings/bronce_spawn
+# spawn rate silver
+execute as @a[scores={bw.spawn.silver=1..},limit=1] run function bw:settosettings/silver_spawn
+# spawn rate gold
+execute as @a[scores={bw.spawn.gold=1..},limit=1] run function bw:settosettings/gold_spawn
+# spawn rate platin
+execute as @a[scores={bw.spawn.platin=1..},limit=1] run function bw:settosettings/platin_spawn
+#END#
+
 # set alwaysshop to BEDWARS Settings
 execute as @a[scores={bw.enablealwaysshop=1..}] run function bw:settosettings/alwaysshop
 #END#

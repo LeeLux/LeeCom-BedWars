@@ -44,9 +44,6 @@ scoreboard players set bw.spawn.silver BedWars 10
 scoreboard players set bw.spawn.gold BedWars 30
 scoreboard players set bw.spawn.platin BedWars 60
 ##END##
-## set default ticks after a brige egg disappears
-scoreboard players set bw.removerticks bw.brigeeggtimer 40
-##END##
 ## set default auto draw and bed destruction times and bool
 scoreboard players set bw.enableautodrawaftertime BedWars 1
 scoreboard players set bw.settimeuntilautodraw BedWars 3600

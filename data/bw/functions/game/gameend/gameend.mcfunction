@@ -23,10 +23,6 @@ execute unless score bw.enablekeepteamaftergameend BedWars matches 1 run team le
 team empty spec
 ##END##
 
-#difficulty
-difficulty peaceful
-#END#
-
 ##set border##
 worldborder set 30000000
 worldborder center 0 0

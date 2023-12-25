@@ -59,7 +59,7 @@ execute unless score bw.bed.yellow bw.beds matches 1.. as @a[team=yellow,scores=
 execute unless score bw.bed.green bw.beds matches 1.. as @a[team=green,scores={bw.death.bed=1..}] run function bw:respawn/joinspecingame
 execute unless score bw.bed.blue bw.beds matches 1.. as @a[team=blue,scores={bw.death.bed=1..}] run function bw:respawn/joinspecingame
 scoreboard players reset @a bw.death.bed
-##END##
+#END#
 
 # auto gameend
 execute if score bw.team.red bw.teams matches 1.. unless score bw.team.yellow bw.teams matches 1.. unless score bw.team.green bw.teams matches 1.. unless score bw.team.blue bw.teams matches 1.. run function bw:game/gameend/red
