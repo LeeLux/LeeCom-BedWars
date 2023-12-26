@@ -21,10 +21,10 @@ execute as @s run function bw:shop/page/page_select_detection
 #END#
 
 #detecting if any item was taken or droped and resetting the content of this page#
-execute store success score @s bw.shop.update at @p[distance=..6] run kill @e[nbt={Item: {tag: {BWShopItem: 1b}}},distance=..1.5]
+execute store success score @s bw.shop.update at @p[distance=..6,tag=bw.shop.want] run execute if entity @e[nbt={Item: {tag: {BWShopItem: 1b}}},distance=..1.5]
 #we need this second (first) check becuase the next stor success could overwite the first one and we would miss it
 execute if score @s bw.shop.update matches 1 run function bw:shop/reset/8
-execute store success score @s bw.shop.update at @s run clear @p[distance=..6] #all{BWShopItem: 1b}
+execute store success score @s bw.shop.update at @s run clear @p[distance=..6,tag=bw.shop.want] #all{BWShopItem: 1b} 0
 execute if score @s bw.shop.update matches 1 run function bw:shop/reset/8
 #END#
 

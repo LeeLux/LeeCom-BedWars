@@ -8,9 +8,9 @@
 scoreboard objectives remove bw.gametime
 scoreboard objectives remove bw.gamestate
 scoreboard objectives remove bw.gamestart
-scoreboard objectives remove bw.drawforce
+scoreboard objectives remove bw.forceadraw
 scoreboard objectives remove bw.timer
-scoreboard objectives remove bw.gamecountdown
+scoreboard objectives remove bw.setgamecountdown
 scoreboard objectives remove BedWars
 scoreboard objectives remove bw.visiblenames
 scoreboard objectives remove bw.xp1
@@ -19,10 +19,10 @@ scoreboard objectives remove bw.spawn.bronce
 scoreboard objectives remove bw.spawn.silver
 scoreboard objectives remove bw.spawn.gold
 scoreboard objectives remove bw.spawn.platin
-scoreboard objectives remove bw.name.spawner
-scoreboard objectives remove bw.name.respawn
-scoreboard objectives remove bw.name.bed
-scoreboard objectives remove bw.name.other
+scoreboard objectives remove bw.showname.spawner
+scoreboard objectives remove bw.showname.respawn
+scoreboard objectives remove bw.showname.bed
+scoreboard objectives remove bw.showname.other
 scoreboard objectives remove Rotation
 scoreboard objectives remove bw.blue.broken
 scoreboard objectives remove bw.red.broken
@@ -56,52 +56,49 @@ scoreboard objectives remove bw.setYdeath
 scoreboard objectives remove bw.clear
 scoreboard objectives remove bw.sidebar
 scoreboard objectives remove bw.teams
-scoreboard objectives remove bw.alwaysshop
+scoreboard objectives remove bw.enablealwaysshop
 scoreboard objectives remove bw.bedselfbroken
 scoreboard objectives remove bw.entity.count
-scoreboard objectives remove bw.cancel.clone
+scoreboard objectives remove bw.cancelcloning
 scoreboard objectives remove bw.health
-scoreboard objectives remove bw.sethealth
+scoreboard objectives remove bw.sethealthdisplay
 scoreboard objectives remove bw.random
 scoreboard objectives remove bw.gameID
 scoreboard objectives remove bw.leave
 scoreboard objectives remove bw.join
 scoreboard objectives remove bw.joinleave
 scoreboard objectives remove bw.clear00
-scoreboard objectives remove bw.map
-scoreboard objectives remove bw.map1
-scoreboard objectives remove bw.map2
-scoreboard objectives remove bw.map3
-scoreboard objectives remove bw.map4
-scoreboard objectives remove bw.mapshop
+scoreboard objectives remove bw.tptomap
+scoreboard objectives remove bw.tptomap1
+scoreboard objectives remove bw.tptomap2
+scoreboard objectives remove bw.tptomap3
+scoreboard objectives remove bw.tptomap4
+scoreboard objectives remove bw.tptomapshop
 scoreboard objectives remove bw.actionbar
 scoreboard objectives remove bw.seractionbar
 scoreboard objectives remove bw.tntused
-scoreboard objectives remove bw.customshop
+scoreboard objectives remove bw.enablecustomshop
 scoreboard objectives remove bw.shop.predi
 scoreboard objectives remove shopreset
-scoreboard objectives remove bw.keepteam
+scoreboard objectives remove bw.enablekeepteamaftergameend
 scoreboard objectives remove bw.updateshop
-scoreboard objectives remove bw.normalregen
-scoreboard objectives remove bw.brigeeggtimer
+scoreboard objectives remove bw.enablenormalregeneration
 scoreboard objectives remove bw.timer
-scoreboard objectives remove bw.bedgonetime
-scoreboard objectives remove bw.bedgonebool
-scoreboard objectives remove bw.autodrawtime
-scoreboard objectives remove bw.autodrawbool
-scoreboard objectives remove bw.eightteams
-scoreboard objectives remove bw.invgui
-scoreboard objectives remove bw.invgui.page
+scoreboard objectives remove bw.settimeuntilbedsgone
+scoreboard objectives remove bw.enablebedsgoneaftertime
+scoreboard objectives remove bw.settimeuntilautodraw
+scoreboard objectives remove bw.enableautodrawaftertime
+scoreboard objectives remove bw.toggletoeightteams
+scoreboard objectives remove bw.toggleinventorgui
+scoreboard objectives remove bw.toggleinventorgui.page
 scoreboard objectives remove bw.pearltime
 scoreboard objectives remove bw.sneaktime
 scoreboard objectives remove bw.hometptimer
 scoreboard objectives remove bw.usearmorstand
 scoreboard objectives remove bw.trapaktivated
-#scoreboard objectives remove bw.
-#scoreboard objectives remove bw.
-#scoreboard objectives remove bw.
-#scoreboard objectives remove bw.
-#scoreboard objectives remove bw.
+scoreboard objectives remove bw.unlimitedCreativeResources
+scoreboard objectives remove bw.disableResourcesOnDeath
+scoreboard objectives remove bw.beds
 #scoreboard objectives remove bw.
 #scoreboard objectives remove bw.
 #scoreboard objectives remove bw.
@@ -116,10 +113,6 @@ team remove yellow
 team remove green
 team remove blue
 team remove spec
-team remove sred
-team remove syellow
-team remove sgreen
-team remove sblue
 #END#
 
 tellraw @s {"text": ""}

@@ -4,4 +4,4 @@
 #         Please don't claim this as your own work!        #
 # ======================================================== #
 
-summon chest_minecart ~ ~ ~ {NoGravity: 1b, Silent: 1b, Invulnerable: 1b, CustomDisplayTile: 1b, LootTable: "empty", Tags: ["bw.shop.entity", "bw.entity", "bw.invis_minecart", "bw.shop.first"], CustomName: '[{"text":"","color":"white"},{"text":"[BW] ","color":"green","italic":false},{"text":"Shop"}]', DisplayState: {Name: "minecraft:air"}}
+summon chest_minecart ~ ~ ~ {NoGravity: 1b, Silent: 1b, Invulnerable: 1b, CustomDisplayTile: 1b, CustomNameVisible:0b, LootTable: "empty", Tags: ["bw.shop.entity", "bw.entity", "bw.invis_minecart", "bw.shop.init"], CustomName: '[{"text":"Shop","color":"white"}]', DisplayState: {Name: "minecraft:air"}}

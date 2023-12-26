@@ -14,6 +14,10 @@ playsound minecraft:entity.ender_dragon.growl voice @s ~ ~ ~
 scoreboard players reset @a[scores={bw.yellow.broken=1..}] bw.yellow.broken
 ##END##
 
+## kill bed item
+kill @e[type=item,nbt={Item: {id: "minecraft:yellow_bed"}}]
+##END##
+
 #stats#
 scoreboard players add @s bws.yellowbed 1
 #END#

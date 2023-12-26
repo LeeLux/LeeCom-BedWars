@@ -5,36 +5,38 @@
 # ======================================================== #
 
 ##Enable triggers##
-scoreboard players enable @a[tag=bw.admin] bw.drawforce
-scoreboard players enable @a[tag=bw.admin] bw.gamecountdown
+scoreboard players enable @a[tag=bw.admin] bw.forceadraw
+scoreboard players enable @a[tag=bw.admin] bw.setgamecountdown
 scoreboard players enable @a[tag=bw.admin] bw.spawn.bronce
 scoreboard players enable @a[tag=bw.admin] bw.spawn.silver
 scoreboard players enable @a[tag=bw.admin] bw.spawn.gold
 scoreboard players enable @a[tag=bw.admin] bw.spawn.platin
-scoreboard players enable @a[tag=bw.admin] bw.name.spawner
-scoreboard players enable @a[tag=bw.admin] bw.name.respawn
-scoreboard players enable @a[tag=bw.admin] bw.name.bed
-scoreboard players enable @a[tag=bw.admin] bw.name.other
+scoreboard players enable @a[tag=bw.admin] bw.showname.spawner
+scoreboard players enable @a[tag=bw.admin] bw.showname.respawn
+scoreboard players enable @a[tag=bw.admin] bw.showname.bed
+scoreboard players enable @a[tag=bw.admin] bw.showname.other
 # (OLD) bw.setYdeath is enabled in line 250 because its must be enabled after it runs some commands!
-scoreboard players enable @a[tag=bw.admin] bw.alwaysshop
-scoreboard players enable @a[tag=bw.admin] bw.customshop
-scoreboard players enable @a[tag=bw.admin] bw.sethealth
-scoreboard players enable @a[tag=bw.admin] bw.map
-scoreboard players enable @a[tag=bw.admin] bw.map1
-scoreboard players enable @a[tag=bw.admin] bw.map2
-scoreboard players enable @a[tag=bw.admin] bw.map3
-scoreboard players enable @a[tag=bw.admin] bw.map4
-scoreboard players enable @a[tag=bw.admin] bw.mapshop
-scoreboard players enable @a[tag=bw.admin] bw.setactionbar
-scoreboard players enable @a[tag=bw.admin] bw.shopreset
-scoreboard players enable @a[tag=bw.admin] bw.keepteam
+scoreboard players enable @a[tag=bw.admin] bw.enablealwaysshop
+scoreboard players enable @a[tag=bw.admin] bw.enablecustomshop
+scoreboard players enable @a[tag=bw.admin] bw.sethealthdisplay
+scoreboard players enable @a[tag=bw.admin] bw.tptomap
+scoreboard players enable @a[tag=bw.admin] bw.tptomap1
+scoreboard players enable @a[tag=bw.admin] bw.tptomap2
+scoreboard players enable @a[tag=bw.admin] bw.tptomap3
+scoreboard players enable @a[tag=bw.admin] bw.tptomap4
+scoreboard players enable @a[tag=bw.admin] bw.tptomapshop
+scoreboard players enable @a[tag=bw.admin] bw.setactionbardisplay
+scoreboard players enable @a[tag=bw.admin] bw.enableshopreset
+scoreboard players enable @a[tag=bw.admin] bw.enablekeepteamaftergameend
 scoreboard players enable @a[tag=bw.admin] bw.updateshop
-scoreboard players enable @a[tag=bw.admin] bw.normalregen
-scoreboard players enable @a[tag=bw.admin] bw.bedgonetime
-scoreboard players enable @a[tag=bw.admin] bw.bedgonebool
-scoreboard players enable @a[tag=bw.admin] bw.autodrawtime
-scoreboard players enable @a[tag=bw.admin] bw.autodrawbool
-scoreboard players enable @a[tag=bw.admin] bw.eightteams
+scoreboard players enable @a[tag=bw.admin] bw.enablenormalregeneration
+scoreboard players enable @a[tag=bw.admin] bw.settimeuntilbedsgone
+scoreboard players enable @a[tag=bw.admin] bw.enablebedsgoneaftertime
+scoreboard players enable @a[tag=bw.admin] bw.settimeuntilautodraw
+scoreboard players enable @a[tag=bw.admin] bw.enableautodrawaftertime
+scoreboard players enable @a[tag=bw.admin] bw.toggletoeightteams
+scoreboard players enable @a[tag=bw.admin] bw.unlimitedCreativeResources
+scoreboard players enable @a[tag=bw.admin] bw.disableResourcesOnDeath
 #everyone#
 scoreboard players enable @a bw.join.red
 scoreboard players enable @a bw.join.yellow
@@ -43,7 +45,7 @@ scoreboard players enable @a bw.join.blue
 scoreboard players enable @a bw.join.empty
 scoreboard players enable @a bw.join.random
 scoreboard players enable @a bw.gamestart
-scoreboard players enable @a bw.invgui
+scoreboard players enable @a bw.toggleinventorgui
 ##END##
 
 ##invisible minecarts (texturpack) not really my code or ideer##
@@ -136,8 +138,8 @@ execute store result score bw.doImmediateRespawn BedWars run gamerule doImmediat
 ##END##
 
 ## normalregen
-execute unless score bw.normalregen BedWars matches 1 run gamerule naturalRegeneration false
-execute unless score bw.normalregen BedWars matches 1 run effect give @a regeneration 6000 0 true
+execute unless score bw.enablenormalregeneration BedWars matches 1 run gamerule naturalRegeneration false
+execute unless score bw.enablenormalregeneration BedWars matches 1 run effect give @a regeneration 6000 0 true
 ##END##
 
 ## special items trap particles

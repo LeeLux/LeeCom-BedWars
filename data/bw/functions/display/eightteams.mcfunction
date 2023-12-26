@@ -5,10 +5,10 @@
 # ======================================================== #
 
 
-execute unless score bw.eightteams BedWars matches 1 run tellraw @a[tag=bw.admin] [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text":"Playing with eight teams toggled ","color":"white"},{"text":"off","color":"red"}]
-execute unless score bw.eightteams BedWars matches 1 as @a[tag=bw.invgui] run function bw:invgui/page3/give
+execute unless score bw.toggletoeightteams BedWars matches 1 run tellraw @a[tag=bw.admin] [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text":"Playing with eight teams toggled ","color":"white"},{"text":"off","color":"red"}]
+execute unless score bw.toggletoeightteams BedWars matches 1 as @a[tag=bw.toggleinventorgui] run function bw:invgui/page3/give
 schedule clear bw:invgui/page2/10t
 
-execute if score bw.eightteams BedWars matches 1 run tellraw @a[tag=bw.admin] [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text":"Playing with eight teams toggled ","color":"white"},{"text":"on","color":"green"}]
-execute if score bw.eightteams BedWars matches 1 as @a[tag=bw.invgui] run function bw:invgui/page1/give
+execute if score bw.toggletoeightteams BedWars matches 1 run tellraw @a[tag=bw.admin] [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text":"Playing with eight teams toggled ","color":"white"},{"text":"on","color":"green"}]
+execute if score bw.toggletoeightteams BedWars matches 1 as @a[tag=bw.toggleinventorgui] run function bw:invgui/page1/give
 function bw:invgui/page2/10t

@@ -7,10 +7,10 @@
 
 
 function bw:onesecondtimer/generell
-scoreboard players operation bw.gametimer BedWars = bw.gamecountdown BedWars
+scoreboard players operation bw.gametimer BedWars = bw.setgamecountdown BedWars
 scoreboard players set bw.gamestart BedWars 0
 title @a times 10 70 20
-title @a title [{"text": "Game Starts in ","color": "white"},{"score":{"name": "bw.gamecountdown","objective": "BedWars","value": "-1"},"color": "red"},{"text": " seconds!"}]
+title @a title [{"text": "Game Starts in ","color": "white"},{"score":{"name": "bw.setgamecountdown","objective": "BedWars","value": "-1"},"color": "red"},{"text": " seconds!"}]
 
 #stats#
 scoreboard players add @a[team=!spec] bws.playedgames 1

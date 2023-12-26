@@ -11,7 +11,7 @@
               "italic": false
             },
             {
-              "selector": "@a[team=!spec,team=!blue,team=!green,team=!random,team=!red,team=!spec,team=!yellow,tag=bw.invgui.lore.empty]"
+              "selector": "@a[team=!spec,team=!blue,team=!green,team=!random,team=!red,team=!spec,team=!yellow,tag=bw.toggleinventorgui.lore.empty]"
             }
           ]
         ]

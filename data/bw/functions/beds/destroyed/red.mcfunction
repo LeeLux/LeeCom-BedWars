@@ -4,7 +4,7 @@
 #         Please don't claim this as your own work!        #
 # ======================================================== #
 
-##bed destroy red##
+## bed destroy red
 tellraw @a [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"selector":"@a[scores={bw.red.broken=..1}]"},{"text":" has destroyed the "},{"text":"Red Bed","color":"red"},{"text":"!","color":"white"}]
 title @a times 10 70 20
 title @a[team=red] title [{"text": "Bed destoyed!","color": "red"}]
@@ -14,6 +14,10 @@ playsound minecraft:entity.ender_dragon.growl voice @s ~ ~ ~
 scoreboard players reset @a[scores={bw.red.broken=1..}] bw.red.broken
 ##END##
 
-#stats#
+## kill bed item
+kill @e[type=item,nbt={Item: {id: "minecraft:red_bed"}}]
+##END##
+
+# stats
 scoreboard players add @s bws.redbed 1
 #END#

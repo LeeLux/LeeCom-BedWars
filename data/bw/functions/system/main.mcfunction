@@ -4,99 +4,50 @@
 #         Please don't claim this as your own work!        #
 # ======================================================== #
 
-# runs the game code wehn the game is activ
+## drop resources on death and clear the rest
+# clear inv
+clear @a[scores={bw.death=1..}]
+execute unless score bw.disableResourcesOnDeath BedWars matches 1 as @a[scores={bw.death=1..}] at @s run function bw:system/dropresources
+##END##
+
+## runs the game code wehn the game is activ
 execute if score bw.gamestate BedWars matches 1.. run function bw:game/run
 execute if score bw.gamestate BedWars matches 0 run scoreboard players reset bw.gametime
-#END#
+##END##
 
-# run the bw enitiy count
+# puts the count of the entity type to the bw.entity.count scoreboard
 function bw:system/entity_count
 #END#
 
+# get the number of beds for each team
+# red
+scoreboard players set bw.bed.red bw.beds 0
+execute as @e[tag=bw.bed.red] at @s if block ~ ~ ~ red_bed run scoreboard players add bw.bed.red bw.beds 1
+# yellow
+scoreboard players set bw.bed.yellow bw.beds 0
+execute as @e[tag=bw.bed.yellow] at @s if block ~ ~ ~ yellow_bed run scoreboard players add bw.bed.yellow bw.beds 1
+# green
+scoreboard players set bw.bed.green bw.beds 0
+execute as @e[tag=bw.bed.green] at @s if block ~ ~ ~ lime_bed run scoreboard players add bw.bed.green bw.beds 1
+# blue
+scoreboard players set bw.bed.blue bw.beds 0
+execute as @e[tag=bw.bed.blue] at @s if block ~ ~ ~ light_blue_bed run scoreboard players add bw.bed.blue bw.beds 1
+#END#
+
 # bw.entity delete with delete item
-execute as @e[type=item,nbt={Item: {tag: {Tags: ["bw.entity.delete"]}}}] at @s run tellraw @p [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text": "Killed: "},{"selector":"@e[tag=bw.entity,limit=1,distance=..4,sort=nearest]"}]
-execute as @e[type=item,nbt={Item: {tag: {Tags: ["bw.entity.delete"]}}}] at @s run tp @e[tag=bw.shop,limit=1,distance=..4,sort=nearest] ~ ~-1000 ~
-execute as @e[type=item,nbt={Item: {tag: {Tags: ["bw.entity.delete"]}}}] at @s run kill @e[tag=bw.entity,limit=1,distance=..4,sort=nearest]
+execute as @e[type=item,nbt={Item: {tag: {Tags: ["bw.entity.delete"]}}}] at @s run tellraw @p [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text": "Killed: "},{"selector":"@e[tag=bw.entity,limit=1,distance=..2,sort=nearest]"}]
+execute as @e[type=item,nbt={Item: {tag: {Tags: ["bw.entity.delete"]}}}] at @s run tp @e[tag=bw.shop,limit=1,distance=..2,sort=nearest] ~ ~-1000 ~
+execute as @e[type=item,nbt={Item: {tag: {Tags: ["bw.entity.delete"]}}}] at @s run kill @e[tag=bw.entity,limit=1,distance=..2,sort=nearest]
 execute as @e[type=item,nbt={Item: {tag: {Tags: ["bw.entity.delete"]}}}] at @s run kill @s
 #END#
 
-# set alwaysshop to BEDWARS Settings
-execute as @a[scores={bw.alwaysshop=1..}] run function bw:settosettings/alwaysshop
-#END#
+# runs the code that deals wit the trigger commands and changes the game settings
+function bw:system/settosettings
+#EDN#
 
-# set customshop to BEDWARS Settings
-execute as @a[scores={bw.customshop=1..}] run function bw:settosettings/customshop
-#END#
-
-# set actionbar to BEDWARS Settings
-execute as @a[scores={bw.setactionbar=1..}] run function bw:settosettings/actionbar
-#END#
-
-# set health to BEDWARS Settings
-execute as @a[scores={bw.sethealth=1..}] run function bw:settosettings/sethealth
-#END#
-
-# set shopreset to BEDWARS Settings
-execute as @a[scores={bw.shopreset=1..}] run function bw:settosettings/shopreset
-#END#
-
-# Set Game Countdown to BEDWARS Settings
-execute as @a[scores={bw.gamecountdown=1..}] run function bw:settosettings/gamecountdown
-#END#
-
-# Set keepteam to BEDWARS Settings
-execute as @a[scores={bw.keepteam=1..}] run function bw:settosettings/keepteam
-#END#
-
-# runns the bw:shop/updateshop.mcfunction when trigger
-execute as @a[scores={bw.updateshop=1..}] run function bw:shop/updateshop
-#END#
-
-# Set normalregen to BEDWARS Settings
-execute as @a[scores={bw.normalregen=1..}] run function bw:settosettings/normalregen
-#END#
-
-# set bw.bedgonetime so BEDWARS Settings
-execute as @a[scores={bw.bedgonetime=1..}] run function bw:settosettings/bedgonetime
-#END#
-
-# set bw.bedgonebool so BEDWARS Settings
-execute as @a[scores={bw.bedgonebool=1..}] run function bw:settosettings/bedgonebool
-#END#
-
-# set bw.autodrawtime so BEDWARS Settings
-execute as @a[scores={bw.autodrawtime=1..}] run function bw:settosettings/autodrawtime
-#END#
-
-# set bw.autodrawbool so BEDWARS Settings
-execute as @a[scores={bw.autodrawbool=1..}] run function bw:settosettings/autodrawbool
-#END#
-
-# set bw.eightteams so BEDWARS Settings
-execute as @a[scores={bw.eightteams=1..}] run function bw:settosettings/eightteams
-#END#
-
-# func for bw.invgui
-execute as @a[scores={bw.invgui=1..}] run function bw:invgui/toggel
-#END#
-
-## set spawn rate of resources
-#spawn rate bronce##
-execute as @a[scores={bw.spawn.bronce=1..},limit=1] run function bw:settosettings/bronce_spawn
-#spawn rate silver##
-execute as @a[scores={bw.spawn.silver=1..},limit=1] run function bw:settosettings/silver_spawn
-#spawn rate gold##
-execute as @a[scores={bw.spawn.gold=1..},limit=1] run function bw:settosettings/gold_spawn
-#spawn rate bronce##
-execute as @a[scores={bw.spawn.platin=1..},limit=1] run function bw:settosettings/platin_spawn
-##END##
-
-## summon the shpo minecarts in the shop vill/entity
-#must stand above the alwaysshop to propertly work!!!!!!
-execute as @e[tag=bw.shop.need] at @s positioned ~ ~1.3 ~ run function bw:shop/summonshopminecart
-#optional make two more to cover the hole bw.shop vill/entity
-#execute as @e[tag=bw.shop.need] at @s positioned ~ ~0.65 ~ run function bw:shop/summonshopminecart
-#execute as @e[tag=bw.shop.need] at @s positioned ~ ~ ~ run function bw:shop/summonshopminecart
+## summon the shop minecarts in the mother shop entity
+# must stand above the alwaysshop to propertly work!
+execute as @e[tag=bw.shop.need] at @s run function bw:shop/run/singlesetup
 tag @e[tag=bw.shop.need] remove bw.shop.need
 ##END##
 
@@ -107,9 +58,9 @@ scoreboard players reset @a[scores={bw.gamestart=1..}] bw.gamestart
 ##END##
 
 ## Manually draw and auto timer runs out draw
-execute as @a if score @s bw.drawforce matches 1.. unless score bw.gamestate BedWars matches 1.. run tellraw @a[tag=bw.admin] [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text": "The game is not running and can therefor not be determent to a draw!"}]
-execute as @a if score @s bw.drawforce matches 1.. if score bw.gamestate BedWars matches 1.. run function bw:game/gameend/time
-scoreboard players reset @a[scores={bw.drawforce=1..}] bw.drawforce
+execute as @a if score @s bw.forceadraw matches 1.. unless score bw.gamestate BedWars matches 1.. run tellraw @a[tag=bw.admin] [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text": "The game is not running and can therefor not be determent to be a draw!"}]
+execute as @a if score @s bw.forceadraw matches 1.. if score bw.gamestate BedWars matches 1.. run function bw:game/gameend/time
+scoreboard players reset @a[scores={bw.forceadraw=1..}] bw.forceadraw
 ##END##
 
 ## rotade bw.rotadetoplayer entities to @p player
@@ -119,7 +70,7 @@ execute as @e[tag=bw.rotadetoplayer] run data modify entity @s Rotation[1] set v
 tag @e[tag=bw.rotadetoplayer] remove bw.rotadetoplayer
 ##END##
 
-## run justoneentity code
+## dosn't allow some entities to have two of them at the same time
 function bw:system/justoneentity
 ##END##
 
@@ -137,30 +88,22 @@ execute unless score bw.gametimer BedWars matches -1 run function bw:system/xpba
 
 ## shop prediacte
 scoreboard players remove @a[scores={bw.shop.predi=1..}] bw.shop.predi 1
-scoreboard players set @a[predicate=bw:shop] bw.shop.predi 5
+scoreboard players set @a[predicate=bw:shop] bw.shop.predi 2
 ##END##
 
-# run the alwaysshop when alwaysshop is activated#
-## !! THIS IS CURRENTLY THE OLD SYSTEM (MULTIPLAYER 'FREINDLY') !! ##
-execute unless score bw.alwaysshop BedWars matches 0 if score bw.shopversion BedWars matches 1 run function bw:shop/run/single
-## !! THIS IS THE NEW SYSTEM (JUST SINGLEPLAYER) !! ##
-execute unless score bw.alwaysshop BedWars matches 0 if score bw.shopversion BedWars matches 2 run function bw:shop/run/multi
+## run the alwaysshop when alwaysshop is activate
+# !! THIS IS THE NEW SYSTEM (JUST SINGLEPLAYER) !!
+execute unless score bw.enablealwaysshop BedWars matches 0 if score bw.shopversion BedWars matches 1 run function bw:shop/run/single
+# !! THIS IS CURRENTLY THE OLD SYSTEM (MULTIPLAYER 'FREINDLY') !!
+execute unless score bw.enablealwaysshop BedWars matches 0 if score bw.shopversion BedWars matches 2 run function bw:shop/run/multi
+##END##
 
+## runs the detection of biying upgrades
+function bw:system/checks/detectnewupgrade
+##END##
 
-## detecting the shop villiger and give you the tags for the shop !!  NEW  !!
-##only used if the 'multiplayer' shop is used ##
-#if the game isn't running, a spec can still use the shop
-#MULTI
-execute unless score bw.gamestate BedWars matches 2..3 as @a[tag=!bw.shop.want,scores={bw.shop.predi=1..}] at @s if entity @e[tag=bw.shop,distance=..6] unless entity @e[distance=..1,tag=bw.shop.entity] run tag @s add bw.shop.lookingat
-#SINGLE
-execute unless score bw.gamestate BedWars matches 2..3 as @a[scores={bw.shop.predi=1..}] at @s if entity @e[tag=bw.shop,distance=..6] unless entity @e[distance=..1,tag=bw.shop.entity] run tag @s add bw.shop.want
-#but if its running, spec can't use the shop
-#MULTI
-execute if score bw.gamestate BedWars matches 2..3 as @a[team=!spec,tag=!bw.shop.want,scores={bw.shop.predi=1..}] at @s if entity @e[tag=bw.shop,distance=..6] unless entity @e[distance=..1,tag=bw.shop.entity] run tag @s add bw.shop.lookingat
-#SINGLE
-execute if score bw.gamestate BedWars matches 2..3 as @a[team=!spec,scores={bw.shop.predi=1..}] at @s if entity @e[tag=bw.shop,distance=..6] unless entity @e[distance=..1,tag=bw.shop.entity] run tag @s add bw.shop.want
-execute as @a[scores={bw.shop.predi=..0}] at @s positioned ~ ~1.3 ~ unless entity @e[tag=bw.shop.villclicked,distance=..1] run tag @s remove bw.shop.want
-#summoning and running shop in bw:shop/run/single or bw:shop/run/multi#
+## changes the leather armor color to the team color if you wear it
+function bw:system/changearmorcolor
 ##END##
 
 ## team join v1
@@ -181,7 +124,7 @@ scoreboard players enable @a[tag=bw.admin] bw.setYdeath
 scoreboard players set @a[tag=bw.admin] bw.setYdeath -2147483648
 ##END##
 
-## y level = ..0 = kill
+## kills the player if there y level is under the Ydeath score
 execute as @a at @s store result score @s bw.Y run data get entity @s Pos[1]
 execute as @a if score @s bw.Y <= bw.Ydeath BedWars run kill @s
 ##END##
@@ -205,17 +148,17 @@ execute as @a[scores={bw.join=1..}] at @s run function bw:system/join
 #execute store success score #Bool bw.bools if score #Bool bw.bools matches 0
 ##END##
 
-## calles the clear00/done function if y 320 is reached
+## calles the clear00/done function if y 384 (-64 > 320) is reached
 execute if entity @e[tag=bw.clear00,scores={bw.clear00=384..}] run function bw:clear00/done
 ##END##
 
 ## the map tp system
-execute as @a[scores={bw.map=1..}] at @s run function bw:teleport/map
-execute as @a[scores={bw.map1=1..}] at @s run function bw:teleport/map.1
-execute as @a[scores={bw.map2=1..}] at @s run function bw:teleport/map.2
-execute as @a[scores={bw.map3=1..}] at @s run function bw:teleport/map.3
-execute as @a[scores={bw.map4=1..}] at @s run function bw:teleport/map.4
-execute as @a[scores={bw.mapshop=1..}] at @s run function bw:teleport/mapshop
+execute as @a[scores={bw.tptomap=1..}] at @s run function bw:teleport/map
+execute as @a[scores={bw.tptomap1=1..}] at @s run function bw:teleport/map.1
+execute as @a[scores={bw.tptomap2=1..}] at @s run function bw:teleport/map.2
+execute as @a[scores={bw.tptomap3=1..}] at @s run function bw:teleport/map.3
+execute as @a[scores={bw.tptomap4=1..}] at @s run function bw:teleport/map.4
+execute as @a[scores={bw.tptomapshop=1..}] at @s run function bw:teleport/mapshop
 ##END##
 
 ## run stats
@@ -224,11 +167,6 @@ execute as @a at @s run function bw:stats/manage
 
 ## run special items code
 function bw:specialitems/manage
-##END##
-
-## run code when you buy something the resources will be removed from you
-#I changed things in shop/buyitems/removeremresources and propertly forgott this code but I let it stand here just in case
-#function bw:shop/buyitems/removeremresources
 ##END##
 
 ## respawn detection (from my own DeathEffects-v0.1-1.17 Datapack with name changes)
@@ -243,10 +181,10 @@ execute as @a if score @s bw.death matches ..-1 run scoreboard players add @s bw
 scoreboard players set @a[scores={bw.death=1..}] bw.death -1
 execute as @a[tag=bw.givebrakingtoolafterrespawn,scores={bw.death=0}] run function bw:setup/respawn
 ##END##
-## arrow for bow and crossbow pucheses
-#bow
-execute as @e[type=item,nbt={Item:{id:"minecraft:bow"}},nbt=!{Item:{tag:{Tags:["bw.dropedarrow"]}}}] at @s run summon item ~ ~ ~ {PickupDelay:0s,Item:{id:"minecraft:arrow",Count:1b,tag:{HideFlags:94,CanPlaceOn:["#bw.place"],CanDestroy:["#bw.break"]}}}
-execute as @e[type=item,nbt={Item:{id:"minecraft:bow"}},nbt=!{Item:{tag:{Tags:["bw.dropedarrow"]}}}] at @s run data modify entity @s Item.tag.Tags append value "bw.dropedarrow"
+
+## arrow for bow purcheses (if they have infinity)
+execute as @e[type=item,nbt={Item:{id:"minecraft:bow",tag:{Enchantments:[{lvl:1s,id:"minecraft:infinity"}]}},},nbt=!{Item:{tag:{Tags:["bw.dropedarrow"]}}}] at @s run summon item ~ ~ ~ {PickupDelay:0s,Item:{id:"minecraft:arrow",Count:1b,tag:{HideFlags: 94,CanPlaceOn:["#bw.place"],CanDestroy:["#bw.break"]}}}
+execute as @e[type=item,nbt={Item:{id:"minecraft:bow",tag:{Enchantments:[{lvl:1s,id:"minecraft:infinity"}]}}},nbt=!{Item:{tag:{Tags:["bw.dropedarrow"]}}}] at @s run data modify entity @s Item.tag.Tags append value "bw.dropedarrow"
 ##END##
 
 ## run invgui

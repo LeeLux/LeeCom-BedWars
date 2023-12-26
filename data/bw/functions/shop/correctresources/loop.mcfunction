@@ -7,10 +7,10 @@
 ##Slot:9b##
 data merge block 65536 247 65536 {Items: []}
 
-execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 9b, id: "minecraft:rail"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[0]
-execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 9b, id: "minecraft:detector_rail"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[1]
-execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 9b, id: "minecraft:powered_rail"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[2]
-execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 9b, id: "minecraft:activator_rail"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[3]
+execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 9b, id: "minecraft:command_block"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[0]
+execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 9b, id: "minecraft:chain_command_block"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[1]
+execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 9b, id: "minecraft:structure_void"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[2]
+execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 9b, id: "minecraft:repeating_command_block"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[3]
 
 execute at @e[tag=bw.correctresources.count] run data modify storage minecraft:bedwars CurrentCount set from block ~ ~ ~ Items[{Slot: 9b}].Count
 data modify block 65536 247 65536 Items[].Count set from storage minecraft:bedwars CurrentCount
@@ -22,10 +22,10 @@ execute at @e[tag=bw.correctresources] run data modify block ~ ~ ~ Items[{Slot: 
 ##Slot:10b##
 data merge block 65536 247 65536 {Items: []}
 
-execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 10b, id: "minecraft:rail"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[0]
-execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 10b, id: "minecraft:detector_rail"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[1]
-execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 10b, id: "minecraft:powered_rail"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[2]
-execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 10b, id: "minecraft:activator_rail"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[3]
+execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 10b, id: "minecraft:command_block"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[0]
+execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 10b, id: "minecraft:chain_command_block"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[1]
+execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 10b, id: "minecraft:structure_void"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[2]
+execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 10b, id: "minecraft:repeating_command_block"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[3]
 
 execute at @e[tag=bw.correctresources.count] run data modify storage minecraft:bedwars CurrentCount set from block ~ ~ ~ Items[{Slot: 10b}].Count
 data modify block 65536 247 65536 Items[].Count set from storage minecraft:bedwars CurrentCount
@@ -37,10 +37,10 @@ execute at @e[tag=bw.correctresources] run data modify block ~ ~ ~ Items[{Slot: 
 ##Slot:11b##
 data merge block 65536 247 65536 {Items: []}
 
-execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 11b, id: "minecraft:rail"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[0]
-execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 11b, id: "minecraft:detector_rail"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[1]
-execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 11b, id: "minecraft:powered_rail"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[2]
-execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 11b, id: "minecraft:activator_rail"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[3]
+execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 11b, id: "minecraft:command_block"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[0]
+execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 11b, id: "minecraft:chain_command_block"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[1]
+execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 11b, id: "minecraft:structure_void"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[2]
+execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 11b, id: "minecraft:repeating_command_block"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[3]
 
 execute at @e[tag=bw.correctresources.count] run data modify storage minecraft:bedwars CurrentCount set from block ~ ~ ~ Items[{Slot: 11b}].Count
 data modify block 65536 247 65536 Items[].Count set from storage minecraft:bedwars CurrentCount
@@ -52,10 +52,10 @@ execute at @e[tag=bw.correctresources] run data modify block ~ ~ ~ Items[{Slot: 
 ##Slot:12b##
 data merge block 65536 247 65536 {Items: []}
 
-execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 12b, id: "minecraft:rail"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[0]
-execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 12b, id: "minecraft:detector_rail"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[1]
-execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 12b, id: "minecraft:powered_rail"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[2]
-execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 12b, id: "minecraft:activator_rail"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[3]
+execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 12b, id: "minecraft:command_block"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[0]
+execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 12b, id: "minecraft:chain_command_block"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[1]
+execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 12b, id: "minecraft:structure_void"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[2]
+execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 12b, id: "minecraft:repeating_command_block"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[3]
 
 execute at @e[tag=bw.correctresources.count] run data modify storage minecraft:bedwars CurrentCount set from block ~ ~ ~ Items[{Slot: 12b}].Count
 data modify block 65536 247 65536 Items[].Count set from storage minecraft:bedwars CurrentCount
@@ -66,10 +66,10 @@ execute at @e[tag=bw.correctresources] run data modify block ~ ~ ~ Items[{Slot: 
 ##Slot:13b##
 data merge block 65536 247 65536 {Items: []}
 
-execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 13b, id: "minecraft:rail"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[0]
-execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 13b, id: "minecraft:detector_rail"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[1]
-execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 13b, id: "minecraft:powered_rail"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[2]
-execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 13b, id: "minecraft:activator_rail"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[3]
+execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 13b, id: "minecraft:command_block"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[0]
+execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 13b, id: "minecraft:chain_command_block"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[1]
+execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 13b, id: "minecraft:structure_void"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[2]
+execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 13b, id: "minecraft:repeating_command_block"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[3]
 
 execute at @e[tag=bw.correctresources.count] run data modify storage minecraft:bedwars CurrentCount set from block ~ ~ ~ Items[{Slot: 13b}].Count
 data modify block 65536 247 65536 Items[].Count set from storage minecraft:bedwars CurrentCount
@@ -81,10 +81,10 @@ execute at @e[tag=bw.correctresources] run data modify block ~ ~ ~ Items[{Slot: 
 ##Slot:14b##
 data merge block 65536 247 65536 {Items: []}
 
-execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 14b, id: "minecraft:rail"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[0]
-execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 14b, id: "minecraft:detector_rail"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[1]
-execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 14b, id: "minecraft:powered_rail"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[2]
-execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 14b, id: "minecraft:activator_rail"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[3]
+execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 14b, id: "minecraft:command_block"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[0]
+execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 14b, id: "minecraft:chain_command_block"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[1]
+execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 14b, id: "minecraft:structure_void"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[2]
+execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 14b, id: "minecraft:repeating_command_block"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[3]
 
 execute at @e[tag=bw.correctresources.count] run data modify storage minecraft:bedwars CurrentCount set from block ~ ~ ~ Items[{Slot: 14b}].Count
 data modify block 65536 247 65536 Items[].Count set from storage minecraft:bedwars CurrentCount
@@ -96,10 +96,10 @@ execute at @e[tag=bw.correctresources] run data modify block ~ ~ ~ Items[{Slot: 
 ##Slot:15b##
 data merge block 65536 247 65536 {Items: []}
 
-execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 15b, id: "minecraft:rail"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[0]
-execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 15b, id: "minecraft:detector_rail"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[1]
-execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 15b, id: "minecraft:powered_rail"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[2]
-execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 15b, id: "minecraft:activator_rail"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[3]
+execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 15b, id: "minecraft:command_block"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[0]
+execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 15b, id: "minecraft:chain_command_block"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[1]
+execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 15b, id: "minecraft:structure_void"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[2]
+execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 15b, id: "minecraft:repeating_command_block"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[3]
 
 execute at @e[tag=bw.correctresources.count] run data modify storage minecraft:bedwars CurrentCount set from block ~ ~ ~ Items[{Slot: 15b}].Count
 data modify block 65536 247 65536 Items[].Count set from storage minecraft:bedwars CurrentCount
@@ -111,10 +111,10 @@ execute at @e[tag=bw.correctresources] run data modify block ~ ~ ~ Items[{Slot: 
 ##Slot:16b##
 data merge block 65536 247 65536 {Items: []}
 
-execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 16b, id: "minecraft:rail"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[0]
-execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 16b, id: "minecraft:detector_rail"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[1]
-execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 16b, id: "minecraft:powered_rail"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[2]
-execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 16b, id: "minecraft:activator_rail"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[3]
+execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 16b, id: "minecraft:command_block"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[0]
+execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 16b, id: "minecraft:chain_command_block"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[1]
+execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 16b, id: "minecraft:structure_void"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[2]
+execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 16b, id: "minecraft:repeating_command_block"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[3]
 
 execute at @e[tag=bw.correctresources.count] run data modify storage minecraft:bedwars CurrentCount set from block ~ ~ ~ Items[{Slot: 16b}].Count
 data modify block 65536 247 65536 Items[].Count set from storage minecraft:bedwars CurrentCount
@@ -126,10 +126,10 @@ execute at @e[tag=bw.correctresources] run data modify block ~ ~ ~ Items[{Slot: 
 ##Slot:17b##
 data merge block 65536 247 65536 {Items: []}
 
-execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 17b, id: "minecraft:rail"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[0]
-execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 17b, id: "minecraft:detector_rail"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[1]
-execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 17b, id: "minecraft:powered_rail"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[2]
-execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 17b, id: "minecraft:activator_rail"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[3]
+execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 17b, id: "minecraft:command_block"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[0]
+execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 17b, id: "minecraft:chain_command_block"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[1]
+execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 17b, id: "minecraft:structure_void"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[2]
+execute at @e[tag=bw.correctresources] if block ~ ~ ~ minecraft:barrel{Items: [{Slot: 17b, id: "minecraft:repeating_command_block"}]} run data modify block 65536 247 65536 Items[] set from block 65546 247 65536 Items[3]
 
 execute at @e[tag=bw.correctresources.count] run data modify storage minecraft:bedwars CurrentCount set from block ~ ~ ~ Items[{Slot: 17b}].Count
 data modify block 65536 247 65536 Items[].Count set from storage minecraft:bedwars CurrentCount

@@ -1,0 +1,10 @@
+[
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{display:{color:16701501}}"
+  },
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{bw.TeamColor:2}"
+  }
+]

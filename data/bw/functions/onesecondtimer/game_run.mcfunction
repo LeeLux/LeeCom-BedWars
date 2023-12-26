@@ -26,25 +26,32 @@ execute if score bw.goldtimer BedWars matches ..0 run scoreboard players operati
 execute if score bw.platintimer BedWars matches ..0 run scoreboard players operation bw.platintimer BedWars = bw.spawn.platin BedWars
 ##END##
 
-## game timer for auto bed destroy and game end
-#from Noxon#8448
-scoreboard players operation bw.seconds bw.timer = bw.gametime BedWars
-# Reset the score
-scoreboard players set bw.hours bw.timer 0
-scoreboard players set bw.minutes bw.timer 0
-# Start operations
-function bw:stats/game_timer
-##END##
-
 ## auto bed destruction if enabled
-execute if score bw.bedgonebool BedWars matches 1 run function bw:beds/gone/warnings
+execute if score bw.enablebedsgoneaftertime BedWars matches 1 run function bw:beds/gone/warnings
 ##END##
 
 ## auto draw if enabled
-execute if score bw.autodrawbool BedWars matches 1 run function bw:display/autodraw_warnings
+execute if score bw.enableautodrawaftertime BedWars matches 1 run function bw:display/autodraw_warnings
 ##END##
 
 #actionbar#
 function bw:actionbar/manage
 #END#
+
+## game timer for auto bed destroy and game end
+#from Noxon#8448
+scoreboard players operation bw.seconds bw.timer = bw.gametime BedWars
+
+scoreboard players operation bw.untilbedsgoneSeconds bw.timer = bw.untilbedsgone bw.timer
+scoreboard players operation bw.untilautodrawSeconds bw.timer = bw.untilautodraw bw.timer
+# Reset the score
+scoreboard players set bw.hours bw.timer 0
+scoreboard players set bw.minutes bw.timer 0
+
+scoreboard players set bw.untilbedsgoneMinutes bw.timer 0
+scoreboard players set bw.untilautodrawMinutes bw.timer 0
+# Start operations
+function bw:stats/game_timer
+##END##
+
 execute if score bw.gamestate BedWars matches 1.. run schedule function bw:onesecondtimer/game_run 1s

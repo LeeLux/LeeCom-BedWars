@@ -5,6 +5,6 @@
 # ======================================================== #
 
 
-execute unless score bw.customshop BedWars matches 1 run tellraw @a[tag=bw.admin] [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text":"Customshop toggled ","color":"white"},{"text":"off","color":"red"}]
+execute unless score bw.enablecustomshop BedWars matches 1 run tellraw @a[tag=bw.admin] [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text":"Customshop toggled ","color":"white"},{"text":"off","color":"red"}]
 
-execute if score bw.customshop BedWars matches 1 run tellraw @a[tag=bw.admin] [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text":"Customshop toggled ","color":"white"},{"text":"on","color":"green"}]
+execute if score bw.enablecustomshop BedWars matches 1 run tellraw @a[tag=bw.admin] [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text":"Customshop toggled ","color":"white"},{"text":"on","color":"green"}]

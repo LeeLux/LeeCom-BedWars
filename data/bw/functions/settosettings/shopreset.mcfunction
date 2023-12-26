@@ -4,7 +4,7 @@
 #         Please don't claim this as your own work!        #
 # ======================================================== #
 
-scoreboard players operation bw.shopreset BedWars += @s bw.shopreset
-execute unless score bw.shopreset BedWars matches 0..1 run scoreboard players set bw.shopreset BedWars 0
-execute as @a[scores={bw.shopreset=1..}] run function bw:display/shopreset
-scoreboard players reset @a[scores={bw.shopreset=1..}] bw.shopreset
+scoreboard players operation bw.enableshopreset BedWars += @s bw.enableshopreset
+execute unless score bw.enableshopreset BedWars matches 0..1 run scoreboard players set bw.enableshopreset BedWars 0
+execute as @a[scores={bw.enableshopreset=1..}] run function bw:display/shopreset
+scoreboard players reset @a[scores={bw.enableshopreset=1..}] bw.enableshopreset

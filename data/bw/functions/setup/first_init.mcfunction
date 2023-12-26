@@ -23,7 +23,7 @@ data merge storage bedwars {Prefix: '[{"text":"","color":"white"},{"text":"[BW] 
 ### THE DEFAULT NUMBERS AND SCORES! ###
 ### =============================== ###
 ## set other and generell default values
-scoreboard players set bw.gamecountdown BedWars 10
+scoreboard players set bw.setgamecountdown BedWars 10
 scoreboard players set bw.gametimer BedWars -1
 scoreboard players set bw.Ydeath BedWars 0
 scoreboard players set bw.gamestate BedWars 0
@@ -47,14 +47,12 @@ scoreboard players set bw.spawn.platin BedWars 60
 ## set number of chunks that are cloned 400=20*20 chunks
 scoreboard players set bw.clonechunks BedWars 400
 ##END##
-## set default ticks after a brige egg disappears
-scoreboard players set bw.removerticks bw.brigeeggtimer 40
-##END##
+
 ## set default auto draw and bed destruction times and bool
-scoreboard players set bw.autodrawbool BedWars 1
-scoreboard players set bw.autodrawtime BedWars 3600
-scoreboard players set bw.bedgonebool BedWars 1
-scoreboard players set bw.bedgonetime BedWars 2400
+scoreboard players set bw.enableautodrawaftertime BedWars 1
+scoreboard players set bw.settimeuntilautodraw BedWars 3600
+scoreboard players set bw.enablebedsgoneaftertime BedWars 1
+scoreboard players set bw.settimeuntilbedsgone BedWars 2700
 ##END##
 ## whats the default how the shop should work(with version)
 scoreboard players set bw.shopversion BedWars 1
@@ -73,7 +71,7 @@ gamerule doMobSpawning false
 gamerule doPatrolSpawning false
 gamerule doTraderSpawning false
 gamerule doWeatherCycle false
-gamerule keepInventory false
+gamerule keepInventory true
 gamerule mobGriefing false
 gamerule spawnRadius 1
 gamerule naturalRegeneration true
@@ -128,13 +126,6 @@ team modify random friendlyFire false
 team modify random collisionRule never
 ##END##
 
-## more teams for sidbar
-team add sred
-team add syellow
-team add sgreen
-team add sblue
-##END##
-
 ###END###
 
 ## Scoreboars join teams to better identifi them
@@ -160,20 +151,24 @@ team join spec bw.gamestate
 team join random bw.team.random
 ##END##
 
-## team join sidbar
-team join sred §cRed§7:
-team join syellow §eYellow§7:
-team join sgreen §aGreen§7:
-team join sblue §9Blue§7:
-##END##
-
-## set sidbar
-scoreboard players set §7. bw.sidebar 9
-scoreboard players set §cRed§7: bw.sidebar 8
-scoreboard players set §eYellow§7: bw.sidebar 7
-scoreboard players set §aGreen§7: bw.sidebar 6
-scoreboard players set §9Blue§7: bw.sidebar 5
-scoreboard players set §7' bw.sidebar 4
+## Set and modify main bw.sidebar scoreboard
+scoreboard objectives modify bw.sidebar numberformat blank
+scoreboard players set 16 bw.sidebar 16
+scoreboard players set 15 bw.sidebar 15
+scoreboard players set 14 bw.sidebar 14
+scoreboard players set 13 bw.sidebar 13
+scoreboard players set 12 bw.sidebar 12
+scoreboard players set 11 bw.sidebar 11
+scoreboard players set 10 bw.sidebar 10
+scoreboard players set 0 bw.sidebar 0
+scoreboard players display name 16 bw.sidebar [{"text":""}]
+scoreboard players display name 15 bw.sidebar [{"text":""}]
+scoreboard players display name 14 bw.sidebar [{"text":""}]
+scoreboard players display name 13 bw.sidebar [{"text":""}]
+scoreboard players display name 12 bw.sidebar [{"text":""}]
+scoreboard players display name 11 bw.sidebar [{"text":""}]
+scoreboard players display name 10 bw.sidebar [{"text":""}]
+scoreboard players display name 0 bw.sidebar [{"text":""}]
 ##END##
 
 ##END##

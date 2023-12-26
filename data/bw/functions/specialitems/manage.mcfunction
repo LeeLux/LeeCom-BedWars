@@ -4,22 +4,18 @@
 #         Please don't claim this as your own work!        #
 # ======================================================== #
 
-## remove all chickens
-#summons a brige egg
-#execute as @e[type=chicken,limit=1] at @s run summon item ~ ~1 ~ {Item: {id: "minecraft:egg", Count: 1b, tag: {HideFlags: 24, Tags: ["bw.brigeegg"], Enchantments: [{}], display: {Name: '{"text":"Brige","italic":false}'}}}}
-execute as @e[type=chicken,limit=1] at @s run loot spawn ~ ~ ~ loot minecraft:entities/chicken
-tp @e[type=chicken,limit=1] ~ -1000 ~
-##END##
-
-## brige egg
-execute as @e[type=minecraft:egg,nbt={Item: {tag: {Tags: ["bw.brigeegg"]}}}] at @s run fill ^-1 ^-2 ^-1 ^1 ^-2 ^-1 minecraft:cut_sandstone replace air
-scoreboard players add @e[type=minecraft:egg,nbt={Item: {tag: {Tags: ["bw.brigeegg"]}}}] bw.brigeeggtimer 1
-execute as @e[type=minecraft:egg,nbt={Item: {tag: {Tags: ["bw.brigeegg"]}}}] if score bw.removerticks bw.brigeeggtimer < @s bw.brigeeggtimer run kill @s[type=!player]
+## brige builder
+clear @a minecraft:fishing_rod{Damage:64,Tags:["bw.brigebuilder"]}
+execute as @a[scores={bw.used.fishing_rod=1..},nbt={SelectedItem:{tag:{Tags:["bw.brigebuilder"]}}}] run item modify entity @s weapon.mainhand bw:removeunbreakable
+execute as @a[scores={bw.used.fishing_rod=1..},nbt={SelectedItem:{tag:{Tags:["bw.brigebuilder"]}}}] run item modify entity @s weapon.mainhand bw:setbrigebuilderdamage
+execute as @e[type=minecraft:fishing_bobber] at @s run fill ~ ~-2 ~ ~ ~-2 ~ minecraft:cut_sandstone replace air
+#kill @e[type=minecraft:fishing_bobber,nbt={OnGround:1b}]
+scoreboard players reset @a[scores={bw.used.fishing_rod=1..}] bw.used.fishing_rod
 ##END##
 
 ## TNT
 execute as @a[scores={bw.tntused=1..}] at @s run function bw:specialitems/tnt/init
-execute as @e[type=tnt,nbt={Fuse: 1s}] at @s run function bw:specialitems/tnt/1s
+execute as @e[type=tnt,nbt={fuse: 1s}] at @s run function bw:specialitems/tnt/1s
 ##END##
 
 ## Glowing
@@ -70,13 +66,13 @@ scoreboard players add @a[tag=bw.trap.string_triggert] bw.trapaktivated 1
 execute as @a[scores={bw.trapaktivated=400..}] run function bw:specialitems/traps/string_triggert/remove_tag
 # armore stand: I will find you!
 # adding the team of placer
-execute as @e[tag=bw.trap.getplacedteam] at @s if entity @a[scores={bw.usearmorstand=1..},distance=..10] run function bw:specialitems/traps/getplacedteam
+execute as @e[tag=bw.trap.getplacedteam] at @s if entity @p[scores={bw.usearmorstand=1..},distance=..10] run function bw:specialitems/traps/getplacedteam
 # found an enemy
-execute as @e[tag=bw.trap.eye,team=red] at @s if entity @a[distance=..4,team=!red,team=!spec,team=!random] run function bw:specialitems/traps/found_enemy/red
-execute as @e[tag=bw.trap.eye,team=yellow] at @s if entity @a[distance=..4,team=!yellow,team=!spec,team=!random] run function bw:specialitems/traps/found_enemy/yellow
-execute as @e[tag=bw.trap.eye,team=green] at @s if entity @a[distance=..4,team=!green,team=!spec,team=!random] run function bw:specialitems/traps/found_enemy/green
-execute as @e[tag=bw.trap.eye,team=blue] at @s if entity @a[distance=..4,team=!blue,team=!spec,team=!random] run function bw:specialitems/traps/found_enemy/blue
+execute as @e[tag=bw.trap.eye,team=red] at @s if entity @p[distance=..6,team=!red,team=!spec,team=!random] run function bw:specialitems/traps/found_enemy/red
+execute as @e[tag=bw.trap.eye,team=yellow] at @s if entity @p[distance=..6,team=!yellow,team=!spec,team=!random] run function bw:specialitems/traps/found_enemy/yellow
+execute as @e[tag=bw.trap.eye,team=green] at @s if entity @p[distance=..6,team=!green,team=!spec,team=!random] run function bw:specialitems/traps/found_enemy/green
+execute as @e[tag=bw.trap.eye,team=blue] at @s if entity @p[distance=..6,team=!blue,team=!spec,team=!random] run function bw:specialitems/traps/found_enemy/blue
 # resets place scoreboard
-scoreboard players reset @a[scores={bw.usearmorstand=1..}] bw.usearmorstand
+scoreboard players reset @p[scores={bw.usearmorstand=1..}] bw.usearmorstand
 
 ##END##

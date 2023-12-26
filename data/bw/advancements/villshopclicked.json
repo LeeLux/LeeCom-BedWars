@@ -16,6 +16,6 @@
         }
     },
     "rewards": {
-        "function": "bw:shop/villshopclicked"
+        "function": "bw:shop/noshoponclickreplacement/villshopclicked"
     }
 }

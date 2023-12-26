@@ -4,10 +4,10 @@
 #         Please don't claim this as your own work!        #
 # ======================================================== #
 
-scoreboard players operation bw.customshop BedWars += @s bw.customshop
-execute unless score bw.customshop BedWars matches 0..1 run scoreboard players set bw.customshop BedWars 0
-execute as @a[scores={bw.customshop=1..}] run function bw:display/customshop
-scoreboard players reset @a[scores={bw.customshop=1..}] bw.customshop
+scoreboard players operation bw.enablecustomshop BedWars += @s bw.enablecustomshop
+execute unless score bw.enablecustomshop BedWars matches 0..1 run scoreboard players set bw.enablecustomshop BedWars 0
+execute as @a[scores={bw.enablecustomshop=1..}] run function bw:display/customshop
+scoreboard players reset @a[scores={bw.enablecustomshop=1..}] bw.enablecustomshop
 
-execute if score bw.customshop BedWars matches 0 run function bw:shop/setshoptype/setdefaultshop
-execute if score bw.customshop BedWars matches 1 run function bw:shop/setshoptype/setcustomshop
+execute if score bw.enablecustomshop BedWars matches 0 run function bw:shop/setshoptype/setdefaultshop
+execute if score bw.enablecustomshop BedWars matches 1 run function bw:shop/setshoptype/setcustomshop

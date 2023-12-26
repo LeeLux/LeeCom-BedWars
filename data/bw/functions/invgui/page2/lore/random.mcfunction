@@ -4,10 +4,10 @@
 #         Please don't claim this as your own work!        #
 # ======================================================== #
 
-tag @a[team=random,limit=1,tag=!bw.invgui.lore.randomdone] add bw.invgui.lore.random
+tag @a[team=random,limit=1,tag=!bw.toggleinventorgui.lore.randomdone] add bw.toggleinventorgui.lore.random
 item modify entity @s hotbar.1 bw:lores/random
-tag @a[tag=bw.invgui.lore.random] add bw.invgui.lore.randomdone
-tag @a remove bw.invgui.lore.random
+tag @a[tag=bw.toggleinventorgui.lore.random] add bw.toggleinventorgui.lore.randomdone
+tag @a remove bw.toggleinventorgui.lore.random
 
-execute if entity @a[team=random,tag=!bw.invgui.lore.randomdone] run function bw:invgui/page2/lore/random
-execute unless entity @a[team=random,tag=!bw.invgui.lore.randomdone] run tag @a remove bw.invgui.lore.randomdone
+execute if entity @a[team=random,tag=!bw.toggleinventorgui.lore.randomdone] run function bw:invgui/page2/lore/random
+execute unless entity @a[team=random,tag=!bw.toggleinventorgui.lore.randomdone] run tag @a remove bw.toggleinventorgui.lore.randomdone

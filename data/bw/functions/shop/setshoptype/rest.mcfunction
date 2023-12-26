@@ -6,11 +6,11 @@
 
 function bw:shop/addplacebreak
 
-# == do not change order pls or things will get or not get the right tags so that the whop AND resourcespawn will work == #
+# == do not change order == #
 
-#sets the items to a storage becuase the Slot is a fucking bitch with these kind of things
+# sets the items to a storage becuase the Slot tag is a fucking bitch with these kind of things
 data modify storage minecraft:bedwars Resources.Items set from block 65546 247 65536 Items
-#removing the annoying Slots
+# removing the annoying Slot tags
 data remove storage minecraft:bedwars Resources.Items[].Slot
 data modify storage minecraft:bedwars Resources.Items[].Count set value 1b
 
