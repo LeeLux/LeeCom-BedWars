@@ -4,7 +4,7 @@
 #         Please don't claim this as your own work!        #
 # ======================================================== #
 
-scoreboard players set @s bw.invgui.page 1
+scoreboard players set @s bw.toggleinventorgui.page 1
 clear @s
 #all 8 teams
 item replace entity @s hotbar.0 from block 65538 255 65536 container.0

@@ -33,7 +33,6 @@ scoreboard objectives remove bws.losegreen
 scoreboard objectives remove bws.losered
 scoreboard objectives remove bws.loseyellow
 scoreboard objectives remove bws.losses
-scoreboard objectives remove bws.pearlkills
 scoreboard objectives remove bws.pickupblocks
 scoreboard objectives remove bws.placedblocks
 scoreboard objectives remove bws.playedgames

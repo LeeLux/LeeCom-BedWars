@@ -8,14 +8,14 @@
 title @a times 10 70 20
 tellraw @a [{"nbt":"Prefix","storage": "minecraft:bedwars","interpret": true},{"text": "All beds have been destroyed!"}]
 #teams
-execute as @e[tag=bw.bed.red] at @s if block ~ ~ ~ red_bed run title @a[team=red] title [{"text": "Bed destoyed!","color": "red"}]
-execute as @e[tag=bw.bed.red] at @s if block ~ ~ ~ red_bed run title @a[team=blue] subtitle [{"text": "All beds have been destroyed!","color": "red"}]
-execute as @e[tag=bw.bed.blue] at @s if block ~ ~ ~ light_blue_bed run title @a[team=blue] title [{"text": "Bed destoyed!","color": "blue"}]
-execute as @e[tag=bw.bed.blue] at @s if block ~ ~ ~ light_blue_bed run title @a[team=blue] subtitle [{"text": "All beds have been destroyed!","color": "blue"}]
-execute as @e[tag=bw.bed.green] at @s if block ~ ~ ~ lime_bed run title @a[team=green] title [{"text": "Bed destoyed!","color": "green"}]
-execute as @e[tag=bw.bed.green] at @s if block ~ ~ ~ lime_bed run title @a[team=green] subtitle [{"text": "All beds have been destroyed!","color": "green"}]
-execute as @e[tag=bw.bed.yellow] at @s if block ~ ~ ~ yellow_bed run title @a[team=yellow] title [{"text": "Bed destoyed!","color": "yellow"}]
-execute as @e[tag=bw.bed.yellow] at @s if block ~ ~ ~ yellow_bed run title @a[team=yellow] subtitle [{"text": "All beds have been destroyed!","color": "yellow"}]
+execute if score bw.bed.red bw.beds matches 1.. run title @a[team=red] title [{"text": "Bed destoyed!","color": "red"}]
+execute if score bw.bed.red bw.beds matches 1.. run title @a[team=red] subtitle [{"text": "All beds have been destroyed!","color": "red"}]
+execute if score bw.bed.yellow bw.beds matches 1.. run title @a[team=yellow] title [{"text": "Bed destoyed!","color": "yellow"}]
+execute if score bw.bed.yellow bw.beds matches 1.. run title @a[team=yellow] subtitle [{"text": "All beds have been destroyed!","color": "yellow"}]
+execute if score bw.bed.green bw.beds matches 1.. run title @a[team=green] title [{"text": "Bed destoyed!","color": "green"}]
+execute if score bw.bed.green bw.beds matches 1.. run title @a[team=green] subtitle [{"text": "All beds have been destroyed!","color": "green"}]
+execute if score bw.bed.blue bw.beds matches 1.. run title @a[team=blue] title [{"text": "Bed destoyed!","color": "blue"}]
+execute if score bw.bed.blue bw.beds matches 1.. run title @a[team=blue] subtitle [{"text": "All beds have been destroyed!","color": "blue"}]
 execute as @a[team=!spec] at @s run playsound minecraft:entity.ender_dragon.growl voice @s ~ ~ ~
 
 #destroy beds

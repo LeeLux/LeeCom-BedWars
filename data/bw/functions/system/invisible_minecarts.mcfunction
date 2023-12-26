@@ -8,4 +8,3 @@ data merge entity @s[type=furnace_minecart] {CustomDisplayTile:1,DisplayState:{N
 data merge entity @s[type=tnt_minecart] {CustomDisplayTile:1,DisplayState:{Name:"minecraft:command_block",Properties:{conditional:"true",facing:"south"}},DisplayOffset:4}
 data merge entity @s[type=hopper_minecart] {CustomDisplayTile:1,DisplayState:{Name:"minecraft:command_block",Properties:{conditional:"true",facing:"west"}},DisplayOffset:4}
 tag @s add bw.invis_minecart
-##END##

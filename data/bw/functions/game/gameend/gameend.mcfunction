@@ -19,13 +19,9 @@ team join green @a[tag=bw.playedteamgreen,team=spec]
 team join red @a[tag=bw.playedteamred,team=spec]
 team join yellow @a[tag=bw.playedteamyellow,team=spec]
 
-execute unless score bw.keepteam BedWars matches 1 run team leave @a
+execute unless score bw.enablekeepteamaftergameend BedWars matches 1 run team leave @a
 team empty spec
 ##END##
-
-#difficulty
-difficulty peaceful
-#END#
 
 ##set border##
 worldborder set 30000000
@@ -35,6 +31,11 @@ worldborder center 0 0
 ##set sidbar##
 scoreboard objectives setdisplay sidebar bw.sidebar
 function bw:sidebar/lobby
+scoreboard players reset 0 bw.sidebar
+scoreboard players reset 1 bw.sidebar
+scoreboard players reset 2 bw.sidebar
+scoreboard players reset 3 bw.sidebar
+scoreboard players set 11 bw.sidebar 11
 ##END##
 
 #stopp sectickergamerun function#
@@ -64,8 +65,8 @@ execute as @a run function bw:game/gameend/remove_played_teamtag
 #END#
 
 ## invgui
-tag @a[tag=bw.invgui.afterround] add bw.invgui
-tag @a remove bw.invgui.afterround
+tag @a[tag=bw.toggleinventorgui.afterround] add bw.toggleinventorgui
+tag @a remove bw.toggleinventorgui.afterround
 ##END##
 
 ## star clearing up 0 0

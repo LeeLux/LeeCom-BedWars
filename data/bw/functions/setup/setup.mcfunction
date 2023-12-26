@@ -5,7 +5,7 @@
 # ======================================================== #
 
 
-tellraw @a [{"text":"Datapack: ","color":"green"},{"text":"LeeCom ","color":"gold"},{"text":" started!","color":"green"},{"text":" v0.07en","color":"gold"}]
+tellraw @a [{"text":"Datapack: ","color":"green"},{"text":"LeeCom BedWars","color":"gold"},{"text":" started!","color":"green"},{"text":" v0.7.2en","color":"gold"}]
 
 ## start bw:onesecondtimer/main for not so important things that run just ones per second
 function bw:onesecondtimer/main
@@ -15,8 +15,8 @@ function bw:onesecondtimer/main
 scoreboard objectives add bw.gametime dummy
 scoreboard objectives add bw.gamestate dummy
 scoreboard objectives add bw.gamestart trigger
-scoreboard objectives add bw.drawforce trigger
-scoreboard objectives add bw.gamecountdown trigger
+scoreboard objectives add bw.forceadraw trigger
+scoreboard objectives add bw.setgamecountdown trigger
 scoreboard objectives add BedWars dummy
 scoreboard objectives add bw.visiblenames dummy
 scoreboard objectives add bw.xp1 dummy
@@ -25,10 +25,10 @@ scoreboard objectives add bw.spawn.bronce trigger
 scoreboard objectives add bw.spawn.silver trigger
 scoreboard objectives add bw.spawn.gold trigger
 scoreboard objectives add bw.spawn.platin trigger
-scoreboard objectives add bw.name.spawner trigger
-scoreboard objectives add bw.name.respawn trigger
-scoreboard objectives add bw.name.bed trigger
-scoreboard objectives add bw.name.other trigger
+scoreboard objectives add bw.showname.spawner trigger
+scoreboard objectives add bw.showname.respawn trigger
+scoreboard objectives add bw.showname.bed trigger
+scoreboard objectives add bw.showname.other trigger
 scoreboard objectives add Rotation dummy
 scoreboard objectives add bw.blue.broken minecraft.mined:minecraft.light_blue_bed
 scoreboard objectives add bw.red.broken minecraft.mined:minecraft.red_bed
@@ -62,47 +62,50 @@ scoreboard objectives add bw.setYdeath trigger
 scoreboard objectives add bw.clear dummy
 scoreboard objectives add bw.sidebar dummy {"text":"BedWars","color":"gold","bold": true}
 scoreboard objectives add bw.teams dummy
-scoreboard objectives add bw.alwaysshop trigger
+scoreboard objectives add bw.enablealwaysshop trigger
 scoreboard objectives add bw.bedselfbroken dummy
 scoreboard objectives add bw.entity.count dummy
-scoreboard objectives add bw.cancel.clone trigger
+scoreboard objectives add bw.cancelcloning trigger
 scoreboard objectives add bw.health health {"text": "❤","color": "red"}
-scoreboard objectives add bw.sethealth trigger
+scoreboard objectives add bw.sethealthdisplay trigger
 scoreboard objectives add bw.random dummy
 scoreboard objectives add bw.gameID dummy
 scoreboard objectives add bw.leave minecraft.custom:leave_game
 scoreboard objectives add bw.join dummy
 scoreboard objectives add bw.joinleave minecraft.custom:leave_game
 scoreboard objectives add bw.clear00 dummy
-scoreboard objectives add bw.map trigger
-scoreboard objectives add bw.map1 trigger
-scoreboard objectives add bw.map2 trigger
-scoreboard objectives add bw.map3 trigger
-scoreboard objectives add bw.map4 trigger
-scoreboard objectives add bw.mapshop trigger
+scoreboard objectives add bw.tptomap trigger
+scoreboard objectives add bw.tptomap1 trigger
+scoreboard objectives add bw.tptomap2 trigger
+scoreboard objectives add bw.tptomap3 trigger
+scoreboard objectives add bw.tptomap4 trigger
+scoreboard objectives add bw.tptomapshop trigger
 scoreboard objectives add bw.actionbar dummy
-scoreboard objectives add bw.setactionbar trigger
+scoreboard objectives add bw.setactionbardisplay trigger
 scoreboard objectives add bw.tntused minecraft.used:tnt
-scoreboard objectives add bw.customshop trigger
+scoreboard objectives add bw.enablecustomshop trigger
 scoreboard objectives add bw.shop.predi dummy
-scoreboard objectives add bw.shopreset trigger
-scoreboard objectives add bw.keepteam trigger
+scoreboard objectives add bw.enableshopreset trigger
+scoreboard objectives add bw.enablekeepteamaftergameend trigger
 scoreboard objectives add bw.updateshop trigger
-scoreboard objectives add bw.normalregen trigger
-scoreboard objectives add bw.brigeeggtimer dummy
+scoreboard objectives add bw.enablenormalregeneration trigger
 scoreboard objectives add bw.timer dummy
-scoreboard objectives add bw.bedgonetime trigger
-scoreboard objectives add bw.bedgonebool trigger
-scoreboard objectives add bw.autodrawtime trigger
-scoreboard objectives add bw.autodrawbool trigger
-scoreboard objectives add bw.eightteams trigger
-scoreboard objectives add bw.invgui trigger
-scoreboard objectives add bw.invgui.page dummy
+scoreboard objectives add bw.settimeuntilbedsgone trigger
+scoreboard objectives add bw.enablebedsgoneaftertime trigger
+scoreboard objectives add bw.settimeuntilautodraw trigger
+scoreboard objectives add bw.enableautodrawaftertime trigger
+scoreboard objectives add bw.toggletoeightteams trigger
+scoreboard objectives add bw.toggleinventorgui trigger
+scoreboard objectives add bw.toggleinventorgui.page dummy
 scoreboard objectives add bw.pearltimer dummy
 scoreboard objectives add bw.sneaktime minecraft.custom:sneak_time
 scoreboard objectives add bw.hometptimer dummy
 scoreboard objectives add bw.usearmorstand minecraft.used:minecraft.armor_stand
 scoreboard objectives add bw.trapaktivated dummy
+scoreboard objectives add bw.unlimitedCreativeResources trigger
+scoreboard objectives add bw.disableResourcesOnDeath trigger
+scoreboard objectives add bw.beds dummy
+#scoreboard objectives add bw.
 #scoreboard objectives add bw.
 #scoreboard objectives add bw.
 ## stats scoreboards
@@ -120,7 +123,6 @@ scoreboard objectives add bws.wlint dummy
 scoreboard objectives add bws.wldecimal dummy
 scoreboard objectives add bws.placedblocks dummy
 scoreboard objectives add bws.tnt minecraft.used:tnt
-scoreboard objectives add bws.pearlkills dummy
 scoreboard objectives add bws.powerkills dummy
 scoreboard objectives add bws.playedred dummy
 scoreboard objectives add bws.playedgames dummy
@@ -249,9 +251,4 @@ setblock 65545 247 65536 barrel[facing=up]{CustomName: '{"text":"Shop page 9" }'
 setblock 65546 247 65536 barrel[facing=up]{CustomName: '{"text":"Shop Resources" }'} keep
 #invgui
 setblock 65538 255 65536 barrel[facing=up]{CustomName: '{"text": "Invgui items"}'} keep
-#END#
-
-#giving info message if the custom tnt can't be executed propertly
-execute store result score bw.difficulty BedWars run difficulty
-execute if score bw.difficulty BedWars matches 0 run tellraw @a [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text": "Because the difficulty was automatically or manually set to peaceful the custom tnt can't property be executed!","color": "red"}]
 #END#

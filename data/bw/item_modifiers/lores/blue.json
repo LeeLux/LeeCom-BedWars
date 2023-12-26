@@ -11,7 +11,7 @@
               "italic": false
             },
             {
-              "selector": "@a[team=blue,tag=bw.invgui.lore.blue]"
+              "selector": "@a[team=blue,tag=bw.toggleinventorgui.lore.blue]"
             }
           ]
         ]

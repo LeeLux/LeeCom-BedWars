@@ -5,6 +5,6 @@
 # ======================================================== #
 
 
-execute if score bw.alwaysshop BedWars matches 0 run tellraw @a[tag=bw.admin] [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text":"Alwaysshop toggled ","color":"white"},{"text":"off","color":"red"}]
+execute if score bw.enablealwaysshop BedWars matches 0 run tellraw @a[tag=bw.admin] [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text":"Alwaysshop toggled ","color":"white"},{"text":"off","color":"red"}]
 
-execute if score bw.alwaysshop BedWars matches 1 run tellraw @a[tag=bw.admin] [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text":"Alwaysshop toggled ","color":"white"},{"text":"on","color":"green"}]
+execute if score bw.enablealwaysshop BedWars matches 1 run tellraw @a[tag=bw.admin] [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text":"Alwaysshop toggled ","color":"white"},{"text":"on","color":"green"}]

@@ -14,14 +14,14 @@ kill @e[tag=bw.clone.map4]
 #END#
 
 #get the player back to the map#
-scoreboard players enable @a[tag=bw.load.map1] bw.map
-scoreboard players enable @a[tag=bw.load.map2] bw.map
-scoreboard players enable @a[tag=bw.load.map3] bw.map
-scoreboard players enable @a[tag=bw.load.map4] bw.map
-execute as @a[tag=bw.load.map1] run trigger bw.map
-execute as @a[tag=bw.load.map2] run trigger bw.map
-execute as @a[tag=bw.load.map3] run trigger bw.map
-execute as @a[tag=bw.load.map4] run trigger bw.map
+scoreboard players enable @a[tag=bw.load.map1] bw.tptomap
+scoreboard players enable @a[tag=bw.load.map2] bw.tptomap
+scoreboard players enable @a[tag=bw.load.map3] bw.tptomap
+scoreboard players enable @a[tag=bw.load.map4] bw.tptomap
+execute as @a[tag=bw.load.map1] run trigger bw.tptomap
+execute as @a[tag=bw.load.map2] run trigger bw.tptomap
+execute as @a[tag=bw.load.map3] run trigger bw.tptomap
+execute as @a[tag=bw.load.map4] run trigger bw.tptomap
 tag @a remove bw.load.map1
 tag @a remove bw.load.map2
 tag @a remove bw.load.map3

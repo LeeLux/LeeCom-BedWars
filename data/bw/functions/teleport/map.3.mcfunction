@@ -5,7 +5,7 @@
 # ======================================================== #
 
 
-scoreboard players reset @s bw.map3
+scoreboard players reset @s bw.tptomap3
 tp @s -1000 256 1000
 tellraw @s [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text": "You tped to the third map.","color": "dark_green"}]
 playsound minecraft:entity.enderman.teleport voice @s ~ ~ ~ 10 1

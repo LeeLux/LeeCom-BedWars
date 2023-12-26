@@ -20,7 +20,7 @@ kill @e[type=ender_pearl]
 kill @e[type=tnt]
 ##END##
 
-tellraw @a [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text":"Map cleaning done!","color":"none"}]
+tellraw @a [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text":"Map cleaning done!"}]
 execute positioned 0 128 0 run playsound minecraft:block.anvil.use voice @a ~ ~ ~ 10 2
 kill @e[tag=bw.clear00]
 kill @e[scores={bw.clear00=-1000..1000}]

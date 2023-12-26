@@ -4,4 +4,4 @@
 #         Please don't claim this as your own work!        #
 # ======================================================== #
 
-tellraw @a[tag=bw.admin] [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text": "The shop has been "},{"text": "updeted","color":"green"},{"text":" and schould now be ready to use again!"}]
+tellraw @a[tag=bw.admin] [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text": "The shop has been "},{"text": "updated","color":"green"},{"text":" and should now be ready to use again!"}]

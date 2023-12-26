@@ -4,9 +4,9 @@
 #         Please don't claim this as your own work!        #
 # ======================================================== #
 
-tag @s remove bw.invgui
-tag @s remove bw.invgui.rem
-scoreboard players reset @s bw.invgui.page
+tag @s remove bw.toggleinventorgui
+tag @s remove bw.toggleinventorgui.rem
+scoreboard players reset @s bw.toggleinventorgui.page
 clear @s
 
-tellraw @s [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text": "The invgui was removed from you. To get it back use '/trigger bw.invgui'"}]
+tellraw @s [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text": "The invgui was removed from you. To get it back use '/trigger bw.toggleinventorgui'"}]
