@@ -206,7 +206,7 @@ execute as @a[scores={bw.join=1..}] at @s run function bw:system/join
 ##END##
 
 ## calles the clear00/done function if y 320 is reached
-execute if entity @e[tag=bw.clear00,scores={bw.clear00=320..}] run function bw:clear00/done
+execute if entity @e[tag=bw.clear00,scores={bw.clear00=384..}] run function bw:clear00/done
 ##END##
 
 ## the map tp system
