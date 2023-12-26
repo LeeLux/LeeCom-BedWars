@@ -7,4 +7,4 @@
 scoreboard players reset @s bw.tptomap
 tp @s 0 256 0
 tellraw @s [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text": "You tped to the map.","color": "dark_green"}]
-playsound minecraft:entity.enderman.teleport voice @s ~ ~ ~ 10 1
+execute at @s run playsound minecraft:entity.enderman.teleport voice @s ~ ~ ~ 10 1

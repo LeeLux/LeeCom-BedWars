@@ -4,5 +4,5 @@
 #         Please don't claim this as your own work!        #
 # ======================================================== #
 
-advancement revoke @s only bw:endereyejoinstart
+advancement revoke @s only bw:jointeam/endereyejoinstart
 trigger bw.gamestart

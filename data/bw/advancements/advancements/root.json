@@ -1,0 +1,14 @@
+{
+    "display": {
+    "icon": {
+        "item": "minecraft:blue_bed"
+    },
+    "title": "Just the beginning",
+    "description": "",
+    "background": "minecraft:textures/blocks/blue_wool",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+    },
+    "criteria": {}
+}

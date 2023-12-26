@@ -4,5 +4,5 @@
 #         Please don't claim this as your own work!        #
 # ======================================================== #
 
-advancement revoke @s only bw:endereyejoinred
+advancement revoke @s only bw:jointeam/endereyejoinred
 trigger bw.join.red

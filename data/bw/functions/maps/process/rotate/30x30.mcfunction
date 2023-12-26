@@ -1,0 +1,21 @@
+#up tp 30*30 chunks
+execute as @e[nbt={Tags:["bw.mapclone"]}] at @s if score @s bw.clear matches 421 run tp @s ~ ~ ~ 0 0
+execute as @e[nbt={Tags:["bw.mapclone"]}] at @s if score @s bw.clear matches 442 run tp @s ~ ~ ~ -90 0
+execute as @e[nbt={Tags:["bw.mapclone"]}] at @s if score @s bw.clear matches 463 run tp @s ~ ~ ~ -180 0
+execute as @e[nbt={Tags:["bw.mapclone"]}] at @s if score @s bw.clear matches 485 run tp @s ~ ~ ~ 90 0
+execute as @e[nbt={Tags:["bw.mapclone"]}] at @s if score @s bw.clear matches 507 run tp @s ~ ~ ~ 0 0
+execute as @e[nbt={Tags:["bw.mapclone"]}] at @s if score @s bw.clear matches 530 run tp @s ~ ~ ~ -90 0
+execute as @e[nbt={Tags:["bw.mapclone"]}] at @s if score @s bw.clear matches 553 run tp @s ~ ~ ~ -180 0
+execute as @e[nbt={Tags:["bw.mapclone"]}] at @s if score @s bw.clear matches 577 run tp @s ~ ~ ~ 90 0
+execute as @e[nbt={Tags:["bw.mapclone"]}] at @s if score @s bw.clear matches 601 run tp @s ~ ~ ~ 0 0
+execute as @e[nbt={Tags:["bw.mapclone"]}] at @s if score @s bw.clear matches 626 run tp @s ~ ~ ~ -90 0
+execute as @e[nbt={Tags:["bw.mapclone"]}] at @s if score @s bw.clear matches 651 run tp @s ~ ~ ~ -180 0
+execute as @e[nbt={Tags:["bw.mapclone"]}] at @s if score @s bw.clear matches 677 run tp @s ~ ~ ~ 90 0
+execute as @e[nbt={Tags:["bw.mapclone"]}] at @s if score @s bw.clear matches 703 run tp @s ~ ~ ~ 0 0
+execute as @e[nbt={Tags:["bw.mapclone"]}] at @s if score @s bw.clear matches 730 run tp @s ~ ~ ~ -90 0
+execute as @e[nbt={Tags:["bw.mapclone"]}] at @s if score @s bw.clear matches 757 run tp @s ~ ~ ~ -180 0
+execute as @e[nbt={Tags:["bw.mapclone"]}] at @s if score @s bw.clear matches 785 run tp @s ~ ~ ~ 90 0
+execute as @e[nbt={Tags:["bw.mapclone"]}] at @s if score @s bw.clear matches 813 run tp @s ~ ~ ~ 0 0
+execute as @e[nbt={Tags:["bw.mapclone"]}] at @s if score @s bw.clear matches 842 run tp @s ~ ~ ~ -90 0
+execute as @e[nbt={Tags:["bw.mapclone"]}] at @s if score @s bw.clear matches 871 run tp @s ~ ~ ~ -180 0
+execute as @e[nbt={Tags:["bw.mapclone"]}] at @s if score @s bw.clear matches 901 run tp @s ~ ~ ~ 90 0

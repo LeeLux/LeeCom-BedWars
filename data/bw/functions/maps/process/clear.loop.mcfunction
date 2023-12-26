@@ -16,6 +16,6 @@ title @a times 10 70 20
 title @a title [{"text": "","color": "red"},{"text": "Clearing process...  ["},{"score":{"name": "@e[tag=bw.clear00,limit=1]","objective": "bw.clear","value": "error"},"color": "green"},{"text": "/"},{"text": "320","color": "green"},{"text": "]"}]
 title @a subtitle [{"text": "Dont leave this area!","color": "red"}]
 #END#
-execute if entity @e[tag=bw.clear00,scores={bw.clear=320..}] run function bw:maps/process/end
-execute as @e[tag=bw.clear00] at @s unless score @s bw.clear matches 320.. run schedule function bw:maps/process/clear.loop 1t
+execute if entity @e[tag=bw.clear00,scores={bw.clear=384..}] run function bw:maps/process/end
+execute as @e[tag=bw.clear00] at @s unless score @s bw.clear matches 384.. run schedule function bw:maps/process/clear.loop 1t
 ##END##
