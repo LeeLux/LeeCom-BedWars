@@ -44,6 +44,9 @@ scoreboard players set bw.spawn.silver BedWars 10
 scoreboard players set bw.spawn.gold BedWars 30
 scoreboard players set bw.spawn.platin BedWars 60
 ##END##
+## set number of chunks that are cloned 400=20*20 chunks
+scoreboard players set bw.clonechunks BedWars 400
+##END##
 ## set default ticks after a brige egg disappears
 scoreboard players set bw.removerticks bw.brigeeggtimer 40
 ##END##

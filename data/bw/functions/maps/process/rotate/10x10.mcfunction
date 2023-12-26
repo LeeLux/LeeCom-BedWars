@@ -1,0 +1,20 @@
+
+execute as @e[nbt={Tags:["bw.mapclone"]}] at @s if score @s bw.clear matches 2 run tp @s ~ ~ ~ -90 0
+execute as @e[nbt={Tags:["bw.mapclone"]}] at @s if score @s bw.clear matches 3 run tp @s ~ ~ ~ -180 0
+execute as @e[nbt={Tags:["bw.mapclone"]}] at @s if score @s bw.clear matches 5 run tp @s ~ ~ ~ 90 0
+execute as @e[nbt={Tags:["bw.mapclone"]}] at @s if score @s bw.clear matches 7 run tp @s ~ ~ ~ 0 0
+execute as @e[nbt={Tags:["bw.mapclone"]}] at @s if score @s bw.clear matches 10 run tp @s ~ ~ ~ -90 0
+execute as @e[nbt={Tags:["bw.mapclone"]}] at @s if score @s bw.clear matches 13 run tp @s ~ ~ ~ -180 0
+execute as @e[nbt={Tags:["bw.mapclone"]}] at @s if score @s bw.clear matches 17 run tp @s ~ ~ ~ 90 0
+execute as @e[nbt={Tags:["bw.mapclone"]}] at @s if score @s bw.clear matches 21 run tp @s ~ ~ ~ 0 0
+execute as @e[nbt={Tags:["bw.mapclone"]}] at @s if score @s bw.clear matches 26 run tp @s ~ ~ ~ -90 0
+execute as @e[nbt={Tags:["bw.mapclone"]}] at @s if score @s bw.clear matches 31 run tp @s ~ ~ ~ -180 0
+execute as @e[nbt={Tags:["bw.mapclone"]}] at @s if score @s bw.clear matches 37 run tp @s ~ ~ ~ 90 0
+execute as @e[nbt={Tags:["bw.mapclone"]}] at @s if score @s bw.clear matches 43 run tp @s ~ ~ ~ 0 0
+execute as @e[nbt={Tags:["bw.mapclone"]}] at @s if score @s bw.clear matches 50 run tp @s ~ ~ ~ -90 0
+execute as @e[nbt={Tags:["bw.mapclone"]}] at @s if score @s bw.clear matches 57 run tp @s ~ ~ ~ -180 0
+execute as @e[nbt={Tags:["bw.mapclone"]}] at @s if score @s bw.clear matches 65 run tp @s ~ ~ ~ 90 0
+execute as @e[nbt={Tags:["bw.mapclone"]}] at @s if score @s bw.clear matches 73 run tp @s ~ ~ ~ 0 0
+execute as @e[nbt={Tags:["bw.mapclone"]}] at @s if score @s bw.clear matches 82 run tp @s ~ ~ ~ -90 0
+execute as @e[nbt={Tags:["bw.mapclone"]}] at @s if score @s bw.clear matches 91 run tp @s ~ ~ ~ -180 0
+execute as @e[nbt={Tags:["bw.mapclone"]}] at @s if score @s bw.clear matches 101 run tp @s ~ ~ ~ 90 0

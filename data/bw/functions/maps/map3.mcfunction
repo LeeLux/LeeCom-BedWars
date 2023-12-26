@@ -4,25 +4,16 @@
 #         Please don't claim this as your own work!        #
 # ======================================================== #
 
-kill @e[tag=bw.clone.map3]
-#visuals#
-tellraw @a [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text": "Cloning starts..."}]
-#END#
+#killing executor
+kill @e[nbt={Tags:["bw.mapclone"]}]
 
-#kill old bw.entitys by 00#
-execute positioned 0 128 0 run kill @e[tag=bw.entity,distance=..300]
-#END#
+#summon executor
+summon armor_stand -1007.5 128 992.5 {NoGravity:1b,Tags: ["bw.entity","bw.mapclone"]}
 
-#text#
-tellraw @a [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text": "All bw entities have been killed in this area!"}]
-#END#
-
-#load area around the map#
+#load area with player
 tag @s add bw.load.map3
 scoreboard players enable @s bw.map3
 trigger bw.map3
-#end#
 
-#summon#
-schedule function bw:maps/process/map3.start 10t
-#END#
+#conformation
+function bw:maps/process/conformation
