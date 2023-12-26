@@ -1,2 +1,3 @@
-execute as @e[nbt={Tags:["bw.mapclone"]}] at @s run clone ~ 0 ~ ~15 127 ~15 288 0 -128
-execute as @e[nbt={Tags:["bw.mapclone"]}] at @s run clone ~ 128 ~ ~15 255 ~15 288 128 -128
+execute as @e[nbt={Tags:['bw.mapclone']}] at @s run clone ~ -64 ~ ~15 63 ~15 288 -64 -128
+execute as @e[nbt={Tags:['bw.mapclone']}] at @s run clone ~ 64 ~ ~15 191 ~15 288 64 -128
+execute as @e[nbt={Tags:['bw.mapclone']}] at @s run clone ~ 192 ~ ~15 320 ~15 288 192 -128
