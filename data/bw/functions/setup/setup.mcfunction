@@ -105,6 +105,10 @@ scoreboard objectives add bw.trapaktivated dummy
 scoreboard objectives add bw.unlimitedCreativeResources trigger
 scoreboard objectives add bw.disableResourcesOnDeath trigger
 scoreboard objectives add bw.beds dummy
+scoreboard objectives add bw.respawnTeam dummy
+scoreboard objectives add bw.spawnerTeam dummy
+#scoreboard objectives add bw.
+#scoreboard objectives add bw.
 #scoreboard objectives add bw.
 #scoreboard objectives add bw.
 #scoreboard objectives add bw.
