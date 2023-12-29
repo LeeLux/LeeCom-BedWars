@@ -14,5 +14,9 @@ function bw:shop/install/armor
 function bw:shop/install/magic
 function bw:shop/install/specials
 function bw:shop/install/empty
-function bw:shop/install/upgrades
+function bw:shop/install/upgrades.1
+function bw:shop/install/upgrades.2
+function bw:shop/install/upgrades.3
+function bw:shop/install/upgrades.4
+function bw:shop/install/upgrades.5
 function bw:shop/install/quickbuy
