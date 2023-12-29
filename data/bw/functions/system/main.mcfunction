@@ -91,15 +91,15 @@ scoreboard players remove @a[scores={bw.shop.predi=1..}] bw.shop.predi 1
 scoreboard players set @a[predicate=bw:shop] bw.shop.predi 2
 ##END##
 
+## handels the team upgrades
+function bw:upgrades/handle
+##END##
+
 ## run the alwaysshop when alwaysshop is activate
 # !! THIS IS THE NEW SYSTEM (JUST SINGLEPLAYER) !!
 execute unless score bw.enablealwaysshop BedWars matches 0 if score bw.shopversion BedWars matches 1 run function bw:shop/run/single
 # !! THIS IS CURRENTLY THE OLD SYSTEM (MULTIPLAYER 'FREINDLY') !!
 execute unless score bw.enablealwaysshop BedWars matches 0 if score bw.shopversion BedWars matches 2 run function bw:shop/run/multi
-##END##
-
-## runs the detection of biying upgrades
-function bw:system/checks/detectnewupgrade
 ##END##
 
 ## changes the leather armor color to the team color if you wear it

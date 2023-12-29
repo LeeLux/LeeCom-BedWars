@@ -5,17 +5,32 @@
 # ======================================================== #
 #/give @p wandering_trader_spawn_egg{display:{Name:'{"text":"Upgrades"}'},EntityTag:{Silent:1b,Invulnerable:1b,CustomNameVisible:1b,DeathLootTable:"empty",NoAI:1b,CanPickUpLoot:0b,Willing:0b,Tags:["bw.entity","bw.upgradeshop"],CustomName:'{"text":"Upgrade Shop"}',Offers:{Recipes:[{rewardExp:0b,maxUses:1,buy:{id:"minecraft:gold_ingot",Count:1b},sell:{id:"minecraft:copper_ingot",Count:1b,tag:{display:{Name:'{"text":"1 Upgrade"}'},bw.upgrade.1:1b}}}]}}} 1
 
-# 1
-tag @a[team=red,nbt={Inventory:[{tag:{bw.upgrade.1:1b}}]}] add bw.upgrades.1 
+## update upgrade prices in shop
+execute if entity @a[nbt={Inventory:[{tag:{bw.upgrade.1:1b}}]}] run schedule function bw:upgrades/changeshop 1t
+##END##
+
+## 1
+tag @a[team=red,nbt={Inventory:[{tag:{bw.upgrade.1:1b}}]}] add bw.upgrade.1 
 execute as @a[team=red,nbt={Inventory:[{tag:{bw.upgrade.1:1b}}]}] store success score bw.detectupgrade.1 bw.upgrades.red run clear @s #all{bw.upgrade.1: 1b}
 # if already bought you get a refund
-execute if score bw.detectupgrade.1 bw.upgrades.red matches 1 if score bw.upgrade.1 bw.upgrades.red matches 1.. as @a[tag=bw.upgrades.1] at @s run function bw:upgrades/refunds/upgrade.1
+# change 'bw.upgrade.1 bw.upgrades.red matches XY' where XY is the number of upgrades possibel
+execute if score bw.detectupgrade.1 bw.upgrades.red matches 1 if score bw.upgrade.1 bw.upgrades.red matches 2.. as @a[tag=bw.upgrade.1] at @s run function bw:upgrades/refunds/upgrade.1
 # adding 1 to current upgrades that you(team) has
 execute if score bw.detectupgrade.1 bw.upgrades.red matches 1 run scoreboard players add bw.upgrade.1 bw.upgrades.red 1
-# 1
-tag @a[team=red,nbt={Inventory:[{tag:{bw.upgrade.2:1b}}]}] add bw.upgrades.2 
+# reset
+scoreboard players set bw.detectupgrade.1 bw.upgrades.red 0
+tag @a remove bw.upgrade.1
+##END##
+
+## 2
+tag @a[team=red,nbt={Inventory:[{tag:{bw.upgrade.2:1b}}]}] add bw.upgrade.2 
 execute as @a[team=red,nbt={Inventory:[{tag:{bw.upgrade.2:1b}}]}] store success score bw.detectupgrade.2 bw.upgrades.red run clear @s #all{bw.upgrade.2: 1b}
 # if already bought you get a refund
-execute if score bw.detectupgrade.2 bw.upgrades.red matches 1 if score bw.upgrade.2 bw.upgrades.red matches 1.. as @a[tag=bw.upgrades.2] at @s run function bw:upgrades/refunds/upgrade.2
+# change 'bw.upgrade.2 bw.upgrades.red matches XY' where XY is the number of upgrades possibel
+execute if score bw.detectupgrade.2 bw.upgrades.red matches 1 if score bw.upgrade.2 bw.upgrades.red matches 1.. as @a[tag=bw.upgrade.2] at @s run function bw:upgrades/refunds/upgrade.2
 # adding 1 to current upgrades that you(team) has
 execute if score bw.detectupgrade.2 bw.upgrades.red matches 1 run scoreboard players add bw.upgrade.2 bw.upgrades.red 1
+# reset
+scoreboard players set bw.detectupgrade.2 bw.upgrades.red 0
+tag @a remove bw.upgrade.2
+##END##
