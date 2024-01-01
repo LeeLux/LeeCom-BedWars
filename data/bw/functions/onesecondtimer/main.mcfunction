@@ -163,4 +163,8 @@ function bw:onesecondtimer/visible_names
 execute if score bw.gamestate BedWars matches 0 run function bw:onesecondtimer/generell
 ##END##
 
+## effect based upgrades
+function bw:upgrades/effectbased
+##END##
+
 schedule function bw:onesecondtimer/main 1s
