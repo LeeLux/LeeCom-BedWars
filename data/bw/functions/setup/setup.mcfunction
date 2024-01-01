@@ -194,15 +194,6 @@ scoreboard objectives add bws.kddecimalgre dummy
 scoreboard objectives add bws.kdintblu dummy
 scoreboard objectives add bws.kddecimalblu dummy
 ## END ##
-# END #
-
-## Secticker Start
-execute if score bw.gamestate BedWars matches 0 run function bw:onesecondtimer/generell
-##END##
-
-## start visiblenames 1s repeat function
-function bw:onesecondtimer/visible_names
-##END##
 
 ## start invgui clocks
 function bw:invgui/10t

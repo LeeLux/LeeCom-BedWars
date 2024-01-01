@@ -155,4 +155,12 @@ tag @e remove bw.giverespawnTeamScore
 execute as @e[tag=bw.spawner] at @s run scoreboard players operation @s bw.spawnerTeam = @e[tag=bw.respawn,tag=!bw.respawn.spec,limit=1,sort=nearest,distance=..50] bw.respawnTeam
 ##END##
 
+## visiblenames
+function bw:onesecondtimer/visible_names
+##END##
+
+## Secticker Start
+execute if score bw.gamestate BedWars matches 0 run function bw:onesecondtimer/generell
+##END##
+
 schedule function bw:onesecondtimer/main 1s
