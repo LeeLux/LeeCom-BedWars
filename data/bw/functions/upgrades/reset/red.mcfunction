@@ -4,12 +4,12 @@
 #         Please don't claim this as your own work!        #
 # ======================================================== #
 
-scoreboard players reset bw.upgrades.1 bw.upgrades.red
-scoreboard players reset bw.upgrades.2 bw.upgrades.red
-scoreboard players reset bw.upgrades.3 bw.upgrades.red
-scoreboard players reset bw.upgrades.4 bw.upgrades.red
-scoreboard players reset bw.upgrades.5 bw.upgrades.red
-scoreboard players reset bw.upgrades.6 bw.upgrades.red
-scoreboard players reset bw.upgrades.7 bw.upgrades.red
-scoreboard players reset bw.upgrades.8 bw.upgrades.red
-scoreboard players reset bw.upgrades.9 bw.upgrades.red
+scoreboard players reset bw.upgrade.1 bw.upgrades.red
+scoreboard players reset bw.upgrade.2 bw.upgrades.red
+scoreboard players reset bw.upgrade.3 bw.upgrades.red
+scoreboard players reset bw.upgrade.4 bw.upgrades.red
+scoreboard players reset bw.upgrade.5 bw.upgrades.red
+scoreboard players reset bw.upgrade.6 bw.upgrades.red
+scoreboard players reset bw.upgrade.7 bw.upgrades.red
+scoreboard players reset bw.upgrade.8 bw.upgrades.red
+scoreboard players reset bw.upgrade.9 bw.upgrades.red
