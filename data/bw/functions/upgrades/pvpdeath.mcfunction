@@ -9,4 +9,4 @@ advancement revoke @s only bw:pvpdeathyellow
 advancement revoke @s only bw:pvpdeathgreen
 advancement revoke @s only bw:pvpdeathblue
 
-effect give @s wither 6 0 true
+effect give @s wither 3 3 true

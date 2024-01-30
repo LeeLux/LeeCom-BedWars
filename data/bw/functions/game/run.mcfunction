@@ -5,6 +5,10 @@
 # ======================================================== #
 # is ticked if game is running
 
+# gets the amount of resources you have
+function bw:shop/resourcetoscore
+#END#
+
 # calls func. if a team member destroys his own bed (replace it, particles etc.)
 execute as @a[team=red,scores={bw.red.broken=1..}] run function bw:beds/own_broken/red
 execute as @a[team=blue,scores={bw.blue.broken=1..}] run function bw:beds/own_broken/blue
@@ -35,6 +39,7 @@ execute as @a at @s as @e[type=item,distance=..5] run data modify entity @s Item
 #END#
 
 ## the shop
+
 ## !! THIS IS CURRENTLY THE OLD SYSTEM (MULTIPLAYER 'FREINDLY') !! 
 execute if score bw.shopversion BedWars matches 1 run function bw:shop/run/single
 
@@ -65,12 +70,4 @@ execute unless score bw.bed.blue bw.beds matches 1.. as @a[team=blue,scores={bw.
 scoreboard players reset @a bw.death.bed
 #END#
 
-# auto gameend
-execute if score bw.team.red bw.teams matches 1.. unless score bw.team.yellow bw.teams matches 1.. unless score bw.team.green bw.teams matches 1.. unless score bw.team.blue bw.teams matches 1.. run function bw:game/gameend/red
-execute if score bw.team.yellow bw.teams matches 1.. unless score bw.team.red bw.teams matches 1.. unless score bw.team.green bw.teams matches 1.. unless score bw.team.blue bw.teams matches 1.. run function bw:game/gameend/yellow
-execute if score bw.team.green bw.teams matches 1.. unless score bw.team.yellow bw.teams matches 1.. unless score bw.team.red bw.teams matches 1.. unless score bw.team.blue bw.teams matches 1.. run function bw:game/gameend/green
-execute if score bw.team.blue bw.teams matches 1.. unless score bw.team.yellow bw.teams matches 1.. unless score bw.team.green bw.teams matches 1.. unless score bw.team.red bw.teams matches 1.. run function bw:game/gameend/blue
-#END#
-
-function bw:system/teamsum
 #END#

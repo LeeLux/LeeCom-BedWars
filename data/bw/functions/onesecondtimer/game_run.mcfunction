@@ -4,7 +4,7 @@
 #         Please don't claim this as your own work!        #
 # ======================================================== #
 
-## timer
+    # timer
 execute if score bw.gamestate BedWars matches 1.. run scoreboard players add bw.gametime BedWars 1
 execute if score bw.gamestate BedWars matches 1.. run scoreboard players remove bw.broncetimer BedWars 1
 execute if score bw.gamestate BedWars matches 1.. run scoreboard players remove bw.silvertimer BedWars 1
@@ -12,31 +12,40 @@ execute if score bw.gamestate BedWars matches 1.. run scoreboard players remove 
 execute if score bw.gamestate BedWars matches 1.. run scoreboard players remove bw.platintimer BedWars 1
 ##END##
 
-## spawn Items!
+# spawn Items!
 execute if score bw.broncetimer BedWars matches ..0 run function bw:recourcesummon/1
 execute if score bw.silvertimer BedWars matches ..0 run function bw:recourcesummon/2
 execute if score bw.goldtimer BedWars matches ..0 run function bw:recourcesummon/3
 execute if score bw.platintimer BedWars matches ..0 run function bw:recourcesummon/4
 ##END##
 
-## reset spawner timer wenn spawnd item
+# reset spawner timer
 execute if score bw.broncetimer BedWars matches ..0 run scoreboard players operation bw.broncetimer BedWars = bw.spawn.bronce BedWars
 execute if score bw.silvertimer BedWars matches ..0 run scoreboard players operation bw.silvertimer BedWars = bw.spawn.silver BedWars
 execute if score bw.goldtimer BedWars matches ..0 run scoreboard players operation bw.goldtimer BedWars = bw.spawn.gold BedWars
 execute if score bw.platintimer BedWars matches ..0 run scoreboard players operation bw.platintimer BedWars = bw.spawn.platin BedWars
 ##END##
 
-## auto bed destruction if enabled
+# auto bed destruction if enabled
 execute if score bw.enablebedsgoneaftertime BedWars matches 1 run function bw:beds/gone/warnings
 ##END##
 
-## auto draw if enabled
+# auto draw if enabled
 execute if score bw.enableautodrawaftertime BedWars matches 1 run function bw:display/autodraw_warnings
 ##END##
 
 #actionbar#
 function bw:actionbar/manage
 #END#
+
+# auto gameend
+execute if score bw.team.red bw.teams matches 1.. unless score bw.team.yellow bw.teams matches 1.. unless score bw.team.green bw.teams matches 1.. unless score bw.team.blue bw.teams matches 1.. run function bw:game/gameend/red
+execute if score bw.team.yellow bw.teams matches 1.. unless score bw.team.red bw.teams matches 1.. unless score bw.team.green bw.teams matches 1.. unless score bw.team.blue bw.teams matches 1.. run function bw:game/gameend/yellow
+execute if score bw.team.green bw.teams matches 1.. unless score bw.team.yellow bw.teams matches 1.. unless score bw.team.red bw.teams matches 1.. unless score bw.team.blue bw.teams matches 1.. run function bw:game/gameend/green
+execute if score bw.team.blue bw.teams matches 1.. unless score bw.team.yellow bw.teams matches 1.. unless score bw.team.green bw.teams matches 1.. unless score bw.team.red bw.teams matches 1.. run function bw:game/gameend/blue
+#END#
+
+function bw:system/teamsum
 
 ## game timer for auto bed destroy and game end
 #from Noxon#8448
