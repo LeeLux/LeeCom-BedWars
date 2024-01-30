@@ -20,7 +20,11 @@ scoreboard players reset @a[team=yellow,scores={bw.yellow.broken=1..}] bw.yellow
 #END#
 
 # Spawn protection v1
-execute as @e[tag=bw.respawn] at @s run fill ~ ~ ~ ~ ~2 ~ air destroy
+execute as @e[tag=bw.respawn] at @s run fill ~ ~ ~ ~ ~2 ~ air replace #bw.blocks
+execute if score bw.upgrade.6 bw.upgrades.red matches 1.. at @e[tag=bw.respawn.red] run fill ~1 ~ ~1 ~-1 ~2 ~-1 air replace #bw.blocks
+execute if score bw.upgrade.6 bw.upgrades.yellow matches 1.. at @e[tag=bw.respawn.yellow] run fill ~1 ~ ~1 ~-1 ~2 ~-1 air replace #bw.blocks
+execute if score bw.upgrade.6 bw.upgrades.green matches 1.. at @e[tag=bw.respawn.green] run fill ~1 ~ ~1 ~-1 ~2 ~-1 air replace #bw.blocks
+execute if score bw.upgrade.6 bw.upgrades.blue matches 1.. at @e[tag=bw.respawn.blue] run fill ~1 ~ ~1 ~-1 ~2 ~-1 air replace #bw.blocks
 #END#
 
 # Adding some thing on all items so players can use them in adventure

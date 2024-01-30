@@ -27,5 +27,3 @@ execute as @a[scores={bw.showname.other=1..}] run function bw:settosettings/name
 execute if score bw.showname.other bw.visiblenames matches 1 as @e[tag=bw.other] run data modify entity @s CustomNameVisible set value 1b
 execute unless score bw.showname.other bw.visiblenames matches 1 as @e[tag=bw.other] run data modify entity @s CustomNameVisible set value 0b
 #END#
-
-schedule function bw:onesecondtimer/visible_names 1s
