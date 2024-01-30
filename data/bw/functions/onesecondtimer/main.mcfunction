@@ -157,11 +157,7 @@ execute as @e[tag=bw.spawner] at @s run scoreboard players operation @s bw.spawn
 
 ## visiblenames
 function bw:onesecondtimer/visible_names
-##END##
-
-## Secticker Start
-execute if score bw.gamestate BedWars matches 0 run function bw:onesecondtimer/generell
-##END##
+##END#
 
 ## effect based upgrades
 function bw:upgrades/effectbased
