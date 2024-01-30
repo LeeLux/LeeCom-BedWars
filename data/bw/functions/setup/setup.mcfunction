@@ -165,6 +165,8 @@ scoreboard objectives add bws.pearlkills dummy
 scoreboard objectives add bws.pearlkilluse minecraft.used:minecraft.ender_pearl
 scoreboard objectives add bws.tempkillcou playerKillCount
 scoreboard objectives add bws.strengthkill dummy
+scoreboard objectives add bws.tempkillcou playerKillCount
+scoreboard objectives add bws.playerNr dummy
 #wl teams
 scoreboard objectives add bws.wlintred dummy
 scoreboard objectives add bws.wldecimalred dummy

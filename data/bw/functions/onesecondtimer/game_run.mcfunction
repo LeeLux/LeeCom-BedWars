@@ -54,4 +54,12 @@ scoreboard players set bw.untilautodrawMinutes bw.timer 0
 function bw:stats/game_timer
 ##END##
 
+##stats
+scoreboard players add bw.gametimesec bw.stats 1
+execute if score bw.gametimesec bw.stats matches 60.. run scoreboard players add bw.gametimemin bw.stats 1
+execute if score bw.gametimesec bw.stats matches 60.. run scoreboard players set bw.gametimesec bw.stats 0
+execute if score bw.gametimemin bw.stats matches 60.. run scoreboard players add bw.gametimehour bw.stats 1
+execute if score bw.gametimemin bw.stats matches 60.. run scoreboard players set bw.gametimemin bw.stats 0
+##END##
+
 execute if score bw.gamestate BedWars matches 1.. run schedule function bw:onesecondtimer/game_run 1s
