@@ -105,6 +105,13 @@ scoreboard objectives add bw.trapaktivated dummy
 scoreboard objectives add bw.unlimitedCreativeResources trigger
 scoreboard objectives add bw.disableResourcesOnDeath trigger
 scoreboard objectives add bw.beds dummy
+scoreboard objectives add bw.respawnTeam dummy
+scoreboard objectives add bw.spawnerTeam dummy
+scoreboard objectives add bw.upgrades.red dummy
+scoreboard objectives add bw.upgrades.yellow dummy
+scoreboard objectives add bw.upgrades.green dummy
+scoreboard objectives add bw.upgrades.blue dummy
+#scoreboard objectives add bw.
 #scoreboard objectives add bw.
 #scoreboard objectives add bw.
 #scoreboard objectives add bw.
@@ -158,6 +165,8 @@ scoreboard objectives add bws.pearlkills dummy
 scoreboard objectives add bws.pearlkilluse minecraft.used:minecraft.ender_pearl
 scoreboard objectives add bws.tempkillcou playerKillCount
 scoreboard objectives add bws.strengthkill dummy
+scoreboard objectives add bws.tempkillcou playerKillCount
+scoreboard objectives add bws.playerNr dummy
 #wl teams
 scoreboard objectives add bws.wlintred dummy
 scoreboard objectives add bws.wldecimalred dummy
@@ -187,15 +196,6 @@ scoreboard objectives add bws.kddecimalgre dummy
 scoreboard objectives add bws.kdintblu dummy
 scoreboard objectives add bws.kddecimalblu dummy
 ## END ##
-# END #
-
-## Secticker Start
-execute if score bw.gamestate BedWars matches 0 run function bw:onesecondtimer/generell
-##END##
-
-## start visiblenames 1s repeat function
-function bw:onesecondtimer/visible_names
-##END##
 
 ## start invgui clocks
 function bw:invgui/10t
@@ -214,18 +214,22 @@ execute unless entity @e[type=marker,tag=bw.firstinstall] run summon marker 0 50
 #set containes for the shopitems#
 #default
 execute as @r at @s run function bw:system/addingforceload
-setblock 65536 250 65537 barrel[facing=up]{CustomName: '{"text": "Temp Quckbuy"}'} keep
-setblock 65536 250 65536 barrel[facing=up]{CustomName: '{"text": "Default Select"}'} keep
-setblock 65537 250 65536 barrel[facing=up]{CustomName: '{"text": "Default page 1"}'} keep
-setblock 65538 250 65536 barrel[facing=up]{CustomName: '{"text": "Default page 2"}'} keep
-setblock 65539 250 65536 barrel[facing=up]{CustomName: '{"text": "Default page 3"}'} keep
-setblock 65540 250 65536 barrel[facing=up]{CustomName: '{"text": "Default page 4"}'} keep
-setblock 65541 250 65536 barrel[facing=up]{CustomName: '{"text": "Default page 5"}'} keep
-setblock 65542 250 65536 barrel[facing=up]{CustomName: '{"text": "Default page 6"}'} keep
-setblock 65543 250 65536 barrel[facing=up]{CustomName: '{"text": "Default page 7"}'} keep
-setblock 65544 250 65536 barrel[facing=up]{CustomName: '{"text": "Default page 8"}'} keep
-setblock 65545 250 65536 barrel[facing=up]{CustomName: '{"text": "Default page 9"}'} keep
-setblock 65546 250 65536 barrel[facing=up]{CustomName: '{"text": "Default Resources"}'} keep
+setblock 65536 250 65537 barrel[facing=up]{CustomName: '{"text":"Temp Quckbuy"}'} keep
+setblock 65536 250 65536 barrel[facing=up]{CustomName: '{"text":"Default Select"}'} keep
+setblock 65537 250 65536 barrel[facing=up]{CustomName: '{"text":"Default page 1"}'} keep
+setblock 65538 250 65536 barrel[facing=up]{CustomName: '{"text":"Default page 2"}'} keep
+setblock 65539 250 65536 barrel[facing=up]{CustomName: '{"text":"Default page 3"}'} keep
+setblock 65540 250 65536 barrel[facing=up]{CustomName: '{"text":"Default page 4"}'} keep
+setblock 65541 250 65536 barrel[facing=up]{CustomName: '{"text":"Default page 5"}'} keep
+setblock 65542 250 65536 barrel[facing=up]{CustomName: '{"text":"Default page 6"}'} keep
+setblock 65543 250 65536 barrel[facing=up]{CustomName: '{"text":"Default page 7"}'} keep
+setblock 65544 250 65536 barrel[facing=up]{CustomName: '{"text":"Default page 8"}'} keep
+setblock 65545 250 65536 barrel[facing=up]{CustomName: '{"text":"Default page 9"}'} keep
+setblock 65545 250 65537 barrel[facing=up]{CustomName: '{"text":"Default page 9.2"}'} keep
+setblock 65545 250 65538 barrel[facing=up]{CustomName: '{"text":"Default page 9.3"}'} keep
+setblock 65545 250 65539 barrel[facing=up]{CustomName: '{"text":"Default page 9.4"}'} keep
+setblock 65545 250 65540 barrel[facing=up]{CustomName: '{"text":"Default page 9.5"}'} keep
+setblock 65546 250 65536 barrel[facing=up]{CustomName: '{"text":"Default Resources"}'} keep
 #custom
 setblock 65537 253 65536 barrel[facing=up]{CustomName: '{"text":"Custom page 1" }'} keep
 setblock 65538 253 65536 barrel[facing=up]{CustomName: '{"text":"Custom page 2" }'} keep
@@ -236,6 +240,10 @@ setblock 65542 253 65536 barrel[facing=up]{CustomName: '{"text":"Custom page 6" 
 setblock 65543 253 65536 barrel[facing=up]{CustomName: '{"text":"Custom page 7" }'} keep
 setblock 65544 253 65536 barrel[facing=up]{CustomName: '{"text":"Custom page 8" }'} keep
 setblock 65545 253 65536 barrel[facing=up]{CustomName: '{"text":"Custom page 9" }'} keep
+setblock 65545 253 65537 barrel[facing=up]{CustomName: '{"text":"Custom page 9.2"}'} keep
+setblock 65545 253 65538 barrel[facing=up]{CustomName: '{"text":"Custom page 9.3"}'} keep
+setblock 65545 253 65539 barrel[facing=up]{CustomName: '{"text":"Custom page 9.4"}'} keep
+setblock 65545 253 65540 barrel[facing=up]{CustomName: '{"text":"Custom page 9.5"}'} keep
 setblock 65546 253 65536 barrel[facing=up]{CustomName: '{"text":"Custom Resources" }'} keep
 #shop
 setblock 65536 247 65536 barrel[facing=up]{CustomName: '{"text":"Temp Resources" }'} keep
@@ -248,6 +256,10 @@ setblock 65542 247 65536 barrel[facing=up]{CustomName: '{"text":"Shop page 6" }'
 setblock 65543 247 65536 barrel[facing=up]{CustomName: '{"text":"Shop page 7" }'} keep
 setblock 65544 247 65536 barrel[facing=up]{CustomName: '{"text":"Shop page 8" }'} keep
 setblock 65545 247 65536 barrel[facing=up]{CustomName: '{"text":"Shop page 9" }'} keep
+setblock 65545 247 65537 barrel[facing=up]{CustomName: '{"text":"Shop page 9.2"}'} keep
+setblock 65545 247 65538 barrel[facing=up]{CustomName: '{"text":"Shop page 9.3"}'} keep
+setblock 65545 247 65539 barrel[facing=up]{CustomName: '{"text":"Shop page 9.4"}'} keep
+setblock 65545 247 65540 barrel[facing=up]{CustomName: '{"text":"Shop page 9.5"}'} keep
 setblock 65546 247 65536 barrel[facing=up]{CustomName: '{"text":"Shop Resources" }'} keep
 #invgui
 setblock 65538 255 65536 barrel[facing=up]{CustomName: '{"text": "Invgui items"}'} keep

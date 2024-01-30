@@ -4,6 +4,7 @@
 #         Please don't claim this as your own work!        #
 # ======================================================== #
 
-function bw:random/from.uuid
-scoreboard players operation bw.gameID BedWars = bw.gameID bw.random
-function bw:random/from.uuid
+function bw:upgrades/reset/red
+function bw:upgrades/reset/yellow
+function bw:upgrades/reset/green
+function bw:upgrades/reset/blue

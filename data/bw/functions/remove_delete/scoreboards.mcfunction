@@ -99,8 +99,12 @@ scoreboard objectives remove bw.trapaktivated
 scoreboard objectives remove bw.unlimitedCreativeResources
 scoreboard objectives remove bw.disableResourcesOnDeath
 scoreboard objectives remove bw.beds
-#scoreboard objectives remove bw.
-#scoreboard objectives remove bw.
+scoreboard objectives remove bw.respawnTeam
+scoreboard objectives remove bw.spawnerTeam
+scoreboard objectives remove bw.upgrades.red
+scoreboard objectives remove bw.upgrades.yellow
+scoreboard objectives remove bw.upgrades.green
+scoreboard objectives remove bw.upgrades.blue
 #scoreboard objectives remove bw.
 #scoreboard objectives remove bw.
 #scoreboard objectives remove bw.

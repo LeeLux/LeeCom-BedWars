@@ -139,6 +139,8 @@ execute at @e[tag=bw.correctresources] run data modify block ~ ~ ~ Items[{Slot: 
 
 #add one to bw.correctresources to check if its allready done
 scoreboard players add bw.correctresources bw.clear00 1
-execute if score bw.correctresources bw.clear00 matches 9.. run kill @e[tag=bw.correctresources.tag]
-execute as @e[tag=bw.correctresources.tag] at @s run tp @s ~1 ~ ~
-execute unless score bw.correctresources bw.clear00 matches 9.. run function bw:shop/correctresources/loop
+execute if score bw.correctresources bw.clear00 matches 14.. run kill @e[tag=bw.correctresources.tag]
+execute if score bw.correctresources bw.clear00 matches 0..9 as @e[tag=bw.correctresources.tag] at @s run tp @s ~1 ~ ~
+execute if score bw.correctresources bw.clear00 matches 10 as @e[tag=bw.correctresources.tag] at @s run tp @s ~-1 ~ ~
+execute if score bw.correctresources bw.clear00 matches 10..14 as @e[tag=bw.correctresources.tag] at @s run tp @s ~ ~ ~1
+execute unless score bw.correctresources bw.clear00 matches 14.. run function bw:shop/correctresources/loop

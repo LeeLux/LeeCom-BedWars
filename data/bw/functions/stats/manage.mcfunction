@@ -16,3 +16,8 @@ scoreboard players add @s[nbt={Attributes:[{Name:"minecraft:generic.attack_damag
 #resetting temp kill count
 scoreboard players reset @s bws.tempkillcou
 #END#
+
+#total kill count
+execute as @a[scores={bws.tempkillcou=1..}] run scoreboard players add bw.totalkills bw.stats 1
+scoreboard players reset @a bws.tempkillcou
+#END#

@@ -24,6 +24,7 @@ tag @a[team=blue] add bw.playedteamblue
 
 # stats
 scoreboard players add @a[team=spec] bws.gotspectator 1
+scoreboard players add bw.totalgames bw.stats 1
 #END#
 
 ## set sidbar
@@ -102,7 +103,7 @@ execute as @a run function bw:system/reset_player
 ##END##
 
 # set random game id
-function bw:random/start
+execute store result score bw.gameID BedWars run random roll 100000..999999 bw
 scoreboard players operation @a bw.gameID = bw.gameID BedWars
 #END#
 

@@ -20,4 +20,5 @@ kill @e[type=item,nbt={Item: {id: "minecraft:lime_bed"}}]
 
 #stats#
 scoreboard players add @s bws.greenbed 1
+scoreboard players add bws.totalbedsbroken bw.stats 1
 #END#
