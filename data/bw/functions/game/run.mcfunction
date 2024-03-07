@@ -62,12 +62,30 @@ execute as @e[tag=bw.bed.green] at @s if block ~ ~ ~ minecraft:lime_bed run func
 execute as @e[tag=bw.bed.blue] at @s if block ~ ~ ~ minecraft:light_blue_bed run function bw:respawn/blue
 #END#
 
-# set spec if no bed and ded
+# set spec if no bed and dead
 execute unless score bw.bed.red bw.beds matches 1.. as @a[team=red,scores={bw.death.bed=1..}] run function bw:respawn/joinspecingame
 execute unless score bw.bed.yellow bw.beds matches 1.. as @a[team=yellow,scores={bw.death.bed=1..}] run function bw:respawn/joinspecingame
 execute unless score bw.bed.green bw.beds matches 1.. as @a[team=green,scores={bw.death.bed=1..}] run function bw:respawn/joinspecingame
 execute unless score bw.bed.blue bw.beds matches 1.. as @a[team=blue,scores={bw.death.bed=1..}] run function bw:respawn/joinspecingame
 scoreboard players reset @a bw.death.bed
+#END#
+
+# trigger detection for enemy players in your base
+# red
+execute as @e[tag=bw.respawn.red] at @s as @a[distance=..16,tag=!bw.inbaseof.red,team=!red,team=!spec,team=!random] run function bw:upgrades/inbaseof/red
+execute as @e[tag=bw.respawn.red] at @s run tag @a[distance=17..,tag=bw.inbaseof.red] remove bw.inbaseof.red
+
+# yellow
+execute as @e[tag=bw.respawn.yellow] at @s as @a[distance=..16,tag=!bw.inbaseof.yellow,team=!yellow,team=!spec,team=!random] run function bw:upgrades/inbaseof/yellow
+execute as @e[tag=bw.respawn.yellow] at @s run tag @a[distance=17..,tag=bw.inbaseof.yellow] remove bw.inbaseof.
+
+# green
+execute as @e[tag=bw.respawn.green] at @s as @a[distance=..16,tag=!bw.inbaseof.green,team=!green,team=!spec,team=!random] run function bw:upgrades/inbaseof/green
+execute as @e[tag=bw.respawn.green] at @s run tag @a[distance=17..,tag=bw.inbaseof.green] remove bw.inbaseof.green
+
+# blue
+execute as @e[tag=bw.respawn.blue] at @s as @a[distance=..16,tag=!bw.inbaseof.blue,team=!blue,team=!spec,team=!random] run function bw:upgrades/inbaseof/blue
+execute as @e[tag=bw.respawn.blue] at @s run tag @a[distance=17..,tag=bw.inbaseof.blue] remove bw.inbaseof.blue
 #END#
 
 #END#
