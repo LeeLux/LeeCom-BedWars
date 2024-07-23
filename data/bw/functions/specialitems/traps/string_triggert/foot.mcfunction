@@ -8,6 +8,7 @@ fill ~ ~0.5 ~ ~ ~0.5 ~ air replace tripwire
 
 effect give @s nausea 20 0 true
 effect give @s darkness 20 0 true
+effect give @s blindness 18 0 true
 effect give @s slowness 20 0 true
 
 playsound item.shield.break voice @a ~ ~ ~

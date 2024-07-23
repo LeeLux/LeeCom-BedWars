@@ -64,15 +64,18 @@ execute as @a[tag=!bw.trap.string_triggert] at @s if block ~ ~1.5 ~ tripwire run
 scoreboard players add @a[tag=bw.trap.string_triggert] bw.trapaktivated 1
 # remove string triggert after 20 seconds
 execute as @a[scores={bw.trapaktivated=400..}] run function bw:specialitems/traps/string_triggert/remove_tag
-# armore stand: I will find you!
+
+# armore_stand: I will find you!
 # adding the team of placer
-execute as @e[tag=bw.trap.getplacedteam] at @s if entity @p[scores={bw.usearmorstand=1..},distance=..10] run function bw:specialitems/traps/getplacedteam
+execute as @e[tag=bw.trap.getplacedteam] at @s if entity @p[scores={bw.used.drownedSpawnEgg=1..},distance=..10] run function bw:specialitems/traps/getplacedteam
 # found an enemy
 execute as @e[tag=bw.trap.eye,team=red] at @s if entity @p[distance=..6,team=!red,team=!spec,team=!random] run function bw:specialitems/traps/found_enemy/red
 execute as @e[tag=bw.trap.eye,team=yellow] at @s if entity @p[distance=..6,team=!yellow,team=!spec,team=!random] run function bw:specialitems/traps/found_enemy/yellow
 execute as @e[tag=bw.trap.eye,team=green] at @s if entity @p[distance=..6,team=!green,team=!spec,team=!random] run function bw:specialitems/traps/found_enemy/green
 execute as @e[tag=bw.trap.eye,team=blue] at @s if entity @p[distance=..6,team=!blue,team=!spec,team=!random] run function bw:specialitems/traps/found_enemy/blue
 # resets place scoreboard
-scoreboard players reset @p[scores={bw.usearmorstand=1..}] bw.usearmorstand
+scoreboard players reset @p[scores={bw.used.drownedSpawnEgg=1..}] bw.used.drownedSpawnEgg
+
+execute as @e[tag=bw.trap.eye] at @s run tp @s ~ ~ ~ facing entity @p[distance=..12]
 
 ##END##

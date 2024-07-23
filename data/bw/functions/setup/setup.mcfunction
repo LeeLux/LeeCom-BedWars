@@ -100,7 +100,7 @@ scoreboard objectives add bw.toggleinventorgui.page dummy
 scoreboard objectives add bw.pearltimer dummy
 scoreboard objectives add bw.sneaktime minecraft.custom:sneak_time
 scoreboard objectives add bw.hometptimer dummy
-scoreboard objectives add bw.usearmorstand minecraft.used:minecraft.armor_stand
+scoreboard objectives add bw.used.drownedSpawnEgg minecraft.used:minecraft.drowned_spawn_egg
 scoreboard objectives add bw.trapaktivated dummy
 scoreboard objectives add bw.unlimitedCreativeResources trigger
 scoreboard objectives add bw.disableResourcesOnDeath trigger
