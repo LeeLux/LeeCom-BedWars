@@ -130,7 +130,7 @@ execute as @a run function bw:system/reset_player
 ##END##
 
 # set random game id
-execute store result score bw.gameID BedWars run random roll 100000..999999 bw
+execute store result score bw.gameID BedWars run random value 100000..999999 bw
 scoreboard players operation @a bw.gameID = bw.gameID BedWars
 #END#
 

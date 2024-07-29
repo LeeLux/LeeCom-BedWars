@@ -177,6 +177,9 @@ team join random bw.team.random
 
 ## Set and modify main bw.sidebar scoreboard
 scoreboard objectives modify bw.sidebar numberformat blank
+scoreboard players set 19 bw.sidebar 19
+scoreboard players set 18 bw.sidebar 18
+scoreboard players set 17 bw.sidebar 17
 scoreboard players set 16 bw.sidebar 16
 scoreboard players set 15 bw.sidebar 15
 scoreboard players set 14 bw.sidebar 14
