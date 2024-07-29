@@ -3,7 +3,7 @@
 # https://www.youtube.com/channel/UCTL2EnToGrLXZaHV7oYHRDg #
 #         Please don't claim this as your own work!        #
 # ======================================================== #
-execute as @s run function bw:stats/do_math
+execute as @s run function bw:stats/ownstats_math
 #team spesific
 tellraw @s [{"nbt":"StatsPrefix","storage":"minecraft:bedwars","interpret":true},{"text": "=== [Team spesific stats] ===","color": "gold"}]
 #red
@@ -34,5 +34,7 @@ tellraw @s [{"nbt":"StatsPrefix","storage":"minecraft:bedwars","interpret":true}
 tellraw @s [{"nbt":"StatsPrefix","storage":"minecraft:bedwars","interpret":true},{"text": "Beds destroyed "},{"score":{"name": "@s","objective": "bws.destroyedbed"},"color": "green"},{"text": " Got spectator "},{"score":{"name": "@s","objective": "bws.gotspectator"},"color": "green"},{"text": " Total games "},{"score":{"name": "@s","objective": "bws.playedgames"},"color": "green"}]
 #total play time and ingame time
 tellraw @s [{"nbt":"StatsPrefix","storage":"minecraft:bedwars","interpret":true},{"text": "Online time "},{"score":{"name": "@s","objective": "bws.playtimehour"},"color": "green"},{"text": "h"},{"score":{"name": "@s","objective": "bws.playtimemin"},"color": "green"},{"text": "m"},{"text": " Ingame time "},{"score":{"name": "@s","objective": "bws.ingamehour"},"color": "green"},{"text": "h"},{"score":{"name": "@s","objective": "bws.ingamemin"},"color": "green"},{"text": "m"}]
+#unique player join number
+tellraw @s [{"nbt":"StatsPrefix","storage":"minecraft:bedwars","interpret":true},{"text": "Nr. #"},{"score":{"name": "@s","objective": "bws.playerNr"},"color": "green"},{"text": " player joined"}]
 #end
 tellraw @s [{"nbt":"StatsPrefix","storage":"minecraft:bedwars","interpret":true},{"text": "=== [END] ===","color": "gold"}]

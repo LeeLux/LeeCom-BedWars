@@ -4,6 +4,8 @@
 #         Please don't claim this as your own work!        #
 # ======================================================== #
 
+#get total wins
+function bw:stats/total_winns
 scoreboard players operation @s bws.wlint = @s bws.winns
 scoreboard players operation @s bws.wlint *= bw.100 bw.random
 scoreboard players operation @s bws.wlint /= @s bws.losses

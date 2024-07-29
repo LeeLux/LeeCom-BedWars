@@ -22,7 +22,7 @@ execute as @e[type=tnt,nbt={fuse: 1s}] at @s run function bw:specialitems/tnt/1s
 execute as @e[type=spectral_arrow,nbt={inGround:1b},tag=!bw.glowing.point] at @s run tag @s add bw.glowing.point
 
 #white sparki
-execute as @e[tag=bw.glowing.point] at @s unless entity @a[distance=..16,team=!spec] run particle minecraft:dust 1 1 1 6 ~ ~4 ~ 8 8 8 1 600 force @a
+execute as @e[tag=bw.glowing.point] at @s unless entity @a[distance=..16,team=!spec] run particle minecraft:dust 0.5 0.5 0.5 6 ~ ~4 ~ 8 8 8 1 600 force @a
 #red
 execute as @e[tag=bw.glowing.point] at @s if entity @a[distance=..16,team=red] run particle minecraft:dust 1 0 0 6 ~ ~4 ~ 8 8 8 1 600 force @a
 #blue
@@ -31,6 +31,14 @@ execute as @e[tag=bw.glowing.point] at @s if entity @a[distance=..16,team=blue] 
 execute as @e[tag=bw.glowing.point] at @s if entity @a[distance=..16,team=green] run particle minecraft:dust 0 1 0 6 ~ ~4 ~ 8 8 8 1 600 force @a
 #yellow
 execute as @e[tag=bw.glowing.point] at @s if entity @a[distance=..16,team=yellow] run particle minecraft:dust 1 1 0 6 ~ ~4 ~ 8 8 8 1 600 force @a
+#orange
+execute as @e[tag=bw.glowing.point] at @s if entity @a[distance=..16,team=orange] run particle minecraft:dust 1 0.6 0 6 ~ ~4 ~ 8 8 8 1 600 force @a
+#purple
+execute as @e[tag=bw.glowing.point] at @s if entity @a[distance=..16,team=purple] run particle minecraft:dust 0.667 0 1 6 ~ ~4 ~ 8 8 8 1 600 force @a
+#white
+execute as @e[tag=bw.glowing.point] at @s if entity @a[distance=..16,team=white] run particle minecraft:dust 1 1 1 6 ~ ~4 ~ 8 8 8 1 600 force @a
+#black
+execute as @e[tag=bw.glowing.point] at @s if entity @a[distance=..16,team=black] run particle minecraft:dust 0 0 0 6 ~ ~4 ~ 8 8 8 1 600 force @a
 
 #glowing
 execute as @e[tag=bw.glowing.point] at @s run effect give @a[distance=..16,team=!spec] glowing 10 255 true
@@ -72,6 +80,10 @@ execute as @e[tag=bw.trap.eye,team=red] at @s if entity @p[distance=..6,team=!re
 execute as @e[tag=bw.trap.eye,team=yellow] at @s if entity @p[distance=..6,team=!yellow,team=!spec,team=!random] run function bw:specialitems/traps/found_enemy/yellow
 execute as @e[tag=bw.trap.eye,team=green] at @s if entity @p[distance=..6,team=!green,team=!spec,team=!random] run function bw:specialitems/traps/found_enemy/green
 execute as @e[tag=bw.trap.eye,team=blue] at @s if entity @p[distance=..6,team=!blue,team=!spec,team=!random] run function bw:specialitems/traps/found_enemy/blue
+execute as @e[tag=bw.trap.eye,team=orange] at @s if entity @p[distance=..6,team=!orange,team=!spec,team=!random] run function bw:specialitems/traps/found_enemy/orange
+execute as @e[tag=bw.trap.eye,team=purple] at @s if entity @p[distance=..6,team=!purple,team=!spec,team=!random] run function bw:specialitems/traps/found_enemy/purple
+execute as @e[tag=bw.trap.eye,team=white] at @s if entity @p[distance=..6,team=!white,team=!spec,team=!random] run function bw:specialitems/traps/found_enemy/white
+execute as @e[tag=bw.trap.eye,team=black] at @s if entity @p[distance=..6,team=!black,team=!spec,team=!random] run function bw:specialitems/traps/found_enemy/black
 # resets place scoreboard
 scoreboard players reset @p[scores={bw.usearmorstand=1..}] bw.usearmorstand
 

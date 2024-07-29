@@ -27,11 +27,11 @@ give @s endermite_spawn_egg{display: {Name: '[{"text": "","color": "white","ital
 ##END##
 
 ## lobby spwan
-give @s panda_spawn_egg{display: {Name: '[{"text": "","color": "white","italic":false},{"text":"[BW] ","color":"green"},{"text":"Lobby ","color":"white","italic":false},{"text":"spawn","color":"white","italic":false}]'}, EntityTag: {id: "minecraft:armor_stand", NoGravity: 1b, Silent: 1b, Invulnerable: 1b, Marker: 1b, Invisible: 1b, NoBasePlate: 1b, Tags: ["bw.lobby.spawn", "bw.entity", "bw.rotadetoplayer", "bw.respawn"]}} 1
+give @s allay_spawn_egg{display: {Name: '[{"text": "","color": "white","italic":false},{"text":"[BW] ","color":"green"},{"text":"Lobby ","color":"white","italic":false},{"text":"spawn","color":"white","italic":false}]'}, EntityTag: {id: "minecraft:armor_stand", NoGravity: 1b, Silent: 1b, Invulnerable: 1b, Marker: 1b, Invisible: 1b, NoBasePlate: 1b, Tags: ["bw.lobby.spawn", "bw.entity", "bw.rotadetoplayer", "bw.respawn"]}} 1
 ##END##
 
 ## Spectator spwan
-give @s ghast_spawn_egg{display: {Name: '[{"text": "","color": "white","italic":false},{"text":"[BW] ","color":"green"},{"text":"Spectator ","color":"gray","italic":false},{"text":"respawn","color":"white","italic":false}]'}, EntityTag: {id: "minecraft:armor_stand", NoGravity: 1b, Silent: 1b, Invulnerable: 1b, Marker: 1b, Invisible: 1b, NoBasePlate: 1b, Tags: ["bw.respawn.spec", "bw.respawn", "bw.entity", "bw.rotadetoplayer"]}} 1
+give @s skeleton_spawn_egg{display: {Name: '[{"text": "","color": "white","italic":false},{"text":"[BW] ","color":"green"},{"text":"Spectator ","color":"gray","italic":false},{"text":"respawn","color":"white","italic":false}]'}, EntityTag: {id: "minecraft:armor_stand", NoGravity: 1b, Silent: 1b, Invulnerable: 1b, Marker: 1b, Invisible: 1b, NoBasePlate: 1b, Tags: ["bw.respawn.spec", "bw.respawn", "bw.entity", "bw.rotadetoplayer"]}} 1
 ##END##
 
 ## chests
@@ -40,24 +40,43 @@ give @s rabbit_spawn_egg{display: {Name: '[{"text": "","color": "white","italic"
 
 ## RED
 give @s mooshroom_spawn_egg{display: {Name: '[{"text": "","color": "white","italic":false},{"text":"[BW] ","color":"green"},{"text":"Red Team ","color":"red","italic":false},{"text":"respawn","color":"white","italic":false}]'}, EntityTag: {id: "minecraft:armor_stand", NoGravity: 1b, Silent: 1b, Invulnerable: 1b, Marker: 1b, Invisible: 1b, NoBasePlate: 1b, Tags: ["bw.respawn.red", "bw.respawn", "bw.entity", "bw.rotadetoplayer","bw.giverespawnTeamScore"]}} 1
-give @s mooshroom_spawn_egg{display: {Name: '[{"text": "","color": "white","italic":false},{"text":"[BW] ","color":"green"},{"text":"Red Bed","color":"red","italic":false}]'}, EntityTag: {id: "minecraft:armor_stand", NoGravity: 1b, Silent: 1b, Invulnerable: 1b, Marker: 1b, Invisible: 1b, NoBasePlate: 1b, Tags: ["bw.bed.red", "bw.bed", "bw.entity", "bw.rotadetoplayer"]}} 1
+give @s mooshroom_spawn_egg{display: {Name: '[{"text": "","color": "white","italic":false},{"text":"[BW] ","color":"green"},{"text":"Red Bed","color":"red","italic":false}]'}, CustomModelData:100021, EntityTag: {id: "minecraft:armor_stand", NoGravity: 1b, Silent: 1b, Invulnerable: 1b, Marker: 1b, Invisible: 1b, NoBasePlate: 1b, Tags: ["bw.bed.red", "bw.bed", "bw.entity", "bw.rotadetoplayer"]}} 1
 ##END##
 
 ## YELLOW
 give @s blaze_spawn_egg{display: {Name: '[{"text": "","color": "white","italic":false},{"text":"[BW] ","color":"green"},{"text":"Yellow Team ","color":"yellow","italic":false},{"text":"respawn","color":"white","italic":false}]'}, EntityTag: {id: "minecraft:armor_stand", NoGravity: 1b, Silent: 1b, Invulnerable: 1b, Marker: 1b, Invisible: 1b, NoBasePlate: 1b, Tags: ["bw.respawn.yellow", "bw.respawn", "bw.entity", "bw.rotadetoplayer","bw.giverespawnTeamScore"]}} 1
-give @s blaze_spawn_egg{display: {Name: '[{"text": "","color": "white","italic":false},{"text":"[BW] ","color":"green"},{"text":"Yellow Bed","color":"yellow","italic":false}]'}, EntityTag: {id: "minecraft:armor_stand", NoGravity: 1b, Silent: 1b, Invulnerable: 1b, Marker: 1b, Invisible: 1b, NoBasePlate: 1b, Tags: ["bw.bed.yellow", "bw.bed", "bw.entity", "bw.rotadetoplayer"]}} 1
+give @s blaze_spawn_egg{display: {Name: '[{"text": "","color": "white","italic":false},{"text":"[BW] ","color":"green"},{"text":"Yellow Bed","color":"yellow","italic":false}]'},CustomModelData:100022, EntityTag: {id: "minecraft:armor_stand", NoGravity: 1b, Silent: 1b, Invulnerable: 1b, Marker: 1b, Invisible: 1b, NoBasePlate: 1b, Tags: ["bw.bed.yellow", "bw.bed", "bw.entity", "bw.rotadetoplayer"]}} 1
 ##END##
 
 ## GREEN
 give @s slime_spawn_egg{display: {Name: '[{"text": "","color": "white","italic":false},{"text":"[BW] ","color":"green"},{"text":"Green Team ","color":"green","italic":false},{"text":"respawn","color":"white","italic":false}]'}, EntityTag: {id: "minecraft:armor_stand", NoGravity: 1b, Silent: 1b, Invulnerable: 1b, Marker: 1b, Invisible: 1b, NoBasePlate: 1b, Tags: ["bw.respawn.green", "bw.respawn", "bw.entity", "bw.rotadetoplayer","bw.giverespawnTeamScore"]}} 1
-give @s slime_spawn_egg{display: {Name: '[{"text": "","color": "white","italic":false},{"text":"[BW] ","color":"green"},{"text":"Green Bed","color":"green","italic":false}]'}, EntityTag: {id: "minecraft:armor_stand", NoGravity: 1b, Silent: 1b, Invulnerable: 1b, Marker: 1b, Invisible: 1b, NoBasePlate: 1b, Tags: ["bw.bed.green", "bw.bed", "bw.entity", "bw.rotadetoplayer"]}} 1
+give @s slime_spawn_egg{display: {Name: '[{"text": "","color": "white","italic":false},{"text":"[BW] ","color":"green"},{"text":"Green Bed","color":"green","italic":false}]'},CustomModelData:100023, EntityTag: {id: "minecraft:armor_stand", NoGravity: 1b, Silent: 1b, Invulnerable: 1b, Marker: 1b, Invisible: 1b, NoBasePlate: 1b, Tags: ["bw.bed.green", "bw.bed", "bw.entity", "bw.rotadetoplayer"]}} 1
 ##END##
 
 ## BLUE
 give @s squid_spawn_egg{display: {Name: '[{"text": "","color": "white","italic":false},{"text":"[BW] ","color":"green"},{"text":"Blue Team ","color":"blue","italic":false},{"text":"respawn","color":"white","italic":false}]'}, EntityTag: {id: "minecraft:armor_stand", NoGravity: 1b, Silent: 1b, Invulnerable: 1b, Marker: 1b, Invisible: 1b, NoBasePlate: 1b, Tags: ["bw.respawn.blue", "bw.respawn", "bw.entity", "bw.rotadetoplayer","bw.giverespawnTeamScore"]}} 1
-give @s squid_spawn_egg{display: {Name: '[{"text": "","color": "white","italic":false},{"text":"[BW] ","color":"green"},{"text":"Blue Bed","color":"blue","italic":false}]'}, EntityTag: {id: "minecraft:armor_stand", NoGravity: 1b, Silent: 1b, Invulnerable: 1b, Marker: 1b, Invisible: 1b, NoBasePlate: 1b, Tags: ["bw.bed.blue", "bw.bed", "bw.entity", "bw.rotadetoplayer"]}} 1
+give @s squid_spawn_egg{display: {Name: '[{"text": "","color": "white","italic":false},{"text":"[BW] ","color":"green"},{"text":"Blue Bed","color":"blue","italic":false}]'},CustomModelData:100024, EntityTag: {id: "minecraft:armor_stand", NoGravity: 1b, Silent: 1b, Invulnerable: 1b, Marker: 1b, Invisible: 1b, NoBasePlate: 1b, Tags: ["bw.bed.blue", "bw.bed", "bw.entity", "bw.rotadetoplayer"]}} 1
 ##END##
 
+## ORANGE
+give @s tropical_fish_spawn_egg{display: {Name: '[{"text": "","color": "white","italic":false},{"text":"[BW] ","color":"green"},{"text":"Orange Team ","color":"gold","italic":false},{"text":"respawn","color":"white","italic":false}]'}, EntityTag: {id: "minecraft:armor_stand", NoGravity: 1b, Silent: 1b, Invulnerable: 1b, Marker: 1b, Invisible: 1b, NoBasePlate: 1b, Tags: ["bw.respawn.orange", "bw.respawn", "bw.entity", "bw.rotadetoplayer","bw.giverespawnTeamScore"]}} 1
+give @s tropical_fish_spawn_egg{display: {Name: '[{"text": "","color": "white","italic":false},{"text":"[BW] ","color":"green"},{"text":"Orange Bed","color":"gold","italic":false}]'},CustomModelData:100025, EntityTag: {id: "minecraft:armor_stand", NoGravity: 1b, Silent: 1b, Invulnerable: 1b, Marker: 1b, Invisible: 1b, NoBasePlate: 1b, Tags: ["bw.bed.orange", "bw.bed", "bw.entity", "bw.rotadetoplayer"]}} 1
+##END##
+
+## PURPLE
+give @s shulker_spawn_egg{display: {Name: '[{"text": "","color": "white","italic":false},{"text":"[BW] ","color":"green"},{"text":"Purple Team ","color":"dark_purple","italic":false},{"text":"respawn","color":"white","italic":false}]'}, EntityTag: {id: "minecraft:armor_stand", NoGravity: 1b, Silent: 1b, Invulnerable: 1b, Marker: 1b, Invisible: 1b, NoBasePlate: 1b, Tags: ["bw.respawn.purple", "bw.respawn", "bw.entity", "bw.rotadetoplayer","bw.giverespawnTeamScore"]}} 1
+give @s shulker_spawn_egg{display: {Name: '[{"text": "","color": "white","italic":false},{"text":"[BW] ","color":"green"},{"text":"Purple Bed","color":"dark_purple","italic":false}]'},CustomModelData:100026, EntityTag: {id: "minecraft:armor_stand", NoGravity: 1b, Silent: 1b, Invulnerable: 1b, Marker: 1b, Invisible: 1b, NoBasePlate: 1b, Tags: ["bw.bed.purple", "bw.bed", "bw.entity", "bw.rotadetoplayer"]}} 1
+##END##
+
+## WHITE
+give @s ghast_spawn_egg{display: {Name: '[{"text": "","color": "white","italic":false},{"text":"[BW] ","color":"green"},{"text":"White Team ","color":"white","italic":false},{"text":"respawn","color":"white","italic":false}]'}, EntityTag: {id: "minecraft:armor_stand", NoGravity: 1b, Silent: 1b, Invulnerable: 1b, Marker: 1b, Invisible: 1b, NoBasePlate: 1b, Tags: ["bw.respawn.white", "bw.respawn", "bw.entity", "bw.rotadetoplayer","bw.giverespawnTeamScore"]}} 1
+give @s ghast_spawn_egg{display: {Name: '[{"text": "","color": "white","italic":false},{"text":"[BW] ","color":"green"},{"text":"White Bed","color":"white","italic":false}]'},CustomModelData:100027, EntityTag: {id: "minecraft:armor_stand", NoGravity: 1b, Silent: 1b, Invulnerable: 1b, Marker: 1b, Invisible: 1b, NoBasePlate: 1b, Tags: ["bw.bed.white", "bw.bed", "bw.entity", "bw.rotadetoplayer"]}} 1
+##END##
+
+## BLACK
+give @s enderman_spawn_egg{display: {Name: '[{"text": "","color": "white","italic":false},{"text":"[BW] ","color":"green"},{"text":"Black Team ","color":"black","italic":false},{"text":"respawn","color":"white","italic":false}]'}, EntityTag: {id: "minecraft:armor_stand", NoGravity: 1b, Silent: 1b, Invulnerable: 1b, Marker: 1b, Invisible: 1b, NoBasePlate: 1b, Tags: ["bw.respawn.black", "bw.respawn", "bw.entity", "bw.rotadetoplayer","bw.giverespawnTeamScore"]}} 1
+give @s enderman_spawn_egg{display: {Name: '[{"text": "","color": "white","italic":false},{"text":"[BW] ","color":"green"},{"text":"Black Bed","color":"black","italic":false}]'},CustomModelData:100028, EntityTag: {id: "minecraft:armor_stand", NoGravity: 1b, Silent: 1b, Invulnerable: 1b, Marker: 1b, Invisible: 1b, NoBasePlate: 1b, Tags: ["bw.bed.black", "bw.bed", "bw.entity", "bw.rotadetoplayer"]}} 1
+##END##
 
 ##give join team signs##
 #give @s warped_sign{display: {Name: '[{"text": "","color": "white","italic":false},{"text":"[BW] ","color":"green"},{"text":"Join ","color":"white","italic":false},{"text":"Red ","color":"red","italic":false},{"text":"Team","color":"white","italic":false}]'}, BlockEntityTag: {Text1: '{"text":"[Right click]","color":"yellow","clickEvent":{"action":"run_command","value":"/trigger bw.join.red"}}', Text3: '{"text":"to join team","color":"white"}', Text4: '{"text":"Red","color":"red"}'}} 1

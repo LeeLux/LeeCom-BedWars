@@ -22,6 +22,10 @@ execute if score bw.team.red bw.teams matches 1.. unless entity @e[tag=bw.respaw
 execute if score bw.team.yellow bw.teams matches 1.. unless entity @e[tag=bw.respawn.yellow] run scoreboard players set bw.starttestcancel BedWars 4
 execute if score bw.team.green bw.teams matches 1.. unless entity @e[tag=bw.respawn.green] run scoreboard players set bw.starttestcancel BedWars 4
 execute if score bw.team.blue bw.teams matches 1.. unless entity @e[tag=bw.respawn.blue] run scoreboard players set bw.starttestcancel BedWars 4
+execute if score bw.team.orange bw.teams matches 1.. unless entity @e[tag=bw.respawn.orange] run scoreboard players set bw.starttestcancel BedWars 4
+execute if score bw.team.purple bw.teams matches 1.. unless entity @e[tag=bw.respawn.purple] run scoreboard players set bw.starttestcancel BedWars 4
+execute if score bw.team.white bw.teams matches 1.. unless entity @e[tag=bw.respawn.white] run scoreboard players set bw.starttestcancel BedWars 4
+execute if score bw.team.black bw.teams matches 1.. unless entity @e[tag=bw.respawn.black] run scoreboard players set bw.starttestcancel BedWars 4
 # == END == #
 
 # == give error messages if test fail == #
