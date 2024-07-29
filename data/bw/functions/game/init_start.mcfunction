@@ -4,8 +4,7 @@
 #         Please don't claim this as your own work!        #
 # ======================================================== #
 
-
-
+schedule clear bw:onesecondtimer/generell
 function bw:onesecondtimer/generell
 scoreboard players operation bw.gametimer BedWars = bw.setgamecountdown BedWars
 scoreboard players set bw.gamestart BedWars 0

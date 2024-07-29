@@ -20,7 +20,7 @@ scoreboard players add bws.greenwon bw.stats 1
 
 scoreboard players add @a[team=red] bws.losered 1
 scoreboard players add @a[team=yellow] bws.loseyellow 1
-scoreboard players add @a[team=blue] bws.loseblue 
+scoreboard players add @a[team=blue] bws.loseblue 1 
 scoreboard players add @a[team=orange] bws.loseorange 1
 scoreboard players add @a[team=purple] bws.losepurple 1
 scoreboard players add @a[team=white] bws.losewhite 1

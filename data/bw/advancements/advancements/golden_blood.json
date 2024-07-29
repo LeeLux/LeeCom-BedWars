@@ -25,7 +25,7 @@
             "minecraft:golden_apple"
           ],
           "count": {
-            "min": 1
+            "min": 100
           }
         }
       }
