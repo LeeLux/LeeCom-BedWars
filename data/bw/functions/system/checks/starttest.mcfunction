@@ -14,14 +14,21 @@ execute unless score bw.gamestate BedWars matches 0 run scoreboard players set b
 execute unless score bw.gametimer BedWars matches -1 run scoreboard players set bw.starttestcancel BedWars 2
 # join teams if you are in random team
 execute if score bw.team.random bw.teams matches 1.. run function bw:teamjoin/teams_from_random
-#enought players in teams#
+#enought players in teams
 function bw:system/teamsum
+# manually add "random" team
+execute if score bw.team.random bw.teams matches 1.. run scoreboard players add bw.teams bw.teams 1
+execute if score bw.team.random bw.teams matches 2.. run scoreboard players add bw.teams bw.teams 2
 execute unless score bw.teams bw.teams matches 2.. run scoreboard players set bw.starttestcancel BedWars 3
 #there must be a bw.respawn entity for every team with min 1 player in it
 execute if score bw.team.red bw.teams matches 1.. unless entity @e[tag=bw.respawn.red] run scoreboard players set bw.starttestcancel BedWars 4
 execute if score bw.team.yellow bw.teams matches 1.. unless entity @e[tag=bw.respawn.yellow] run scoreboard players set bw.starttestcancel BedWars 4
 execute if score bw.team.green bw.teams matches 1.. unless entity @e[tag=bw.respawn.green] run scoreboard players set bw.starttestcancel BedWars 4
 execute if score bw.team.blue bw.teams matches 1.. unless entity @e[tag=bw.respawn.blue] run scoreboard players set bw.starttestcancel BedWars 4
+execute if score bw.team.orange bw.teams matches 1.. unless entity @e[tag=bw.respawn.orange] run scoreboard players set bw.starttestcancel BedWars 4
+execute if score bw.team.purple bw.teams matches 1.. unless entity @e[tag=bw.respawn.purple] run scoreboard players set bw.starttestcancel BedWars 4
+execute if score bw.team.white bw.teams matches 1.. unless entity @e[tag=bw.respawn.white] run scoreboard players set bw.starttestcancel BedWars 4
+execute if score bw.team.black bw.teams matches 1.. unless entity @e[tag=bw.respawn.black] run scoreboard players set bw.starttestcancel BedWars 4
 # == END == #
 
 # == give error messages if test fail == #

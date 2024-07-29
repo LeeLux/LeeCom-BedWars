@@ -9,4 +9,4 @@ tag @s remove bw.toggleinventorgui.rem
 scoreboard players reset @s bw.toggleinventorgui.page
 clear @s
 
-tellraw @s [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text": "The invgui was removed from you. To get it back use '/trigger bw.toggleinventorgui'"}]
+execute if score bw.gamestate BedWars matches 0 run tellraw @s [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text": "The invgui was removed from you. To get it back use '/trigger bw.toggleinventorgui'"}]

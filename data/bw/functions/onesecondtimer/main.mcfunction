@@ -41,6 +41,10 @@ scoreboard players enable @a bw.join.red
 scoreboard players enable @a bw.join.yellow
 scoreboard players enable @a bw.join.green
 scoreboard players enable @a bw.join.blue
+scoreboard players enable @a bw.join.orange
+scoreboard players enable @a bw.join.purple
+scoreboard players enable @a bw.join.white
+scoreboard players enable @a bw.join.black
 scoreboard players enable @a bw.join.empty
 scoreboard players enable @a bw.join.random
 scoreboard players enable @a bw.gamestart
@@ -86,6 +90,14 @@ execute if score bw.gamestate BedWars matches 1.. run scoreboard players add @a[
 execute if score bw.gamestate BedWars matches 1.. run scoreboard players add @a[scores={bws.ingamesec=61..},team=green] bws.timegreen 1
 # blue min
 execute if score bw.gamestate BedWars matches 1.. run scoreboard players add @a[scores={bws.ingamesec=61..},team=blue] bws.timeblue 1
+# orange min
+execute if score bw.gamestate BedWars matches 1.. run scoreboard players add @a[scores={bws.ingamesec=61..},team=orange] bws.timeorange 1
+# purple min
+execute if score bw.gamestate BedWars matches 1.. run scoreboard players add @a[scores={bws.ingamesec=61..},team=purple] bws.timepurple 1
+# white min
+execute if score bw.gamestate BedWars matches 1.. run scoreboard players add @a[scores={bws.ingamesec=61..},team=white] bws.timewhite 1
+# black min
+execute if score bw.gamestate BedWars matches 1.. run scoreboard players add @a[scores={bws.ingamesec=61..},team=black] bws.timeblack 1
 # overall playtime (just when game is running)
 # +1 min if sec > 60
 execute if score bw.gamestate BedWars matches 1.. run scoreboard players add @a[scores={bws.ingamesec=61..}] bws.ingamemin 1
@@ -150,6 +162,10 @@ scoreboard players set @e[tag=bw.giverespawnTeamScore,tag=bw.respawn.red] bw.res
 scoreboard players set @e[tag=bw.giverespawnTeamScore,tag=bw.respawn.yellow] bw.respawnTeam 2
 scoreboard players set @e[tag=bw.giverespawnTeamScore,tag=bw.respawn.green] bw.respawnTeam 3
 scoreboard players set @e[tag=bw.giverespawnTeamScore,tag=bw.respawn.blue] bw.respawnTeam 4
+scoreboard players set @e[tag=bw.giverespawnTeamScore,tag=bw.respawn.orange] bw.respawnTeam 5
+scoreboard players set @e[tag=bw.giverespawnTeamScore,tag=bw.respawn.purple] bw.respawnTeam 6
+scoreboard players set @e[tag=bw.giverespawnTeamScore,tag=bw.respawn.white] bw.respawnTeam 7
+scoreboard players set @e[tag=bw.giverespawnTeamScore,tag=bw.respawn.black] bw.respawnTeam 8
 tag @e remove bw.giverespawnTeamScore
 # setting spawnerTeam Score from nearst respawnTeam Score
 execute as @e[tag=bw.spawner] at @s run scoreboard players operation @s bw.spawnerTeam = @e[tag=bw.respawn,tag=!bw.respawn.spec,limit=1,sort=nearest,distance=..50] bw.respawnTeam

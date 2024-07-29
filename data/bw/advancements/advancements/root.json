@@ -5,10 +5,14 @@
     },
     "title": "Just the beginning",
     "description": "",
-    "background": "minecraft:textures/blocks/blue_wool",
+    "background": "minecraft:textures/block/light_blue_wool.png",
     "show_toast": false,
     "announce_to_chat": false,
     "hidden": false
     },
-    "criteria": {}
+    "criteria": {
+        "requirement": {
+        "trigger": "minecraft:location"
+        }
+    }
 }

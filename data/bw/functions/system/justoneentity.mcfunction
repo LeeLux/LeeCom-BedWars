@@ -32,4 +32,20 @@ execute if score bw.respawn.blue bw.entity.count matches 2.. at @e[tag=bw.respaw
 #bw.respawn.yellow (1 allowed)#
 execute if score bw.respawn.yellow bw.entity.count matches 2.. run tellraw @a [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text": "Ther are too many 'bw.respawn.yellow's. You nearest 'bw.respawn.yellow' has therefor been killed!\n> Use '/scoreboard objectives setdisplay sidebar bw.entity.count' to show what entity you have how offen.\n> Klick this text to tp you the the furthest 'bw.respawn.yellow'.","color": "red","clickEvent": {"action": "run_command","value": "/tp @s @e[tag=bw.respawn.yellow,sort=furthest,limit=1]"}}]
 execute if score bw.respawn.yellow bw.entity.count matches 2.. at @e[tag=bw.respawn.yellow,limit=1] at @p run kill @e[tag=bw.respawn.yellow,limit=1,sort=nearest]
+
+#bw.respawn.orange (1 allowed)#
+execute if score bw.respawn.orange bw.entity.count matches 2.. run tellraw @a [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text": "Ther are too many 'bw.respawn.orange's. You nearest 'bw.respawn.orange' has therefor been killed!\n> Use '/scoreboard objectives setdisplay sidebar bw.entity.count' to show what entity you have how offen.\n> Klick this text to tp you the the furthest 'bw.respawn.orange'.","color": "red","clickEvent": {"action": "run_command","value": "/tp @s @e[tag=bw.respawn.orange,sort=furthest,limit=1]"}}]
+execute if score bw.respawn.orange bw.entity.count matches 2.. at @e[tag=bw.respawn.orange,limit=1] at @p run kill @e[tag=bw.respawn.orange,limit=1,sort=nearest]
+
+#bw.respawn.purple (1 allowed)#
+execute if score bw.respawn.purple bw.entity.count matches 2.. run tellraw @a [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text": "Ther are too many 'bw.respawn.purple's. You nearest 'bw.respawn.orange' has therefor been killed!\n> Use '/scoreboard objectives setdisplay sidebar bw.entity.count' to show what entity you have how offen.\n> Klick this text to tp you the the furthest 'bw.respawn.purple'.","color": "red","clickEvent": {"action": "run_command","value": "/tp @s @e[tag=bw.respawn.purple,sort=furthest,limit=1]"}}]
+execute if score bw.respawn.purple bw.entity.count matches 2.. at @e[tag=bw.respawn.purple,limit=1] at @p run kill @e[tag=bw.respawn.purple,limit=1,sort=nearest]
+
+#bw.respawn.white (1 allowed)#
+execute if score bw.respawn.purple bw.entity.count matches 2.. run tellraw @a [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text": "Ther are too many 'bw.respawn.white's. You nearest 'bw.respawn.orange' has therefor been killed!\n> Use '/scoreboard objectives setdisplay sidebar bw.entity.count' to show what entity you have how offen.\n> Klick this text to tp you the the furthest 'bw.respawn.white'.","color": "red","clickEvent": {"action": "run_command","value": "/tp @s @e[tag=bw.respawn.white,sort=furthest,limit=1]"}}]
+execute if score bw.respawn.white bw.entity.count matches 2.. at @e[tag=bw.respawn.white,limit=1] at @p run kill @e[tag=bw.respawn.white,limit=1,sort=nearest]
+
+#bw.respawn.black (1 allowed)#
+execute if score bw.respawn.purple bw.entity.count matches 2.. run tellraw @a [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text": "Ther are too many 'bw.respawn.black's. You nearest 'bw.respawn.orange' has therefor been killed!\n> Use '/scoreboard objectives setdisplay sidebar bw.entity.count' to show what entity you have how offen.\n> Klick this text to tp you the the furthest 'bw.respawn.black'.","color": "red","clickEvent": {"action": "run_command","value": "/tp @s @e[tag=bw.respawn.black,sort=furthest,limit=1]"}}]
+execute if score bw.respawn.black bw.entity.count matches 2.. at @e[tag=bw.respawn.black,limit=1] at @p run kill @e[tag=bw.respawn.black,limit=1,sort=nearest]
 #END#

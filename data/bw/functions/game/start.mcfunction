@@ -10,7 +10,7 @@ scoreboard players set bw.gamestate BedWars 2
 scoreboard players set bw.gametimer BedWars -1
 
 ## when in no team, join spec team and set the player in the right gamemode
-team join spec @a[team=!red,team=!yellow,team=!green,team=!blue]
+team join spec @a[team=!red,team=!yellow,team=!green,team=!blue,team=!orange,team=!purple,team=!white,team=!black]
 gamemode spectator @a[team=spec]
 gamemode adventure @a[team=!spec]
 ##END##
@@ -20,11 +20,26 @@ tag @a[team=red] add bw.playedteamred
 tag @a[team=yellow] add bw.playedteamyellow
 tag @a[team=green] add bw.playedteamgreen
 tag @a[team=blue] add bw.playedteamblue
+tag @a[team=orange] add bw.playedteamorange
+tag @a[team=purple] add bw.playedteampurple
+tag @a[team=white] add bw.playedteamwhite
+tag @a[team=black] add bw.playedteamblack
 #END#
 
 # stats
-scoreboard players add @a[team=spec] bws.gotspectator 1
-scoreboard players add bw.totalgames bw.stats 1
+scoreboard players add @a[team=red] bws.playedred 1
+scoreboard players add @a[team=yellow] bws.playedyellow 1
+scoreboard players add @a[team=green] bws.playedgreen 1
+scoreboard players add @a[team=blue] bws.playedblue 1
+scoreboard players add @a[team=orange] bws.playedorange 1
+scoreboard players add @a[team=purple] bws.playedpurple 1
+scoreboard players add @a[team=white] bws.playedwhite 1
+scoreboard players add @a[team=black] bws.playedblack 1
+
+scoreboard players add bws.totalgames bw.stats 1
+
+#not sure if you should also get this stat if you are a spectator from the beginning
+#scoreboard players add @a[team=spec] bws.gotspectator 1
 #END#
 
 ## set sidbar
@@ -49,6 +64,10 @@ execute as @e[tag=bw.respawn.red] at @s run spawnpoint @a[team=red] ~ ~ ~ ~
 execute as @e[tag=bw.respawn.blue] at @s run spawnpoint @a[team=blue] ~ ~ ~ ~
 execute as @e[tag=bw.respawn.green] at @s run spawnpoint @a[team=green] ~ ~ ~ ~
 execute as @e[tag=bw.respawn.yellow] at @s run spawnpoint @a[team=yellow] ~ ~ ~ ~
+execute as @e[tag=bw.respawn.orange] at @s run spawnpoint @a[team=orange] ~ ~ ~ ~
+execute as @e[tag=bw.respawn.purple] at @s run spawnpoint @a[team=purple] ~ ~ ~ ~
+execute as @e[tag=bw.respawn.white] at @s run spawnpoint @a[team=white] ~ ~ ~ ~
+execute as @e[tag=bw.respawn.black] at @s run spawnpoint @a[team=black] ~ ~ ~ ~
 execute as @e[tag=bw.respawn.spec] at @s run spawnpoint @a[team=spec] ~ ~ ~
 ##END##
 
@@ -77,6 +96,10 @@ execute if score bw.team.red bw.teams matches 1.. run function bw:beds/place/che
 execute if score bw.team.yellow bw.teams matches 1.. run function bw:beds/place/check/yellow
 execute if score bw.team.green bw.teams matches 1.. run function bw:beds/place/check/green
 execute if score bw.team.blue bw.teams matches 1.. run function bw:beds/place/check/blue
+execute if score bw.team.orange bw.teams matches 1.. run function bw:beds/place/check/orange
+execute if score bw.team.purple bw.teams matches 1.. run function bw:beds/place/check/purple
+execute if score bw.team.white bw.teams matches 1.. run function bw:beds/place/check/white
+execute if score bw.team.black bw.teams matches 1.. run function bw:beds/place/check/black
 ##END##
 
 ## set chests
@@ -90,6 +113,10 @@ tp @a[team=red] @e[tag=bw.respawn.red,limit=1]
 tp @a[team=yellow] @e[tag=bw.respawn.yellow,limit=1]
 tp @a[team=green] @e[tag=bw.respawn.green,limit=1]
 tp @a[team=blue] @e[tag=bw.respawn.blue,limit=1]
+tp @a[team=orange] @e[tag=bw.respawn.orange,limit=1]
+tp @a[team=purple] @e[tag=bw.respawn.purple,limit=1]
+tp @a[team=white] @e[tag=bw.respawn.white,limit=1]
+tp @a[team=black] @e[tag=bw.respawn.black,limit=1]
 tp @a[team=spec] @e[tag=bw.respawn.spec,limit=1]
 ##END##
 
@@ -103,7 +130,7 @@ execute as @a run function bw:system/reset_player
 ##END##
 
 # set random game id
-execute store result score bw.gameID BedWars run random roll 100000..999999 bw
+execute store result score bw.gameID BedWars run random value 100000..999999 bw
 scoreboard players operation @a bw.gameID = bw.gameID BedWars
 #END#
 

@@ -9,6 +9,10 @@ kill @e[type=item,nbt={Item: {id: "minecraft:red_bed"}}]
 kill @e[type=item,nbt={Item: {id: "minecraft:light_blue_bed"}}]
 kill @e[type=item,nbt={Item: {id: "minecraft:lime_bed"}}]
 kill @e[type=item,nbt={Item: {id: "minecraft:yellow_bed"}}]
+kill @e[type=item,nbt={Item: {id: "minecraft:orange_bed"}}]
+kill @e[type=item,nbt={Item: {id: "minecraft:purple_bed"}}]
+kill @e[type=item,nbt={Item: {id: "minecraft:white_bed"}}]
+kill @e[type=item,nbt={Item: {id: "minecraft:black_bed"}}]
 ##END##
 
 ##killing ladder entity##

@@ -15,8 +15,16 @@ execute if entity @s[team=red] if score bw.upgrade.6 bw.upgrades.red matches 2 r
 execute if entity @s[team=yellow] if score bw.upgrade.6 bw.upgrades.yellow matches 2 run effect give @s resistance 6 255 true
 execute if entity @s[team=green] if score bw.upgrade.6 bw.upgrades.green matches 2 run effect give @s resistance 6 255 true
 execute if entity @s[team=blue] if score bw.upgrade.6 bw.upgrades.blue matches 2 run effect give @s resistance 6 255 true
+execute if entity @s[team=orange] if score bw.upgrade.6 bw.upgrades.orange matches 2 run effect give @s resistance 6 255 true
+execute if entity @s[team=purple] if score bw.upgrade.6 bw.upgrades.purple matches 2 run effect give @s resistance 6 255 true
+execute if entity @s[team=white] if score bw.upgrade.6 bw.upgrades.white matches 2 run effect give @s resistance 6 255 true
+execute if entity @s[team=black] if score bw.upgrade.6 bw.upgrades.black matches 2 run effect give @s resistance 6 255 true
 # spawn protection 10s
 execute if entity @s[team=red] if score bw.upgrade.6 bw.upgrades.red matches 3.. run effect give @s resistance 10 255 true
 execute if entity @s[team=yellow] if score bw.upgrade.6 bw.upgrades.yellow matches 3.. run effect give @s resistance 10 255 true
 execute if entity @s[team=green] if score bw.upgrade.6 bw.upgrades.green matches 3.. run effect give @s resistance 10 255 true
 execute if entity @s[team=blue] if score bw.upgrade.6 bw.upgrades.blue matches 3.. run effect give @s resistance 10 255 true
+execute if entity @s[team=orange] if score bw.upgrade.6 bw.upgrades.orange matches 3.. run effect give @s resistance 10 255 true
+execute if entity @s[team=purple] if score bw.upgrade.6 bw.upgrades.purple matches 3.. run effect give @s resistance 10 255 true
+execute if entity @s[team=white] if score bw.upgrade.6 bw.upgrades.white matches 3.. run effect give @s resistance 10 255 true
+execute if entity @s[team=black] if score bw.upgrade.6 bw.upgrades.black matches 3.. run effect give @s resistance 10 255 true

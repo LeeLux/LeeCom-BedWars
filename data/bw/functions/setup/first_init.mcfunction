@@ -29,7 +29,7 @@ scoreboard players set bw.Ydeath BedWars 0
 scoreboard players set bw.gamestate BedWars 0
 ##END###
 ## set -1 to macke some negativ numbers positive
-#and some other#
+#and some other
 scoreboard players set bw.negativOne bw.random -1
 scoreboard players set bw.10 bw.random 10
 scoreboard players set bw.20 bw.random 20
@@ -118,6 +118,30 @@ team modify blue color blue
 team modify blue prefix [{"text": "B ","color": "blue"}]
 team modify blue friendlyFire false
 team modify blue collisionRule never
+## orange
+team add orange
+team modify orange color gold
+team modify orange prefix [{"text": "B ","color": "gold"}]
+team modify orange friendlyFire false
+team modify orange collisionRule never
+## purple
+team add purple
+team modify purple color dark_purple
+team modify purple prefix [{"text": "B ","color": "dark_purple"}]
+team modify purple friendlyFire false
+team modify purple collisionRule never
+## white
+team add white
+team modify white color white
+team modify white prefix [{"text": "B ","color": "white"}]
+team modify white friendlyFire false
+team modify white collisionRule never
+## black
+team add black
+team modify black color black
+team modify black prefix [{"text": "B ","color": "black"}]
+team modify black friendlyFire false
+team modify black collisionRule never
 ## enother team for joining a random team
 team add random
 team modify random color dark_gray
@@ -153,6 +177,9 @@ team join random bw.team.random
 
 ## Set and modify main bw.sidebar scoreboard
 scoreboard objectives modify bw.sidebar numberformat blank
+scoreboard players set 19 bw.sidebar 19
+scoreboard players set 18 bw.sidebar 18
+scoreboard players set 17 bw.sidebar 17
 scoreboard players set 16 bw.sidebar 16
 scoreboard players set 15 bw.sidebar 15
 scoreboard players set 14 bw.sidebar 14
@@ -162,13 +189,25 @@ scoreboard players set 11 bw.sidebar 11
 scoreboard players set 10 bw.sidebar 10
 scoreboard players set 0 bw.sidebar 0
 scoreboard players display name 16 bw.sidebar [{"text":""}]
+scoreboard players display name 19 bw.sidebar [{"text":""}]
+scoreboard players display name 17 bw.sidebar [{"text":""}]
+scoreboard players display name 16 bw.sidebar [{"text":""}]
 scoreboard players display name 15 bw.sidebar [{"text":""}]
-scoreboard players display name 14 bw.sidebar [{"text":""}]
-scoreboard players display name 13 bw.sidebar [{"text":""}]
-scoreboard players display name 12 bw.sidebar [{"text":""}]
 scoreboard players display name 11 bw.sidebar [{"text":""}]
 scoreboard players display name 10 bw.sidebar [{"text":""}]
 scoreboard players display name 0 bw.sidebar [{"text":""}]
+##END##
+
+## Init Server StatsPrefix
+#bws.totalbedsbroken
+scoreboard players add bws.totalbedsbroken bw.stats 1
+scoreboard players remove bws.totalbedsbroken bw.stats 1
+#bws.totalkills
+scoreboard players add bws.totalkills bw.stats 1
+scoreboard players remove bws.totalkills bw.stats 1
+#bws.totalgames
+scoreboard players add bws.totalgames bw.stats 1
+scoreboard players remove bws.totalgames bw.stats 1
 ##END##
 
 ##END##

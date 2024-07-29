@@ -73,7 +73,7 @@ scoreboard objectives remove bws.pearlkills
 scoreboard objectives remove bws.tempkillcou
 scoreboard objectives remove bws.strengthkill
 scoreboard objectives remove bws.playerNr
-#scoreboard objectives remove bws.
+scoreboard objectives remove bws.totalbedsbroken
 #scoreboard objectives remove bws.
 #scoreboard objectives remove bws.
 #scoreboard objectives remove bws.

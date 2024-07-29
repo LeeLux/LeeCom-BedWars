@@ -34,6 +34,10 @@ scoreboard objectives add bw.blue.broken minecraft.mined:minecraft.light_blue_be
 scoreboard objectives add bw.red.broken minecraft.mined:minecraft.red_bed
 scoreboard objectives add bw.yellow.broken minecraft.mined:minecraft.yellow_bed
 scoreboard objectives add bw.green.broken minecraft.mined:minecraft.lime_bed
+scoreboard objectives add bw.orange.broken minecraft.mined:minecraft.orange_bed
+scoreboard objectives add bw.purple.broken minecraft.mined:minecraft.purple_bed
+scoreboard objectives add bw.white.broken minecraft.mined:minecraft.white_bed
+scoreboard objectives add bw.black.broken minecraft.mined:minecraft.black_bed
 #scoreboard objectives add bw.
 scoreboard objectives add bw.shop.page dummy
 scoreboard objectives add bw.shop.temp dummy
@@ -55,6 +59,10 @@ scoreboard objectives add bw.join.red trigger
 scoreboard objectives add bw.join.yellow trigger
 scoreboard objectives add bw.join.green trigger
 scoreboard objectives add bw.join.blue trigger
+scoreboard objectives add bw.join.orange trigger
+scoreboard objectives add bw.join.purple trigger
+scoreboard objectives add bw.join.white trigger
+scoreboard objectives add bw.join.black trigger
 scoreboard objectives add bw.join.empty trigger
 scoreboard objectives add bw.join.random trigger
 scoreboard objectives add bw.Y dummy
@@ -111,6 +119,10 @@ scoreboard objectives add bw.upgrades.red dummy
 scoreboard objectives add bw.upgrades.yellow dummy
 scoreboard objectives add bw.upgrades.green dummy
 scoreboard objectives add bw.upgrades.blue dummy
+scoreboard objectives add bw.upgrades.orange dummy
+scoreboard objectives add bw.upgrades.purple dummy
+scoreboard objectives add bw.upgrades.white dummy
+scoreboard objectives add bw.upgrades.black dummy
 #scoreboard objectives add bw.
 #scoreboard objectives add bw.
 #scoreboard objectives add bw.
@@ -136,19 +148,35 @@ scoreboard objectives add bws.playedgames dummy
 scoreboard objectives add bws.playedyellow dummy
 scoreboard objectives add bws.playedgreen dummy
 scoreboard objectives add bws.playedblue dummy
+scoreboard objectives add bws.playedorange dummy
+scoreboard objectives add bws.playedpurple dummy
+scoreboard objectives add bws.playedwhite dummy
+scoreboard objectives add bws.playedblack dummy
 scoreboard objectives add bws.pickupblocks dummy
 scoreboard objectives add bws.redbed dummy
 scoreboard objectives add bws.yellowbed dummy
 scoreboard objectives add bws.greenbed dummy
 scoreboard objectives add bws.bluebed dummy
+scoreboard objectives add bws.orangebed dummy
+scoreboard objectives add bws.purplebed dummy
+scoreboard objectives add bws.whitebed dummy
+scoreboard objectives add bws.blackbed dummy
 scoreboard objectives add bws.wonred dummy
 scoreboard objectives add bws.wonyellow dummy
 scoreboard objectives add bws.wongreen dummy
 scoreboard objectives add bws.wonblue dummy
+scoreboard objectives add bws.wonorange dummy
+scoreboard objectives add bws.wonpurple dummy
+scoreboard objectives add bws.wonwhite dummy
+scoreboard objectives add bws.wonblack dummy
 scoreboard objectives add bws.losered dummy
 scoreboard objectives add bws.loseyellow dummy
 scoreboard objectives add bws.losegreen dummy
 scoreboard objectives add bws.loseblue dummy
+scoreboard objectives add bws.loseorange dummy
+scoreboard objectives add bws.losepurple dummy
+scoreboard objectives add bws.losewhite dummy
+scoreboard objectives add bws.loseblack dummy
 scoreboard objectives add bws.damagedealt minecraft.custom:minecraft.damage_dealt
 scoreboard objectives add bws.damagetaken minecraft.custom:minecraft.damage_taken
 scoreboard objectives add bws.playtimesec dummy
@@ -158,6 +186,10 @@ scoreboard objectives add bws.timered dummy
 scoreboard objectives add bws.timeyellow dummy
 scoreboard objectives add bws.timegreen dummy
 scoreboard objectives add bws.timeblue dummy
+scoreboard objectives add bws.timeorange dummy
+scoreboard objectives add bws.timepurple dummy
+scoreboard objectives add bws.timewhite dummy
+scoreboard objectives add bws.timeblack dummy
 scoreboard objectives add bws.ingamesec dummy
 scoreboard objectives add bws.ingamemin dummy
 scoreboard objectives add bws.ingamehour dummy
@@ -165,7 +197,6 @@ scoreboard objectives add bws.pearlkills dummy
 scoreboard objectives add bws.pearlkilluse minecraft.used:minecraft.ender_pearl
 scoreboard objectives add bws.tempkillcou playerKillCount
 scoreboard objectives add bws.strengthkill dummy
-scoreboard objectives add bws.tempkillcou playerKillCount
 scoreboard objectives add bws.playerNr dummy
 #wl teams
 scoreboard objectives add bws.wlintred dummy
@@ -176,17 +207,33 @@ scoreboard objectives add bws.wlintgre dummy
 scoreboard objectives add bws.wldecimalgre dummy
 scoreboard objectives add bws.wlintblu dummy
 scoreboard objectives add bws.wldecimalblu dummy
-#kd teams
+scoreboard objectives add bws.wlintora dummy
+scoreboard objectives add bws.wldecimalora dummy
+scoreboard objectives add bws.wlintpur dummy
+scoreboard objectives add bws.wldecimalpur dummy
+scoreboard objectives add bws.wlintwhi dummy
+scoreboard objectives add bws.wldecimalwhi dummy
+scoreboard objectives add bws.wlintbla dummy
+scoreboard objectives add bws.wldecimalbla dummy
+#kills teams
 scoreboard objectives add bws.killsred dummy
 scoreboard objectives add bws.killsyellow dummy
 scoreboard objectives add bws.killsgreen dummy
 scoreboard objectives add bws.killsblue dummy
-
+scoreboard objectives add bws.killsorange dummy
+scoreboard objectives add bws.killspurple dummy
+scoreboard objectives add bws.killswhite dummy
+scoreboard objectives add bws.killsblack dummy
+#deaths teams
 scoreboard objectives add bws.deathsred dummy
 scoreboard objectives add bws.deathsyellow dummy
 scoreboard objectives add bws.deathsgreen dummy
 scoreboard objectives add bws.deathsblue dummy
-
+scoreboard objectives add bws.deathsorange dummy
+scoreboard objectives add bws.deathspurple dummy
+scoreboard objectives add bws.deathswhite dummy
+scoreboard objectives add bws.deathsblack dummy
+#k/d teams
 scoreboard objectives add bws.kdintred dummy
 scoreboard objectives add bws.kddecimalred dummy
 scoreboard objectives add bws.kdintyel dummy
@@ -195,6 +242,14 @@ scoreboard objectives add bws.kdintgre dummy
 scoreboard objectives add bws.kddecimalgre dummy
 scoreboard objectives add bws.kdintblu dummy
 scoreboard objectives add bws.kddecimalblu dummy
+scoreboard objectives add bws.kdintora dummy
+scoreboard objectives add bws.kddecimalora dummy
+scoreboard objectives add bws.kdintpur dummy
+scoreboard objectives add bws.kddecimalpur dummy
+scoreboard objectives add bws.kdintwhi dummy
+scoreboard objectives add bws.kddecimalwhi dummy
+scoreboard objectives add bws.kdintbla dummy
+scoreboard objectives add bws.kddecimalbla dummy
 ## END ##
 
 ## start invgui clocks

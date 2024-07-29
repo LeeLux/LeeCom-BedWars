@@ -21,3 +21,7 @@ execute as @a[team=red] at @s run function bw:upgrades/detect/red
 execute as @a[team=yellow] at @s run function bw:upgrades/detect/yellow
 execute as @a[team=green] at @s run function bw:upgrades/detect/green
 execute as @a[team=blue] at @s run function bw:upgrades/detect/blue
+execute as @a[team=orange] at @s run function bw:upgrades/detect/orange
+execute as @a[team=purple] at @s run function bw:upgrades/detect/purple
+execute as @a[team=white] at @s run function bw:upgrades/detect/white
+execute as @a[team=black] at @s run function bw:upgrades/detect/black

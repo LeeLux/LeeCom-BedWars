@@ -32,9 +32,22 @@ execute as @e[tag=bw.bed.green] at @s if block ~ ~ ~ lime_bed run scoreboard pla
 # blue
 scoreboard players set bw.bed.blue bw.beds 0
 execute as @e[tag=bw.bed.blue] at @s if block ~ ~ ~ light_blue_bed run scoreboard players add bw.bed.blue bw.beds 1
+# orange
+scoreboard players set bw.bed.orange bw.beds 0
+execute as @e[tag=bw.bed.orange] at @s if block ~ ~ ~ orange_bed run scoreboard players add bw.bed.orange bw.beds 1
+# purple
+scoreboard players set bw.bed.purple bw.beds 0
+execute as @e[tag=bw.bed.purple] at @s if block ~ ~ ~ purple_bed run scoreboard players add bw.bed.purple bw.beds 1
+# white
+scoreboard players set bw.bed.white bw.beds 0
+execute as @e[tag=bw.bed.white] at @s if block ~ ~ ~ white_bed run scoreboard players add bw.bed.white bw.beds 1
+# black
+scoreboard players set bw.bed.black bw.beds 0
+execute as @e[tag=bw.bed.black] at @s if block ~ ~ ~ black_bed run scoreboard players add bw.bed.black bw.beds 1
 #END#
 
 # bw.entity delete with delete item
+execute as @a[nbt={SelectedItem:{id:"minecraft:barrier",tag:{Tags:["bw.entity.delete"]}}}] at @s at @e[distance=..8,tag=bw.entity] run particle minecraft:happy_villager ~ ~0.12 ~ 0.2 0 0.2 0.1 1 normal
 execute as @e[type=item,nbt={Item: {tag: {Tags: ["bw.entity.delete"]}}}] at @s run tellraw @p [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text": "Killed: "},{"selector":"@e[tag=bw.entity,limit=1,distance=..2,sort=nearest]"}]
 execute as @e[type=item,nbt={Item: {tag: {Tags: ["bw.entity.delete"]}}}] at @s run tp @e[tag=bw.shop,limit=1,distance=..2,sort=nearest] ~ ~-1000 ~
 execute as @e[type=item,nbt={Item: {tag: {Tags: ["bw.entity.delete"]}}}] at @s run kill @e[tag=bw.entity,limit=1,distance=..2,sort=nearest]
@@ -136,6 +149,10 @@ execute store result score bw.team.green bw.teams if entity @a[team=green]
 execute store result score bw.team.blue bw.teams if entity @a[team=blue]
 execute store result score bw.team.random bw.teams if entity @a[team=random]
 execute store result score bw.team.empty bw.teams if entity @a[team=!blue,team=!green,team=!random,team=!red,team=!spec,team=!yellow,]
+execute store result score bw.team.orange bw.teams if entity @a[team=orange]
+execute store result score bw.team.purple bw.teams if entity @a[team=purple]
+execute store result score bw.team.white bw.teams if entity @a[team=white]
+execute store result score bw.team.black bw.teams if entity @a[team=black]
 ##END##
 
 ## player join
