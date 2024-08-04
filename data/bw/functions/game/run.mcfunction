@@ -85,6 +85,18 @@ execute unless score bw.bed.black bw.beds matches 1.. as @a[team=black,scores={b
 scoreboard players reset @a bw.death.bed
 #END#
 
+# drop ressources marker
+# gives every active player a invis armor stand that follows you
+# around to have a point for the drop ressouce on you death
+execute as @a at @s unless score @s bw.dropresourcesmarkeruniqueid matches -2147483648..2147483647 run function bw:game/addresourcemarker
+tag @e[tag=bw.tpdropresource] remove bw.tpdropresource
+# is sort=random really needed?
+tag @e[nbt={Tags:["bw.dropresourcesmarkermove"]},limit=1,tag=!bw.tpdropresource,sort=random] add bw.tpdropresource
+execute as @a[scores={bw.death=1..}] if score @e[tag=bw.tpdropresource,limit=1] bw.dropresourcesmarkeruniqueid = @s bw.dropresourcesmarkeruniqueid positioned as @e[tag=bw.tpdropresource,limit=1] run summon armor_stand ~ ~ ~ {Invisible:0b,Small:1b,NoBasePlate:1b,Invulnerable:1b,Tags:["bw.entity","bw.dropresourcesmarker"]}
+execute as @a at @s if score @e[tag=bw.tpdropresource,limit=1] bw.dropresourcesmarkeruniqueid = @s bw.dropresourcesmarkeruniqueid run tp @e[tag=bw.tpdropresource,limit=1] @s
+tag @e[tag=bw.tpdropresource] remove bw.tpdropresource
+#END#
+
 # auto gameend
 #execute if score bw.team.red bw.teams matches 1.. unless score bw.team.yellow bw.teams matches 1.. unless score bw.team.green bw.teams matches 1.. unless score bw.team.blue bw.teams matches 1.. run function bw:game/gameend/red
 #execute if score bw.team.yellow bw.teams matches 1.. unless score bw.team.red bw.teams matches 1.. unless score bw.team.green bw.teams matches 1.. unless score bw.team.blue bw.teams matches 1.. run function bw:game/gameend/yellow
