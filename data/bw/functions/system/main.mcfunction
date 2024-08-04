@@ -7,7 +7,7 @@
 ## drop resources on death and clear the rest
 # clear inv
 clear @a[scores={bw.death=1..}]
-execute unless score bw.disableResourcesOnDeath BedWars matches 1 as @a[scores={bw.death=1..}] at @s run function bw:system/checks/shoulddropresources
+#execute unless score bw.disableResourcesOnDeath BedWars matches 1 as @a[scores={bw.death=1..}] at @s run function bw:system/checks/shoulddropresources
 ##END##
 
 ## runs the game code wehn the game is activ
