@@ -25,7 +25,7 @@
                         {
                             "type": "minecraft:item",
                             "name": "minecraft:yellow_shulker_box",
-                            "functions": [
+                            "function": [
                                 {
                                     "function": "minecraft:copy_name",
                                     "source": "block_entity"
