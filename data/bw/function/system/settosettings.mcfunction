@@ -18,60 +18,81 @@ execute as @a[scores={bw.spawn.platin=1..},limit=1] run function bw:settosetting
 
 # set alwaysshop to BEDWARS Settings
 execute as @a[scores={bw.enable.alwaysActiveShop=1..}] run function bw:settosettings/alwaysshop
+execute as @a[scores={bw.enable.alwaysActiveShop=1..}] run function bw:settosettings/alwaysshop
 #END#
 
 # set customshop to BEDWARS Settings
+execute as @a[scores={bw.enable.useCustomShop=1..}] run function bw:settosettings/customshop
 execute as @a[scores={bw.enable.useCustomShop=1..}] run function bw:settosettings/customshop
 #END#
 
 # set actionbar to BEDWARS Settings
 execute as @a[scores={bw.setActionbarDisplay=1..}] run function bw:settosettings/actionbar
+execute as @a[scores={bw.setActionbarDisplay=1..}] run function bw:settosettings/actionbar
 #END#
 
 # set health to BEDWARS Settings
+execute as @a[scores={bw.setHealthDisplay=1..}] run function bw:settosettings/sethealth
 execute as @a[scores={bw.setHealthDisplay=1..}] run function bw:settosettings/sethealth
 #END#
 
 # set shopreset to BEDWARS Settings
 execute as @a[scores={bw.enable.shopReset=1..}] run function bw:settosettings/shopreset
+execute as @a[scores={bw.enable.shopReset=1..}] run function bw:settosettings/shopreset
 #END#
 
 # Set Game Countdown to BEDWARS Settings
+execute as @a[scores={bw.setGameCountdown=1..}] run function bw:settosettings/gamecountdown
 execute as @a[scores={bw.setGameCountdown=1..}] run function bw:settosettings/gamecountdown
 #END#
 
 # Set keepteam to BEDWARS Settings
 execute as @a[scores={bw.enable.keepTeamAfterGameEnd=1..}] run function bw:settosettings/keepteam
+execute as @a[scores={bw.enable.keepTeamAfterGameEnd=1..}] run function bw:settosettings/keepteam
 #END#
 
 # runns the bw:shop/updateshop.mcfunction when trigger
+execute as @a[scores={bw.updateShop=1..}] run function bw:shop/updateshop
 execute as @a[scores={bw.updateShop=1..}] run function bw:shop/updateshop
 #END#
 
 # Set normalregen to BEDWARS Settings
 execute as @a[scores={bw.enable.normalRegeneration=1..}] run function bw:settosettings/normalregen
+execute as @a[scores={bw.enable.normalRegeneration=1..}] run function bw:settosettings/normalregen
 #END#
 
+# set bw.setTimeUntilBedsGone so BEDWARS Settings
+execute as @a[scores={bw.setTimeUntilBedsGone=1..}] run function bw:settosettings/bedsgonetime
 # set bw.setTimeUntilBedsGone so BEDWARS Settings
 execute as @a[scores={bw.setTimeUntilBedsGone=1..}] run function bw:settosettings/bedsgonetime
 #END#
 
 # set bw.enable.bedsGoneAfterTime so BEDWARS Settings
 execute as @a[scores={bw.enable.bedsGoneAfterTime=1..}] run function bw:settosettings/bedsgonebool
+# set bw.enable.bedsGoneAfterTime so BEDWARS Settings
+execute as @a[scores={bw.enable.bedsGoneAfterTime=1..}] run function bw:settosettings/bedsgonebool
 #END#
 
+# set bw.setTimeUntilAutoDraw so BEDWARS Settings
+execute as @a[scores={bw.setTimeUntilAutoDraw=1..}] run function bw:settosettings/autodrawtime
 # set bw.setTimeUntilAutoDraw so BEDWARS Settings
 execute as @a[scores={bw.setTimeUntilAutoDraw=1..}] run function bw:settosettings/autodrawtime
 #END#
 
 # set bw.enable.autoDrawAfterTime so BEDWARS Settings
 execute as @a[scores={bw.enable.autoDrawAfterTime=1..}] run function bw:settosettings/autodrawbool
+# set bw.enable.autoDrawAfterTime so BEDWARS Settings
+execute as @a[scores={bw.enable.autoDrawAfterTime=1..}] run function bw:settosettings/autodrawbool
 #END#
 
 # set bw.toggleToEightTeams so BEDWARS Settings
 execute as @a[scores={bw.toggleToEightTeams=1..}] run function bw:settosettings/eightteams
+# set bw.toggleToEightTeams so BEDWARS Settings
+execute as @a[scores={bw.toggleToEightTeams=1..}] run function bw:settosettings/eightteams
 #END#
 
+# func for bw.toggleInventorGui
+execute as @a[scores={bw.toggleInventorGui=1..}] run function bw:invgui/toggel
 # func for bw.toggleInventorGui
 execute as @a[scores={bw.toggleInventorGui=1..}] run function bw:invgui/toggel
 #END#
