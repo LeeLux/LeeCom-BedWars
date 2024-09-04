@@ -5,7 +5,7 @@
 # ======================================================== #
 
 #get seconds until bedgone
-scoreboard players operation bw.untilautodraw bw.timer = bw.settimeuntilautodraw BedWars
+scoreboard players operation bw.untilautodraw bw.timer = bw.setTimeUntilAutoDraw BedWars
 scoreboard players operation bw.untilautodraw bw.timer -= bw.gametime BedWars
 
 #checks if 10min, 5min or 1min befor Auto draw will happen and sends a warning message

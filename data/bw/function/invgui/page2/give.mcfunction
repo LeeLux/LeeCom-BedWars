@@ -4,7 +4,7 @@
 #         Please don't claim this as your own work!        #
 # ======================================================== #
 
-scoreboard players set @s bw.toggleinventorgui.page 2
+scoreboard players set @s bw.toggleInventorGui.page 2
 clear @s
 #back
 item replace entity @s hotbar.0 from block 65538 255 65536 container.13

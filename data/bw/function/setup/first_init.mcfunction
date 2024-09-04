@@ -23,7 +23,7 @@ data merge storage bedwars {Prefix: '[{"text":"","color":"white"},{"text":"[BW] 
 ### THE DEFAULT NUMBERS AND SCORES! ###
 ### =============================== ###
 ## set other and generell default values
-scoreboard players set bw.setgamecountdown BedWars 10
+scoreboard players set bw.setGameCountdown BedWars 10
 scoreboard players set bw.gametimer BedWars -1
 scoreboard players set bw.Ydeath BedWars 0
 scoreboard players set bw.gamestate BedWars 0
@@ -49,10 +49,10 @@ scoreboard players set bw.clonechunks BedWars 400
 ##END##
 
 ## set default auto draw and bed destruction times and bool
-scoreboard players set bw.enableautodrawaftertime BedWars 1
-scoreboard players set bw.settimeuntilautodraw BedWars 3600
-scoreboard players set bw.enablebedsgoneaftertime BedWars 1
-scoreboard players set bw.settimeuntilbedsgone BedWars 2700
+scoreboard players set bw.enable.autoDrawAfterTime BedWars 1
+scoreboard players set bw.setTimeUntilAutoDraw BedWars 3600
+scoreboard players set bw.enable.bedsGoneAfterTime BedWars 1
+scoreboard players set bw.setTimeUntilBedsGone BedWars 2700
 ##END##
 ## whats the default how the shop should work(with version)
 scoreboard players set bw.shopversion BedWars 1
@@ -188,13 +188,24 @@ scoreboard players set 12 bw.sidebar 12
 scoreboard players set 11 bw.sidebar 11
 scoreboard players set 10 bw.sidebar 10
 scoreboard players set 0 bw.sidebar 0
-scoreboard players display name 16 bw.sidebar [{"text":""}]
+# disabling all times
+scoreboard players reset 3 bw.sidebar
+scoreboard players reset 2 bw.sidebar
+scoreboard players reset 1 bw.sidebar
+
 scoreboard players display name 19 bw.sidebar [{"text":""}]
+scoreboard players display name 18 bw.sidebar [{"text":""}]
 scoreboard players display name 17 bw.sidebar [{"text":""}]
 scoreboard players display name 16 bw.sidebar [{"text":""}]
 scoreboard players display name 15 bw.sidebar [{"text":""}]
+scoreboard players display name 14 bw.sidebar [{"text":""}]
+scoreboard players display name 13 bw.sidebar [{"text":""}]
+scoreboard players display name 12 bw.sidebar [{"text":""}]
 scoreboard players display name 11 bw.sidebar [{"text":""}]
 scoreboard players display name 10 bw.sidebar [{"text":""}]
+scoreboard players display name 3 bw.sidebar [{"text":""}]
+scoreboard players display name 2 bw.sidebar [{"text":""}]
+scoreboard players display name 1 bw.sidebar [{"text":""}]
 scoreboard players display name 0 bw.sidebar [{"text":""}]
 ##END##
 

@@ -15,3 +15,8 @@ execute store result storage minecraft:bedwars ScoreboardStats.white int 1 run e
 execute store result storage minecraft:bedwars ScoreboardStats.black int 1 run execute if entity @a[team=black]
 execute store result storage minecraft:bedwars ScoreboardStats.random int 1 run execute if entity @a[team=random]
 function bw:sidebar/lobby_changestats with storage minecraft:bedwars ScoreboardStats
+
+# disableling all tree times
+scoreboard players reset 1 bw.sidebar
+scoreboard players reset 2 bw.sidebar
+scoreboard players reset 3 bw.sidebar

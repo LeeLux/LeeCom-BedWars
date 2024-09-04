@@ -31,6 +31,12 @@ execute if score bw.team.white bw.teams matches 1.. unless entity @e[tag=bw.resp
 execute if score bw.team.black bw.teams matches 1.. unless entity @e[tag=bw.respawn.black] run scoreboard players set bw.starttestcancel BedWars 4
 # == END == #
 
+# == enabeling a game with just one player or team if bw.enable.SingleplayerGame is enabled ==
+# if enabled force min players to test passed
+execute if score bw.enable.SingleplayerGame BedWars matches 1.. if score bw.starttestcancel BedWars matches 3 run tellraw @a [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text":"Singleplayer game detected. Automatic gameend based on one last team left disabled. To end the game use '/trigger bw.forceGameDraw'.","color":"red"}]
+execute if score bw.enable.SingleplayerGame BedWars matches 1.. if score bw.starttestcancel BedWars matches 3 run scoreboard players set bw.starttestcancel BedWars 0
+# == END == #
+
 # == give error messages if test fail == #
 #1
 execute if score bw.starttestcancel BedWars matches 1 run tellraw @a [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text":"The game is already running!","color":"red"}]

@@ -5,37 +5,38 @@
 # ======================================================== #
 
 ## Enable triggers
-scoreboard players enable @a[tag=bw.admin] bw.forceadraw
-scoreboard players enable @a[tag=bw.admin] bw.setgamecountdown
+scoreboard players enable @a[tag=bw.admin] bw.forceGameDraw
+scoreboard players enable @a[tag=bw.admin] bw.setGameCountdown
 scoreboard players enable @a[tag=bw.admin] bw.spawn.bronce
 scoreboard players enable @a[tag=bw.admin] bw.spawn.silver
 scoreboard players enable @a[tag=bw.admin] bw.spawn.gold
 scoreboard players enable @a[tag=bw.admin] bw.spawn.platin
-scoreboard players enable @a[tag=bw.admin] bw.showname.spawner
-scoreboard players enable @a[tag=bw.admin] bw.showname.respawn
-scoreboard players enable @a[tag=bw.admin] bw.showname.bed
-scoreboard players enable @a[tag=bw.admin] bw.showname.other
-scoreboard players enable @a[tag=bw.admin] bw.enablealwaysshop
-scoreboard players enable @a[tag=bw.admin] bw.enablecustomshop
-scoreboard players enable @a[tag=bw.admin] bw.sethealthdisplay
-scoreboard players enable @a[tag=bw.admin] bw.tptomap
-scoreboard players enable @a[tag=bw.admin] bw.tptomap1
-scoreboard players enable @a[tag=bw.admin] bw.tptomap2
-scoreboard players enable @a[tag=bw.admin] bw.tptomap3
-scoreboard players enable @a[tag=bw.admin] bw.tptomap4
-scoreboard players enable @a[tag=bw.admin] bw.tptomapshop
-scoreboard players enable @a[tag=bw.admin] bw.setactionbardisplay
-scoreboard players enable @a[tag=bw.admin] bw.enableshopreset
-scoreboard players enable @a[tag=bw.admin] bw.enablekeepteamaftergameend
-scoreboard players enable @a[tag=bw.admin] bw.updateshop
-scoreboard players enable @a[tag=bw.admin] bw.enablenormalregeneration
-scoreboard players enable @a[tag=bw.admin] bw.settimeuntilbedsgone
-scoreboard players enable @a[tag=bw.admin] bw.enablebedsgoneaftertime
-scoreboard players enable @a[tag=bw.admin] bw.settimeuntilautodraw
-scoreboard players enable @a[tag=bw.admin] bw.enableautodrawaftertime
-scoreboard players enable @a[tag=bw.admin] bw.toggletoeightteams
+scoreboard players enable @a[tag=bw.admin] bw.showName.spawner
+scoreboard players enable @a[tag=bw.admin] bw.showName.respawn
+scoreboard players enable @a[tag=bw.admin] bw.showName.bed
+scoreboard players enable @a[tag=bw.admin] bw.showName.other
+scoreboard players enable @a[tag=bw.admin] bw.enable.alwaysActiveShop
+scoreboard players enable @a[tag=bw.admin] bw.enable.useCustomShop
+scoreboard players enable @a[tag=bw.admin] bw.setHealthDisplay
+scoreboard players enable @a[tag=bw.admin] bw.tpToMap
+scoreboard players enable @a[tag=bw.admin] bw.tpToMap1
+scoreboard players enable @a[tag=bw.admin] bw.tpToMap2
+scoreboard players enable @a[tag=bw.admin] bw.tpToMap3
+scoreboard players enable @a[tag=bw.admin] bw.tpToMap4
+scoreboard players enable @a[tag=bw.admin] bw.tpToMapShop
+scoreboard players enable @a[tag=bw.admin] bw.setActionbarDisplay
+scoreboard players enable @a[tag=bw.admin] bw.enable.shopReset
+scoreboard players enable @a[tag=bw.admin] bw.enable.keepTeamAfterGameEnd
+scoreboard players enable @a[tag=bw.admin] bw.updateShop
+scoreboard players enable @a[tag=bw.admin] bw.enable.normalRegeneration
+scoreboard players enable @a[tag=bw.admin] bw.setTimeUntilBedsGone
+scoreboard players enable @a[tag=bw.admin] bw.enable.bedsGoneAfterTime
+scoreboard players enable @a[tag=bw.admin] bw.setTimeUntilAutoDraw
+scoreboard players enable @a[tag=bw.admin] bw.enable.autoDrawAfterTime
+scoreboard players enable @a[tag=bw.admin] bw.toggleToEightTeams
 scoreboard players enable @a[tag=bw.admin] bw.unlimitedCreativeResources
-scoreboard players enable @a[tag=bw.admin] bw.disableResourcesOnDeath
+scoreboard players enable @a[tag=bw.admin] bw.disableDropResourcesOnDeath
+scoreboard players enable @a[tag=bw.admin] bw.enable.SingleplayerGame
 # everyone
 scoreboard players enable @a bw.join.red
 scoreboard players enable @a bw.join.yellow
@@ -47,8 +48,8 @@ scoreboard players enable @a bw.join.white
 scoreboard players enable @a bw.join.black
 scoreboard players enable @a bw.join.empty
 scoreboard players enable @a bw.join.random
-scoreboard players enable @a bw.gamestart
-scoreboard players enable @a bw.toggleinventorgui
+scoreboard players enable @a bw.startGame
+scoreboard players enable @a bw.toggleInventorGui
 ##END##
 
 ## invisible minecarts (texturpack) not really my code or ideer
@@ -147,8 +148,8 @@ execute store result score bw.doImmediateRespawn BedWars run gamerule doImmediat
 ##END##
 
 ## normalregen
-execute unless score bw.enablenormalregeneration BedWars matches 1 run gamerule naturalRegeneration false
-execute unless score bw.enablenormalregeneration BedWars matches 1 run effect give @a regeneration 6000 0 true
+execute unless score bw.enable.normalRegeneration BedWars matches 1 run gamerule naturalRegeneration false
+execute unless score bw.enable.normalRegeneration BedWars matches 1 run effect give @a regeneration 6000 0 true
 ##END##
 
 ## special items trap particles
@@ -178,5 +179,10 @@ function bw:onesecondtimer/visible_names
 ## effect based upgrades
 function bw:upgrades/effectbased
 ##END##
+
+#update sidebar#
+execute if score bw.gamestate BedWars matches 1.. run function bw:sidebar/ingame
+execute unless score bw.gamestate BedWars matches 1.. run function bw:sidebar/lobby
+#END#
 
 schedule function bw:onesecondtimer/main 1s

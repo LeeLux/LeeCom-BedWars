@@ -27,11 +27,11 @@ execute if score bw.platintimer BedWars matches ..0 run scoreboard players opera
 ##END##
 
 ## auto bed destruction if enabled
-execute if score bw.enablebedsgoneaftertime BedWars matches 1 run function bw:beds/gone/warnings
+execute if score bw.enable.bedsGoneAfterTime BedWars matches 1 run function bw:beds/gone/warnings
 ##END##
 
 ## auto draw if enabled
-execute if score bw.enableautodrawaftertime BedWars matches 1 run function bw:display/autodraw_warnings
+execute if score bw.enable.autoDrawAfterTime BedWars matches 1 run function bw:display/autodraw_warnings
 ##END##
 
 #actionbar#
@@ -61,5 +61,9 @@ execute if score bw.gametimesec bw.stats matches 60.. run scoreboard players set
 execute if score bw.gametimemin bw.stats matches 60.. run scoreboard players add bw.gametimehour bw.stats 1
 execute if score bw.gametimemin bw.stats matches 60.. run scoreboard players set bw.gametimemin bw.stats 0
 ##END##
+
+# auto gameend
+execute unless score bw.enable.SingleplayerGame BedWars matches 1.. run function bw:game/autogameend
+#END#
 
 execute if score bw.gamestate BedWars matches 1.. run schedule function bw:onesecondtimer/game_run 1s

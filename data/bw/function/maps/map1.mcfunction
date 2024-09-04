@@ -12,8 +12,8 @@ summon armor_stand 992.5 128 992.5 {NoGravity:1b,Tags: ["bw.entity","bw.mapclone
 
 #load area with player
 tag @s add bw.load.map1
-scoreboard players enable @s bw.tptomap1
-trigger bw.tptomap1
+scoreboard players enable @s bw.tpToMap1
+trigger bw.tpToMap1
 #end#
 
 #conformation

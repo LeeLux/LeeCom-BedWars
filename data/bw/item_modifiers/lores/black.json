@@ -11,7 +11,7 @@
               "italic": false
             },
             {
-              "selector": "@a[team=black,tag=bw.toggleinventorgui.lore.black]"
+              "selector": "@a[team=black,tag=bw.toggleInventorGui.lore.black]"
             }
           ]
         ]

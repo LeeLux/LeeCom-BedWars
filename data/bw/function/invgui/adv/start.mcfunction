@@ -5,4 +5,4 @@
 # ======================================================== #
 
 advancement revoke @s only bw:jointeam/endereyejoinstart
-trigger bw.gamestart
+trigger bw.startGame

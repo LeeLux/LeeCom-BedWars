@@ -23,7 +23,7 @@ team join purple @a[tag=bw.playedteampurple,team=spec]
 team join white @a[tag=bw.playedteamwhite,team=spec]
 team join black @a[tag=bw.playedteamblack,team=spec]
 
-execute unless score bw.enablekeepteamaftergameend BedWars matches 1 run team leave @a
+execute unless score bw.enable.keepTeamAfterGameEnd BedWars matches 1 run team leave @a
 team empty spec
 ##END##
 
@@ -69,8 +69,8 @@ execute as @a run function bw:game/gameend/remove_played_teamtag
 #END#
 
 ## invgui
-tag @a[tag=bw.toggleinventorgui.afterround] add bw.toggleinventorgui
-tag @a remove bw.toggleinventorgui.afterround
+tag @a[tag=bw.toggleInventorGui.afterround] add bw.toggleInventorGui
+tag @a remove bw.toggleInventorGui.afterround
 ##END##
 
 ## star clearing up 0 0

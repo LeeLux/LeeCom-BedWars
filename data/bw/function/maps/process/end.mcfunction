@@ -5,14 +5,14 @@
 # ======================================================== #
 
 #get the player back to the map#
-scoreboard players enable @a[tag=bw.load.map1] bw.tptomap
-scoreboard players enable @a[tag=bw.load.map2] bw.tptomap
-scoreboard players enable @a[tag=bw.load.map3] bw.tptomap
-scoreboard players enable @a[tag=bw.load.map4] bw.tptomap
-execute as @a[tag=bw.load.map1] run trigger bw.tptomap
-execute as @a[tag=bw.load.map2] run trigger bw.tptomap
-execute as @a[tag=bw.load.map3] run trigger bw.tptomap
-execute as @a[tag=bw.load.map4] run trigger bw.tptomap
+scoreboard players enable @a[tag=bw.load.map1] bw.tpToMap
+scoreboard players enable @a[tag=bw.load.map2] bw.tpToMap
+scoreboard players enable @a[tag=bw.load.map3] bw.tpToMap
+scoreboard players enable @a[tag=bw.load.map4] bw.tpToMap
+execute as @a[tag=bw.load.map1] run trigger bw.tpToMap
+execute as @a[tag=bw.load.map2] run trigger bw.tpToMap
+execute as @a[tag=bw.load.map3] run trigger bw.tpToMap
+execute as @a[tag=bw.load.map4] run trigger bw.tpToMap
 tag @a remove bw.load.map1
 tag @a remove bw.load.map2
 tag @a remove bw.load.map3

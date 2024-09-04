@@ -4,7 +4,7 @@
 #         Please don't claim this as your own work!        #
 # ======================================================== #
 
-scoreboard players set bw.enablecustomshop BedWars 1
+scoreboard players set bw.enable.useCustomShop BedWars 1
 
 data modify block 65537 247 65536 Items set from block 65537 253 65536 Items
 data modify block 65538 247 65536 Items set from block 65538 253 65536 Items

@@ -19,9 +19,4 @@ execute at @a if score bw.gametimer BedWars matches 1..6 run playsound minecraft
 execute if score bw.gametimer BedWars matches 0.. run scoreboard players remove bw.gametimer BedWars 1
 #END#
 
-#update sidebar#
-execute if score bw.gamestate BedWars matches 1.. run function bw:sidebar/ingame
-execute if score bw.gamestate BedWars matches 0 run function bw:sidebar/lobby
-#END#
-
 schedule function bw:onesecondtimer/generell 1s

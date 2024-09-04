@@ -5,7 +5,7 @@
 # ======================================================== #
 
 #get seconds until bedgone
-scoreboard players operation bw.untilbedsgone bw.timer = bw.settimeuntilbedsgone BedWars
+scoreboard players operation bw.untilbedsgone bw.timer = bw.setTimeUntilBedsGone BedWars
 scoreboard players operation bw.untilbedsgone bw.timer -= bw.gametime BedWars
 
 #checks if 10min, 5min or 1min befor beds will be destroyed and sends a warning message

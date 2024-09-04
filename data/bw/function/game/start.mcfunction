@@ -48,10 +48,6 @@ scoreboard objectives setdisplay sidebar bw.sidebar
 
 ## sidbar
 function bw:sidebar/ingame
-scoreboard players reset 11 bw.sidebar
-scoreboard players set 3 bw.sidebar 3
-scoreboard players set 0 bw.sidebar 0
-scoreboard players display name 0 bw.sidebar [{"text":""}]
 ##END##
 
 # start bw:onesecondtimer/game_run for item spawming and actionbar
@@ -121,7 +117,7 @@ tp @a[team=spec] @e[tag=bw.respawn.spec,limit=1]
 ##END##
 
 ## removing invgui
-tag @a[tag=bw.toggleinventorgui] add bw.toggleinventorgui.afterround
+tag @a[tag=bw.toggleInventorGui] add bw.toggleInventorGui.afterround
 execute as @a run function bw:invgui/rem
 ##END##
 

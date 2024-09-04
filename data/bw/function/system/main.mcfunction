@@ -7,7 +7,7 @@
 ## drop resources on death and clear the rest
 # clear inv
 clear @a[scores={bw.death=1..}]
-#execute unless score bw.disableResourcesOnDeath BedWars matches 1 as @a[scores={bw.death=1..}] at @s run function bw:system/checks/shoulddropresources
+#execute unless score bw.disableDropResourcesOnDeath BedWars matches 1 as @a[scores={bw.death=1..}] at @s run function bw:system/checks/shoulddropresources
 ##END##
 
 ## runs the game code wehn the game is activ
@@ -65,15 +65,15 @@ tag @e[tag=bw.shop.need] remove bw.shop.need
 ##END##
 
 ## Game Start
-execute as @a if score @s bw.gamestart matches 1.. run function bw:system/checks/starttest
+execute as @a if score @s bw.startGame matches 1.. run function bw:system/checks/starttest
 execute if score bw.gametimer BedWars matches 0 run function bw:game/start
-scoreboard players reset @a[scores={bw.gamestart=1..}] bw.gamestart
+scoreboard players reset @a[scores={bw.startGame=1..}] bw.startGame
 ##END##
 
 ## Manually draw and auto timer runs out draw
-execute as @a if score @s bw.forceadraw matches 1.. unless score bw.gamestate BedWars matches 1.. run tellraw @a[tag=bw.admin] [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text": "The game is not running and can therefor not be determent to be a draw!"}]
-execute as @a if score @s bw.forceadraw matches 1.. if score bw.gamestate BedWars matches 1.. run function bw:game/gameend/time
-scoreboard players reset @a[scores={bw.forceadraw=1..}] bw.forceadraw
+execute as @a if score @s bw.forceGameDraw matches 1.. unless score bw.gamestate BedWars matches 1.. run tellraw @a[tag=bw.admin] [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text": "The game is not running and can therefor not be determent to be a draw!"}]
+execute as @a if score @s bw.forceGameDraw matches 1.. if score bw.gamestate BedWars matches 1.. run function bw:game/gameend/time
+scoreboard players reset @a[scores={bw.forceGameDraw=1..}] bw.forceGameDraw
 ##END##
 
 ## rotade bw.rotadetoplayer entities to @p player
@@ -110,9 +110,9 @@ function bw:upgrades/handle
 
 ## run the alwaysshop when alwaysshop is activate
 # !! THIS IS THE NEW SYSTEM (JUST SINGLEPLAYER) !!
-execute unless score bw.enablealwaysshop BedWars matches 0 if score bw.shopversion BedWars matches 1 run function bw:shop/run/single
+execute unless score bw.enable.alwaysActiveShop BedWars matches 0 if score bw.shopversion BedWars matches 1 run function bw:shop/run/single
 # !! THIS IS CURRENTLY THE OLD SYSTEM (MULTIPLAYER 'FREINDLY') !!
-execute unless score bw.enablealwaysshop BedWars matches 0 if score bw.shopversion BedWars matches 2 run function bw:shop/run/multi
+execute unless score bw.enable.alwaysActiveShop BedWars matches 0 if score bw.shopversion BedWars matches 2 run function bw:shop/run/multi
 ##END##
 
 ## changes the leather armor color to the team color if you wear it
@@ -170,12 +170,12 @@ execute if entity @e[tag=bw.clear00,scores={bw.clear00=384..}] run function bw:c
 ##END##
 
 ## the map tp system
-execute as @a[scores={bw.tptomap=1..}] at @s run function bw:teleport/map
-execute as @a[scores={bw.tptomap1=1..}] at @s run function bw:teleport/map.1
-execute as @a[scores={bw.tptomap2=1..}] at @s run function bw:teleport/map.2
-execute as @a[scores={bw.tptomap3=1..}] at @s run function bw:teleport/map.3
-execute as @a[scores={bw.tptomap4=1..}] at @s run function bw:teleport/map.4
-execute as @a[scores={bw.tptomapshop=1..}] at @s run function bw:teleport/mapshop
+execute as @a[scores={bw.tpToMap=1..}] at @s run function bw:teleport/map
+execute as @a[scores={bw.tpToMap1=1..}] at @s run function bw:teleport/map.1
+execute as @a[scores={bw.tpToMap2=1..}] at @s run function bw:teleport/map.2
+execute as @a[scores={bw.tpToMap3=1..}] at @s run function bw:teleport/map.3
+execute as @a[scores={bw.tpToMap4=1..}] at @s run function bw:teleport/map.4
+execute as @a[scores={bw.tpToMapShop=1..}] at @s run function bw:teleport/mapshop
 ##END##
 
 ## run stats

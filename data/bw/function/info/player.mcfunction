@@ -6,8 +6,8 @@
 
 ## show a big text in chat with info for triggers
 tellraw @s [{"text": "","color": "light_purple"},{ "text": "[BWInfo] === ["},{"text":"Info","color": "dark_purple"},{"text":"] ===================== "}]
-# bw.gamestart
-tellraw @s [{"text": "> ","color": "gray"},{"text": "[i] ","color": "dark_purple","hoverEvent": {"action": "show_text","contents": [{"text": "","color": "gray"},{"text": "If used it trys to start the game and if every criterion is meet it start the game countdown"}]}},{"text": "bw.gamestart ","color": "light_purple"},{"text": "                "},{"text": "click to "},{"text": "[use]","color": "dark_purple","hoverEvent": { "action": "show_text","contents": [{"text": "click to use bw.gamestart","color": "gray"}]},"clickEvent": { "action": "run_command","value": "/trigger bw.gamestart"}}]
+# bw.startGame
+tellraw @s [{"text": "> ","color": "gray"},{"text": "[i] ","color": "dark_purple","hoverEvent": {"action": "show_text","contents": [{"text": "","color": "gray"},{"text": "If used it trys to start the game and if every criterion is meet it start the game countdown"}]}},{"text": "bw.startGame ","color": "light_purple"},{"text": "                "},{"text": "click to "},{"text": "[use]","color": "dark_purple","hoverEvent": { "action": "show_text","contents": [{"text": "click to use bw.startGame","color": "gray"}]},"clickEvent": { "action": "run_command","value": "/trigger bw.startGame"}}]
 # bw.join.blue
 tellraw @s [{"text": "> ","color": "gray"},{"text": "[i] ","color": "dark_purple","hoverEvent": {"action": "show_text","contents": [{"text": "","color": "gray"},{"text": "If used you join into the blue team if possible"}]}},{"text": "bw.join.blue ","color": "light_purple"},{"text": "                  "},{"text": "click to "},{"text": "[use]","color": "dark_purple","hoverEvent": { "action": "show_text","contents": [{"text": "click to use bw.join.blue","color": "gray"}]},"clickEvent": { "action": "run_command","value": "/trigger bw.join.blue"}}]
 # bw.join.empty
