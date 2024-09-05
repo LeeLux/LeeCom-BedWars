@@ -17,8 +17,8 @@ Hello everyone, this is my own version of the popular minecraft minegame BedWars
 
 ## Installation
 1. Download the `.zip` file
-2. Place it in the `datapacks` folder of your Minecraft world
-3. Use the in-game command `/reload` to load the datapack
+3. Place it in the `datapacks` folder of your Minecraft world (be sure that you have a datapack/[DatapackName]/data structure, you may have to unzip)
+4. Use the in-game command `/reload` to load the datapack
 
 
 ## How to play
