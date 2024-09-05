@@ -3,7 +3,13 @@
 Hello everyone, this is my own version of the popular minecraft minegame BedWars as a vanilla datapack called **LeeCom BedWars** or **LCBW** for short.
 **This pack is unfinished and kinf of broken!** The converison to 1.21 is uncomplete and not really playable. Fully working with the 1.19.2 build.
 
-Manyu things won't work at all because of difficulties in git, so bear with me, sometime, somewhere it worked.
+Disclaimer: The pack may not work as intended. You may want to fork an older, working version from the repository.
+
+# Download the resourcepack and custom world:
+
+The Resourcepack [repository](https://github.com/LeeLux/LeeCom-BedWars-Resourcepack)
+
+The World [repository](https://github.com/LeeLux/LeeCom-BedWars-Maps)
 
 ## Features
 - 8 Colored Teams and random team option
@@ -81,6 +87,20 @@ To Delete the pack use `/function bw:.delete` and click on `Everything`
 - `bw.tpToMapShop` Tps you to 65537 256 65536 the location where you can change the custom shop
 - `bw.unlimitedCreativeResources` Sets every resource to 100 while in creative
 - `bw.updateShop` Updates the shop when dummy items are shown
+
+## Was to be implemented or future plans for v1.0
+- Admin Settings as an Item GUI in admin inventory
+- Custom sounds for various actions
+- A good recreation of TNT and unbreakable block
+- Hardcore mode (TNT destroys everything, resources are nuggets and have to be crafted to be used, no Regeneration, no scoreboard, no information for destroyed beds or other player related info)
+- Countdown shows in the xp too instead just the level count
+- Custom Advacements and progression
+- Custom arrow trails to be unlocked
+- Battle Royal at the end of a game instead of a draw with shrinking world border
+- Automatic game start
+- Customisable max player team amount (4x1,8x1,4x2,8x2,2x4,4x4,8x4,4x6,8x6,4x8,8x8,2x12,2x20)
+- Bigger shop (each shop page has sub pages)
+- More custom items (playcable bed to have respawn again after the bed was broken)
 
  
 ## Story time
