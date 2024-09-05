@@ -87,3 +87,8 @@ execute as @a[scores={bw.disableDropResourcesOnDeath=1..}] run function bw:setto
 # set bw.enable.SingleplayerGame so BEDWARS Settings
 execute as @a[scores={bw.enable.SingleplayerGame=1..}] run function bw:settosettings/enablesingleplayergame
 #END#
+
+# func for bw.info
+execute as @a[scores={bw.info=1..}] run function bw:info/player
+scoreboard players reset @a[scores={bw.info=1..}] bw.info
+#END#

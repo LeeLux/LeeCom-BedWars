@@ -105,7 +105,7 @@ scoreboard objectives remove bw.upgrades.red
 scoreboard objectives remove bw.upgrades.yellow
 scoreboard objectives remove bw.upgrades.green
 scoreboard objectives remove bw.upgrades.blue
-#scoreboard objectives remove bw.
+scoreboard objectives remove bw.info
 #scoreboard objectives remove bw.
 #scoreboard objectives remove bw.
 #scoreboard objectives remove bw.

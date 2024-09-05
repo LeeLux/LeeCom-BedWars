@@ -123,7 +123,7 @@ scoreboard objectives add bw.upgrades.orange dummy
 scoreboard objectives add bw.upgrades.purple dummy
 scoreboard objectives add bw.upgrades.white dummy
 scoreboard objectives add bw.upgrades.black dummy
-#scoreboard objectives add bw.
+scoreboard objectives add bw.info trigger
 #scoreboard objectives add bw.
 #scoreboard objectives add bw.
 #scoreboard objectives add bw.

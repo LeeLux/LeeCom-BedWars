@@ -50,6 +50,7 @@ scoreboard players enable @a bw.join.empty
 scoreboard players enable @a bw.join.random
 scoreboard players enable @a bw.startGame
 scoreboard players enable @a bw.toggleInventorGui
+scoreboard players enable @a bw.info
 ##END##
 
 ## invisible minecarts (texturpack) not really my code or ideer
