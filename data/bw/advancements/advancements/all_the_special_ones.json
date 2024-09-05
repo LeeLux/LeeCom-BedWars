@@ -8,7 +8,7 @@
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "bw:recipeadvancement/root",
+  "parent": "bw:advancements/root",
   "criteria": {
     "requirement": {
       "trigger": "minecraft:inventory_changed",
