@@ -3,6 +3,7 @@
 Hello everyone, this is my own version of the popular minecraft minegame BedWars as a vanilla datapack called **LeeCom BedWars** or **LCBW** for short.
 **This pack is unfinished and kinf of broken!** The converison to 1.21 is uncomplete and not really playable. Fully working with the 1.19.2 build.
 
+Manyu things won't work at all because of difficulties in git, so bear with me, sometime, somewhere it worked.
 
 ## Features
 - 8 Colored Teams and random team option
