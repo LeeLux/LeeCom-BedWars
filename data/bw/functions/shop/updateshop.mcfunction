@@ -6,7 +6,7 @@
 function bw:display/updateshop
 ##END##
 
-# the real function of the whre the shop is updated
+# the real function where the shop is updated
 function bw:system/addingforceload
 # reloading the shop items
 # bw.enable.useCustomShop = 0 = default

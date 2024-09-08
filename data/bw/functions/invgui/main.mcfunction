@@ -26,10 +26,10 @@ execute as @e[type=item,nbt={Item:{tag:{Tags:["bw.toggleInventorGui.item.black"]
 execute as @e[type=item,nbt={Item:{tag:{Tags:["bw.toggleInventorGui.item.next"]}}}] at @s as @p[distance=..2,tag=bw.toggleInventorGui] run function bw:invgui/adv/pagenext
 execute as @e[type=item,nbt={Item:{tag:{Tags:["bw.toggleInventorGui.item.back"]}}}] at @s as @p[distance=..2,tag=bw.toggleInventorGui] run function bw:invgui/adv/pageback
 #random + empty
-execute as @e[type=item,nbt={Item:{tag:{Tags:["bw.toggleInventorGui.item.random"]}}}] at @s as @p[distance=..2,tag=bw.toggleInventorGui] run function bw:invgui/adv/random 
-execute as @e[type=item,nbt={Item:{tag:{Tags:["bw.toggleInventorGui.item.empty"]}}}] at @s as @p[distance=..2,tag=bw.toggleInventorGui] run function bw:invgui/adv/leave 
+execute as @e[type=item,nbt={Item:{tag:{Tags:["bw.toggleInventorGui.item.random"]}}}] at @s as @p[distance=..2,tag=bw.toggleInventorGui] run function bw:invgui/adv/random
+execute as @e[type=item,nbt={Item:{tag:{Tags:["bw.toggleInventorGui.item.empty"]}}}] at @s as @p[distance=..2,tag=bw.toggleInventorGui] run function bw:invgui/adv/leave
 #start
-execute as @e[type=item,nbt={Item:{tag:{Tags:["bw.toggleInventorGui.item.start"]}}}] at @s as @p[distance=..2,tag=bw.toggleInventorGui,scores={bw.death=0}] run function bw:invgui/adv/start 
+execute as @e[type=item,nbt={Item:{tag:{Tags:["bw.toggleInventorGui.item.start"]}}}] at @s as @p[distance=..2,tag=bw.toggleInventorGui,scores={bw.death=0}] run function bw:invgui/adv/start
 
 #resett/reload everyting
 execute as @e[type=item,nbt={Item:{tag:{Tags:["bw.toggleInventorGui.item"]}}}] at @s as @p[distance=..2,tag=bw.toggleInventorGui] run function bw:invgui/reload

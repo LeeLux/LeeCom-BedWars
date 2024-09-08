@@ -9,9 +9,9 @@ execute as @a store result score @s bw.resource.3 run clear @s #minecraft:all{Ta
 execute as @a store result score @s bw.resource.4 run clear @s #minecraft:all{Tags: ["bw.resource.4"]} 0
 ##END#
 
-## setting the resource score to 100 if you are in creative and this feature is turned on
-execute if score bw.unlimitedCreativeResources BedWars matches 1 run scoreboard players set @a[gamemode=creative] bw.resource.1 100
-execute if score bw.unlimitedCreativeResources BedWars matches 1 run scoreboard players set @a[gamemode=creative] bw.resource.2 100
-execute if score bw.unlimitedCreativeResources BedWars matches 1 run scoreboard players set @a[gamemode=creative] bw.resource.3 100
-execute if score bw.unlimitedCreativeResources BedWars matches 1 run scoreboard players set @a[gamemode=creative] bw.resource.4 100
+## setting the resource score to 1000 if you are in creative and this feature is turned on
+execute if score bw.unlimitedCreativeResources BedWars matches 1 run scoreboard players set @a[gamemode=creative] bw.resource.1 1000
+execute if score bw.unlimitedCreativeResources BedWars matches 1 run scoreboard players set @a[gamemode=creative] bw.resource.2 1000
+execute if score bw.unlimitedCreativeResources BedWars matches 1 run scoreboard players set @a[gamemode=creative] bw.resource.3 1000
+execute if score bw.unlimitedCreativeResources BedWars matches 1 run scoreboard players set @a[gamemode=creative] bw.resource.4 1000
 ##END##
