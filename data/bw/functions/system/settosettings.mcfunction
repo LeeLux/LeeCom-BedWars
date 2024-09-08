@@ -90,3 +90,8 @@ execute as @a[scores={bw.enable.SingleplayerGame=1..}] run function bw:settosett
 execute as @a[scores={bw.info=1..}] run function bw:info/player
 scoreboard players reset @a[scores={bw.info=1..}] bw.info
 #END#
+
+# func for bw.showStats
+execute as @a[scores={bw.showStats=1..}] run function bw:stats/ownstats
+scoreboard players reset @a[scores={bw.showStats=1..}] bw.showStats
+#END#
