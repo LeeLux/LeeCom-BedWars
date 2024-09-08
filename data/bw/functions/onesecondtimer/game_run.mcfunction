@@ -3,11 +3,11 @@
 # https://github.com/LeeLux/LeeCom-BedWars #
 
 ## timer
-execute if score bw.gamestate BedWars matches 1.. run scoreboard players add bw.gametime BedWars 1
-execute if score bw.gamestate BedWars matches 1.. run scoreboard players remove bw.broncetimer BedWars 1
-execute if score bw.gamestate BedWars matches 1.. run scoreboard players remove bw.silvertimer BedWars 1
-execute if score bw.gamestate BedWars matches 1.. run scoreboard players remove bw.goldtimer BedWars 1
-execute if score bw.gamestate BedWars matches 1.. run scoreboard players remove bw.platintimer BedWars 1
+execute if score bw.isRunning BedWars matches 1 run scoreboard players add bw.gametime BedWars 1
+execute if score bw.isRunning BedWars matches 1 run scoreboard players remove bw.broncetimer BedWars 1
+execute if score bw.isRunning BedWars matches 1 run scoreboard players remove bw.silvertimer BedWars 1
+execute if score bw.isRunning BedWars matches 1 run scoreboard players remove bw.goldtimer BedWars 1
+execute if score bw.isRunning BedWars matches 1 run scoreboard players remove bw.platintimer BedWars 1
 ##END##
 
 ## spawn Items!
@@ -64,4 +64,4 @@ execute if score bw.gametimemin bw.stats matches 60.. run scoreboard players set
 execute unless score bw.enable.SingleplayerGame BedWars matches 1.. run function bw:game/autogameend
 #END#
 
-execute if score bw.gamestate BedWars matches 1.. run schedule function bw:onesecondtimer/game_run 1s
+execute if score bw.isRunning BedWars matches 1 run schedule function bw:onesecondtimer/game_run 1s

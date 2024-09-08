@@ -24,7 +24,7 @@ data merge storage bedwars {Prefix: '[{"text":"","color":"white"},{"text":"[BW] 
 scoreboard players set bw.setGameCountdown BedWars 10
 scoreboard players set bw.gametimer BedWars -1
 scoreboard players set bw.Ydeath BedWars 0
-scoreboard players set bw.gamestate BedWars 0
+scoreboard players set bw.isRunning BedWars 0
 ##END###
 ## set -1 to macke some negativ numbers positive
 #and some other
@@ -168,7 +168,7 @@ team join blue bw.spawn.platin
 team join blue bw.team.blue
 
 team join spec bw.gametime
-team join spec bw.gamestate
+team join spec bw.isRunning
 
 team join random bw.team.random
 ##END##

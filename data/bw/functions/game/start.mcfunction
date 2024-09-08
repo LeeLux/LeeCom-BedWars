@@ -4,7 +4,7 @@
 
 tellraw @a [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text":"How to play BedWars:","color":"white"}]
 tellraw @a [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text":"You know how it works, collect resources, buy equipment, destroy you enemies beds and dominate you opponents.","color":"white"}]
-scoreboard players set bw.gamestate BedWars 2
+scoreboard players set bw.isRunning BedWars 1
 scoreboard players set bw.gametimer BedWars -1
 
 ## when in no team, join spec team and set the player in the right gamemode

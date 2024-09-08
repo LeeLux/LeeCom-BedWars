@@ -11,7 +11,7 @@ function bw:onesecondtimer/main
 
 # creating scoreboards #
 scoreboard objectives add bw.gametime dummy
-scoreboard objectives add bw.gamestate dummy
+scoreboard objectives add bw.isRunning dummy
 scoreboard objectives add bw.startGame trigger
 scoreboard objectives add bw.forceGameDraw trigger
 scoreboard objectives add bw.setGameCountdown trigger
@@ -256,7 +256,7 @@ function bw:invgui/10t
 
 ## lobby spawn
 execute as @e[tag=bw.lobby.spawn,limit=1] at @s run forceload add ~ ~
-execute if score bw.gamestate BedWars matches 0 as @e[tag=bw.lobby.spawn,limit=1] at @s run spawnpoint @a ~ ~ ~
+execute unless score bw.isRunning BedWars matches 1 as @e[tag=bw.lobby.spawn,limit=1] at @s run spawnpoint @a ~ ~ ~
 ##
 
 ## first time install

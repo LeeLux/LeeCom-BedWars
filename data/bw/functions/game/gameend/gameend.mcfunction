@@ -3,7 +3,7 @@
 # https://github.com/LeeLux/LeeCom-BedWars #
 
 ##set gamestate##
-scoreboard players set bw.gamestate BedWars 0
+scoreboard players set bw.isRunning BedWars 0
 ##END##
 
 ##general ending visials and sounds##

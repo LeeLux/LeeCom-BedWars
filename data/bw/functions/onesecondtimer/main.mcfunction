@@ -63,12 +63,12 @@ execute as @e[type=furnace_minecart,tag=!bw.invis_minecart] run function bw:syst
 ##END##
 
 # deactivates pvp in gamestate 0
-execute if score bw.gamestate BedWars matches 0 run effect give @a[gamemode=!creative,gamemode=!spectator] minecraft:weakness 2 250 true
+execute unless score bw.isRunning BedWars matches 1 run effect give @a[gamemode=!creative,gamemode=!spectator] minecraft:weakness 2 250 true
 #END#
 
 # hunger
 #removes hunger in gamestate 1..#
-#execute if score bw.gamestate BedWars matches 1.. run effect give @a[gamemode=!creative,gamemode=!spectator] minecraft:saturation 1 250 true
+#execute if score bw.isRunning BedWars matches 1 run effect give @a[gamemode=!creative,gamemode=!spectator] minecraft:saturation 1 250 true
 #END#
 
 # making nobody need tp eat
@@ -84,32 +84,32 @@ scoreboard players remove @a[scores={bw.pearltimer=1..}] bw.pearltimer 1
 
 # playtime as team in minutes (just when game is running)
 # add sec
-execute if score bw.gamestate BedWars matches 1.. run scoreboard players add @a[team=!spec] bws.ingamesec 1
+execute if score bw.isRunning BedWars matches 1 run scoreboard players add @a[team=!spec] bws.ingamesec 1
 # red min
-execute if score bw.gamestate BedWars matches 1.. run scoreboard players add @a[scores={bws.ingamesec=61..},team=red] bws.timered 1
+execute if score bw.isRunning BedWars matches 1 run scoreboard players add @a[scores={bws.ingamesec=61..},team=red] bws.timered 1
 # yellow min
-execute if score bw.gamestate BedWars matches 1.. run scoreboard players add @a[scores={bws.ingamesec=61..},team=yellow] bws.timeyellow 1
+execute if score bw.isRunning BedWars matches 1 run scoreboard players add @a[scores={bws.ingamesec=61..},team=yellow] bws.timeyellow 1
 # green min
-execute if score bw.gamestate BedWars matches 1.. run scoreboard players add @a[scores={bws.ingamesec=61..},team=green] bws.timegreen 1
+execute if score bw.isRunning BedWars matches 1 run scoreboard players add @a[scores={bws.ingamesec=61..},team=green] bws.timegreen 1
 # blue min
-execute if score bw.gamestate BedWars matches 1.. run scoreboard players add @a[scores={bws.ingamesec=61..},team=blue] bws.timeblue 1
+execute if score bw.isRunning BedWars matches 1 run scoreboard players add @a[scores={bws.ingamesec=61..},team=blue] bws.timeblue 1
 # orange min
-execute if score bw.gamestate BedWars matches 1.. run scoreboard players add @a[scores={bws.ingamesec=61..},team=orange] bws.timeorange 1
+execute if score bw.isRunning BedWars matches 1 run scoreboard players add @a[scores={bws.ingamesec=61..},team=orange] bws.timeorange 1
 # purple min
-execute if score bw.gamestate BedWars matches 1.. run scoreboard players add @a[scores={bws.ingamesec=61..},team=purple] bws.timepurple 1
+execute if score bw.isRunning BedWars matches 1 run scoreboard players add @a[scores={bws.ingamesec=61..},team=purple] bws.timepurple 1
 # white min
-execute if score bw.gamestate BedWars matches 1.. run scoreboard players add @a[scores={bws.ingamesec=61..},team=white] bws.timewhite 1
+execute if score bw.isRunning BedWars matches 1 run scoreboard players add @a[scores={bws.ingamesec=61..},team=white] bws.timewhite 1
 # black min
-execute if score bw.gamestate BedWars matches 1.. run scoreboard players add @a[scores={bws.ingamesec=61..},team=black] bws.timeblack 1
+execute if score bw.isRunning BedWars matches 1 run scoreboard players add @a[scores={bws.ingamesec=61..},team=black] bws.timeblack 1
 # overall playtime (just when game is running)
 # +1 min if sec > 60
-execute if score bw.gamestate BedWars matches 1.. run scoreboard players add @a[scores={bws.ingamesec=61..}] bws.ingamemin 1
+execute if score bw.isRunning BedWars matches 1 run scoreboard players add @a[scores={bws.ingamesec=61..}] bws.ingamemin 1
 # -60 sec if sec > 60
-execute if score bw.gamestate BedWars matches 1.. run scoreboard players remove @a[scores={bws.ingamesec=61..}] bws.ingamesec 60
+execute if score bw.isRunning BedWars matches 1 run scoreboard players remove @a[scores={bws.ingamesec=61..}] bws.ingamesec 60
 # +1 hour if min > 60
-execute if score bw.gamestate BedWars matches 1.. run scoreboard players add @a[scores={bws.ingamemin=61..}] bws.ingamehour 1
+execute if score bw.isRunning BedWars matches 1 run scoreboard players add @a[scores={bws.ingamemin=61..}] bws.ingamehour 1
 # -60 min if min > 60
-execute if score bw.gamestate BedWars matches 1.. run scoreboard players remove @a[scores={bws.ingamemin=61..}] bws.ingamemin 60
+execute if score bw.isRunning BedWars matches 1 run scoreboard players remove @a[scores={bws.ingamemin=61..}] bws.ingamemin 60
 #END#
 
 # overall everytime sec timer sec +1
@@ -185,13 +185,13 @@ function bw:upgrades/effectbased
 ##END##
 
 #update sidebar#
-execute if score bw.gamestate BedWars matches 1.. run function bw:sidebar/ingame
-execute unless score bw.gamestate BedWars matches 1.. run function bw:sidebar/lobby
+execute if score bw.isRunning BedWars matches 1 run function bw:sidebar/ingame
+execute unless score bw.isRunning BedWars matches 1.. run function bw:sidebar/lobby
 #END#
 
 #update sidebar#
-execute if score bw.gamestate BedWars matches 1.. run function bw:sidebar/ingame
-execute unless score bw.gamestate BedWars matches 1.. run function bw:sidebar/lobby
+execute if score bw.isRunning BedWars matches 1 run function bw:sidebar/ingame
+execute unless score bw.isRunning BedWars matches 1.. run function bw:sidebar/lobby
 #END#
 
 schedule function bw:onesecondtimer/main 1s

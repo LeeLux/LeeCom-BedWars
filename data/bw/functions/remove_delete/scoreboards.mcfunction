@@ -4,7 +4,7 @@
 
 # delete all scoreboars #
 scoreboard objectives remove bw.gametime
-scoreboard objectives remove bw.gamestate
+scoreboard objectives remove bw.isRunning
 scoreboard objectives remove bw.startGame
 scoreboard objectives remove bw.forceGameDraw
 scoreboard objectives remove bw.timer

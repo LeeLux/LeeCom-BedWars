@@ -9,8 +9,8 @@ clear @a[scores={bw.death=1..}]
 ##END##
 
 ## runs the game code wehn the game is activ
-execute if score bw.gamestate BedWars matches 1.. run function bw:game/run
-execute if score bw.gamestate BedWars matches 0 run scoreboard players reset bw.gametime
+execute if score bw.isRunning BedWars matches 1 run function bw:game/run
+execute unless score bw.isRunning BedWars matches 1 run scoreboard players reset bw.gametime
 ##END##
 
 # puts the count of the entity type to the bw.entity.count scoreboard
@@ -69,8 +69,8 @@ scoreboard players reset @a[scores={bw.startGame=1..}] bw.startGame
 ##END##
 
 ## Manually draw and auto timer runs out draw
-execute as @a if score @s bw.forceGameDraw matches 1.. unless score bw.gamestate BedWars matches 1.. run tellraw @a[tag=bw.admin] [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text": "The game is not running and can therefor not be determent to be a draw!"}]
-execute as @a if score @s bw.forceGameDraw matches 1.. if score bw.gamestate BedWars matches 1.. run function bw:game/gameend/time
+execute as @a if score @s bw.forceGameDraw matches 1.. unless score bw.isRunning BedWars matches 1.. run tellraw @a[tag=bw.admin] [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text": "The game is not running and can therefor not be determent to be a draw!"}]
+execute as @a if score @s bw.forceGameDraw matches 1.. if score bw.isRunning BedWars matches 1 run function bw:game/gameend/time
 scoreboard players reset @a[scores={bw.forceGameDraw=1..}] bw.forceGameDraw
 ##END##
 
@@ -118,8 +118,8 @@ function bw:system/changearmorcolor
 ##END##
 
 ## team join v1
-execute if score bw.gamestate BedWars matches 0 if score bw.gametimer BedWars matches -1 run function bw:teamjoin/trigger_join
-execute unless score bw.gamestate BedWars matches 0 as @a run function bw:teamjoin/reset_join
+execute unless score bw.isRunning BedWars matches 1 if score bw.gametimer BedWars matches -1 run function bw:teamjoin/trigger_join
+execute unless score bw.isRunning BedWars matches 0 as @a run function bw:teamjoin/reset_join
 ##END##
 
 ## set bw.setYdeath to bw.Ydeath BedWars

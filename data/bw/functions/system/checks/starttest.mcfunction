@@ -7,7 +7,7 @@ scoreboard players set bw.starttestcancel BedWars 0
 
 # == set bw.starttestcancel in BedWars if tests fail == #
 #the gamestate should be 0 (idle)
-execute unless score bw.gamestate BedWars matches 0 run scoreboard players set bw.starttestcancel BedWars 1
+execute unless score bw.isRunning BedWars matches 0 run scoreboard players set bw.starttestcancel BedWars 1
 #the countdown must be finished (-1)
 execute unless score bw.gametimer BedWars matches -1 run scoreboard players set bw.starttestcancel BedWars 2
 # join teams if you are in random team
