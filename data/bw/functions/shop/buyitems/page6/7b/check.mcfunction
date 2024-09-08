@@ -1,8 +1,6 @@
-# ========================INFO============================ #
-#          This was coded by LeeLux! YouTube Link:         #
-# https://www.youtube.com/channel/UCTL2EnToGrLXZaHV7oYHRDg #
-#         Please don't claim this as your own work!        #
-# ======================================================== #
+
+# This was coded by LeeLux! Github:        #
+# https://github.com/LeeLux/LeeCom-BedWars #
 #in witch slot the resource is (slot of what you want to buy + 9)
 function bw:shop/buyitems/slot/16
 #gets you resources to score again (just backup/just in case)

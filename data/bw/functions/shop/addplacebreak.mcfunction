@@ -1,8 +1,6 @@
-# ========================INFO============================ #
-#          This was coded by LeeLux! YouTube Link:         #
-# https://www.youtube.com/channel/UCTL2EnToGrLXZaHV7oYHRDg #
-#         Please don't claim this as your own work!        #
-# ======================================================== #
+
+# This was coded by LeeLux! Github:        #
+# https://github.com/LeeLux/LeeCom-BedWars #
 
 data modify block 65537 247 65536 Items[].tag merge value {CanPlaceOn: ["#bw.place"], CanDestroy: ["#bw.break"], HideFlags: 94, Unbreakable: 1b, BWShopItem: 1b}
 data modify block 65538 247 65536 Items[].tag merge value {CanPlaceOn: ["#bw.place"], CanDestroy: ["#bw.break"], HideFlags: 94, Unbreakable: 1b, BWShopItem: 1b}

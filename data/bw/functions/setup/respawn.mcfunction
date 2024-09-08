@@ -1,8 +1,6 @@
-# ========================INFO============================ #
-#          This was coded by LeeLux! YouTube Link:         #
-# https://www.youtube.com/channel/UCTL2EnToGrLXZaHV7oYHRDg #
-#         Please don't claim this as your own work!        #
-# ======================================================== #
+
+# This was coded by LeeLux! Github:        #
+# https://github.com/LeeLux/LeeCom-BedWars #
 tag @s remove bw.givebrakingtoolafterrespawn
 
 ## This func. is called every time you respawn (when you click respawn) from the player so just use @s

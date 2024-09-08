@@ -1,8 +1,6 @@
-# ========================INFO============================ #
-#          This was coded by LeeLux! YouTube Link:         #
-# https://www.youtube.com/channel/UCTL2EnToGrLXZaHV7oYHRDg #
-#         Please don't claim this as your own work!        #
-# ======================================================== #
+
+# This was coded by LeeLux! Github:        #
+# https://github.com/LeeLux/LeeCom-BedWars #
 
 #bw.remresource.1
 execute as @s[scores={bw.remresource.1=64..}] run clear @s #minecraft:all{Tags: ["bw.resource.1"]} 64

@@ -1,8 +1,6 @@
-# ========================INFO============================ #
-#          This was coded by LeeLux! YouTube Link:         #
-# https://www.youtube.com/channel/UCTL2EnToGrLXZaHV7oYHRDg #
-#         Please don't claim this as your own work!        #
-# ======================================================== #
+
+# This was coded by LeeLux! Github:        #
+# https://github.com/LeeLux/LeeCom-BedWars #
 
 ## 1
 execute as @a[team=red,nbt={Inventory:[{tag:{bw.upgrade.1:1b}}]}] store success score bw.detectupgrade.1 bw.upgrades.red run clear @s #all{bw.upgrade.1:1b}

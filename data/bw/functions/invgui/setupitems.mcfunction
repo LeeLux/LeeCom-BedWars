@@ -1,8 +1,6 @@
-# ========================INFO============================ #
-#          This was coded by LeeLux! YouTube Link:         #
-# https://www.youtube.com/channel/UCTL2EnToGrLXZaHV7oYHRDg #
-#         Please don't claim this as your own work!        #
-# ======================================================== #
+
+# This was coded by LeeLux! Github:        #
+# https://github.com/LeeLux/LeeCom-BedWars #
 
 data merge block 65538 255 65536 {Items:[]}
 item replace block 65538 255 65536 container.0 with ender_eye{CustomModelData:100001,display:{Name:'[{"text": "Join team ","italic": false},{"text": "Red","color": "red"},{"text": " (right click or drop)","color": "gray"}]'},Tags:["bw.toggleInventorGui.item","bw.toggleInventorGui.item.red"]}

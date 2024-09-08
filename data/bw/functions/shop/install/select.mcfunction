@@ -1,7 +1,5 @@
-# ========================INFO============================ #
-#          This was coded by LeeLux! YouTube Link:         #
-# https://www.youtube.com/channel/UCTL2EnToGrLXZaHV7oYHRDg #
-#         Please don't claim this as your own work!        #
-# ======================================================== #
+
+# This was coded by LeeLux! Github:        #
+# https://github.com/LeeLux/LeeCom-BedWars #
 
 data merge block 65536 250 65536 {Items: [{Slot: 18b, id: "minecraft:bedrock", Count: 1b, tag: {display: {Name: '{"text":"Quickbuy","color":"white","italic":false}'}}}, {Slot: 19b, id: "minecraft:cut_sandstone", Count: 1b, tag: {display: {Name: '{"text":"Blocks","color":"white","italic":false}'}}}, {Slot: 20b, id: "minecraft:wooden_sword", Count: 1b, tag: {display: {Name: '{"text":"Weapods","color":"white","italic":false}'}, Unbreakable: 1b}}, {Slot: 21b, id: "minecraft:wooden_pickaxe", Count: 1b, tag: {display: {Name: '{"text":"Tools","color":"white","italic":false}'}}}, {Slot: 22b, id: "minecraft:chainmail_chestplate", Count: 1b, tag: {display: {Name: '{"text":"Armor","color":"white","italic":false}'}}, Unbreakable: 1b}, {Slot: 23b, id: "minecraft:golden_apple", Count: 1b, tag: {display: {Name: '{"text":"Magic","color":"white","italic":false}'}}}, {Slot: 24b, id: "minecraft:ender_pearl", Count: 1b, tag: {display: {Name: '{"text":"Specials","color":"white","italic":false}'}}}, {Slot: 25b, id: "minecraft:black_stained_glass_pane", Count: 1b, tag: {display: {Name: '{"text":""}'}}}, {Slot: 26b, id: "minecraft:netherite_upgrade_smithing_template", Count: 1b, tag: {display: {Name: '{"text":"Upgrades","color":"white","italic":false}'},HideMoreFlags:126}}]}

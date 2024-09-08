@@ -1,8 +1,6 @@
-# ========================INFO============================ #
-#          This was coded by LeeLux! YouTube Link:         #
-# https://www.youtube.com/channel/UCTL2EnToGrLXZaHV7oYHRDg #
-#         Please don't claim this as your own work!        #
-# ======================================================== #
+
+# This was coded by LeeLux! Github:        #
+# https://github.com/LeeLux/LeeCom-BedWars #
 
 ## show a big text in chat +click to aktivate or change things
 tellraw @s [{"text": "","color": "light_purple"},{ "text": "[BWSettings] === ["},{"text":"Settings","color": "dark_purple"},{"text":"] === "},{"text": "click to ","color": "gray"},{"text": "["},{"text": "Uninstall","color": "red","hoverEvent": { "action": "show_text","contents": [{"text": "click to chose the things you want to uninstall","color": "gray"}]},"clickEvent": { "action": "run_command","value": "/function bw:.delete"}},{"text": "]"}]

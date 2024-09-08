@@ -1,8 +1,6 @@
-# ========================INFO============================ #
-#          This was coded by LeeLux! YouTube Link:         #
-# https://www.youtube.com/channel/UCTL2EnToGrLXZaHV7oYHRDg #
-#         Please don't claim this as your own work!        #
-# ======================================================== #
+
+# This was coded by LeeLux! Github:        #
+# https://github.com/LeeLux/LeeCom-BedWars #
 #/give @p wandering_trader_spawn_egg{display:{Name:'{"text":"Upgrades"}'},EntityTag:{Silent:1b,Invulnerable:1b,CustomNameVisible:1b,DeathLootTable:"empty",NoAI:1b,CanPickUpLoot:0b,Willing:0b,Tags:["bw.entity","bw.upgradeshop"],CustomName:'{"text":"Upgrade Shop"}',Offers:{Recipes:[{rewardExp:0b,maxUses:1,buy:{id:"minecraft:gold_ingot",Count:1b},sell:{id:"minecraft:copper_ingot",Count:1b,tag:{display:{Name:'{"text":"1 Upgrade"}'},bw.upgrade.1:1b}}}]}}} 1
 
 ## update upgrade prices in shop

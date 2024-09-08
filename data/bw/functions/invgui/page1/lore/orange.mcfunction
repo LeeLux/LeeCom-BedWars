@@ -1,8 +1,6 @@
-# ========================INFO============================ #
-#          This was coded by LeeLux! YouTube Link:         #
-# https://www.youtube.com/channel/UCTL2EnToGrLXZaHV7oYHRDg #
-#         Please don't claim this as your own work!        #
-# ======================================================== #
+
+# This was coded by LeeLux! Github:        #
+# https://github.com/LeeLux/LeeCom-BedWars #
 
 tag @a[team=orange,limit=1,tag=!bw.toggleInventorGui.lore.orangedone] add bw.toggleInventorGui.lore.orange
 execute if entity @a[tag=bw.toggleInventorGui.lore.orange] run item modify entity @s hotbar.1 bw:lores/orange

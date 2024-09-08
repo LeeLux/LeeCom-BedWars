@@ -1,8 +1,6 @@
-# ========================INFO============================ #
-#          This was coded by LeeLux! YouTube Link:         #
-# https://www.youtube.com/channel/UCTL2EnToGrLXZaHV7oYHRDg #
-#         Please don't claim this as your own work!        #
-# ======================================================== #
+
+# This was coded by LeeLux! Github:        #
+# https://github.com/LeeLux/LeeCom-BedWars #
 
 # red
 execute if entity @s[team=red,scores={bw.hometptimer=40..}] as @e[tag=bw.respawn.red] at @s run particle minecraft:sculk_soul ~ ~ ~ 0.2 0.2 0.2 0.001 20 force @a

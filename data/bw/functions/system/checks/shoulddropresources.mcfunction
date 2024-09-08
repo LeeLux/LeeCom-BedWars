@@ -1,8 +1,6 @@
-# ========================INFO============================ #
-#          This was coded by LeeLux! YouTube Link:         #
-# https://www.youtube.com/channel/UCTL2EnToGrLXZaHV7oYHRDg #
-#         Please don't claim this as your own work!        #
-# ======================================================== #
+
+# This was coded by LeeLux! Github:        #
+# https://github.com/LeeLux/LeeCom-BedWars #
 
 # checks the team upgrade of the killed player if you shouldn't drop your resources
 execute if entity @s[team=red] unless score bw.upgrade.8 bw.upgrades.red matches 2.. run function bw:system/getresourcescore

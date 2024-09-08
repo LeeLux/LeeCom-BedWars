@@ -1,8 +1,6 @@
-# ========================INFO============================ #
-#          This was coded by LeeLux! YouTube Link:         #
-# https://www.youtube.com/channel/UCTL2EnToGrLXZaHV7oYHRDg #
-#         Please don't claim this as your own work!        #
-# ======================================================== #
+
+# This was coded by LeeLux! Github:        #
+# https://github.com/LeeLux/LeeCom-BedWars #
 
 execute as @a[scores={bw.join.red=1..}] at @s run function bw:teamjoin/red
 execute as @a[scores={bw.join.yellow=1..}] at @s run function bw:teamjoin/yellow

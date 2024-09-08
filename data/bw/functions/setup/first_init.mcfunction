@@ -1,12 +1,10 @@
-# ========================INFO============================ #
-#          This was coded by LeeLux! YouTube Link:         #
-# https://www.youtube.com/channel/UCTL2EnToGrLXZaHV7oYHRDg #
-#         Please don't claim this as your own work!        #
-# ======================================================== #
+
+# This was coded by LeeLux! Github:        #
+# https://github.com/LeeLux/LeeCom-BedWars #
 
 # Writes some info and my yt link in the chat
 tellraw @a [{"text":"# ======================================== #","color":"dark_green"}]
-tellraw @a [{"text":"#        This was coded by LeeLux! YouTube Link:   #","color":"dark_green"}]
+tellraw @a [{"text":"#        This was coded by LeeLux! Github:   #","color":"dark_green"}]
 tellraw @a ["",{"text":"#      https://www.youtube.com/channel/             #","color":"dark_green","clickEvent":{"action":"open_url","value":"https://www.youtube.com/channel/UCTL2EnToGrLXZaHV7oYHRDg"},"hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"(click to go to URL)","color":"gray"}]}}}]
 tellraw @a ["",{"text":"#         UCTL2EnToGrLXZaHV7oYHRDg                 #","color":"dark_green","clickEvent":{"action":"open_url","value":"https://www.youtube.com/channel/UCTL2EnToGrLXZaHV7oYHRDg"},"hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"(click to go to URL)","color":"gray"}]}}}]
 tellraw @a [{"text":"#       Please don't claim this as your own work!    #","color":"dark_green"}]

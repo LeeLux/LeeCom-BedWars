@@ -1,8 +1,6 @@
-# ========================INFO============================ #
-#          This was coded by LeeLux! YouTube Link:         #
-# https://www.youtube.com/channel/UCTL2EnToGrLXZaHV7oYHRDg #
-#         Please don't claim this as your own work!        #
-# ======================================================== #
+
+# This was coded by LeeLux! Github:        #
+# https://github.com/LeeLux/LeeCom-BedWars #
 
 $scoreboard players display name 19 bw.sidebar [{"text":" Red","color":"red"},{"text":":     ","color":"gray"},{"text":"$(red)","color":"gold"}]
 $scoreboard players display name 18 bw.sidebar [{"text":" Orange","color":"gold"},{"text":": ","color":"gray"},{"text":"$(orange)","color":"gold"}]

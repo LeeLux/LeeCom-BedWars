@@ -1,8 +1,6 @@
-# ========================INFO============================ #
-#          This was coded by LeeLux! YouTube Link:         #
-# https://www.youtube.com/channel/UCTL2EnToGrLXZaHV7oYHRDg #
-#         Please don't claim this as your own work!        #
-# ======================================================== #
+
+# This was coded by LeeLux! Github:        #
+# https://github.com/LeeLux/LeeCom-BedWars #
 
 execute if score bw.actionbar BedWars matches 1 run function bw:actionbar/recourcetimer_1
 execute if score bw.actionbar BedWars matches 2 run function bw:actionbar/recourcetimer_2

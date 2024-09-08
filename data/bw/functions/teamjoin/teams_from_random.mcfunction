@@ -1,8 +1,6 @@
-# ========================INFO============================ #
-#          This was coded by LeeLux! YouTube Link:         #
-# https://www.youtube.com/channel/UCTL2EnToGrLXZaHV7oYHRDg #
-#         Please don't claim this as your own work!        #
-# ======================================================== #
+
+# This was coded by LeeLux! Github:        #
+# https://github.com/LeeLux/LeeCom-BedWars #
 function bw:system/teamsum
 # red
 execute if score bw.team.red bw.teams <= bw.team.blue bw.teams if score bw.team.red bw.teams <= bw.team.green bw.teams if score bw.team.red bw.teams <= bw.team.yellow bw.teams if score bw.team.red bw.teams <= bw.team.orange bw.teams if score bw.team.red bw.teams <= bw.team.purple bw.teams if score bw.team.red bw.teams <= bw.team.white bw.teams if score bw.team.red bw.teams <= bw.team.black bw.teams run team join red @r[team=random]

@@ -1,8 +1,6 @@
-# ========================INFO============================ #
-#          This was coded by LeeLux! YouTube Link:         #
-# https://www.youtube.com/channel/UCTL2EnToGrLXZaHV7oYHRDg #
-#         Please don't claim this as your own work!        #
-# ======================================================== #
+
+# This was coded by LeeLux! Github:        #
+# https://github.com/LeeLux/LeeCom-BedWars #
 
 execute as @e[nbt={Tags:["bw.mapclone"]}] at @s if score @s bw.clear matches 2..101 run function bw:maps/process/rotate/10x10
 execute as @e[nbt={Tags:["bw.mapclone"]}] at @s if score @s bw.clear matches 102..401 run function bw:maps/process/rotate/20x20

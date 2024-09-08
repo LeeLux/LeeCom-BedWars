@@ -1,8 +1,6 @@
-# ========================INFO============================ #
-#          This was coded by LeeLux! YouTube Link:         #
-# https://www.youtube.com/channel/UCTL2EnToGrLXZaHV7oYHRDg #
-#         Please don't claim this as your own work!        #
-# ======================================================== #
+
+# This was coded by LeeLux! Github:        #
+# https://github.com/LeeLux/LeeCom-BedWars #
 
 ## detect how many items a player have (bronce etc) and put the int into a scoreboard
 execute as @a store result score @s bw.resource.1 run clear @s #minecraft:all{Tags: ["bw.resource.1"]} 0

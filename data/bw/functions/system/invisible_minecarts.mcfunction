@@ -1,6 +1,6 @@
-# ========================INFO============================ #
-#          This was not coded by LeeLux! YouTube Link:     #
-# https://www.youtube.com/channel/UCTL2EnToGrLXZaHV7oYHRDg #
+
+# This was not coded by LeeLux! Github:     #
+# https://github.com/LeeLux/LeeCom-BedWars #
 # ======================================================== #
 data merge entity @s[type=minecart] {CustomDisplayTile:1,DisplayState:{Name:"minecraft:command_block",Properties:{conditional:"true",facing:"down"}},DisplayOffset:4}
 data merge entity @s[type=chest_minecart] {CustomDisplayTile:1,DisplayState:{Name:"minecraft:command_block",Properties:{conditional:"true",facing:"up"}},DisplayOffset:4}

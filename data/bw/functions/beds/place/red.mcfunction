@@ -1,8 +1,6 @@
-# ========================INFO============================ #
-#          This was coded by LeeLux! YouTube Link:         #
-# https://www.youtube.com/channel/UCTL2EnToGrLXZaHV7oYHRDg #
-#         Please don't claim this as your own work!        #
-# ======================================================== #
+
+# This was coded by LeeLux! Github:        #
+# https://github.com/LeeLux/LeeCom-BedWars #
 
 ## place
 execute as @e[tag=bw.bed.red,scores={Rotation=-45..45}] at @s run fill ^ ^ ^ ^ ^ ^ red_bed[ part= foot,facing= north,occupied=true] replace air

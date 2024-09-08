@@ -1,8 +1,6 @@
-# ========================INFO============================ #
-#          This was coded by LeeLux! YouTube Link:         #
-# https://www.youtube.com/channel/UCTL2EnToGrLXZaHV7oYHRDg #
-#         Please don't claim this as your own work!        #
-# ======================================================== #
+
+# This was coded by LeeLux! Github:        #
+# https://github.com/LeeLux/LeeCom-BedWars #
 
 scoreboard players operation bw.enable.SingleplayerGame BedWars += @s bw.enable.SingleplayerGame
 execute unless score bw.enable.SingleplayerGame BedWars matches 0..1 run scoreboard players set bw.enable.SingleplayerGame BedWars 0

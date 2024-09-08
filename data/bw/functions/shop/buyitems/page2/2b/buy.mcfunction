@@ -1,8 +1,6 @@
-# ========================INFO============================ #
-#          This was coded by LeeLux! YouTube Link:         #
-# https://www.youtube.com/channel/UCTL2EnToGrLXZaHV7oYHRDg #
-#         Please don't claim this as your own work!        #
-# ======================================================== #
+
+# This was coded by LeeLux! Github:        #
+# https://github.com/LeeLux/LeeCom-BedWars #
 
 # copies the correct item from the barrel to a dummy item you pick up immidiatly
 execute at @p run summon item ~ ~ ~ {Tags: ["bw.buyitem","bw.buyitem.2.2"], Item: {id: "minecraft:stone", Count: 1b}}

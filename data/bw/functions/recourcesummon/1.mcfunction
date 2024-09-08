@@ -1,8 +1,6 @@
-# ========================INFO============================ #
-#          This was coded by LeeLux! YouTube Link:         #
-# https://www.youtube.com/channel/UCTL2EnToGrLXZaHV7oYHRDg #
-#         Please don't claim this as your own work!        #
-# ======================================================== #
+
+# This was coded by LeeLux! Github:        #
+# https://github.com/LeeLux/LeeCom-BedWars #
 execute as @e[tag=bw.spawner.bronce,tag=bw.spawner] at @s run summon item ~ ~ ~ {Tags: ["bw.newressourceitem.1"], Item: {id: "minecraft:stone", Count: 1b}}
 
 #direct from block

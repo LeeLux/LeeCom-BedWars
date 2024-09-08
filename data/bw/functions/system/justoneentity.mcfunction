@@ -1,8 +1,6 @@
-# ========================INFO============================ #
-#          This was coded by LeeLux! YouTube Link:         #
-# https://www.youtube.com/channel/UCTL2EnToGrLXZaHV7oYHRDg #
-#         Please don't claim this as your own work!        #
-# ======================================================== #
+
+# This was coded by LeeLux! Github:        #
+# https://github.com/LeeLux/LeeCom-BedWars #
 
 #bw.lobby.spawn (1 allowed)#
 execute if score bw.lobby.spawn bw.entity.count matches 2.. run tellraw @a [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text": "Ther are too many 'bw.lobby.spawn's. You nearest 'bw.lobby.spawn' has therefor been killed!\n> Use '/scoreboard objectives setdisplay sidebar bw.entity.count' to show what entity you have how offen.\n> Klick this text to tp you the the furthest 'bw.lobby.spawn'.","color": "red","clickEvent": {"action": "run_command","value": "/tp @s @e[tag=bw.lobby.spawn,sort=furthest,limit=1]"}}]

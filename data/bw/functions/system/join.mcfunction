@@ -1,8 +1,6 @@
-# ========================INFO============================ #
-#          This was coded by LeeLux! YouTube Link:         #
-# https://www.youtube.com/channel/UCTL2EnToGrLXZaHV7oYHRDg #
-#         Please don't claim this as your own work!        #
-# ======================================================== #
+
+# This was coded by LeeLux! Github:        #
+# https://github.com/LeeLux/LeeCom-BedWars #
 
 execute unless score bw.enable.keepTeamAfterGameEnd BedWars matches 1 unless score bw.gamestate BedWars matches 1.. run team leave @s
 execute run function bw:system/checks/first_zero
