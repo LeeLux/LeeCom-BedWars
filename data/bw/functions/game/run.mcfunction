@@ -14,6 +14,10 @@ execute as @a[team=white,scores={bw.white.broken=1..}] run function bw:beds/own_
 execute as @a[team=black,scores={bw.black.broken=1..}] run function bw:beds/own_broken/black
 #END#
 
+# auto gameend
+execute unless score bw.enable.SingleplayerGame BedWars matches 1.. run function bw:game/autogameend
+#END#
+
 # reset bed broken counter if the bed was the same color as the team
 scoreboard players reset @a[team=red,scores={bw.red.broken=1..}] bw.red.broken
 scoreboard players reset @a[team=blue,scores={bw.blue.broken=1..}] bw.blue.broken

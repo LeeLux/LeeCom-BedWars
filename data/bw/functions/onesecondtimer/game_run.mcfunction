@@ -60,8 +60,4 @@ execute if score bw.gametimemin bw.stats matches 60.. run scoreboard players add
 execute if score bw.gametimemin bw.stats matches 60.. run scoreboard players set bw.gametimemin bw.stats 0
 ##END##
 
-# auto gameend
-execute unless score bw.enable.SingleplayerGame BedWars matches 1.. run function bw:game/autogameend
-#END#
-
 execute if score bw.isRunning BedWars matches 1 run schedule function bw:onesecondtimer/game_run 1s
