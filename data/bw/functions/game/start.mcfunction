@@ -1,11 +1,9 @@
-# ========================INFO============================ #
-#          This was coded by LeeLux! YouTube Link:         #
-# https://www.youtube.com/channel/UCTL2EnToGrLXZaHV7oYHRDg #
-#         Please don't claim this as your own work!        #
-# ======================================================== #
+
+# This was coded by LeeLux! Github:        #
+# https://github.com/LeeLux/LeeCom-BedWars #
 
 tellraw @a [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text":"How to play BedWars:","color":"white"}]
-tellraw @a [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text":"Text.........","color":"white"}]
+tellraw @a [{"nbt":"Prefix","storage":"minecraft:bedwars","interpret":true},{"text":"You know how it works, collect resources, buy equipment, destroy you enemies beds and dominate you opponents.","color":"white"}]
 scoreboard players set bw.gamestate BedWars 2
 scoreboard players set bw.gametimer BedWars -1
 
@@ -73,7 +71,7 @@ kill @e[type=item,nbt={Item: {tag: {Tags: ["bw.resource.2"]}}}]
 kill @e[type=item,nbt={Item: {tag: {Tags: ["bw.resource.3"]}}}]
 kill @e[type=item,nbt={Item: {tag: {Tags: ["bw.resource.4"]}}}]
 
-# or kill all items
+# or optional kill all items which is done by default
 kill @e[type=item]
 #END##
 ##END###
@@ -86,8 +84,9 @@ scoreboard players operation bw.platintimer BedWars = bw.spawn.platin BedWars
 ##END##
 
 ## Set Beds
-# set die y rotation to 0
+# set the y rotation to 0
 execute as @e[tag=bw.bed] run data modify entity @s Rotation[1] set value 0f
+# only beds are placed for teams that acutally have atleast one player
 execute if score bw.team.red bw.teams matches 1.. run function bw:beds/place/check/red
 execute if score bw.team.yellow bw.teams matches 1.. run function bw:beds/place/check/yellow
 execute if score bw.team.green bw.teams matches 1.. run function bw:beds/place/check/green
@@ -121,7 +120,7 @@ tag @a[tag=bw.toggleInventorGui] add bw.toggleInventorGui.afterround
 execute as @a run function bw:invgui/rem
 ##END##
 
-## reset player like he was killed
+## reset player as he was killed
 execute as @a run function bw:system/reset_player
 ##END##
 
@@ -130,7 +129,7 @@ execute store result score bw.gameID BedWars run random value 100000..999999 bw
 scoreboard players operation @a bw.gameID = bw.gameID BedWars
 #END#
 
-# reset join
+# reset bw.join
 scoreboard players reset @a bw.join
 ##END##
 
@@ -138,7 +137,7 @@ scoreboard players reset @a bw.join
 execute as @a at @s run playsound minecraft:entity.player.levelup voice @a ~ ~ ~ 10 1
 #END#
 
-# take anybody all recipies
+# take all recipies
 recipe take @a *
 #END#
 
