@@ -8,6 +8,12 @@ scoreboard objectives setdisplay sidebar bw.sidebar
 
 ## set the prefix
 data merge storage bedwars {Prefix: '[{"text":"","color":"white"},{"text":"[BW] ","color":"green"}]', StatsPrefix: '[{"text":"","color":"white"},{"text":"[BWStats] ","color":"gold"}]',HoleName: '[{"text":"","color":"green"},{"text":"[LeeCom BedWars] ","color":"green"}]', Resources: {Items: [], CurrenCount: 9},TimeColor:'{"text":"","color":"white"}'}
+
+## create scoreboards and create barrels for the shop
+function bw:setup/createscoreboards
+function bw:setup/createshopbarrels
+##END##
+
 ### =============================== ###
 ### THE DEFAULT NUMBERS AND SCORES! ###
 ### =============================== ###
