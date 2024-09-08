@@ -3,7 +3,14 @@
 # https://github.com/LeeLux/LeeCom-BedWars #
 
 
-tellraw @a [{"text":"Datapack: ","color":"green"},{"text":"LeeCom ","color":"gold"},{"text":" started!","color":"green"},{"text":" v0.08","color":"gold"}]
+tellraw @a [{"text":"Datapack: ","color":"green"},{"text":"LeeCom BedWars","color":"gold"},{"text":" started!","color":"green"},{"text":" v0.08","color":"gold"}]
+
+# project link and credits
+tellraw @a ""
+tellraw @a [{"text":"This pack was created by LeeLux!","color":"dark_gray","clickEvent":{"action":"open_url","value":"https://github.com/LeeLux/LeeCom-BedWars"},"hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"click to go to Github","color":"gray"}]}}}]
+tellraw @a ["",{"text":"Get infos and download on my Github [here]","color":"dark_gray","clickEvent":{"action":"open_url","value":"https://github.com/LeeLux/LeeCom-BedWars"},"hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"click to go to Github","color":"gray"}]}}}]
+tellraw @a ""
+#END#
 
 ## start bw:onesecondtimer/main for not so important things that run just ones per second
 function bw:onesecondtimer/main
