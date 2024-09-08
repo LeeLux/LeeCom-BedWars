@@ -1,8 +1,6 @@
-# ========================INFO============================ #
-#          This was coded by LeeLux! YouTube Link:         #
-# https://www.youtube.com/channel/UCTL2EnToGrLXZaHV7oYHRDg #
-#         Please don't claim this as your own work!        #
-# ======================================================== #
+
+# This was coded by LeeLux! Github:        #
+# https://github.com/LeeLux/LeeCom-BedWars #
 
 ## Enable triggers
 scoreboard players enable @a[tag=bw.admin] bw.forceGameDraw
@@ -36,32 +34,7 @@ scoreboard players enable @a[tag=bw.admin] bw.enable.bedsGoneAfterTime
 scoreboard players enable @a[tag=bw.admin] bw.setTimeUntilAutoDraw
 scoreboard players enable @a[tag=bw.admin] bw.enable.autoDrawAfterTime
 scoreboard players enable @a[tag=bw.admin] bw.toggleToEightTeams
-scoreboard players enable @a[tag=bw.admin] bw.showName.spawner
-scoreboard players enable @a[tag=bw.admin] bw.showName.respawn
-scoreboard players enable @a[tag=bw.admin] bw.showName.bed
-scoreboard players enable @a[tag=bw.admin] bw.showName.other
-scoreboard players enable @a[tag=bw.admin] bw.enable.alwaysActiveShop
-scoreboard players enable @a[tag=bw.admin] bw.enable.useCustomShop
-scoreboard players enable @a[tag=bw.admin] bw.setHealthDisplay
-scoreboard players enable @a[tag=bw.admin] bw.tpToMap
-scoreboard players enable @a[tag=bw.admin] bw.tpToMap1
-scoreboard players enable @a[tag=bw.admin] bw.tpToMap2
-scoreboard players enable @a[tag=bw.admin] bw.tpToMap3
-scoreboard players enable @a[tag=bw.admin] bw.tpToMap4
-scoreboard players enable @a[tag=bw.admin] bw.tpToMapShop
-scoreboard players enable @a[tag=bw.admin] bw.setActionbarDisplay
-scoreboard players enable @a[tag=bw.admin] bw.enable.shopReset
-scoreboard players enable @a[tag=bw.admin] bw.enable.keepTeamAfterGameEnd
-scoreboard players enable @a[tag=bw.admin] bw.updateShop
-scoreboard players enable @a[tag=bw.admin] bw.enable.normalRegeneration
-scoreboard players enable @a[tag=bw.admin] bw.setTimeUntilBedsGone
-scoreboard players enable @a[tag=bw.admin] bw.enable.bedsGoneAfterTime
-scoreboard players enable @a[tag=bw.admin] bw.setTimeUntilAutoDraw
-scoreboard players enable @a[tag=bw.admin] bw.enable.autoDrawAfterTime
-scoreboard players enable @a[tag=bw.admin] bw.toggleToEightTeams
 scoreboard players enable @a[tag=bw.admin] bw.unlimitedCreativeResources
-scoreboard players enable @a[tag=bw.admin] bw.disableDropResourcesOnDeath
-scoreboard players enable @a[tag=bw.admin] bw.enable.SingleplayerGame
 scoreboard players enable @a[tag=bw.admin] bw.disableDropResourcesOnDeath
 scoreboard players enable @a[tag=bw.admin] bw.enable.SingleplayerGame
 # everyone
