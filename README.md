@@ -1,7 +1,7 @@
 # Minecraft BedWars Datapack
 
-Hello everyone, this is my own version of the popular minecraft minegame BedWars as a vanilla datapack called **LeeCom BedWars** or **LCBW** for short.
-**This pack is unfinished and kinf of broken!** The converison to 1.21 is uncomplete and not really playable. Fully working with the 1.19.2 build.
+Hello everyone, this is my own version of the popular minecraft minigame BedWars as a vanilla datapack called **LeeCom BedWars** or **LCBW** for short.
+**This pack is unfinished and kind of broken!** The converison to 1.21 is uncomplete and not playable. Fully working with the 1.19.2 build.
 
 
 ## Features
