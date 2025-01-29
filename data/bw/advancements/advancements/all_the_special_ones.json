@@ -1,0 +1,55 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:gold_ingot"
+    },
+    "title": "All the special ones",
+    "description": "Have all special items at once",
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "bw:advancements/root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:egg"
+            ],
+            "nbt": "Tags:[\"bw.brigeegg\"]"
+          },
+          {
+            "items": [
+              "minecraft:tnt"
+            ]
+          },
+          {
+            "items": [
+              "minecraft:ender_pearl"
+            ]
+          },
+          {
+            "items": [
+              "minecraft:glowstone_dust"
+            ],
+            "nbt": "Tags:[\"bw.homepowder\"]"
+          },
+          {
+            "items": [
+              "minecraft:ender_eye"
+            ],
+            "nbt": "Tags:[\"bw.platform\"]"
+          },
+          {
+            "items": [
+              "minecraft:spectral_arrow"
+            ],
+            "nbt": "Tags:[\"bw.glowing\"]"
+          }
+        ]
+      }
+    }
+  }
+}

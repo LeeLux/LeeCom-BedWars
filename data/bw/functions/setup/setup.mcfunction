@@ -5,7 +5,7 @@
 # ======================================================== #
 
 
-tellraw @a [{"text":"Datapack: ","color":"green"},{"text":"LeeCom ","color":"gold"},{"text":" started!","color":"green"},{"text":" v0.07en","color":"gold"}]
+tellraw @a [{"text":"Datapack: ","color":"green"},{"text":"LeeCom BedWars","color":"gold"},{"text":" started!","color":"green"},{"text":" v0.07en","color":"gold"}]
 
 ## start bw:onesecondtimer/main for not so important things that run just ones per second
 function bw:onesecondtimer/main

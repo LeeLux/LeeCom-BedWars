@@ -4,5 +4,5 @@
 #         Please don't claim this as your own work!        #
 # ======================================================== #
 
-advancement revoke @s only bw:endereyejoinorange
+advancement revoke @s only bw:jointeam/endereyejoinorange
 trigger bw.join.orange

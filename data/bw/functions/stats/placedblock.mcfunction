@@ -4,5 +4,5 @@
 #         Please don't claim this as your own work!        #
 # ======================================================== #
 
-advancement revoke @s only bw:placedblock
+advancement revoke @s only bw:/stats/placedblock
 execute if score bw.gamestate BedWars matches 1.. run scoreboard players add @s[team=!spec,gamemode=!creative] bws.placedblocks 1

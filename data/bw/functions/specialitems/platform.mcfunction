@@ -4,6 +4,6 @@
 #         Please don't claim this as your own work!        #
 # ======================================================== #
 
-advancement revoke @s only bw:endereyeclick
+advancement revoke @s only bw:specialitems/endereyeclick
 clear @s[gamemode=!creative] ender_eye 1
 fill ~2 ~-1 ~2 ~-2 ~-1 ~-2 cut_sandstone replace air
